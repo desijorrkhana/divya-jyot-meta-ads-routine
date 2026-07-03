@@ -22,7 +22,7 @@ Hardened against the three issues seen in production:
   3. self-signed proxy cert breaks Google SSL        -> resilient HTTP via google_auth_httplib2
 Runtime reduced by running the 5 Meta API calls + Google reads concurrently.
 """
-import json, os, base64, ssl, urllib.request, urllib.parse
+import json, os, base64, ssl, time, urllib.request, urllib.parse
 from datetime import date, datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor
 
@@ -54,10 +54,9 @@ _INSIGHT_FIELDS = ("campaign_name,adset_name,ad_name,spend,impressions,reach,cli
 
 # Match Ads Manager's default attribution so counts line up with what you see on screen.
 # Ads Manager default = 7-day click + 1-day view. We pin the same here.
-_ATTRIBUTION = json.dumps([
-    {"event_type": "CLICK_THROUGH", "window_days": 7},
-    {"event_type": "VIEW_THROUGH",  "window_days": 1},
-])
+# NOTE: Graph API v25.0 expects short-code strings ("7d_click"/"1d_view"), not the older
+# {event_type, window_days} object form — that old form now 400s with (#100) on every call.
+_ATTRIBUTION = json.dumps(["7d_click", "1d_view"])
 
 def meta_insights(level, since, until):
     if not TOKEN or not AD_ACCOUNT_ID:
@@ -190,7 +189,10 @@ def google_sheets():
     creds = Credentials.from_service_account_info(
         sa_info, scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
     # FIX 3: build an http object that tolerates the env's self-signed proxy cert
-    http = google_auth_httplib2.AuthorizedHttp(creds, http=httplib2.Http(disable_ssl_certificate_validation=True))
+    # FIX 4: explicit timeout — without one, a stalled proxy connection hangs this thread
+    # (and thus the whole run, since run_fetch() blocks on it) forever instead of failing.
+    http = google_auth_httplib2.AuthorizedHttp(
+        creds, http=httplib2.Http(disable_ssl_certificate_validation=True, timeout=25))
     return build("sheets", "v4", http=http, cache_discovery=False)
 
 def fetch_sheets():
@@ -202,11 +204,18 @@ def fetch_sheets():
     except Exception as e:
         return {"error": f"google auth/build failed: {e}"}
 
-    def read(sid, rng):
-        try:
-            return svc.spreadsheets().values().get(spreadsheetId=sid, range=rng).execute().get("values", [])
-        except Exception as e:
-            return [["error", str(e)]]
+    # The proxy in this environment occasionally drops/corrupts a connection (SSL errors,
+    # stalls) — retry a couple of times before giving up so one flaky call doesn't blank
+    # out a whole tab.
+    def read(sid, rng, attempts=3):
+        last_err = None
+        for i in range(attempts):
+            try:
+                return svc.spreadsheets().values().get(spreadsheetId=sid, range=rng).execute().get("values", [])
+            except Exception as e:
+                last_err = e
+                time.sleep(1.5 * (i + 1))
+        return [["error", str(last_err)]]
 
     # Run the three sheet reads concurrently (they're independent network calls).
     with ThreadPoolExecutor(max_workers=3) as ex:
