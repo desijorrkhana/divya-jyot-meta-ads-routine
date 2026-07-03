@@ -130,4 +130,4 @@ Use yesterday / last7 / last30 for comparison and trend, not as the headline win
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
-commit all to the repo, then run `python3 fetch_all.py --send` to push report.md to Telegram.
+commit all to the repo, then run python3 fetch_all.py --send to push report.md to Telegram.
