@@ -202,6 +202,39 @@ Use yesterday / last7 / last30 for comparison and trend, not as the headline win
 - Telegram has no tables — use bold headers, short lines, simple lists. Keep it tight.
 
 
+## SELF-LEARNING (standing instruction — this file is meant to evolve)
+Every run, before finishing, ask: "did I learn anything today that EVERY future run should
+know?" Route each learning to the right layer:
+- **Tactical / expires in days** → reports/_memory.md (leads to chase, corrections to
+  carry, hypotheses to confirm). Rewrite it fresh each run; keep it under ~40 lines.
+- **Durable rule about the data or the process** → edit THIS FILE. Add it to the LEARNED
+  RULES section below with a date and one line of evidence. Examples of what qualifies:
+  a new data pitfall (a sheet format quirk, an API behavior), a recurring team behavior
+  that changes how to read the sheet, a verification step that caught a real error.
+- **A bug or a better fetch method** → fix fetch_all.py itself, comment the why, test it
+  (run it, check data.json), then commit.
+Curation rules so this file improves instead of bloating: LEARNED RULES stays under ~15
+entries — when adding one over the cap, merge or delete the least useful; never duplicate
+what the main spec already says (tighten the spec instead); never weaken or delete the
+core sections above; if a learned rule graduates into the main spec text, remove it from
+the list. Commit message must say what was learned in one line.
+
+## LEARNED RULES (dated, curated — see SELF-LEARNING above)
+- 2026-07-04: Meta API v25.0 rejects the old object-form attribution windows — flat
+  strings ("7d_click") required. If every Meta call 400s, check this first.
+- 2026-07-04: report.md in the repo root is the ONLY file --send delivers to Telegram —
+  a run that only writes reports/*.md delivered nothing (this happened; now a hard rule
+  in the Telegram section above).
+- 2026-07-04: xlsx revision exports give phone cells as floats (9224542504.0) — collapse
+  integral floats before matching, or every phone silently mismatches.
+- 2026-07-04: the team's sheet can't be trusted on source attribution — "Hitendra/Heena
+  dedhia" was entered as a Facebook lead Meta never sent, visited 3/7, and the visit was
+  pushed to Meta as a conversion. Hence the standing integrity check in section 5b.
+- 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
+  Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
+  lead unlogged, and flag that the team dialed a wrong number.
+
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
+apply any SELF-LEARNING updates (this file / _memory.md / fetch_all.py),
 commit all to the repo, then run python3 fetch_all.py --send to push report.md to Telegram.
