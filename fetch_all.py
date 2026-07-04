@@ -54,10 +54,9 @@ _INSIGHT_FIELDS = ("campaign_name,adset_name,ad_name,spend,impressions,reach,cli
 
 # Match Ads Manager's default attribution so counts line up with what you see on screen.
 # Ads Manager default = 7-day click + 1-day view. We pin the same here.
-_ATTRIBUTION = json.dumps([
-    {"event_type": "CLICK_THROUGH", "window_days": 7},
-    {"event_type": "VIEW_THROUGH",  "window_days": 1},
-])
+# NOTE: as of API v25.0, action_attribution_windows takes flat strings (e.g. "7d_click"),
+# NOT {"event_type":..., "window_days":...} objects — the old object form now 400s outright.
+_ATTRIBUTION = json.dumps(["7d_click", "1d_view"])
 
 def meta_insights(level, since, until):
     if not TOKEN or not AD_ACCOUNT_ID:
@@ -182,14 +181,20 @@ def _decode_sa():
     except Exception:
         return json.loads(raw)                       # last resort
 
-def google_sheets():
+def _google_creds():
     from google.oauth2.service_account import Credentials
+    sa_info = _decode_sa()
+    return Credentials.from_service_account_info(
+        sa_info, scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
+
+def google_sheets(creds=None):
     from googleapiclient.discovery import build
     import google_auth_httplib2, httplib2
-    sa_info = _decode_sa()
-    creds = Credentials.from_service_account_info(
-        sa_info, scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
-    # FIX 3: build an http object that tolerates the env's self-signed proxy cert
+    creds = creds or _google_creds()
+    # FIX 3: build an http object that tolerates the env's self-signed proxy cert.
+    # NOTE: httplib2.Http is NOT thread-safe — each concurrent caller MUST get its own
+    # instance, or interleaved requests corrupt the shared TLS session (intermittent
+    # "decryption failed or bad record mac" errors under concurrency).
     http = google_auth_httplib2.AuthorizedHttp(creds, http=httplib2.Http(disable_ssl_certificate_validation=True))
     return build("sheets", "v4", http=http, cache_discovery=False)
 
@@ -198,12 +203,13 @@ def fetch_sheets():
     if not sheet_id:
         return {"error": "Missing GOOGLE_SHEET_ID"}
     try:
-        svc = google_sheets()
+        creds = _google_creds()
     except Exception as e:
-        return {"error": f"google auth/build failed: {e}"}
+        return {"error": f"google auth failed: {e}"}
 
     def read(sid, rng):
         try:
+            svc = google_sheets(creds)   # fresh http per thread — see NOTE above
             return svc.spreadsheets().values().get(spreadsheetId=sid, range=rng).execute().get("values", [])
         except Exception as e:
             return [["error", str(e)]]
