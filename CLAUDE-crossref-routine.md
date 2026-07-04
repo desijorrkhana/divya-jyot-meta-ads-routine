@@ -230,9 +230,14 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: the team's sheet can't be trusted on source attribution — "Hitendra/Heena
   dedhia" was entered as a Facebook lead Meta never sent, visited 3/7, and the visit was
   pushed to Meta as a conversion. Hence the standing integrity check in section 5b.
-- 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
-  Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
-  lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-04: "never logged" leads may actually be logged under a WRONG phone — mistyped
+  (Atul Thorat: CRM 9819877789, sheet 8198777789) or even ANOTHER lead's number (Andre
+  Rozario logged under Aparna Pawar's 8976902153) — always name+date match before declaring
+  a lead unlogged. And when the team "fixes" a flagged number, VERIFY the edit digit-by-digit
+  against the CRM: Atul's cell was edited to 98198777789 — still wrong.
+- 2026-07-04: the remote runner's system `cryptography` package can be missing
+  `_cffi_backend` (google-auth import crashes with a pyo3 panic) — `pip install cffi`
+  fixes it. If fetch_all.py dies on import before any network call, check this first.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
