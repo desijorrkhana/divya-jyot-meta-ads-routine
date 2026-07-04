@@ -153,6 +153,36 @@ Use yesterday / last7 / last30 for comparison and trend, not as the headline win
 **5. LEAD QUALITY (sales-manager hat)** — warm vs dead vs unreachable, the budget/location
    mismatch breakdown, and which AD/intent produced the good leads. Real cost-per-visit vs
    the vanity CPL.
+   ⚠️ Cost-per-visit / visit-rate MUST count only CRM-VERIFIED visits (see section 5b) —
+   an SVD row saying "Facebook" is a claim, not proof. State both numbers if they differ
+   ("sheet claims 6 visits, 4 verify against the CRM").
+
+**5b. DATA INTEGRITY CROSS-CHECK (standing section — the sheet lies sometimes).**
+   The CRM Event sheet (meta_leads_timed) is the SOURCE OF TRUTH for what Meta actually
+   delivered — OTP-verified phone + exact arrival time. The team's sheet is hand-typed.
+   Cross-check BOTH directions every run and report discrepancies by name:
+   - **Reverse check:** every Facebook-tab row created since V3 start (2026-06-10) whose
+     phone is NOT in the CRM = a lead the team says came from Facebook that Meta never
+     sent. Real precedent (1 Jul 2026): "Hitendra dedhia" 9673213241 entered as a Facebook
+     lead, never existed in the CRM, got a site visit on 3/7 recorded in SVD under a
+     DIFFERENT name ("Heena dedhia"), and that visit was pushed to Meta as a conversion.
+     That single chain inflates the campaign's apparent visit count AND feeds Meta's
+     optimization a fake conversion.
+   - **Phone-typo detection:** a CRM lead with no phone match in the sheet may still have
+     been logged — with a mistyped number. Before calling a lead "never logged", check for
+     a same/similar NAME entered the same day with a different phone. Real precedent:
+     CRM "Atul Thorat" 9819877789 (24 Jun, within_3_months) was entered as 8198777789 —
+     the team then dialed the WRONG NUMBER and marked a 3-month-intent lead Dead off a
+     conversation with the wrong person. Flag these as urgent: the real lead was never
+     called, and the fix is trivial (copy the number from the CRM sheet, don't retype it).
+   - **SVD validation:** for every SVD row claiming source Facebook with a visit date in
+     the reporting window, verify the phone exists in the CRM before counting it as a V3
+     visit or trusting its "Meta Sent ✅". Old-campaign leads (e.g. an April lead visiting
+     in June) are real visits but NOT V3 results — count them separately. Non-Meta leads
+     whose conversions were pushed to Meta pollute the CAPI signal — flag every instance.
+   - **Name consistency:** same phone appearing under materially different names across
+     the Facebook tab / SVD / CRM = data-entry sloppiness worth naming (it breaks matching
+     and hides duplicates).
 
 **6. DIAGNOSTIC STEPS — what to change (both hats), ranked 2-5 items.**
    - Agency side: creative refresh if fatiguing, budget reallocation, audience notes — but
