@@ -22,7 +22,7 @@ Hardened against the three issues seen in production:
   3. self-signed proxy cert breaks Google SSL        -> resilient HTTP via google_auth_httplib2
 Runtime reduced by running the 5 Meta API calls + Google reads concurrently.
 """
-import json, os, base64, ssl, urllib.request, urllib.parse
+import json, os, base64, ssl, time, urllib.request, urllib.parse
 from datetime import date, datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor
 
@@ -184,8 +184,12 @@ def _decode_sa():
 def _google_creds():
     from google.oauth2.service_account import Credentials
     sa_info = _decode_sa()
+    # drive.readonly is needed on top of spreadsheets.readonly so we can read the sheet's
+    # REVISION HISTORY (Drive API) — that's the only place edit *times* live, since the
+    # team writes only dates (never clock times) into the cells themselves.
     return Credentials.from_service_account_info(
-        sa_info, scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
+        sa_info, scopes=["https://www.googleapis.com/auth/spreadsheets.readonly",
+                         "https://www.googleapis.com/auth/drive.readonly"])
 
 def google_sheets(creds=None):
     from googleapiclient.discovery import build
@@ -230,6 +234,144 @@ def fetch_sheets():
         "meta_leads_error": err,
     }
 
+# ---------- CONTACT TIMES via Drive revision history ----------
+# The team writes only DATES (never clock times) in the sheet, so the cells alone can't
+# say WHEN a lead was first entered/called. But every edit creates a Drive revision with a
+# modifiedTime. We export a handful of recent revisions of the team sheet, parse the
+# Facebook tab in each, and bracket for each fresh Meta lead: when its row first appeared,
+# and when its first feedback text appeared. Resolution = gap between adjacent revisions
+# (typically minutes-to-hours on an actively edited sheet) instead of a whole day.
+REVISION_LOOKBACK_DAYS = int(os.environ.get("REVISION_LOOKBACK_DAYS", "2"))
+_MAX_REVISION_DOWNLOADS = 24
+_REVISION_STAGE_DEADLINE_S = 360   # hard cap for the whole stage — a daily job must not hang
+_XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+def _drive_http(creds):
+    import google_auth_httplib2, httplib2
+    return google_auth_httplib2.AuthorizedHttp(
+        creds, http=httplib2.Http(disable_ssl_certificate_validation=True))
+
+def _cell_phone(c):
+    # xlsx exports numeric-looking phones as floats (7506401771.0) — the ".0" corrupts
+    # normalize_phone's last-10-digits logic, so collapse integral floats first.
+    if c is None:
+        return ""
+    if isinstance(c, float) and c.is_integer():
+        c = int(c)
+    return normalize_phone(c)
+
+def _parse_fb_tab_xlsx(blob, phones):
+    """From one exported revision, return {phone10: {'present': bool, 'feedback': bool}}."""
+    import io, openpyxl
+    wb = openpyxl.load_workbook(io.BytesIO(blob), read_only=True, data_only=True)
+    if "Facebook" not in wb.sheetnames:
+        return {}
+    state = {p: {"present": False, "feedback": False} for p in phones}
+    for row in wb["Facebook"].iter_rows(max_col=14, values_only=True):
+        p = _cell_phone(row[5]) if len(row) > 5 else ""
+        if p in state:
+            state[p]["present"] = True
+            # feedback = any text in Feedback (col H, idx 7) or the follow-up columns
+            if any(c is not None and str(c).strip() for c in row[7:14]):
+                state[p]["feedback"] = True
+    wb.close()
+    return state
+
+def fetch_contact_history(leads):
+    """leads = meta_leads_timed. Only leads that arrived inside the lookback window are
+    tracked (older ones were in the sheet before the earliest revision we scan)."""
+    sheet_id = os.environ.get("GOOGLE_SHEET_ID", "")
+    if not sheet_id:
+        return {"error": "Missing GOOGLE_SHEET_ID"}
+    cutoff = (datetime.now(IST) - timedelta(days=REVISION_LOOKBACK_DAYS)).strftime("%Y-%m-%d %H:%M:%S")
+    fresh = {l["phone10"]: l for l in leads
+             if l["phone10"] and l["created_time_ist"] >= cutoff}
+    if not fresh:
+        return {"error": None, "window_days": REVISION_LOOKBACK_DAYS, "leads": {}}
+    try:
+        import openpyxl  # noqa: F401 — fail early with a clear message
+    except ImportError:
+        return {"error": "openpyxl not installed (pip install openpyxl) — contact times unavailable"}
+    try:
+        http = _drive_http(_google_creds())
+        url = (f"https://www.googleapis.com/drive/v3/files/{sheet_id}/revisions"
+               f"?fields=revisions(id,modifiedTime,exportLinks)&pageSize=1000")
+        revs = []
+        for attempt in range(3):   # seen returning 200 with an empty body transiently
+            resp, content = http.request(url)
+            if resp.status == 200:
+                revs = json.loads(content).get("revisions", [])
+                if revs:
+                    break
+            time.sleep(1 + attempt)
+        if not revs:
+            return {"error": f"revisions.list returned no revisions (last HTTP {resp.status})"}
+        def ist(mt):  # RFC3339 UTC -> IST string
+            return (datetime.fromisoformat(mt.replace("Z", "+00:00"))
+                    .astimezone(IST).strftime("%Y-%m-%d %H:%M:%S"))
+        for r in revs:
+            r["ist"] = ist(r["modifiedTime"])
+        revs.sort(key=lambda r: r["ist"])
+        window = [r for r in revs if r["ist"] >= cutoff]
+        baseline = revs[revs.index(window[0]) - 1:revs.index(window[0])] if (window and revs.index(window[0]) > 0) else []
+        scan = baseline + window
+        total_in_window = len(scan)
+        if len(scan) > _MAX_REVISION_DOWNLOADS:
+            # keep first + last, sample the middle evenly — resolution degrades gracefully
+            step = (len(scan) - 1) / (_MAX_REVISION_DOWNLOADS - 1)
+            scan = [scan[round(i * step)] for i in range(_MAX_REVISION_DOWNLOADS)]
+
+        out = {p: {"name": l["name"], "meta_arrival_ist": l["created_time_ist"],
+                   "row_appeared_between": None, "feedback_appeared_between": None}
+               for p, l in fresh.items()}
+        prev_state, prev_ist = {}, None
+        scanned, failed = 0, 0
+        stage_deadline = time.monotonic() + _REVISION_STAGE_DEADLINE_S
+        for rv in scan:
+            link = rv.get("exportLinks", {}).get(_XLSX_MIME)
+            if not link:
+                continue
+            # Drive throttles revision exports with a small burst quota (429 after ~4 rapid
+            # downloads, refills over tens of seconds) — pace + retry, but never blow the
+            # stage deadline: partial coverage is reported honestly below.
+            blob = None
+            for attempt in range(4):
+                if time.monotonic() > stage_deadline:
+                    break
+                resp, b = http.request(link)
+                if resp.status == 200:
+                    blob = b
+                    break
+                if resp.status != 429:
+                    break
+                time.sleep(min(12 + 12 * attempt, max(0, stage_deadline - time.monotonic())))
+            if blob is None:
+                failed += 1
+                if time.monotonic() > stage_deadline:
+                    break
+                continue
+            scanned += 1
+            state = _parse_fb_tab_xlsx(blob, set(fresh))
+            for p, s in state.items():
+                o = out[p]
+                ps = prev_state.get(p, {"present": False, "feedback": False})
+                if s["present"] and not ps["present"] and o["row_appeared_between"] is None:
+                    o["row_appeared_between"] = [prev_ist, rv["ist"]]
+                if s["feedback"] and not ps["feedback"] and o["feedback_appeared_between"] is None:
+                    o["feedback_appeared_between"] = [prev_ist, rv["ist"]]
+            prev_state, prev_ist = state, rv["ist"]
+            time.sleep(4)   # pacing: stay under the export burst quota
+        return {"error": None, "window_days": REVISION_LOOKBACK_DAYS,
+                "revisions_scanned": scanned, "revisions_failed": failed,
+                "revisions_in_window": total_in_window,
+                "note": ("[after, by] IST bounds from Drive revision history. null bound = state "
+                         "unknown before the first scanned revision; a null field = not yet "
+                         "seen in the sheet as of the newest scanned revision. A skipped "
+                         "(failed) revision widens the bracket, it never fabricates one."),
+                "leads": out}
+    except Exception as e:
+        return {"error": f"contact history failed: {e}"}
+
 # ---------- ASSEMBLE (Meta calls + Sheets all concurrent) ----------
 def run_fetch():
     jobs = {
@@ -248,6 +390,10 @@ def run_fetch():
         for k, fut in meta_futs.items():
             results[k] = shape_meta(fut.result())
         sheet = sheet_fut.result()
+
+    # needs the timed leads' phones, so it runs after the sheet fetch (sequential is fine —
+    # it's one revisions.list + a bounded number of small xlsx exports)
+    sheet["contact_history"] = fetch_contact_history(sheet.get("meta_leads_timed") or [])
 
     data = {
         "dates": {"yesterday": day(1), "daybefore": day(2), "today": day(0), "tz": "IST",

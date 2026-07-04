@@ -9,12 +9,34 @@ leads (did they call, how fast). Plus concrete diagnostic steps to improve BOTH 
 the team. Delivered to Keval on Telegram. Mobile-first, scannable, blunt, no filler.
 
 ## The flow (do in this order)
+0. Deps: `pip install google-api-python-client google-auth google-auth-httplib2 openpyxl`
+   (openpyxl is REQUIRED for contact-time precision — without it, sheet.contact_history
+   degrades to an error note and speed-to-lead falls back to day-level dates).
 1. Run `python3 fetch_all.py` — pulls Meta Ads data, then the team's Google Sheet
-   (Facebook + SVD tabs), then the V3 CRM Event sheet (timed leads). Writes data.json.
+   (Facebook + SVD tabs), then the V3 CRM Event sheet (timed leads), then mines the team
+   sheet's Drive revision history for lead contact times. Writes data.json.
+   NOTE: the revision-history stage is paced against Drive's export quota — the run can
+   take a few extra minutes; that's normal, don't kill it.
 2. Read data.json. Analyse as agency + sales manager.
 3. Write the report to `report.md` AND `reports/YYYY-MM-DD.md` (TODAY's date) AND
    `reports/latest.md`. Commit all to the repo.
 4. Run `python3 fetch_all.py --send` to deliver report.md to Telegram.
+
+### ⚠️ TELEGRAM DELIVERY IS THE DELIVERABLE — this has been missed repeatedly. Read this.
+Why it keeps happening: the daily task prompt sometimes only says "write the report and
+commit" without mentioning Telegram, and the run looks complete once reports/ is committed —
+so the send step silently never happens. Also, `--send` reads **`report.md` in the repo root
+ONLY**; the dated `reports/*.md` files are never sent. Writing only reports/*.md = nothing
+reaches Keval.
+
+Non-negotiable rules for EVERY run, regardless of what the day's task prompt says:
+1. `report.md` (repo root, plain text — no markdown tables, no `**`/`|`, since Telegram
+   sends without parse_mode) MUST be written fresh with today's report.
+2. `python3 fetch_all.py --send` MUST be run, and you MUST verify it printed
+   "Report sent to Telegram." — if it printed anything else (missing env vars, "Telegram
+   delivery had errors"), fix and retry; if you can't, say loudly in your summary/notification
+   that Telegram delivery FAILED and why.
+3. A run that commits reports but does not confirm Telegram delivery is a FAILED run.
 
 ## Business context (never forget)
 - Product: BARE SHELL studio, ₹87 lakh, Mulund West, 5 min from MG Road station.
@@ -105,6 +127,28 @@ Use yesterday / last7 / last30 for comparison and trend, not as the headline win
    the time it was updated on the google sheet, the lag.
    Be explicit about precision (day-level from dates, finer if times are written).
    If the team was fast, CREDIT them. If slow, name it and tie it to lost warm leads.
+
+   ### CONTACT-TIME PRECISION — how the lag is actually measured
+   The team's sheet stores only DATES in the feedback/follow-up cells ("3/7/26 Ringing"),
+   never clock times, so the cell text alone can NEVER give better than day-level lag.
+   The real edit times live in the sheet's Drive REVISION HISTORY, and fetch_all.py now
+   mines it: `sheet.contact_history` in data.json gives, for each Meta lead that arrived in
+   the last REVISION_LOOKBACK_DAYS (default 2), `row_appeared_between` and
+   `feedback_appeared_between` as [after, by] IST brackets — i.e. the revision timestamps
+   between which the lead's row / first call-note appeared. Resolution = the gap between
+   adjacent revisions, typically minutes-to-hours on this actively edited sheet.
+   Rules for using it:
+   - USE contact_history as the primary lag source in the speed-to-lead table: lag =
+     bracket minus meta arrival, reported as a range ("arrived 11:41, feedback appeared
+     between 10:50–12:22 → contacted within ~40 min").
+   - A [null, T] bracket means the lead was already in the sheet at the earliest scanned
+     revision (usually an OLD duplicate row for the same phone — check for a re-lead).
+     A null field means not yet in the sheet as of the newest revision = still untouched.
+   - `revisions_failed` > 0 means Drive throttled some exports (burst quota, the code
+     paces + retries); brackets just get wider, they never lie. If `error` is set or
+     coverage is thin, SAY SO and fall back to day-level from the cell dates.
+   - Still worth asking the team (DIAGNOSTIC STEPS, until it happens): write the TIME of
+     the first call next to the date ("3/7/26 4:15pm Ringing") — direct beats inferred.
 
 **5. LEAD QUALITY (sales-manager hat)** — warm vs dead vs unreachable, the budget/location
    mismatch breakdown, and which AD/intent produced the good leads. Real cost-per-visit vs
