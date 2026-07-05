@@ -1,64 +1,75 @@
-DIVYA JYOT LYF REWA — DAILY SNAPSHOT — THU 3 JULY 2026
-Window: yesterday, full day (midnight-midnight IST). First automated run — no prior report to follow up on.
+DIVYA JYOT LYF REWA — DAILY SNAPSHOT — SAT 4 JULY 2026
+Window: yesterday, full day (midnight-midnight IST), reported 5 July.
 
-INFRA NOTE (fixed before this report could run)
-Meta Ads data was 100% broken — every API call was 400ing (v25.0 changed the attribution-window format). Also fixed a Google Sheets race condition that was corrupting reads mid-fetch. Both fixed and verified. Numbers below are real.
+FOLLOW-UP FROM LAST REPORT (3 July)
+- Sunil Bagul (8108715063, 3-6mo intent, arrived 3 Jul 19:41) is STILL not in the sheet at all - newest revision (5 Jul ~18:42) shows no row for him. ~47 hours untouched, up from 20+ hrs last time. Top escalation item.
+- Dedhia case: no repeat, still just the one known bad entry, no new fake Facebook visit found.
+- Atul Thorat phone-typo still unresolved - sheet now reads 98198777789 (still wrong vs CRM 9819877789), still marked Dead. Real number never dialed, second report running.
+- Retracting last report's "suspected wrong number" flag on Ravi DU - the sheet cell actually has both numbers ("9321110668 / 8369593191"), correct CRM number is there.
+- Speed-to-lead credit doesn't fully hold today - 2 of 4 leads fast, 2 slow. Mixed, see below.
 
 1) HEADLINE
-CPL looks mediocre (Rs 180) but the real number is good: ~Rs 2,200-2,550 per confirmed site visit, 6.7% visit rate — beating the ~4.5% V3 baseline. The problem yesterday wasn't the ad, it was sales: a 3-6mo lead (Sunil Bagul) sat unlogged and uncalled for 20+ hours, and 3 older leads from weeks ago were never entered in the sheet at all.
+Ad numbers are fine (CPL Rs 160, in line with trend) but every one of yesterday's 4 fresh leads wanted the wrong product (2BHK, 1BHK x2, one a broker) - a 100% mismatch day. Sunil Bagul is now 47 hours cold and still not logged. Bright spot: Vipul Rakhasia, a 10 June CRM lead, converted to a verified site visit TODAY (5 Jul) - but his own sheet row is broken (phone field overwritten with a note, status stuck Cold).
 
-2) THE FUNNEL — yesterday, full day
-- Spend: Rs 721.26
-- Impressions: 3,583 | Reach: 2,838
-- Clicks: 78 (link clicks: 50)
-- Leads: 4 — canonical count verified against lead_actions_raw, no double-count. CPL: Rs 180.31
-- Platform split: 2 Facebook / 2 Instagram
-- Contacted by team: 3 of 4 same-day. Untouched: 1 of 4
-- Site visits logged yesterday: 1 (a returning FB lead, not one of yesterday's 4 fresh leads)
+2) THE FUNNEL - yesterday, 4 July, full day
+- Spend: Rs 641.48
+- Impressions: 2,960 | Reach: 2,499
+- Clicks: 75 (link clicks: 43)
+- Leads: 4 - canonical count verified against lead_actions_raw, no double-count. CPL: Rs 160.37
+- Platform split: all 4 attributed to Facebook (30-day mix is 61 fb/37 ig, so just a one-day skew)
+- Contacted by team: all 4 eventually got a row+feedback, but 2 took hours not minutes
+- Site visits logged 4 July: none dated yesterday. One landed TODAY instead (Vipul Rakhasia)
 
 3) AD PERFORMANCE (agency hat)
-- Yesterday: CTR 2.18%, CPC Rs 9.25, CPM Rs 201.30, Frequency 1.26
-- Last 7 days: CTR 2.48%, CPC Rs 8.32, CPM Rs 205.95, Frequency 1.80
-- Last 30 days: CTR 2.78%, CPC Rs 8.48, CPM Rs 235.52, Frequency 2.73
-- Not fatigue — frequency yesterday is LOWER than the 7d/30d figures, audience is turning over. CTR softening slightly alongside falling frequency is mild, not an alarm. Don't touch creative on this alone.
-- Single creative, single real adset ("Studio" in "Open - DJR") carries all spend and leads. "Luxury - DJ" adset spent Rs 7.76 over 30 days for 0 leads — immaterial, but fold it in.
-- Today so far (partial): Rs 570.10 spent, 4 leads, CPL Rs 142.53, CTR 2.55% — tracking fine.
+- Yesterday: CTR 2.53%, CPC Rs 8.55, CPM Rs 216.72, Frequency 1.18
+- Last 7 days: CTR 2.51%, CPC Rs 8.19, CPM Rs 205.67, Frequency 1.80
+- Last 30 days: CTR 2.77%, CPC Rs 8.49, CPM Rs 234.69, Frequency 2.72
+- Still not fatigue - yesterday's frequency is the lowest of the three windows, audience turning over. CTR flat vs 7-day avg. Don't touch on this alone.
+- "Luxury - DJ" adset raised twice now, still not folded in - Rs 7.76 spend/0 leads over 30 days.
+- Today so far (partial): Rs 828.92 spent, 4 leads, CPL Rs 207.23, CTR 2.16% - tracking normal.
 
-4) SPEED-TO-LEAD (sales-manager hat) — most important section
-Yesterday's 4 Meta leads, matched by phone to the Facebook tab:
+4) SPEED-TO-LEAD (sales-manager hat) - most important section
+Yesterday's 4 Meta leads, lag from Drive revision history (bracket = window the true contact time falls in):
+- Rushikesh Bagayatkar | arrived 10:03 | within_3_months | feedback appeared 3 Jul 18:32 - 4 Jul 10:35 | lag <= ~32 min
+- Raju Shinde | arrived 13:34 | within_3_months | feedback appeared 4 Jul 11:58 - 13:50 | lag <= ~16 min (fastest)
+- Manoj Agrawal | arrived 18:15 | within_3_months | feedback appeared 4 Jul 21:59 - 5 Jul 12:20 | lag ~3h44m-18h (SLOW)
+- Subhash Soni | arrived 19:36 | within_3_months | feedback appeared 4 Jul 21:59 - 5 Jul 12:20 | lag ~2h23m-16h45m (SLOW)
 
-- Doshi Jaswant | arrived 15:20 IST | just_exploring | Cold, "Ringing" (attempted, no connect) | 0-day lag (attempted same day)
-- Dhanraj | arrived 15:21 IST | within_3_months | Cold, "Details shared, coming Sunday" | 0-day lag — CONNECTED
-- Sunil Bagul | arrived 19:41 IST | 3-6_months | NOT IN THE SHEET AT ALL | untouched, 20+ hrs and counting
-- Amey Angane | arrived 22:09 IST | within_3_months | Cold, "1RK, Rs 70L budget, coming tomorrow" | 0-day lag — CONNECTED (budget mismatch flagged below)
+All 4 were within_3_months intent - the higher-value bucket, so the slow ones are a worse miss.
 
-Precision note: the sheet has no per-call timestamps, only the row's Created date and free-text feedback — lag above is day-level, not hour-level.
+Credit: Rushikesh and Raju Shinde both contacted inside ~30 min - the right pattern.
+The miss: Manoj Agrawal and Subhash Soni both sat for hours before any feedback appeared. Not the uniform "15-40 min" pattern credited last time - today shows it's inconsistent lead-to-lead.
 
-Credit: 3 of 4 got a real same-day attempt, 2 of those became real conversations with budget/timeline captured. Solid work.
-
-The miss: Sunil Bagul is exactly the case this section exists to catch — OTP-verified, phone in hand, 3-6mo intent, never called or logged. Call him first thing.
-
-Bigger pattern: widening to the trailing 30 days (94 Meta leads, 88 matched to the sheet = 93.6% match rate), 3 of the 6 unlogged leads are WEEKS old and simply never made it into the sheet: Ravi DU (10 Jun), Andre Rozario (14 Jun), Atul Thorat (24 Jun). Not a speed problem — a logging leak. Worth checking the form-to-sheet handoff.
+Carryover, escalated: Sunil Bagul (8108715063), arrived 3 Jul 19:41, 3-6mo intent - still no row in the sheet as of the newest revision (5 Jul ~18:42). ~47 hours untouched. Call him first, today.
 
 5) LEAD QUALITY (sales-manager hat)
-- Status breakdown, last 30 days (94 leads): 76 Cold, 11 Dead, 6 never logged, 1 Warm. Most "Cold" leads are early-stage, not confirmed low quality.
-- Dominant quality leak, confirmed in data: of 88 leads matched to real feedback text, 36 (41%) explicitly asked for a 1BHK/2BHK/1RK — a flat mismatch since this project is a bare-shell studio only. Zero matched leads' feedback mentions "studio" specifically. Ad/instant-form likely isn't making the product clear before people submit their number.
-- Budget mismatches spotted directly: Amey Angane offered Rs 70L against the Rs 87L ask; several recent leads cited Rs 75-90L for 1BHK requests.
-- Real cost-per-site-visit vs vanity CPL (the metric that matters):
-  - Last 30 days: 6 confirmed visits / Rs 15,259.80 spent / 90 leads = Rs 2,543 per visit, 6.7% visit rate. Beats the ~4.5% baseline.
-  - Last 7 days: 2 visits / Rs 4,384.74 / 27 leads = Rs 2,192 per visit, 7.4% visit rate. Trending better than the 30-day average.
-  - Yesterday alone: 1 visit / Rs 721.26 — too small a sample to trend, noted only.
-  - Bottom line: don't touch this ad on CPL. The number that matters is beating baseline.
+- Status breakdown, last 30 days (94 CRM leads, 90 phone-matched = 95.7% match rate): 76 Cold, 13 Dead, 1 Warm. Of the 4 unmatched: 2 (Vipul Rakhasia, Atul Thorat) are actually logged but under corrupted/wrong phone data, 1 (Andre Rozario) under a totally different number, 1 (Sunil Bagul) a genuine miss.
+- Yesterday was a 100% mismatch day: Rushikesh (2BHK, Rs1.6cr), Raju Shinde (1BHK 500sqft, Rs1cr), Subhash Soni (1BHK 420sqft), Manoj Agrawal a broker (marked Dead). Zero product matches.
+- Dominant quality leak, confirmed again: of 90 phone-matched leads w/ feedback over 30 days, 37 (41%) explicitly ask for 1BHK/2BHK/1RK - this project is bare-shell studio only. Only 1 of 90 even mentions "studio" (Ravi DU). Ad copy still not setting expectations pre-click.
+- Real cost-per-site-visit vs vanity CPL (CRM-verified visits only):
+  - Last 30 days (6 Jun-4 Jul): 4 CRM-verified V3 visits (Swati Wankhede 19 Jun, Manjula Mahida 20 Jun, Sandeep Shah 20 Jun, Rewashankar Gomtiwal 24 Jun) / Rs 15,901.28 / 94 leads = Rs 3,975 per visit, 4.26% visit rate - essentially AT the ~4.5% baseline, not beating it. (Hitendra Dedhia's visit excluded - never a Meta lead. Naveen Suvarna's visit excluded from V3 count - real but pre-V3 lead.)
+  - Last 7 days (28 Jun-4 Jul): 0 CRM-verified visits / Rs 4,605.21 / 29 leads = 0%. Don't over-read this - visits lag lead capture by weeks, too small a sample.
+  - Fresh today (not yet in the 30-day figure): Vipul Rakhasia, a genuine CRM lead from 10 June, visited today with Meta Sent confirmed - a real 5th V3 visit, will lift tomorrow's number.
+  - Bottom line: still right at baseline, not beating it, same as the corrected 3 July figure. Don't touch the ad on CPL.
+
+5b) DATA INTEGRITY CROSS-CHECK
+1. Vipul Rakhasia's row is broken and will keep failing every future phone-match - CRM lead (10 Jun, within_3_months), confirmed visit today with Meta Sent verified, but his Facebook-tab row has the Phone column overwritten with a note instead of his number, and Status still says Cold despite the visit. Fix the phone cell and the status.
+2. Atul Thorat - still wrong number in the sheet, still Dead, real number never dialed.
+3. Andre Rozario - CRM has 9821266080, sheet has a same-day same-name row under 8976902153 entirely - not a plausible typo, can't reconcile from data alone. Ask the team.
+4. Ravi DU - resolved, not an issue (see follow-up above).
+5. Sunil Bagul - genuinely absent, no typo candidate found. Real miss.
+6. CAPI hygiene holding up - no new bad push found this run, Vipul Rakhasia's push today is legitimate.
 
 6) DIAGNOSTIC STEPS
-1. [Sales, urgent] Call Sunil Bagul (8108715063) today — untouched 3-6mo lead, 20+ hrs cold.
-2. [Sales] Investigate the 3 fully-orphaned leads from weeks ago — find where they fell out between form and sheet. Also spot-check today's newest leads (Manoj Agrawal, Subhash Soni) aren't repeating the pattern.
-3. [Agency] Tighten ad copy to make "bare-shell STUDIO" explicit before the click — 41% of engaged leads want a BHK layout this project doesn't have. Messaging fix, not a pause/budget call.
-4. [Agency] Fold "Luxury - DJ" adset's token spend into "Open - DJR" — 0 leads for Rs 7.76 over 30 days.
-5. [Sales] Screen budget in the first minute of every call (per Amey Angane, Rs 70L vs Rs 87L ask) — saves follow-up cycles on leads that can't close here.
+1. [Sales, urgent] Call Sunil Bagul (8108715063) right now - ~47 hrs untouched, still not logged.
+2. [Sales] Fix Vipul Rakhasia's sheet row - real number 9967421298 in Phone column, update Status to reflect the visit.
+3. [Sales] Copy the CRM number for Atul Thorat (9819877789) into the sheet and call it - flagged twice now.
+4. [Agency] Make "bare-shell STUDIO" explicit in ad copy - 41% of matched leads over 30 days want a BHK/RK, yesterday it was 4-for-4. Largest quality leak, hasn't moved across two reports.
+5. [Agency] Fold "Luxury - DJ" into "Open - DJR" - raised twice, still separate, still 0 leads.
+6. [Sales] Ask the team directly about the Andre Rozario phone discrepancy.
 
 7) ANYTHING ELSE
-SVD tab's "Meta Sent" column (confirms whether a site-visit conversion event synced back to Meta via CAPI) shows failure for essentially every visit from Aug 2025 through mid-June 2026, and only starts succeeding from ~19 June 2026 onward (6 straight successes through yesterday). If that sync was broken for ~10 months, Meta's algorithm had zero real conversion signal for most of this campaign's life — it's only had usable data for about two weeks. Worth watching that it doesn't silently break again.
+Today's newest leads (Gautam Ray, Jinal Shah, Nitin Patkar, Rajesh Shah) are all showing fast turnaround in the revision brackets so far - confirm in tomorrow's report once the day completes. Also: with Vipul Rakhasia's visit today, this is the second correctly-synced CAPI conversion in a row after the ~10-month CAPI outage - the mid-June fix is holding up.
 
 ---
-Match rate: 88/94 (93.6%) of last 30 days' Meta leads found in the sheet; 3/4 (75%) of yesterday's. No fabricated numbers.
+Match rate: 90/94 (95.7%) of last 30 days' Meta leads found in the sheet by phone (including multi-number cells); 4/4 of yesterday's. No fabricated numbers.

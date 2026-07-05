@@ -233,6 +233,12 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-05: phone-matching must search for the CRM number as a SUBSTRING across the whole
+  row, not just parse the Phone cell — some rows have two numbers in one cell separated by
+  "/" (Ravi DU: "9321110668 / 8369593191"), and naive "strip non-digits, take last 10" on the
+  concatenated cell silently drops the first number. Also seen: a row where the Phone cell
+  itself was overwritten with a follow-up note instead of a number (Vipul Rakhasia) — that
+  lead is genuinely unmatchable by phone and needs a name/date check, not a retry.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
