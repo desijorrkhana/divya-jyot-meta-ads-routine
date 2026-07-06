@@ -233,6 +233,11 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-06: the Facebook tab's phone cell sometimes holds TWO numbers separated by "/"
+  (e.g. "9321110668 / 8369593191" for Ravi DU). Matching on the last 10 digits of the whole
+  cell string grabs the wrong number and produces a false "never logged" positive (this
+  happened in the 3 Jul report) — split the cell on separators and check each number before
+  declaring a CRM lead unmatched.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
