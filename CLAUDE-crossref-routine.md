@@ -233,6 +233,20 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-07: `meta_leads_timed` (the CRM Event sheet) is hardwired to ONE ad — every row
+  seen so far is `ad: "Studio"`. A new campaign's leads (e.g. "2BHK", launched 6 July) get
+  logged straight into the Facebook tab with NO OTP verification, timestamp, or intent tag.
+  Before computing speed-to-lead coverage, check `Counter(l["ad"] for l in meta_leads_timed)`
+  — if a campaign in `meta.today_campaigns`/`yesterday_campaigns` isn't represented there,
+  say so explicitly rather than silently under-covering it. Also: any future site visit from
+  a non-CRM-tracked campaign will look identical to a fabricated-source case (like Dedhia) in
+  the 5b integrity check — don't flag it as pollution without first checking whether it's a
+  known non-CRM campaign.
+- 2026-07-07: some Facebook-tab phone cells hold TWO numbers ("9321110668 / 8369593191") —
+  naive last-10-digit extraction merges both into one bogus string and silently returns only
+  the second, hiding the first (cost a lead — "Ravi DU" — 3+ weeks of a false "never logged"
+  flag). Fixed in `normalize_phone`: split on non-digit separators first, take the first
+  clean 10+-digit token.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

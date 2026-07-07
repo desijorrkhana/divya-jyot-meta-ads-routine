@@ -22,7 +22,7 @@ Hardened against the three issues seen in production:
   3. self-signed proxy cert breaks Google SSL        -> resilient HTTP via google_auth_httplib2
 Runtime reduced by running the 5 Meta API calls + Google reads concurrently.
 """
-import json, os, base64, ssl, time, urllib.request, urllib.parse
+import json, os, re, base64, ssl, time, urllib.request, urllib.parse
 from datetime import date, datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor
 
@@ -133,7 +133,17 @@ def shape_meta(rows):
 # ---------- (B) timed leads from the V3 CRM Event sheet ----------
 def normalize_phone(p):
     if not p: return ""
-    d = "".join(ch for ch in str(p) if ch.isdigit())
+    s = str(p)
+    # Some sheet cells hold TWO numbers ("9321110668 / 8369593191" - primary + alternate).
+    # Stripping non-digits from the whole string then merges both into one bogus blob and
+    # the old last-10 slice silently returned the SECOND number, masking the first (real
+    # precedent: "Ravi DU" 9321110668 looked unmatched against the CRM for weeks because
+    # only 8369593191 was ever indexed). Split on separators first and prefer the first
+    # clean 10+ digit token; fall back to the old whole-string behavior if that finds none.
+    for part in re.split(r"[^0-9]+", s):
+        if len(part) >= 10:
+            return part[-10:]
+    d = "".join(ch for ch in s if ch.isdigit())
     return d[-10:] if len(d) >= 10 else d
 
 def parse_lead_rows(rows):
