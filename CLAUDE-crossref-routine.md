@@ -233,6 +233,13 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-08: when `meta.*_campaigns` shows a campaign name not present in
+  `sheet.meta_leads_timed`'s campaign field, that campaign's Instant Form is likely not wired
+  into the V3 CRM Event sheet at all — check every run for new campaign names. Real case: the
+  "Divya Jyot V3 July 26 - 2BHK" campaign launched ~2 Jul with zero CRM records despite driving
+  half the account's leads by 7 Jul; confirmed via exact tie-out (un-CRM Facebook-tab rows per
+  day == that campaign's Meta-reported lead count). Flag it loudly — it silently kills
+  speed-to-lead, OTP verification, and visit attribution for the whole campaign.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
