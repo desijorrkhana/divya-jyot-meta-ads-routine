@@ -233,6 +233,13 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-10: a NEW campaign's leads can be entirely absent from `meta_leads_timed` even
+  while Meta reports real spend/leads for it (the "2BHK" campaign: ₹6.6K/34 leads in 7 days,
+  0 CRM rows — every row was still tagged the old Studio campaign). Every run, check whether
+  `set(l['campaign'] for l in meta_leads_timed)` covers every campaign name appearing in
+  `meta.today_campaigns` — a new campaign silently missing from the CRM sheet means its leads
+  are unmeasurable, flag it immediately rather than assuming the CRM covers everything Meta
+  shows.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
