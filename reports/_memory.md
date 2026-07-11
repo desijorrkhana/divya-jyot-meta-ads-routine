@@ -1,33 +1,35 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-07-04 (evening, interactive session with Keval)
+## Updated 2026-07-11 (run covering 10 July, after a 7-day reporting gap)
 
-- **CORRECTION to carry into the next report:** the 3-Jul report claimed 6 Meta visits /
-  ₹2,543 per visit / 6.7% visit rate, "beats baseline". Integrity check (added 4 Jul, at
-  Keval's prompting) shows only 4 of those 6 SVD visits are CRM-verified V3 leads: "Heena
-  dedhia" 3/7 was never a Meta lead (see below) and "Naveen suvarna" 27/6 is an April
-  (pre-V3) lead. Corrected: 4 visits / ₹15,252 (30d) → **₹3,813 per visit, 4.4% visit
-  rate ≈ the 4.5% baseline — NOT beating it.** Say this plainly in the next report.
-- **Dedhia case (watch for repeats):** "Hitendra dedhia" 9673213241 entered in the
-  Facebook tab 1/7 but never delivered by Meta; SVD visit 3/7 under a different name
-  ("Heena dedhia"); conversion pushed to Meta — and RE-sent 4/7 21:19. Ask the team where
-  this lead really came from; watch whether more non-CRM "Facebook" leads appear.
-- **Sunil Bagul 8108715063** (3-6mo intent, arrived 3 Jul 19:41): still never entered in
-  the sheet, never called — flagged in the 3-Jul report, 45+ hrs cold as of 4 Jul evening.
-  If still untouched next run, escalate as top item.
-- **Phone-typo leads — check outcomes:** CRM "Atul Thorat" 9819877789 (24 Jun,
-  within_3_months) was logged as 8198777789 and marked Dead off a wrong-number call — the
-  real number was never dialed. Ask the team to re-call the CRM number. "Ravi" 10 Jun
-  (CRM "Ravi DU" 9321110668, sheet has 8369593191) looks like the same pattern — suspected,
-  not confirmed.
-- **CAPI hygiene watch:** SVD "Meta Sent" was ❌ for ~10 months (Aug 2025 – mid-June 2026),
-  ✅ only since ~19 Jun. Now that it works, non-Meta visits being pushed (Dedhia, Naveen)
-  is the new risk — verify each ✅ against the CRM every run.
-- **Speed-to-lead now has real times** (Drive revision history → sheet.contact_history in
-  data.json). First measurements: team logs+calls fresh daytime leads in ~15-40 min
-  (Raju Shinde ≤16m, Doshi Jaswant ≤40m, Rushikesh ≤32m). CREDIT this in the next report —
-  it makes the Sunil Bagul / typo misses process leaks, not effort problems.
-- **Pending recommendations to track:** (1) ad copy should say bare-shell STUDIO explicitly
-  (41% of engaged leads ask for BHK); (2) fold "Luxury - DJ" adset into "Open - DJR";
-  (3) team to write TIME next to date on first-call notes; (4) team to copy-paste phone
-  numbers from the CRM sheet instead of retyping.
+- **BIGGEST OPEN ITEM — 2BHK campaign, unconfirmed product question.** A second campaign
+  ("Divya Jyot V3 July 26 - 2BHK") has been running since ~6 July, spending nearly as much as
+  the Studio campaign (₹7,632.90 over 7 days, 39 leads, 47% of a 36-lead sample explicitly
+  asking for "2bhk"). It is NOT in the OTP CRM (`meta_leads_timed`) at all — zero of its leads
+  appear there. The team IS manually logging ~92% of them into the Facebook tab (not a "lost
+  leads" problem), but there's no arrival timestamp, no phone verification, and **zero
+  confirmed site visits in its first week**. Ask Keval directly: does this project have 2BHK
+  inventory? If yes, get it wired into the CRM. If no, recommend pausing — flagged as
+  diagnostic #1 in the 10-Jul report. CHECK NEXT RUN: was this addressed, and are there any
+  2BHK site visits yet.
+- **Atul Thorat — regressed.** Correct CRM number is 9819877789 (within_3_months, 24 Jun). The
+  sheet now has a garbled "98198777789" and the lead is marked Dead off a "1RK, ₹30L" call —
+  looks like a repeat wrong-number miss, not the first attempt at a fix. CHECK NEXT RUN whether
+  this was corrected and re-called.
+- **Sunil Bagul (8108715063)** moved from untouched to "Busy" — logged/attempted but not yet a
+  real conversation. Follow up.
+- **Resolved since 4 Jul:** Ravi DU (typo fixed, real conversation happening), Andre Rozario
+  (now logged with feedback), "Luxury - DJ" adset folded away. No need to keep tracking these.
+- **Studio campaign is performing very well right now:** yesterday's (10 Jul) 4 fresh leads
+  were ALL contacted same-day (2 within ~15 min, 2 within ~1.5h per Drive revision brackets),
+  and 2 of the 4 (Asha Joshi, Santosh Utekar) already have CRM-verified, CAPI-confirmed site
+  visits within 24-36 hours. 7-day cost-per-visit has improved to ~₹1,594 (19% visit rate),
+  well ahead of the ~₹2,574/8.16% 30-day figure and the historical ~4.5% baseline. Try to
+  identify what the team did differently that evening and whether it's repeatable.
+  CHECK NEXT RUN: did the visit-rate trend hold, and did Sunil Bagul / Atul Thorat convert.
+- **Studio-ad BHK mismatch is still happening a week after first flagged** (Akash Pithadia,
+  10 Jul, arrived via Studio/CRM but wants "2bhk budget 80L"). Ad copy still hasn't been
+  tightened to say STUDIO explicitly — keep flagging until it changes.
+- **Reporting gap:** no report ran between 3 Jul and 10/11 Jul. The 2BHK campaign's whole
+  first week of spend went unreviewed as a result. If the routine lapses again, say so loudly
+  next time too — it's how the 2BHK gap got caught a week late instead of on day one.

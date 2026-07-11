@@ -233,6 +233,12 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-11: a SECOND Meta campaign ("...July 26 - 2BHK") launched ~6 Jul and has NO
+  presence in `meta_leads_timed` (the OTP CRM) — every lead in it is untimed and unverified.
+  Don't assume `meta_leads_timed` covers all campaigns; check `campaign` field diversity in
+  it against `meta.*_campaigns` before computing match rates or speed-to-lead, and match
+  non-CRM campaign leads to the Facebook tab by CREATED DATE only (no phone-level timing
+  exists for them).
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
