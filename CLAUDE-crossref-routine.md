@@ -233,6 +233,14 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-12: a brand-new campaign/ad can exist in Meta insights with real spend and leads
+  while being 100% invisible to `sheet.meta_leads_timed`/`contact_history` if its lead form
+  isn't wired to the same V3 CRM Event sheet as the main ad — don't assume every Meta lead
+  has a CRM counterpart; cross-check campaign/ad name in `meta.*_ads` against what's actually
+  present in the CRM before trusting match-rate or speed-to-lead numbers for a new ad.
+- 2026-07-12: this sandbox's system `cryptography` package can be broken (missing
+  `_cffi_backend`, crashes with `pyo3_runtime.PanicException` on Google auth import) —
+  fix is `pip install --user --force-reinstall cryptography cffi`, not a fetch_all.py bug.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
