@@ -39,6 +39,12 @@ Non-negotiable rules for EVERY run, regardless of what the day's task prompt say
 3. A run that commits reports but does not confirm Telegram delivery is a FAILED run.
 
 ## Business context (never forget)
+- ⚠️ OPEN QUESTION as of 2026-07-13, unresolved — a new campaign ("Divya Jyot V3 July 26 -
+  2BHK") with dedicated 2BHK creative is now the account's bigger spend line, and 100% of
+  SVD-logged site visits since Aug 2025 (68/68) have been for 1BHK/2BHK, never "studio."
+  This may mean the product line below is out of date. Confirm with Keval before trusting
+  the "2BHK = mismatch" framing for any lead tied to that campaign; update this section the
+  moment it's confirmed either way.
 - Product: BARE SHELL studio, ₹87 lakh, Mulund West, 5 min from MG Road station.
 - The REAL metric is **cost per site visit** and **warm-lead rate**, NOT CPL. High CPL is
   fine if leads are high-intent and convert to visits. NEVER recommend pausing an ad on CPL
@@ -233,6 +239,12 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-13: a new ad campaign can exist with ZERO coverage in `meta_leads_timed` if its
+  lead form was never wired into the CRM Event sheet's pipeline (happened with "Divya Jyot
+  V3 July 26 - 2BHK" — 45 leads/wk, 0 in the CRM). When this happens, do NOT apply the
+  standard "not in CRM = suspicious" rule to that campaign's leads — it's a wiring gap, not
+  misattribution. Check sheet conversations for plausibility instead, and flag the gap
+  itself as the issue to fix.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

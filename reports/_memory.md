@@ -1,33 +1,42 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-07-04 (evening, interactive session with Keval)
+## Updated 2026-07-13 (evening run, 10-day gap since last report on 2026-07-04/03)
 
-- **CORRECTION to carry into the next report:** the 3-Jul report claimed 6 Meta visits /
-  ₹2,543 per visit / 6.7% visit rate, "beats baseline". Integrity check (added 4 Jul, at
-  Keval's prompting) shows only 4 of those 6 SVD visits are CRM-verified V3 leads: "Heena
-  dedhia" 3/7 was never a Meta lead (see below) and "Naveen suvarna" 27/6 is an April
-  (pre-V3) lead. Corrected: 4 visits / ₹15,252 (30d) → **₹3,813 per visit, 4.4% visit
-  rate ≈ the 4.5% baseline — NOT beating it.** Say this plainly in the next report.
-- **Dedhia case (watch for repeats):** "Hitendra dedhia" 9673213241 entered in the
-  Facebook tab 1/7 but never delivered by Meta; SVD visit 3/7 under a different name
-  ("Heena dedhia"); conversion pushed to Meta — and RE-sent 4/7 21:19. Ask the team where
-  this lead really came from; watch whether more non-CRM "Facebook" leads appear.
-- **Sunil Bagul 8108715063** (3-6mo intent, arrived 3 Jul 19:41): still never entered in
-  the sheet, never called — flagged in the 3-Jul report, 45+ hrs cold as of 4 Jul evening.
-  If still untouched next run, escalate as top item.
-- **Phone-typo leads — check outcomes:** CRM "Atul Thorat" 9819877789 (24 Jun,
-  within_3_months) was logged as 8198777789 and marked Dead off a wrong-number call — the
-  real number was never dialed. Ask the team to re-call the CRM number. "Ravi" 10 Jun
-  (CRM "Ravi DU" 9321110668, sheet has 8369593191) looks like the same pattern — suspected,
-  not confirmed.
-- **CAPI hygiene watch:** SVD "Meta Sent" was ❌ for ~10 months (Aug 2025 – mid-June 2026),
-  ✅ only since ~19 Jun. Now that it works, non-Meta visits being pushed (Dedhia, Naveen)
-  is the new risk — verify each ✅ against the CRM every run.
-- **Speed-to-lead now has real times** (Drive revision history → sheet.contact_history in
-  data.json). First measurements: team logs+calls fresh daytime leads in ~15-40 min
-  (Raju Shinde ≤16m, Doshi Jaswant ≤40m, Rushikesh ≤32m). CREDIT this in the next report —
-  it makes the Sunil Bagul / typo misses process leaks, not effort problems.
-- **Pending recommendations to track:** (1) ad copy should say bare-shell STUDIO explicitly
-  (41% of engaged leads ask for BHK); (2) fold "Luxury - DJ" adset into "Open - DJR";
-  (3) team to write TIME next to date on first-call notes; (4) team to copy-paste phone
-  numbers from the CRM sheet instead of retyping.
+- **BIGGEST OPEN QUESTION — needs Keval's direct answer:** a new campaign "Divya Jyot V3
+  July 26 - 2BHK" is live (dedicated 2BHK creative, real budgets Rs 80L-1.7cr in lead
+  conversations, real visits) and is now the account's BIGGER spend line (Rs 9,420 of last
+  7 days' Rs 15,865). Across ALL 68 SVD visits since Aug 2025, ZERO were ever logged as
+  "studio" — 100% are 1BHK/2BHK. Either the project genuinely has 1BHK/2BHK inventory now
+  (retire the "2BHK = quality leak" framing) or ~Rs 9.4k/week is being spent on a product
+  mismatch bigger than anything flagged before. DO NOT let another report cycle pass without
+  this being answered — if answered, update the "Business context" section of
+  CLAUDE-crossref-routine.md accordingly.
+- **CRM coverage gap (structural, not fraud):** the 2BHK campaign has 0 leads in
+  `sheet.meta_leads_timed` — all 121 timed/OTP-verified leads are from the Studio/June26
+  campaign only. No speed-to-lead or independent verification exists for 2BHK leads until
+  the lead form is wired into the same CRM Event pipeline. Until fixed, do NOT apply the
+  "not in CRM = suspicious" rule to 2BHK-attributed leads — check their sheet conversations
+  for plausibility (specific budget/carpet-area detail) instead.
+- **Sunil Bagul (8108715063)** — named #1 urgent 3 Jul, STILL just "Busy," zero follow-up in
+  10 days. Escalate again; if untouched next run too, this is a process failure worth
+  naming directly to Keval, not just flagging in the report.
+- **Atul Thorat (CRM 9819877789)** — number in sheet is now further mangled
+  ("98198777789"), still marked Dead off a wrong-person call. 19 days and counting on a
+  within_3_months lead that was never actually reached. Ask the team to redial the CRM
+  number directly.
+- **Ravi DU** — row updated but now has BOTH numbers jammed in one cell
+  ("9321110668 / 8369593191") — still breaks phone-matching. Needs a clean single-number
+  fix, not an append. Andre Rozario (9821266080, 14 Jun) is still fully unlogged.
+- **"Hitendra Dedhia" phantom lead (9673213241)** — still never in the Facebook-tab log,
+  but got a NEW entry in SVD remarks on 6 Jul ("wants ready-to-move, not interested") and
+  is still marked Meta Sent. This is being actively worked by someone, off every system
+  this routine tracks. Keep watching for repeats of this pattern with other names.
+- **Reporting cadence gap:** no report ran 4 Jul - 12 Jul (10 days). Check whether the
+  schedule is actually firing daily — if not, several of the items above may have gone
+  stale silently during the gap.
+- **Studio campaign CPL watch:** last 7 days Rs 339.16 vs 30-day avg Rs 207.28, despite
+  FALLING frequency (1.79 vs 2.65) — not classic fatigue. Watch next run whether it keeps
+  climbing; if so this becomes a real agency-side question, not just noise.
+- **Credit carried forward:** speed-to-lead remains strong — Dharmesh Thakkar and Pramod
+  Agare both contacted in under 15 minutes this run. "Luxury - DJ" adset fold-in from the
+  last report was actually done (no longer in the account).
