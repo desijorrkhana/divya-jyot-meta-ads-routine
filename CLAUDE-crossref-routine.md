@@ -233,6 +233,15 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-14: the V3 CRM Event sheet (`meta_leads_timed`) only ever contains leads from the
+  "Divya Jyot V3 June26"/Studio ad. A newer campaign ("...2BHK") gets ZERO entries there —
+  its leads only exist in the Facebook tab, with no OTP-verified arrival timestamp. Don't
+  read a lead's absence from the CRM as fraud/leakage unless it predates the newer
+  campaign's launch — check dates and feedback text (BHK mentions) first.
+- 2026-07-14: the wrong-number mislog (Atul Thorat) recurred with a second lead (Andre
+  Rozario, CRM 9821266080 logged as 8976902153) — treat it as a standing pattern, not a
+  one-off: every CRM lead absent from the sheet gets a same-day name-match check for a
+  different phone before being called "unlogged."
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
