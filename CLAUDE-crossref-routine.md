@@ -233,6 +233,16 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-15: A whole CAMPAIGN can be invisible to the CRM Event sheet, not just individual
+  leads — "Divya Jyot V3 July 26 - 2BHK" (36% of spend) has sent zero leads to
+  `meta_leads_timed` since it launched; every lead form on the account needs to be checked
+  for CRM wiring, not assumed. Until fixed, treat that campaign's speed-to-lead, intent, and
+  CAPI conversions as unverifiable — don't report a real cost-per-visit for it.
+- 2026-07-15: A phone number that already exists in the sheet from an OLD (pre-lead)
+  duplicate row breaks the revision-history bracket for a fresh lead on that same number —
+  the bracket shows `[null, before-arrival]` even though the real contact happened later.
+  Cross-check with `meta_arrival_ist`: if the bracket's upper bound predates it, the bracket
+  is stale from the old row: fall back to day-level dates for that lead specifically.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
