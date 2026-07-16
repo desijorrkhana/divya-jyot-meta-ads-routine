@@ -233,6 +233,12 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-16: before running the 5b reverse-check, check whether `meta_leads_timed`
+  actually contains every distinct `campaign` name that Meta's own campaign-level rows
+  report spending on. A whole campaign can be missing from the CRM sheet (the "V3 July 26
+  - 2BHK" campaign had 0 CRM rows despite real Meta-reported spend/leads) — that shows up
+  as a sudden, dateable mass-orphan spike in the reverse-check, not scattered typos, and
+  needs a different diagnosis (lead-form/sheet wiring gap, not data-entry error).
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
