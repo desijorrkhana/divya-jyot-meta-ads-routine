@@ -233,6 +233,13 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-17: `sheet.meta_leads_timed` (the CRM Event sheet) ONLY tracks leads from the
+  "Divya Jyot V3 June26" / "Studio" campaign — the newer "V3 July 26 - 2BHK" campaign's
+  lead form isn't wired into it at all, so 100% of its leads will show as "not in CRM" by
+  design. Don't read that as fabrication for 2BHK leads (check the feedback text for "2bhk"
+  mentions first) — it's a real instrumentation gap, keep recommending it get fixed, and
+  compute cost-per-visit for Studio (CRM-verified) and 2BHK (Meta-reported only, unverified)
+  separately rather than blending them.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
