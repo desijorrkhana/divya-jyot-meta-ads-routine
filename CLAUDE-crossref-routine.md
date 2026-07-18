@@ -233,6 +233,18 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-18: the Meta ad account is NOT single-campaign — a second campaign can appear
+  (found: "Divya Jyot V3 July 26 - 2BHK", ₹12,777/30d, 57 leads) whose leads never reach
+  `sheet.meta_leads_timed` (a different, non-OTP lead form feeds it). Always check the
+  `campaign` field across `meta_leads_timed` before assuming aggregate `meta.*` totals ==
+  the studio product; scope the funnel/CPL/speed-to-lead sections to the studio campaign
+  explicitly and report any other campaign separately until it's wired into the CRM.
+- 2026-07-18: the Facebook-tab phone cell can hold MULTIPLE numbers separated by "/"
+  (e.g. "9321110668 / 8369593191") — naive parsing (strip non-digits, take last 10) mashes
+  both together into a wrong number and produces a false "never logged" / wrong-number
+  flag. Split on "/" or "," and check every resulting number before declaring a phone
+  mismatch (this false-flagged "Ravi DU" as unresolved on 4 July when the team had actually
+  logged it correctly).
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
