@@ -1,33 +1,52 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-07-04 (evening, interactive session with Keval)
+## Updated 2026-07-19 (catch-up run after a 15-day gap since the last report, 3-4 Jul)
 
-- **CORRECTION to carry into the next report:** the 3-Jul report claimed 6 Meta visits /
-  ₹2,543 per visit / 6.7% visit rate, "beats baseline". Integrity check (added 4 Jul, at
-  Keval's prompting) shows only 4 of those 6 SVD visits are CRM-verified V3 leads: "Heena
-  dedhia" 3/7 was never a Meta lead (see below) and "Naveen suvarna" 27/6 is an April
-  (pre-V3) lead. Corrected: 4 visits / ₹15,252 (30d) → **₹3,813 per visit, 4.4% visit
-  rate ≈ the 4.5% baseline — NOT beating it.** Say this plainly in the next report.
-- **Dedhia case (watch for repeats):** "Hitendra dedhia" 9673213241 entered in the
-  Facebook tab 1/7 but never delivered by Meta; SVD visit 3/7 under a different name
-  ("Heena dedhia"); conversion pushed to Meta — and RE-sent 4/7 21:19. Ask the team where
-  this lead really came from; watch whether more non-CRM "Facebook" leads appear.
-- **Sunil Bagul 8108715063** (3-6mo intent, arrived 3 Jul 19:41): still never entered in
-  the sheet, never called — flagged in the 3-Jul report, 45+ hrs cold as of 4 Jul evening.
-  If still untouched next run, escalate as top item.
-- **Phone-typo leads — check outcomes:** CRM "Atul Thorat" 9819877789 (24 Jun,
-  within_3_months) was logged as 8198777789 and marked Dead off a wrong-number call — the
-  real number was never dialed. Ask the team to re-call the CRM number. "Ravi" 10 Jun
-  (CRM "Ravi DU" 9321110668, sheet has 8369593191) looks like the same pattern — suspected,
-  not confirmed.
-- **CAPI hygiene watch:** SVD "Meta Sent" was ❌ for ~10 months (Aug 2025 – mid-June 2026),
-  ✅ only since ~19 Jun. Now that it works, non-Meta visits being pushed (Dedhia, Naveen)
-  is the new risk — verify each ✅ against the CRM every run.
-- **Speed-to-lead now has real times** (Drive revision history → sheet.contact_history in
-  data.json). First measurements: team logs+calls fresh daytime leads in ~15-40 min
-  (Raju Shinde ≤16m, Doshi Jaswant ≤40m, Rushikesh ≤32m). CREDIT this in the next report —
-  it makes the Sunil Bagul / typo misses process leaks, not effort problems.
-- **Pending recommendations to track:** (1) ad copy should say bare-shell STUDIO explicitly
-  (41% of engaged leads ask for BHK); (2) fold "Luxury - DJ" adset into "Open - DJR";
-  (3) team to write TIME next to date on first-call notes; (4) team to copy-paste phone
-  numbers from the CRM sheet instead of retyping.
+- **Phantom-lead pattern is repeating, not resolved.** 3-4 Jul flagged "Hitendra/Heena Dedhia"
+  (9673213241, visit 4 Jul) as a site visit pushed to Meta with zero originating record.
+  This run confirms it's STILL unresolved (searched the full 1,410-row Facebook tab history —
+  genuinely nowhere) AND found a second instance: **Payal Shah 9769884201, visit 18 Jul**,
+  same signature (Meta Sent ✅, zero record in Facebook tab or CRM). Watch for a third next
+  run — if it keeps happening, this is a process failure, not a one-off.
+- **Never-logged leads, call these first:** Kadam Snehal Prathamesh 9870543084 (within_3mo,
+  arrived 10 Jun, 39 days cold), Mitesh Shah 8369885799 (3-6mo, 25 Jun), Kumar C Kummi
+  9108146320 (within_3mo, IG, 29 Jun). Check next run whether any got called.
+- **Phone-typo leads, still wrong, still unresolved:** Atul Thorat (CRM 9819877789, sheet
+  8198777789, marked Dead off the wrong number), Ravi DU (CRM 9321110668, sheet "Ravi"
+  8369593191, confirmed same-day match this run), Andre Rozario (CRM 9821266080, sheet
+  8976902153, confirmed this run). All three now flagged twice (3-4 Jul, 19 Jul) with zero
+  action taken.
+- **Named leads to check for visit conversion next run:** Sandesh Sansare (said coming in
+  1-2 days as of 18 Jul), Sushma Ravasia (coming "tomorrow afternoon"), Surendra Gupta
+  (coming Tue 21 Jul), Poonam Lalwani (coming "next week"), Ashok Savalkar (was "coming
+  tomorrow", latest note is "busy in a meeting" — watch this one doesn't quietly die).
+- **2BHK campaign — durable structural gap, now in LEARNED RULES too:** the CRM Event sheet
+  only ever contains Studio-form leads (100/100 last-30d CRM rows are ad=Studio). The 2BHK
+  campaign (~₹14.3K/30d, 60 leads) has ZERO CRM visibility — can't speed-to-lead it, and
+  "not in CRM" is NOT evidence of a fake lead for a 2BHK-flagged visit the way it is for
+  Studio. Verified 4 real 2BHK-attributable visits this run via Facebook-tab corroboration
+  alone (Deep Biren, Deepak Chaurasia, Vimesh, Kapil Chheda) — that's a floor, not a ceiling.
+- **Recommendations still not acted on (flagged 3 Jul, unchanged 19 Jul):** (1) make
+  "bare-shell STUDIO" explicit in ad copy — BHK-mismatch is 42% (was 41%), basically flat;
+  (2) team to write call TIME next to date — zero timestamps found in 30 days of follow-up
+  notes. Both are now 2+ weeks overdue with no visible improvement — escalate tone next run
+  if still nothing.
+- **Recommendation that WAS acted on:** "Luxury - DJ" adset (0 leads, immaterial spend) no
+  longer appears in the account — folded as recommended. Small credit, mention once then drop.
+- **Cost-per-visit is genuinely good and improving:** 14 verified visits / ₹35,248 (30d) =
+  ₹2,518/visit, 8.8% visit rate vs 4.5% baseline. Note: the 4-Jul correction (below, kept for
+  context) found the 3-Jul report's headline (6 visits/6.7%) was overstated once phantom/
+  pre-V3 visits were excluded (corrected to 4 visits/4.4%, ~baseline). This run's 8.8% is a
+  real improvement over that corrected figure, using the same exclusion discipline. Keep
+  using CRM/log-verified visits only, never the raw SVD "Meta Sent" count (currently 16-17
+  vs 14 real this window — the gap is exactly the phantom + pre-V3 entries above).
+- **Reporting gap:** no run happened 4-18 Jul. If another gap like this happens, the next
+  catch-up should explicitly diff against the last real report's date, not assume "yesterday"
+  is the only missed day.
+
+## Superseded (2026-07-04 note, kept for the phantom/typo case history above)
+- 3-Jul report's headline (6 visits, 6.7%, "beats baseline") was corrected 4 Jul once the
+  Dedhia phantom and the pre-V3 Naveen Suvarna lead were excluded: 4 visits, ₹3,813/visit,
+  4.4% — essentially at baseline, not beating it. reports/2026-07-03.md and the old
+  latest.md were never edited to reflect this — don't trust their headline numbers at face
+  value if referenced later; trust this memory file's correction instead.

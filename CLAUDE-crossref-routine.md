@@ -40,6 +40,13 @@ Non-negotiable rules for EVERY run, regardless of what the day's task prompt say
 
 ## Business context (never forget)
 - Product: BARE SHELL studio, ₹87 lakh, Mulund West, 5 min from MG Road station.
+- **UPDATE 2026-07-19:** a second live campaign, "Divya Jyot V3 July 26 - 2BHK", has been
+  running since ~mid-June alongside the Studio campaign — real spend (~₹14K/30 days) and
+  real leads (~60/30 days), not a test. Confirm with the team whether this is genuinely new
+  2BHK inventory at this project or a second/adjacent project sharing the ad account — until
+  confirmed, treat both campaigns as real and report on both, but don't assume "studio only"
+  applies to lead-quality judgments for 2BHK-form leads (a 2BHK request is expected/correct
+  for that campaign, not a mismatch the way it is for the Studio ad).
 - The REAL metric is **cost per site visit** and **warm-lead rate**, NOT CPL. High CPL is
   fine if leads are high-intent and convert to visits. NEVER recommend pausing an ad on CPL
   alone.
@@ -233,6 +240,20 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-19: the V3 CRM Event sheet (`sheet.meta_leads_timed`) only ever contains
+  Studio-campaign leads — every last-30-day row is `ad: Studio`. A second campaign (2BHK,
+  see business context) has zero CRM rows despite real spend/leads. So "not in CRM" is
+  proof of a problem for a Studio lead, but NOT for a 2BHK one — verify 2BHK visits/leads
+  against the Facebook tab only, and say so explicitly rather than flagging them as fake.
+- 2026-07-19: the Facebook tab's Created-date column silently switches format — 2025 rows
+  are MM/DD/YYYY (e.g. "07/27/2025", day=27 forces this), 2026 rows are DD/MM/YYYY (e.g.
+  "3/7/2026" = 3 July, confirmed against known leads). Parsing "3/7/2026" as MM/DD instead
+  of DD/MM silently drops real July leads out of any date-filtered match — branch the parse
+  rule on year, not a single global assumption.
+- 2026-07-19: after a reporting gap, don't assume "yesterday" is the only missed day —
+  check the last real report's date (not just the last file in reports/, which may be a
+  stale latest.md) and use the last-30-day window to catch up on integrity checks across
+  the whole gap, not just the most recent 24h.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
