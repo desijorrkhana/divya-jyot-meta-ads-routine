@@ -233,6 +233,16 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
+- 2026-07-20: the V3 CRM Event sheet (`meta_leads_timed`) can be blind to an entire
+  campaign while looking fully populated — all 138 rows since 10 June are tagged
+  campaign="Divya Jyot V3 June26"/adset="Open - DJR" even though Meta's own campaign
+  report shows the "2BHK" campaign generating ~39% of leads. Verify every run: do
+  `meta_leads_timed` daily counts track Meta's PER-CAMPAIGN totals or only one campaign's
+  subtotal? If only one, speed-to-lead/intent analysis is silently missing the rest.
+- 2026-07-20: the Dedhia-style fake-attribution pattern (section 5b) is not a one-off —
+  over a rolling 30-day window, 9 of 18 (50%) "Meta Sent ✅" Facebook SVD visits had no
+  CRM match. Compute this ratio every run, not just spot-check named precedents; a 50%
+  pollution rate on the CAPI signal is a standing problem, not an anomaly to note once.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
