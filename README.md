@@ -38,12 +38,26 @@ private repos on the free plan). Options, easiest first:
 2. **Locally:** `./serve_dashboard.sh` then open
    <http://localhost:8787/dashboard.html>. Pulls the repo every 10 minutes;
    the page refreshes itself every 15, so a left-open tab stays current.
-3. **A real private URL (Cloudflare Pages + Access, free):** create a
-   Cloudflare account → Workers & Pages → connect this GitHub repo → build
-   command: none, output dir: `/`. Then Zero Trust → Access → add an
-   application covering the `*.pages.dev` domain with an email-OTP policy for
-   your address. Result: `https://<name>.pages.dev/dashboard.html`, always
-   on, auto-deploys on every dashboard commit, and only you can open it.
+3. **A real private URL (Cloudflare Pages + Access, free) — the chosen setup:**
+   the repo is already prepared (`index.html` redirects the bare URL to the
+   dashboard; `_headers` disables caching so every visit shows the newest
+   build). One-time setup, ~15 minutes:
+
+   1. Sign up at <https://dash.cloudflare.com> (free plan is enough).
+   2. **Workers & Pages → Create → Pages → Connect to Git** → authorize
+      GitHub → pick this repo (grant it access to the private repo).
+   3. Settings: production branch **`main`**, build command **(leave
+      empty)**, build output directory **`/`** → Deploy. You'll get
+      `https://<project>.pages.dev`.
+   4. **Before sharing/bookmarking, lock it down** — until this step the URL
+      is public to anyone who guesses it: in the Pages project → **Settings →
+      Enable Access policy** (protects preview URLs), then in **Zero Trust →
+      Access → Applications** add/edit the application so its domain covers
+      `<project>.pages.dev` itself, with a policy of **Include → Emails →
+      your email**. Login method: One-time PIN (Cloudflare emails a code).
+   5. Open `https://<project>.pages.dev` on the phone, log in once with the
+      emailed PIN, bookmark it. Every push to `main` (including the 4-hour
+      cron commits) redeploys automatically in under a minute.
 
 ## Daily report routine
 
