@@ -1,0 +1,10 @@
+// Cloudflare config: serve this repo as a static site (Workers with assets).
+// Used only if the dashboard is deployed via the Workers flow instead of Pages —
+// either way the site is just the static files in the repo root.
+{
+  "name": "dj-adspendsdashboard",
+  "compatibility_date": "2026-07-01",
+  "assets": {
+    "directory": "."
+  }
+}
