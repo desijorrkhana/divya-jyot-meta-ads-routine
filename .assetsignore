@@ -1,0 +1,15 @@
+# Files that must NEVER be served by the Cloudflare Worker as static assets.
+# Only index.html, dashboard.html and _headers are meant to be public-facing
+# (and the whole site sits behind Cloudflare Access regardless).
+.git/
+.github/
+.wrangler/
+__pycache__/
+reports/
+*.py
+*.sh
+*.md
+*.jsonc
+*.json
+.gitignore
+.assetsignore
