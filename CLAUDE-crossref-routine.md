@@ -9,9 +9,12 @@ leads (did they call, how fast). Plus concrete diagnostic steps to improve BOTH 
 the team. Delivered to Keval on Telegram. Mobile-first, scannable, blunt, no filler.
 
 ## The flow (do in this order)
-0. Deps: `pip install google-api-python-client google-auth google-auth-httplib2 openpyxl`
+0. Deps: `pip install google-api-python-client google-auth google-auth-httplib2 openpyxl cffi`
    (openpyxl is REQUIRED for contact-time precision — without it, sheet.contact_history
-   degrades to an error note and speed-to-lead falls back to day-level dates).
+   degrades to an error note and speed-to-lead falls back to day-level dates. cffi is REQUIRED
+   on a fresh environment — the system `cryptography` package google-auth imports crashes with
+   `ModuleNotFoundError: No module named '_cffi_backend'` / a pyo3 PanicException without it;
+   seen 2026-07-22 on a clean container).
 1. Run `python3 fetch_all.py` — pulls Meta Ads data, then the team's Google Sheet
    (Facebook + SVD tabs), then the V3 CRM Event sheet (timed leads), then mines the team
    sheet's Drive revision history for lead contact times. Writes data.json.
@@ -250,6 +253,10 @@ the list. Commit message must say what was learned in one line.
   coverage" claim, two named leads) before it surfaced — treat persistent user pushback on a
   headline number as a strong signal to re-derive from raw sources, not to re-explain the same
   conclusion more confidently.
+- 2026-07-22: a fresh environment can be missing `cffi`, which makes the system
+  `cryptography` package (a google-auth dependency) crash with `ModuleNotFoundError:
+  No module named '_cffi_backend'` inside a pyo3 PanicException — `pip install cffi`
+  alongside the other deps fixes it; added to the Deps line above.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

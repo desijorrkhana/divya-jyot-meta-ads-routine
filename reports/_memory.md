@@ -1,49 +1,39 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-07-21/22 (correction session — read this before trusting the 21 Jul report)
+## Updated 2026-07-22
 
-- **RETRACTED: the "2BHK campaign is untracked by CRM" finding was wrong.** Root cause: the
-  CRM Event spreadsheet (`LEADS_SHEET_ID`) has TWO tabs, one per lead form — `Sheet1` (Studio)
-  and `Sheet2` (2BHK, created 2026-07-06, same day that campaign launched). `fetch_all.py`
-  only ever read `Sheet1`. Fixed: `fetch_sheets()` now enumerates every tab in the spreadsheet
-  via `spreadsheets().get()` instead of hardcoding a tab name, and `parse_lead_rows()` accepts
-  either question-wording (`when_are_you_planning_to_purchase?` vs `when_are_you_planning_to_
-  buy`) and also captures a `budget` field where present (`what_is_your_budget_for_this_
-  purchase?` — only on the 2BHK form). **Every future run: sanity-check that `meta_leads_timed`
-  contains every campaign_name that appears in `meta.*_campaigns` before writing anything about
-  tracking gaps** — this is now also a LEARNED RULE in the main routine file.
-- Corrected numbers with both tabs: 209 total CRM leads (142 Studio + 67 "2BHK"), matching
-  Meta's real lifetime counts (147 / 68) closely. Facebook-tab-to-CRM match rate over the last
-  30 days is **87.9% (123/140)**, not the ~49% the broken version reported.
-- **2BHK product is confirmed real** (pulled the actual ad creative): 2BHK, ₹1.55 Cr onwards,
-  600 sqft carpet, Mulund West, 5 min from MG Road station. Update the standing business
-  context — this is a real second SKU, not a mislabeled studio ad. Most 2BHK leads self-report
-  "below ₹1.55 cr" on the CRM's own budget question — worth watching whether that's a pricing
-  mismatch worth flagging explicitly in a future report once there's more budget-answer volume.
-- **Two CAPI-pollution cases SURVIVE the correction, still open**: Vidhi Thakkar (9820194111)
-  and Payal Shah (9769884201) — checked again against BOTH CRM tabs, still no match in either.
-  Keep asking the team where these two came from; don't let the correction accidentally paper
-  over this — it's real and separate from the tab bug.
-- **NEW live phone-typo, caught same-day (not historical):** Jigna Rathod — CRM (Sheet2) has
-  9969283**3**, the Facebook tab has 9969283**2**. One digit off, same shape as the 4 Jul Atul
-  Thorat case. Check next run whether it's been corrected in the sheet and whether she's been
-  reached.
-- **"jai shri krishna" (9664658376) is a genuine repeat lead, not a duplicate row** — a Studio
-  lead 1 Jul AND a separate 2BHK lead 21 Jul, same phone, 3 weeks apart. Don't assume an
-  "unmatched-today" Facebook-tab row is automatically fresh — always check the phone against
-  CRM directly; a returning lead can look identical to a brand-new one from the date alone.
-- **Cost-per-visit, corrected:** 12 of 16 last-30-day SVD "Facebook" visits are now
-  CRM-verified (was 7) — 7 Studio + 5 "2BHK" (Deep Biren, Deepak Chaurasia, Vimesh, Kapil
-  Chheda, now confirmed genuine via Sheet2, previously only "plausible"). ₹39,211 / 13
-  (12 verified + Sushma Ravasia's team-annotated visit) = ₹3,016/visit, 8.0% visit rate.
-- **Process note for next run:** this correction took 3 rounds of Keval pushing back (lead
-  count → "no CRM" claim → two specific named leads) before the root cause surfaced. The
-  original report was sent to Telegram and committed before the error was caught — both have
-  now been corrected and re-sent/re-committed. Lesson: before declaring a "critical tracking
-  gap," check the CRM spreadsheet's own tab list, not just the one tab already known to work.
-- **Speed-to-lead still excellent:** all 9 CRM leads on 21 Jul (both campaigns) got same-day
-  contact, worst case ~15h (a lead that arrived at 19:56 IST). Keep watching this holds.
-- **Carried forward, unchanged:** "write call TIME next to the date" still not adopted (zero
-  instances in the last 150 Facebook-tab rows). "Luxury - DJ" adset still dormant (0 spend/
-  leads in 30d). The two OLD known-bad SVD visits (Hitendra/Heena Dedhia, Naveen Suvarna)
-  remain unresolved in the last-30-day window.
+- **Jigna Rathod phone typo — STILL UNRESOLVED, 2nd day.** Sheet still has 9969283482; real CRM
+  (OTP-verified) number is 9969283483. Team dialed the wrong number again today ("Cut the
+  call"). Check next run whether it's finally corrected — this is now a 2-day-old live miss on
+  a within_3_months 2BHK lead.
+- **Atul Thorat got WORSE, not fixed.** Sheet phone is now an 11-digit garble (98198777789);
+  real CRM number is 9819877789. Marked Dead off a call that was never actually to him. Nearly
+  4 weeks stale, flagged 3 times now (4 Jul, 19 Jul, 22 Jul). Needs a decision next time, not
+  another flag — consider naming this explicitly to Keval as a pattern of the flag being seen
+  but not acted on.
+- **Vidhi Thakkar (9820194111) / Payal Shah (9769884201) — 3rd report running, zero CRM trail
+  in either tab.** Both got NEW follow-up/visit-scheduling activity today despite unverifiable
+  origin, and both still carry a pushed "Meta Sent ✅" conversion. Keep asking where these came
+  from; don't let continued sales activity on them quietly normalize the gap.
+- **NEW orphaned-lead findings (reverse check), lower urgency — no CAPI conversion pushed yet:**
+  Nikita Gaurav (9167694214, 10 Jul, "2bhk budget 1.70, coming next sunday", Bhandup) — no CRM
+  match, no typo candidate, still "Ringing" 12 days later, claimed visit never happened. Sandesh
+  Howal (9324595862, 21 Jul) — only 1 day old as of this report, could be sync lag, re-check
+  next run before calling it a confirmed gap.
+- **Match rate jumped to 97.5% (158/162)** last 30 days, up from 87.9% two days ago (21 Jul) —
+  real, credit-worthy improvement. Only 4 unmatched rows left, all named above.
+- **First fully CRM-verified 2BHK-to-visit case: Parshant Deshmukh** (2BHK lead 9 Jul →
+  visited 22 Jul, 13-day cycle, clean phone match at every step). Worth citing to the team as
+  proof the 2BHK funnel converts, not just generates form-fills.
+- **Cost-per-visit holding steady: ₹3,016/visit, 8.0% visit rate** (13 of 163 last-30-day
+  leads) — essentially flat vs. 21 July's corrected number; still well above the ~4.5% baseline.
+- **"2BHK 57 Seconds" still weak/near-dormant** (₹8 spend, 0 clicks today) — recommended for
+  pause/cut in the last two reports, not yet acted on. Keep flagging until it's actually
+  changed or explicitly declined.
+- **22 Jul was a thin data day**: only 1 CRM lead by ~7:10 PM run time (Jitesh Tandel,
+  Studio/ig, 3–6_months, Mulund East/₹70L — location+budget mismatch vs. the Mulund
+  West/₹87L product), correctly triaged Cold within ~47 min. "2BHK" had 0 leads today so far
+  on ₹628 spend — watch tomorrow's full-day number before reading anything into that.
+- **Carried forward, unchanged:** "Luxury - DJ" adset still fully dormant (doesn't appear in
+  any 30-day breakdown) — dropping this from active reporting unless it reactivates, per the
+  standing-issue de-dup rule. "Write call TIME next to the date" still not adopted by the team.
