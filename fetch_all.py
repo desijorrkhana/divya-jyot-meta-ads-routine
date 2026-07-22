@@ -36,7 +36,9 @@ AD_ACCOUNT_ID = _acct()
 TOKEN = os.environ.get("META_ADS_TOKEN", "")
 API = "v25.0"
 IST = timezone(timedelta(hours=5, minutes=30))
-LEADS_SHEET_ID = os.environ.get("LEADS_SHEET_ID", "1752IvdN_Qdwd36xuQp5EJ55jATaoOyv4dwzoqeIAeZY")
+# `or` (not a .get default): CI sets unset secrets as EMPTY-STRING env vars, and an
+# empty spreadsheet id must still fall back — .get's default only covers a MISSING var.
+LEADS_SHEET_ID = os.environ.get("LEADS_SHEET_ID") or "1752IvdN_Qdwd36xuQp5EJ55jATaoOyv4dwzoqeIAeZY"
 
 def day(n): return (date.today() - timedelta(days=n)).isoformat()
 
