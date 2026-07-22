@@ -72,6 +72,11 @@ def build():
     today = now.date()
 
     leads = d["sheet"]["meta_leads_timed"]
+    if not leads:
+        # An empty CRM makes every visit look unverified and every lead untracked —
+        # a dashboard built on that is actively misleading. Fail the build instead.
+        raise SystemExit(f"CRM leads empty (meta_leads_error={d['sheet'].get('meta_leads_error')!r}) "
+                         "— refusing to build a misleading dashboard")
     fb_tab = d["sheet"]["facebook_tab"]
     svd = d["sheet"]["svd_tab"]
     ch = d["sheet"].get("contact_history", {}) or {}
