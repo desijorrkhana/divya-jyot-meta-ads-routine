@@ -1,9 +1,10 @@
 // Cloudflare config: serve this repo as a static site (Workers with assets).
-// Used only if the dashboard is deployed via the Workers flow instead of Pages —
-// either way the site is just the static files in the repo root.
+// The name matches the Worker Cloudflare's CI created; .assetsignore keeps
+// everything except the dashboard pages out of the served assets.
 {
-  "name": "dj-adspendsdashboard",
+  "name": "divya-jyot-meta-ads-routine-dashboard",
   "compatibility_date": "2026-07-01",
+  "preview_urls": false,
   "assets": {
     "directory": "."
   }
