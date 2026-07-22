@@ -146,6 +146,15 @@ def build():
                           "link": r.get("link_clicks", 0) or 0})
     daily_min = min((r["date"] for r in daily), default=today.isoformat())
 
+    # ---- daily per-ad series (30d) for the ad-level range table ----
+    daily_ads = []
+    for r in d["meta"].get("last30_daily_ads", []):
+        if r.get("date") and r.get("campaign") in SHORT and r.get("ad"):
+            daily_ads.append({"date": r["date"], "camp": SHORT[r["campaign"]],
+                              "ad": r["ad"], "adset": r.get("adset") or "",
+                              "spend": r.get("spend", 0) or 0, "leads": r.get("leads", 0) or 0,
+                              "imp": r.get("impressions", 0) or 0, "clicks": r.get("clicks", 0) or 0})
+
     # ---- SVD verification (all rows since 2024; JS filters by range) ----
     hdr = [h.strip().lower() for h in svd[0]]
     i_src, i_name, i_num, i_date = hdr.index("source"), hdr.index("name"), hdr.index("number"), hdr.index("visit date")
@@ -243,7 +252,7 @@ def build():
                     f'{"▲" if good else "▼"} baseline {BASELINE_VISIT_RATE}%</div>')
 
     payload = json.dumps({
-        "daily": daily, "crm": crm_rows, "visits": visits,
+        "daily": daily, "dailyAds": daily_ads, "crm": crm_rows, "visits": visits,
         "today": today.isoformat(), "dailyMin": daily_min, "v3Start": V3_START,
     }, ensure_ascii=False)
 
@@ -384,11 +393,26 @@ footer {{ margin-top: 26px; color: var(--muted); font-size: 12px; }}
     <div id="chart-spend"></div></div>
 </div>
 
+<h2>Cost per lead</h2>
+<div class="cards">
+  <div class="card"><h3>CPL per day <span class="muted" style="font-weight:400">(days with 0 leads show no bar)</span></h3>
+    <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
+    <div id="chart-cpl"></div></div>
+  <div class="card"><h3>CPL over the selected range</h3>
+    <div id="cpl-summary"></div></div>
+</div>
+
 <h2>Campaigns — selected range</h2>
 <div class="tablewrap"><table>
 <thead><tr><th>Campaign</th><th class="num">Spend</th><th class="num">Meta leads</th><th class="num">CPL</th>
 <th class="num">CTR</th><th class="num">CPC</th><th class="num">CPM</th><th class="num">CRM leads</th></tr></thead>
 <tbody id="camp-body"></tbody></table></div>
+
+<h2>Ads — selected range</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Ad</th><th>Campaign</th><th class="num">Spend</th><th class="num">Leads</th><th class="num">CPL</th>
+<th class="num">CTR</th><th class="num">CPC</th><th class="num">CPM</th><th class="num">Share of spend</th></tr></thead>
+<tbody id="ads-body"></tbody></table></div>
 
 <h2>Speed to lead — selected range</h2>
 <div class="tablewrap"><table>
@@ -480,6 +504,44 @@ function render() {{
   barChart($("#chart-leads"), dayList, (c, dt) => get(c, dt, "leads"), v => String(v));
   barChart($("#chart-spend"), dayList, (c, dt) => get(c, dt, "spend"),
            v => v >= 1000 ? "₹" + (v / 1000) + "k" : "₹" + Math.round(v));
+  barChart($("#chart-cpl"), dayList,
+           (c, dt) => get(c, dt, "leads") ? get(c, dt, "spend") / get(c, dt, "leads") : 0,
+           v => v >= 1000 ? "₹" + (v / 1000) + "k" : "₹" + Math.round(v));
+
+  // CPL summary tiles for the range
+  let cplHtml = '<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">';
+  let tsp = 0, tld = 0;
+  ["Studio", "2BHK"].forEach(c => {{
+    const rs = DATA.daily.filter(r => r.camp === c && inR(r.date));
+    const sp = rs.reduce((a, r) => a + r.spend, 0), ld = rs.reduce((a, r) => a + r.leads, 0);
+    tsp += sp; tld += ld;
+    cplHtml += `<div class="tile"><div class="k">${{c}} CPL</div>` +
+      `<div class="v" style="font-size:20px">${{ld ? fmtR(sp / ld) : "—"}}</div>` +
+      `<div class="sub">${{fmtR(sp)}} / ${{ld}} leads</div></div>`;
+  }});
+  cplHtml += `<div class="tile"><div class="k">Blended CPL</div>` +
+    `<div class="v" style="font-size:20px">${{tld ? fmtR(tsp / tld) : "—"}}</div>` +
+    `<div class="sub">${{fmtR(tsp)}} / ${{tld}} leads</div></div></div>`;
+  $("#cpl-summary").innerHTML = cplHtml;
+
+  // ad-level aggregates over range
+  const adAgg = {{}};
+  DATA.dailyAds.filter(r => inR(r.date)).forEach(r => {{
+    const k = r.camp + "|" + r.ad;
+    const a = adAgg[k] || (adAgg[k] = {{camp: r.camp, ad: r.ad, spend: 0, leads: 0, imp: 0, clicks: 0}});
+    a.spend += r.spend; a.leads += r.leads; a.imp += r.imp; a.clicks += r.clicks;
+  }});
+  const adRows = Object.values(adAgg).sort((a, b) => b.spend - a.spend);
+  const totalAdSpend = adRows.reduce((a, r) => a + r.spend, 0);
+  $("#ads-body").innerHTML = adRows.map(r =>
+    `<tr><td>${{r.ad}}</td><td><span class="chip ${{r.camp === "Studio" ? "c1" : "c2"}}">${{r.camp}}</span></td>` +
+    `<td class="num">${{fmtR(r.spend)}}</td><td class="num">${{r.leads}}</td>` +
+    `<td class="num">${{r.leads ? fmtR(r.spend / r.leads) : "—"}}</td>` +
+    `<td class="num">${{r.imp ? (100 * r.clicks / r.imp).toFixed(2) + "%" : "—"}}</td>` +
+    `<td class="num">${{r.clicks ? fmtR(r.spend / r.clicks) : "—"}}</td>` +
+    `<td class="num">${{r.imp ? fmtR(1000 * r.spend / r.imp) : "—"}}</td>` +
+    `<td class="num">${{totalAdSpend ? (100 * r.spend / totalAdSpend).toFixed(0) + "%" : "—"}}</td></tr>`
+  ).join("") || `<tr><td colspan="9" class="muted">No ad-level data in this range (Meta daily data covers the trailing 30 days).</td></tr>`;
 
   // campaign aggregates over range
   let rows = "";

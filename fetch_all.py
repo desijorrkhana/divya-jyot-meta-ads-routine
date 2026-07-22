@@ -421,6 +421,7 @@ def run_fetch():
         "l7": ("campaign", day(7), day(1)),
         "l30":("ad",       day(30), day(1)),
         "l30_daily": ("campaign", day(30), day(0), 1),  # per-day rows for the dashboard trend
+        "l30_daily_ads": ("ad", day(30), day(0), 1),    # per-day per-ad, for ad-level range views
     }
     results = {}
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -446,6 +447,7 @@ def run_fetch():
             "last7_campaigns":     results["l7"],
             "last30_ads":          results["l30"],
             "last30_daily_campaigns": results["l30_daily"],
+            "last30_daily_ads":       results["l30_daily_ads"],
         },
         "sheet": sheet,
     }

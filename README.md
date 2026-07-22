@@ -25,15 +25,25 @@ variables → Actions:
 Then enable the workflow under the Actions tab (first run can be triggered
 manually via "Run workflow").
 
-### Viewing it
+### Viewing it — always-on options
 
-- **Locally (recommended):** `./serve_dashboard.sh` then open
-  <http://localhost:8787/dashboard.html>. The script pulls the repo every 10
-  minutes and the page refreshes itself every 15, so a left-open tab stays
-  current with each 4-hour rebuild.
-- **Anywhere:** open the repo on GitHub → `dashboard.html` → Raw, or just pull
-  and double-click the file. (GitHub Pages is NOT used — Pages sites are public
-  even on private repos on the free plan.)
+The dashboard contains lead names and phone numbers, so it must never be
+hosted publicly. GitHub Pages is ruled out (Pages sites are public even on
+private repos on the free plan). Options, easiest first:
+
+1. **Telegram (zero setup, works on the phone):** if `TELEGRAM_BOT_TOKEN` and
+   `TELEGRAM_CHAT_ID` are added as Actions secrets, every 4-hour rebuild also
+   sends `dashboard.html` to the Telegram chat as a file — tap it any time,
+   it opens in the browser with the full range filter working offline.
+2. **Locally:** `./serve_dashboard.sh` then open
+   <http://localhost:8787/dashboard.html>. Pulls the repo every 10 minutes;
+   the page refreshes itself every 15, so a left-open tab stays current.
+3. **A real private URL (Cloudflare Pages + Access, free):** create a
+   Cloudflare account → Workers & Pages → connect this GitHub repo → build
+   command: none, output dir: `/`. Then Zero Trust → Access → add an
+   application covering the `*.pages.dev` domain with an email-OTP policy for
+   your address. Result: `https://<name>.pages.dev/dashboard.html`, always
+   on, auto-deploys on every dashboard commit, and only you can open it.
 
 ## Daily report routine
 

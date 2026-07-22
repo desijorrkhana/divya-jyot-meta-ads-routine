@@ -47,3 +47,15 @@ jobs:
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Dashboard auto-update $(TZ=Asia/Kolkata date '+%d %b %Y %H:%M IST')"
           git push
+
+      - name: Send dashboard to Telegram (optional)
+        if: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && secrets.TELEGRAM_CHAT_ID != '' }}
+        env:
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          curl -sf -F chat_id="$TG_CHAT" \
+               -F document=@dashboard.html \
+               -F caption="Dashboard $(TZ=Asia/Kolkata date '+%d %b %H:%M IST') — open in browser" \
+               "https://api.telegram.org/bot${TG_TOKEN}/sendDocument" > /dev/null \
+            && echo "Dashboard sent to Telegram" || echo "Telegram send failed (non-fatal)"
