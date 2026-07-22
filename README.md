@@ -5,7 +5,7 @@ Daily Meta Ads + sales-sheet cross-reference routine, plus a live dashboard.
 ## Live dashboard (`dashboard.html`)
 
 A self-contained HTML page — no external dependencies, works offline, private as
-long as this repo is private. Rebuilt automatically **every 4 hours** by the
+long as this repo is private. Rebuilt automatically **every hour, 9AM–7PM IST** by the
 GitHub Actions workflow in `.github/workflows/dashboard.yml` (runs
 `fetch_all.py` → `build_dashboard.py` → commits the fresh `dashboard.html`).
 
@@ -32,7 +32,7 @@ hosted publicly. GitHub Pages is ruled out (Pages sites are public even on
 private repos on the free plan). Options, easiest first:
 
 1. **Telegram (zero setup, works on the phone):** if `TELEGRAM_BOT_TOKEN` and
-   `TELEGRAM_CHAT_ID` are added as Actions secrets, every 4-hour rebuild also
+   `TELEGRAM_CHAT_ID` are added as Actions secrets, every hourly rebuild also
    sends `dashboard.html` to the Telegram chat as a file — tap it any time,
    it opens in the browser with the full range filter working offline.
 2. **Locally:** `./serve_dashboard.sh` then open

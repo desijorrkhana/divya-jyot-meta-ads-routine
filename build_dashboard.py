@@ -354,7 +354,7 @@ footer {{ margin-top: 26px; color: var(--muted); font-size: 12px; }}
 </style></head><body><div class="wrap">
 <header>
   <h1>Divya Jyot LYF Rewa — Meta Ads</h1>
-  <span class="updated">Updated {now.strftime("%a %d %b %Y, %H:%M IST")} · auto-rebuilds every 4h · tab refreshes every 15m</span>
+  <span class="updated">Updated {now.strftime("%a %d %b %Y, %H:%M IST")} · auto-rebuilds hourly 9AM–7PM IST · tab refreshes every 15m</span>
 </header>
 
 <div class="tiles">
