@@ -1,0 +1,49 @@
+name: Rebuild dashboard
+
+on:
+  schedule:
+    - cron: "30 1,5,9,13,17,21 * * *"   # every 4h, offset :30 UTC = 7AM/11AM/3PM/7PM/11PM/3AM IST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dashboard
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install google-api-python-client google-auth google-auth-httplib2 openpyxl
+
+      - name: Fetch data
+        env:
+          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
+          META_ADS_TOKEN: ${{ secrets.META_ADS_TOKEN }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
+          LEADS_SHEET_ID: ${{ secrets.LEADS_SHEET_ID }}
+        run: python3 fetch_all.py
+
+      - name: Build dashboard
+        run: python3 build_dashboard.py
+
+      - name: Commit
+        run: |
+          git config user.name "dashboard-bot"
+          git config user.email "actions@github.com"
+          git add dashboard.html
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Dashboard auto-update $(TZ=Asia/Kolkata date '+%d %b %Y %H:%M IST')"
+          git push

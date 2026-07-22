@@ -58,16 +58,18 @@ _INSIGHT_FIELDS = ("campaign_name,adset_name,ad_name,spend,impressions,reach,cli
 # NOT {"event_type":..., "window_days":...} objects — the old object form now 400s outright.
 _ATTRIBUTION = json.dumps(["7d_click", "1d_view"])
 
-def meta_insights(level, since, until):
+def meta_insights(level, since, until, time_increment=None):
     if not TOKEN or not AD_ACCOUNT_ID:
         return [{"error": "Missing META_ADS_TOKEN or META_AD_ACCOUNT_ID"}]
     params = {
-        "level": level, "fields": _INSIGHT_FIELDS,
+        "level": level, "fields": _INSIGHT_FIELDS + ",date_start",
         "time_range": json.dumps({"since": since, "until": until}),
         "action_attribution_windows": _ATTRIBUTION,
         "use_unified_attribution_setting": "true",   # use the ad set's configured attribution
-        "limit": "200", "access_token": TOKEN,
+        "limit": "500", "access_token": TOKEN,
     }
+    if time_increment:
+        params["time_increment"] = str(time_increment)   # 1 = one row per day (for trends)
     url = f"https://graph.facebook.com/{API}/{AD_ACCOUNT_ID}/insights?" + urllib.parse.urlencode(params)
     try:
         return _get(url).get("data", [])
@@ -116,6 +118,7 @@ def shape_meta(rows):
                        for a in (r.get("actions") or []) if "lead" in a.get("action_type","")}
         out.append({
             "campaign": r.get("campaign_name"), "adset": r.get("adset_name"), "ad": r.get("ad_name"),
+            "date": r.get("date_start"),
             "spend": round(spend,2), "leads": leads,
             "cpl": round(spend/leads,2) if leads else None,
             "lead_actions_raw": raw_leadish,   # audit: all lead-type actions Meta returned
@@ -417,6 +420,7 @@ def run_fetch():
         "yd": ("ad",       day(1), day(1)),
         "l7": ("campaign", day(7), day(1)),
         "l30":("ad",       day(30), day(1)),
+        "l30_daily": ("campaign", day(30), day(0), 1),  # per-day rows for the dashboard trend
     }
     results = {}
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -441,6 +445,7 @@ def run_fetch():
             "yesterday_ads":       results["yd"],
             "last7_campaigns":     results["l7"],
             "last30_ads":          results["l30"],
+            "last30_daily_campaigns": results["l30_daily"],
         },
         "sheet": sheet,
     }
