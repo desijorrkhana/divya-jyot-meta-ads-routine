@@ -233,15 +233,23 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
   Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
   lead unlogged, and flag that the team dialed a wrong number.
-- 2026-07-21: a whole new Meta campaign ("Divya Jyot V3 July 26 - 2BHK") ran for 30+ days
-  with real spend before anyone noticed its leads never reach `sheet.meta_leads_timed` —
-  its lead form was never wired to the CRM Event sheet. Every run, check that EVERY campaign
-  appearing in `meta.*_campaigns` also appears in `meta_leads_timed`'s campaign field before
-  trusting match-rate/speed-to-lead/cost-per-visit numbers — a new campaign can silently
-  launch outside CRM coverage and nothing else will flag it.
 - 2026-07-21: the Facebook tab's Created column contains at least one literal typo year
   ("02/09/2525") — always bound parsed dates to a plausible range (e.g. 2024-01-01 through
   today) before treating them as "recent," or garbage rows silently pass date-range filters.
+- 2026-07-21/22 (CORRECTED — do not repeat this mistake): the CRM Event spreadsheet
+  (`LEADS_SHEET_ID`) gets a NEW TAB per lead form, not one tab total — `Sheet1` (Studio) and
+  `Sheet2` ("2BHK", added the day that campaign launched) both feed real, working data.
+  `fetch_all.py` used to hardcode `Sheet1!A1:Q5000`, so `Sheet2` was silently never read and
+  an entire real campaign's leads were invisible — reported to Keval as a "critical tracking
+  gap" that didn't actually exist. Fixed: `fetch_sheets()` now calls `spreadsheets().get()` to
+  enumerate every tab in the spreadsheet and reads all of them. **Standing rule: before ever
+  reporting a data-completeness problem (a campaign/form/source "not showing up"), check
+  whether the read is scoped to one sheet/tab/range that a newer form might have bypassed —
+  a missing read looks identical to a missing integration from the output alone, but they need
+  opposite fixes.** This one took Keval pushing back three separate times (lead count, "no CRM
+  coverage" claim, two named leads) before it surfaced — treat persistent user pushback on a
+  headline number as a strong signal to re-derive from raw sources, not to re-explain the same
+  conclusion more confidently.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
