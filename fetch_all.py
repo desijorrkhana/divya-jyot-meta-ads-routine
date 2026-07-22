@@ -58,16 +58,18 @@ _INSIGHT_FIELDS = ("campaign_name,adset_name,ad_name,spend,impressions,reach,cli
 # NOT {"event_type":..., "window_days":...} objects — the old object form now 400s outright.
 _ATTRIBUTION = json.dumps(["7d_click", "1d_view"])
 
-def meta_insights(level, since, until):
+def meta_insights(level, since, until, time_increment=None):
     if not TOKEN or not AD_ACCOUNT_ID:
         return [{"error": "Missing META_ADS_TOKEN or META_AD_ACCOUNT_ID"}]
     params = {
-        "level": level, "fields": _INSIGHT_FIELDS,
+        "level": level, "fields": _INSIGHT_FIELDS + ",date_start",
         "time_range": json.dumps({"since": since, "until": until}),
         "action_attribution_windows": _ATTRIBUTION,
         "use_unified_attribution_setting": "true",   # use the ad set's configured attribution
-        "limit": "200", "access_token": TOKEN,
+        "limit": "500", "access_token": TOKEN,
     }
+    if time_increment:
+        params["time_increment"] = str(time_increment)   # 1 = one row per day (for trends)
     url = f"https://graph.facebook.com/{API}/{AD_ACCOUNT_ID}/insights?" + urllib.parse.urlencode(params)
     try:
         return _get(url).get("data", [])
@@ -116,6 +118,7 @@ def shape_meta(rows):
                        for a in (r.get("actions") or []) if "lead" in a.get("action_type","")}
         out.append({
             "campaign": r.get("campaign_name"), "adset": r.get("adset_name"), "ad": r.get("ad_name"),
+            "date": r.get("date_start"),
             "spend": round(spend,2), "leads": leads,
             "cpl": round(spend/leads,2) if leads else None,
             "lead_actions_raw": raw_leadish,   # audit: all lead-type actions Meta returned
@@ -136,16 +139,31 @@ def normalize_phone(p):
     d = "".join(ch for ch in str(p) if ch.isdigit())
     return d[-10:] if len(d) >= 10 else d
 
-def parse_lead_rows(rows):
+def parse_lead_rows(rows, source_tab=""):
+    # NOTE: the "V3 CRM Event" spreadsheet (LEADS_SHEET_ID) has ONE tab per lead FORM, not
+    # one tab total. Sheet1 = the Studio form, Sheet2 = the "2BHK" form added when that
+    # campaign launched (2026-07-06) — each new form gets its own new tab. Missing a tab
+    # here silently drops an entire campaign's leads (happened: Sheet2 was never read,
+    # making the whole 2BHK campaign look untracked when it wasn't). ALWAYS enumerate every
+    # tab in the spreadsheet (see fetch_sheets) rather than hardcoding tab names/count.
     if not rows or len(rows) < 2:
         return []
     header = [h.strip().lower() for h in rows[0]]
-    def col(name):
-        try: return header.index(name)
-        except ValueError: return None
-    ci = {k: col(k) for k in
-          ["created_time","ad_name","adset_name","campaign_name","platform",
-           "when_are_you_planning_to_purchase?","full_name","phone_number","lead_status"]}
+    def col(*names):
+        for n in names:
+            try: return header.index(n)
+            except ValueError: pass
+        return None
+    ci = {
+        "created_time": col("created_time"), "ad_name": col("ad_name"),
+        "adset_name": col("adset_name"), "campaign_name": col("campaign_name"),
+        "platform": col("platform"),
+        # intent question wording differs per form/tab — accept either.
+        "intent": col("when_are_you_planning_to_purchase?", "when_are_you_planning_to_buy"),
+        "budget": col("what_is_your_budget_for_this_purchase?"),  # only present on some forms
+        "full_name": col("full_name"), "phone_number": col("phone_number"),
+        "lead_status": col("lead_status"),
+    }
     out = []
     for r in rows[1:]:
         def g(key):
@@ -161,9 +179,9 @@ def parse_lead_rows(rows):
         out.append({
             "created_time_raw": ct, "created_time_ist": ct_ist,
             "phone10": normalize_phone(g("phone_number")), "name": name,
-            "platform": g("platform"), "intent": g("when_are_you_planning_to_purchase?"),
+            "platform": g("platform"), "intent": g("intent"), "budget": g("budget"),
             "ad": g("ad_name"), "adset": g("adset_name"), "campaign": g("campaign_name"),
-            "lead_status": g("lead_status"),
+            "lead_status": g("lead_status"), "source_tab": source_tab,
         })
     return out
 
@@ -218,18 +236,38 @@ def fetch_sheets():
         except Exception as e:
             return [["error", str(e)]]
 
-    # Run the three sheet reads concurrently (they're independent network calls).
-    with ThreadPoolExecutor(max_workers=3) as ex:
+    # The CRM Event spreadsheet gets a NEW TAB per lead form (Sheet1 = Studio, Sheet2 =
+    # "2BHK" added 2026-07-06, and any future form gets its own tab too) — enumerate every
+    # tab rather than hardcoding "Sheet1", or a whole new campaign's leads silently vanish.
+    try:
+        svc0 = google_sheets(creds)
+        crm_tabs = [s["properties"]["title"]
+                    for s in svc0.spreadsheets().get(spreadsheetId=LEADS_SHEET_ID).execute().get("sheets", [])]
+    except Exception as e:
+        crm_tabs = ["Sheet1"]  # fall back to the known-good tab if listing itself fails
+        crm_tabs_error = str(e)
+    else:
+        crm_tabs_error = None
+
+    # Run the sheet/tab reads concurrently (independent network calls).
+    with ThreadPoolExecutor(max_workers=2 + len(crm_tabs)) as ex:
         f_fb   = ex.submit(read, sheet_id, "Facebook!A1:N2000")
         f_svd  = ex.submit(read, sheet_id, "SVD!A1:O500")
-        f_lead = ex.submit(read, LEADS_SHEET_ID, "Sheet1!A1:Q5000")
-        fb, svd, leads_raw = f_fb.result(), f_svd.result(), f_lead.result()
+        f_leads = {tab: ex.submit(read, LEADS_SHEET_ID, f"{tab}!A1:Z5000") for tab in crm_tabs}
+        fb, svd = f_fb.result(), f_svd.result()
+        leads_by_tab = {tab: fut.result() for tab, fut in f_leads.items()}
 
-    err = leads_raw[0] if (leads_raw and leads_raw[0] and leads_raw[0][0] == "error") else None
-    leads_parsed = [] if err else parse_lead_rows(leads_raw)
+    leads_parsed, leads_errors = [], {}
+    for tab, raw in leads_by_tab.items():
+        if raw and raw[0] and raw[0][0] == "error":
+            leads_errors[tab] = raw[0][1]
+            continue
+        leads_parsed.extend(parse_lead_rows(raw, source_tab=tab))
+    err = leads_errors or crm_tabs_error
     return {
         "facebook_tab": fb,
         "svd_tab": svd,
+        "meta_leads_crm_tabs": crm_tabs,
         "meta_leads_timed": leads_parsed,
         "meta_leads_error": err,
     }
@@ -382,6 +420,8 @@ def run_fetch():
         "yd": ("ad",       day(1), day(1)),
         "l7": ("campaign", day(7), day(1)),
         "l30":("ad",       day(30), day(1)),
+        "l30_daily": ("campaign", day(30), day(0), 1),  # per-day rows for the dashboard trend
+        "l30_daily_ads": ("ad", day(30), day(0), 1),    # per-day per-ad, for ad-level range views
     }
     results = {}
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -406,6 +446,8 @@ def run_fetch():
             "yesterday_ads":       results["yd"],
             "last7_campaigns":     results["l7"],
             "last30_ads":          results["l30"],
+            "last30_daily_campaigns": results["l30_daily"],
+            "last30_daily_ads":       results["l30_daily_ads"],
         },
         "sheet": sheet,
     }
