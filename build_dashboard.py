@@ -2,12 +2,13 @@
 """Builds dashboard.html (self-contained, no external deps) from data.json.
 
 Run after fetch_all.py. The GitHub Actions cron does: fetch -> build -> commit,
-so the committed dashboard.html is always the freshest snapshot. The page is
-static; a <meta refresh> makes an open browser tab re-read the file periodically
-so a locally-served copy stays current without any JS.
+so the committed dashboard.html is always the freshest snapshot. All raw series
+are embedded as JSON and rendered client-side, so the date-range filter works
+offline with no server. Every reports/YYYY-MM-DD.md is embedded in the Reports
+section, so the archive travels with the file.
 """
 import html
-import json, os, re
+import json, os, re, glob
 from datetime import datetime, timedelta, timezone
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -16,6 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 STUDIO = "Divya Jyot V3 June26"
 BHK2 = "Divya Jyot V3 July 26 - 2BHK"
 SHORT = {STUDIO: "Studio", BHK2: "2BHK"}
+V3_START = "2026-06-10"
 BASELINE_VISIT_RATE = 4.5  # % — historical V3 baseline
 
 def normphone(p):
@@ -39,6 +41,30 @@ def esc(s):
 def rupees(x):
     return f"₹{x:,.0f}"
 
+def md_lite(text):
+    """Very small markdown renderer for the embedded reports: headings, bold,
+    bullets; markdown tables and anything indented stay monospace."""
+    out, in_pre = [], False
+    for ln in text.split("\n"):
+        table_ln = ln.lstrip().startswith("|")
+        if table_ln and not in_pre:
+            out.append('<pre class="mdtable">'); in_pre = True
+        if not table_ln and in_pre:
+            out.append("</pre>"); in_pre = False
+        if in_pre:
+            out.append(esc(ln)); continue
+        s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(ln))
+        if ln.startswith("### "):  out.append(f"<h5>{s[4:]}</h5>")
+        elif ln.startswith("## "): out.append(f"<h4>{s[3:]}</h4>")
+        elif ln.startswith("# "):  out.append(f"<h3>{s[2:]}</h3>")
+        elif ln.startswith("- "):  out.append(f'<div class="li">• {s[2:]}</div>')
+        elif ln.strip() in ("---", "***"): out.append("<hr>")
+        elif not ln.strip():       out.append('<div class="gap"></div>')
+        else:                      out.append(f"<div>{s}</div>")
+    if in_pre:
+        out.append("</pre>")
+    return "\n".join(out)
+
 def build():
     with open(os.path.join(HERE, "data.json")) as f:
         d = json.load(f)
@@ -49,40 +75,80 @@ def build():
     fb_tab = d["sheet"]["facebook_tab"]
     svd = d["sheet"]["svd_tab"]
     ch = d["sheet"].get("contact_history", {}) or {}
+    ch_leads = ch.get("leads", {}) or {}
     crm_by_phone = {l["phone10"]: l for l in leads if l["phone10"]}
 
-    # ---- daily series (last 14 days shown) ----
-    daily = [r for r in d["meta"].get("last30_daily_campaigns", []) if r.get("date")]
-    days = sorted({r["date"] for r in daily})[-14:]
-    series = {c: {dt: {"spend": 0.0, "leads": 0} for dt in days} for c in (STUDIO, BHK2)}
-    for r in daily:
-        c, dt = r.get("campaign"), r.get("date")
-        if c in series and dt in series[c]:
-            series[c][dt]["spend"] += r.get("spend", 0) or 0
-            series[c][dt]["leads"] += r.get("leads", 0) or 0
+    # ---- Facebook tab: phone -> sorted list of row-created dates (for day-level contact) ----
+    fhdr = [h.strip().lower() for h in fb_tab[0]]
+    fi_created, fi_phone = fhdr.index("created"), fhdr.index("phone")
+    fb_dates_by_phone = {}
+    for r in fb_tab[1:]:
+        if len(r) <= fi_phone:
+            continue
+        ph = normphone(r[fi_phone])
+        dt = parse_dmy(r[fi_created], today)
+        if ph:
+            fb_dates_by_phone.setdefault(ph, [])
+            if dt:
+                fb_dates_by_phone[ph].append(dt.isoformat())
+    for v in fb_dates_by_phone.values():
+        v.sort()
 
-    # ---- today / yesterday tiles ----
-    def agg(rows):
-        out = {}
-        for r in rows:
-            if "error" in r:
-                continue
-            out[r.get("campaign")] = r
-        return out
-    t = agg(d["meta"]["today_campaigns"])
-    y = agg(d["meta"]["yesterday_campaigns"])
-    l30 = d["meta"]["last30_ads"]
-    spend_today = sum(r.get("spend", 0) for r in t.values())
-    leads_today = sum(r.get("leads", 0) for r in t.values())
-    spend30 = sum(r.get("spend", 0) for r in l30 if "error" not in r)
-    leads30 = sum(r.get("leads", 0) for r in l30 if "error" not in r)
+    # ---- per-lead contact assessment (display strings prebuilt; JS only filters) ----
+    def contact_for(l):
+        ph, arr_s = l["phone10"], l["created_time_ist"]
+        arr_date = arr_s[:10]
+        info = ch_leads.get(ph) or {}
+        br = info.get("feedback_appeared_between")
+        if br and br[1]:
+            try:
+                by = datetime.strptime(br[1], "%Y-%m-%d %H:%M:%S")
+                arr = datetime.strptime(arr_s, "%Y-%m-%d %H:%M:%S")
+                mins = int((by - arr).total_seconds() // 60)
+                if mins < 0:
+                    return "row pre-exists (repeat lead)", "repeat lead", "ok"
+                lag = f"≤ {mins//60}h{mins%60:02d}m" if mins >= 60 else f"≤ {mins}m"
+                return f"by {br[1][5:16]}", lag, "ok"
+            except ValueError:
+                pass
+        dates = fb_dates_by_phone.get(ph)
+        if dates is not None:  # phone appears in the sheet
+            same_or_after = [x for x in dates if x >= arr_date]
+            if same_or_after:
+                dd = same_or_after[0]
+                gap = (datetime.fromisoformat(dd).date() - datetime.fromisoformat(arr_date).date()).days
+                lag = "same day" if gap == 0 else f"+{gap}d"
+                return f"on {dd} (day-level)", lag, "ok" if gap <= 1 else "warn"
+            return "older row only (repeat?)", "day-level unknown", "ok"
+        if arr_date >= (today - timedelta(days=2)).isoformat():
+            return "—", "NOT in sheet yet", "warn"
+        return "—", "never logged", "warn"
 
-    # ---- SVD verification, last 30 days ----
+    crm_rows = []
+    for l in sorted(leads, key=lambda x: x["created_time_ist"], reverse=True):
+        if l["created_time_ist"][:10] < V3_START:
+            continue
+        logged, lag, st = contact_for(l)
+        crm_rows.append({
+            "ts": l["created_time_ist"], "name": l["name"],
+            "camp": SHORT.get(l["campaign"], l["campaign"] or "?"),
+            "intent": l.get("intent", ""), "budget": l.get("budget", ""),
+            "phone": l["phone10"], "logged": logged, "lag": lag, "st": st,
+        })
+
+    # ---- daily meta series (30d, per campaign, with clicks/impressions for range aggregates) ----
+    daily = []
+    for r in d["meta"].get("last30_daily_campaigns", []):
+        if r.get("date") and r.get("campaign") in SHORT:
+            daily.append({"date": r["date"], "camp": SHORT[r["campaign"]],
+                          "spend": r.get("spend", 0) or 0, "leads": r.get("leads", 0) or 0,
+                          "imp": r.get("impressions", 0) or 0, "clicks": r.get("clicks", 0) or 0,
+                          "link": r.get("link_clicks", 0) or 0})
+    daily_min = min((r["date"] for r in daily), default=today.isoformat())
+
+    # ---- SVD verification (all rows since 2024; JS filters by range) ----
     hdr = [h.strip().lower() for h in svd[0]]
-    def col(name):
-        return hdr.index(name)
-    i_src, i_name, i_num, i_date = col("source"), col("name"), col("number"), col("visit date")
-    cutoff30 = today - timedelta(days=30)
+    i_src, i_name, i_num, i_date = hdr.index("source"), hdr.index("name"), hdr.index("number"), hdr.index("visit date")
     KNOWN_BAD = {"8976779929": "pre-V3 lead (Apr) — not a V3 result",
                  "9673213241": "never a Meta lead (Dedhia case, 4 Jul)"}
     ANNOTATED_OK = {"9372158643": "relative's phone; team-annotated {Sushma} — ties to real CRM lead"}
@@ -91,7 +157,7 @@ def build():
         if len(r) <= i_num:
             continue
         vd = parse_dmy(r[i_date] if len(r) > i_date else "", today)
-        if not vd or vd < cutoff30 or "facebook" not in (r[i_src] if len(r) > i_src else "").lower():
+        if not vd or "facebook" not in (r[i_src] if len(r) > i_src else "").lower():
             continue
         ph = normphone(r[i_num])
         crm = crm_by_phone.get(ph)
@@ -101,78 +167,48 @@ def build():
             status, note = "bad", KNOWN_BAD[ph]
         elif ph in ANNOTATED_OK:
             status, note = "annotated", ANNOTATED_OK[ph]
+        elif vd.isoformat() < V3_START:
+            status, note = "prev3", "pre-V3 era visit (informational)"
         else:
             status, note = "unverified", "no CRM record in any tab — ask the team"
         visits.append({"date": vd.isoformat(), "name": (r[i_name] or "").strip(),
                        "phone": ph, "status": status, "note": note})
-    n_ver = sum(1 for v in visits if v["status"] in ("verified", "annotated"))
+
+    # ---- fixed-window tiles (today + trailing 30d) ----
+    def agg(rows):
+        return {r.get("campaign"): r for r in rows if "error" not in r}
+    t = agg(d["meta"]["today_campaigns"])
+    l30rows = [r for r in d["meta"]["last30_ads"] if "error" not in r]
+    spend_today = sum(r.get("spend", 0) for r in t.values())
+    leads_today = sum(r.get("leads", 0) for r in t.values())
+    spend30 = sum(r.get("spend", 0) for r in l30rows)
+    leads30 = sum(r.get("leads", 0) for r in l30rows)
+    cutoff30 = (today - timedelta(days=30)).isoformat()
+    v30 = [v for v in visits if v["date"] >= cutoff30]
+    n_ver = sum(1 for v in v30 if v["status"] in ("verified", "annotated"))
     cost_per_visit = spend30 / n_ver if n_ver else None
     visit_rate = 100.0 * n_ver / leads30 if leads30 else None
-
-    # ---- Facebook-tab match rate, last 30 days ----
-    fhdr = [h.strip().lower() for h in fb_tab[0]]
-    fi_created, fi_name, fi_phone = fhdr.index("created"), fhdr.index("name"), fhdr.index("phone")
     total_fb = matched_fb = 0
-    fb_phones = set()
     for r in fb_tab[1:]:
         if len(r) <= fi_phone:
             continue
-        ph = normphone(r[fi_phone])
-        if ph:
-            fb_phones.add(ph)
-        dt = parse_dmy(r[fi_created], today)
-        if not ph or not dt or dt < cutoff30:
+        ph = normphone(r[fi_phone]); dt = parse_dmy(r[fi_created], today)
+        if not ph or not dt or dt.isoformat() < cutoff30:
             continue
         total_fb += 1
-        if ph in crm_by_phone:
-            matched_fb += 1
+        matched_fb += 1 if ph in crm_by_phone else 0
     match_rate = 100.0 * matched_fb / total_fb if total_fb else None
 
-    # ---- speed-to-lead, last 48h ----
-    cutoff48 = (now - timedelta(hours=48)).strftime("%Y-%m-%d %H:%M:%S")
-    recent = sorted((l for l in leads if l["created_time_ist"] >= cutoff48),
-                    key=lambda l: l["created_time_ist"], reverse=True)
-    ch_leads = ch.get("leads", {}) or {}
-    speed_rows = []
-    for l in recent:
-        info = ch_leads.get(l["phone10"]) or {}
-        fb_seen = l["phone10"] in fb_phones
-        br = info.get("feedback_appeared_between")
-        if br and br[1]:
-            try:
-                by = datetime.strptime(br[1], "%Y-%m-%d %H:%M:%S")
-                arr = datetime.strptime(l["created_time_ist"], "%Y-%m-%d %H:%M:%S")
-                mins = int((by - arr).total_seconds() // 60)
-                if mins < 0:
-                    # bracket predates arrival = the phone was already in the sheet
-                    # before this lead came in (a returning/repeat lead)
-                    lag, st = "repeat lead (row pre-exists)", "ok"
-                else:
-                    lag = f"≤ {mins//60}h{mins%60:02d}m" if mins >= 60 else f"≤ {mins}m"
-                    st = "ok"
-            except ValueError:
-                lag, st = "in sheet (time unknown)", "ok"
-        elif info and info.get("feedback_appeared_between") is None and info.get("row_appeared_between") is None and not fb_seen:
-            lag, st = "NOT in sheet yet", "warn"
-        elif fb_seen:
-            lag, st = "in sheet (day-level)", "ok"
-        else:
-            lag, st = "NOT in sheet yet", "warn"
-        speed_rows.append({"name": l["name"], "campaign": SHORT.get(l["campaign"], l["campaign"]),
-                           "arrived": l["created_time_ist"][5:16], "intent": l.get("intent", ""),
-                           "budget": l.get("budget", ""), "lag": lag, "status": st})
-
-    # ---- open integrity flags (curated, standing) ----
+    # ---- open integrity flags ----
     flags = []
-    for v in visits:
+    for v in v30:
         if v["status"] == "unverified":
             flags.append(("serious", f"SVD visit {v['date']} — {esc(v['name'])} ({v['phone']}): "
                                      f"no CRM record in any tab, but conversion was pushed to Meta."))
         elif v["status"] == "bad":
             flags.append(("critical", f"SVD visit {v['date']} — {esc(v['name'])} ({v['phone']}): {v['note']}; "
                                       f"conversion pushed to Meta pollutes optimization."))
-    # live phone-typo check: CRM lead whose exact phone is absent from the FB tab but a
-    # 1-digit-off variant is present
+    fb_phones = set(fb_dates_by_phone)
     for l in leads:
         if l["created_time_ist"][:10] < (today - timedelta(days=3)).isoformat():
             continue
@@ -183,90 +219,21 @@ def build():
         if near:
             flags.append(("serious", f"Phone typo suspected: CRM lead {esc(l['name'])} is {p}, "
                                      f"sheet has {near[0]} — team may be dialing a wrong number."))
-
-    # ---- charts (inline SVG) ----
-    W, H, PAD_L, PAD_B, PAD_T = 660, 200, 44, 26, 12
-    plot_w, plot_h = W - PAD_L - 12, H - PAD_B - PAD_T
-
-    def nice_max(v):
-        if v <= 0: return 1
-        for m in (1, 2, 2.5, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 2500, 5000):
-            if m >= v: return m
-        return v
-
-    def bars_chart(metric, fmt):
-        mx = nice_max(max((series[c][dt][metric] for c in series for dt in days), default=1))
-        n = len(days)
-        group_w = plot_w / max(n, 1)
-        bar_w = max(4.0, (group_w - 6) / 2)
-        parts = []
-        for gi, yv in enumerate((0, mx / 2, mx)):
-            yy = PAD_T + plot_h - plot_h * (yv / mx)
-            parts.append(f'<line x1="{PAD_L}" y1="{yy:.1f}" x2="{W-12}" y2="{yy:.1f}" class="grid"/>' if gi else '')
-            parts.append(f'<text x="{PAD_L-6}" y="{yy+4:.1f}" class="tick" text-anchor="end">{fmt(yv)}</text>')
-        for i, dt in enumerate(days):
-            x0 = PAD_L + i * group_w + (group_w - 2 * bar_w - 2) / 2
-            for si, c in enumerate((STUDIO, BHK2)):
-                v = series[c][dt][metric]
-                bh = plot_h * (v / mx)
-                bx, by = x0 + si * (bar_w + 2), PAD_T + plot_h - bh
-                label = f"{dt[5:]} · {SHORT[c]}: {fmt(v)}"
-                parts.append(
-                    f'<rect x="{bx:.1f}" y="{by:.1f}" width="{bar_w:.1f}" height="{max(bh,0):.1f}" '
-                    f'rx="2" class="s{si+1}"><title>{esc(label)}</title></rect>')
-            if i % 2 == (len(days) - 1) % 2:
-                parts.append(f'<text x="{x0 + bar_w:.1f}" y="{H-8}" class="tick" text-anchor="middle">{dt[8:]}/{int(dt[5:7])}</text>')
-        parts.append(f'<line x1="{PAD_L}" y1="{PAD_T+plot_h}" x2="{W-12}" y2="{PAD_T+plot_h}" class="axis"/>')
-        return f'<svg viewBox="0 0 {W} {H}" role="img">{"".join(parts)}</svg>'
-
-    leads_svg = bars_chart("leads", lambda v: f"{v:g}")
-    spend_svg = bars_chart("spend", lambda v: f"₹{v/1000:g}k" if v >= 1000 else f"₹{v:g}")
-
-    # ---- campaign summary table ----
-    def row_for(c):
-        tt, yy = t.get(c, {}), y.get(c, {})
-        l30c = [r for r in l30 if r.get("campaign") == c]
-        s30 = sum(r.get("spend", 0) for r in l30c); ld30 = sum(r.get("leads", 0) for r in l30c)
-        return {
-            "name": SHORT.get(c, c),
-            "t_spend": tt.get("spend", 0), "t_leads": tt.get("leads", 0),
-            "t_cpl": tt.get("cpl"), "t_ctr": tt.get("ctr"), "t_freq": tt.get("frequency"),
-            "y_spend": yy.get("spend", 0), "y_leads": yy.get("leads", 0),
-            "s30": s30, "l30": ld30, "cpl30": (s30 / ld30) if ld30 else None,
-        }
-    camp_rows = [row_for(STUDIO), row_for(BHK2)]
-
-    def fmt_or(v, fmt="{:.0f}", dash="—"):
-        return fmt.format(v) if v not in (None, 0) or (isinstance(v, (int, float)) and v == 0 and "{" in fmt) else dash
-
-    status_dot = {"ok": ("good", "✓"), "warn": ("serious", "⚠"),
-                  "verified": ("good", "✓"), "annotated": ("good", "✓"),
-                  "unverified": ("serious", "⚠"), "bad": ("critical", "✗")}
-
-    speed_html = "".join(
-        f'<tr><td>{esc(r["name"])}</td><td><span class="chip {"c1" if r["campaign"]=="Studio" else "c2"}">{r["campaign"]}</span></td>'
-        f'<td class="num">{r["arrived"]}</td><td>{esc(r["intent"])}</td><td>{esc(r["budget"] or "—")}</td>'
-        f'<td class="st-{status_dot[r["status"]][0]}">{status_dot[r["status"]][1]} {esc(r["lag"])}</td></tr>'
-        for r in speed_rows) or '<tr><td colspan="6" class="muted">No leads in the last 48 hours.</td></tr>'
-
-    visits_html = "".join(
-        f'<tr><td class="num">{v["date"]}</td><td>{esc(v["name"])}</td><td class="num">{v["phone"]}</td>'
-        f'<td class="st-{status_dot[v["status"]][0]}">{status_dot[v["status"]][1]} {esc(v["note"])}</td></tr>'
-        for v in sorted(visits, key=lambda v: v["date"], reverse=True))
-
     flags_html = "".join(
         f'<li class="flag-{sev}"><span class="flag-ico">{"✗" if sev=="critical" else "⚠"}</span> {msg}</li>'
         for sev, msg in flags) or '<li class="muted">No open integrity flags. ✓</li>'
 
-    camp_html = "".join(
-        f'<tr><td><span class="chip {"c1" if r["name"]=="Studio" else "c2"}">{r["name"]}</span></td>'
-        f'<td class="num">{rupees(r["t_spend"])}</td><td class="num">{r["t_leads"]}</td>'
-        f'<td class="num">{fmt_or(r["t_cpl"], "₹{:.0f}")}</td>'
-        f'<td class="num">{fmt_or(r["t_ctr"], "{:.2f}%")}</td><td class="num">{fmt_or(r["t_freq"], "{:.2f}")}</td>'
-        f'<td class="num">{rupees(r["y_spend"])}</td><td class="num">{r["y_leads"]}</td>'
-        f'<td class="num">{rupees(r["s30"])}</td><td class="num">{r["l30"]}</td>'
-        f'<td class="num">{fmt_or(r["cpl30"], "₹{:.0f}")}</td></tr>'
-        for r in camp_rows)
+    # ---- reports archive ----
+    report_files = sorted(glob.glob(os.path.join(HERE, "reports", "2*.md")), reverse=True)
+    reports_html = []
+    for i, path in enumerate(report_files):
+        date_name = os.path.basename(path)[:-3]
+        with open(path, encoding="utf-8") as f:
+            body = f.read()
+        reports_html.append(
+            f'<details class="report"{" open" if i == 0 else ""}><summary>{date_name}</summary>'
+            f'<div class="rbody">{md_lite(body)}</div></details>')
+    reports_html = "".join(reports_html) or '<p class="muted">No reports committed yet.</p>'
 
     vr_txt = f"{visit_rate:.1f}%" if visit_rate is not None else "—"
     vr_delta = ""
@@ -274,6 +241,11 @@ def build():
         good = visit_rate >= BASELINE_VISIT_RATE
         vr_delta = (f'<div class="delta {"up" if good else "down"}">'
                     f'{"▲" if good else "▼"} baseline {BASELINE_VISIT_RATE}%</div>')
+
+    payload = json.dumps({
+        "daily": daily, "crm": crm_rows, "visits": visits,
+        "today": today.isoformat(), "dailyMin": daily_min, "v3Start": V3_START,
+    }, ensure_ascii=False)
 
     page = f"""<!DOCTYPE html>
 <html lang="en"><head>
@@ -288,18 +260,19 @@ def build():
   --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,.10);
   --s1: #2a78d6; --s2: #eb6834;
   --good: #0ca30c; --serious: #ec835a; --critical: #d03b3b; --good-text: #006300;
+  --wash: rgba(11,11,11,.045);
 }}
 @media (prefers-color-scheme: dark) {{ :root:not([data-theme="light"]) {{
   color-scheme: dark;
   --surface: #1a1a19; --page: #0d0d0d; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c;
+  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
 }} }}
 :root[data-theme="dark"] {{
   color-scheme: dark;
   --surface: #1a1a19; --page: #0d0d0d; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c;
+  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
 }}
 * {{ box-sizing: border-box; margin: 0; }}
 body {{ background: var(--page); color: var(--ink);
@@ -317,6 +290,17 @@ h2 {{ font-size: 13px; font-weight: 600; color: var(--ink2); text-transform: upp
 .tile .sub {{ font-size: 12px; color: var(--muted); margin-top: 2px; }}
 .delta {{ font-size: 12px; margin-top: 2px; }}
 .delta.up {{ color: var(--good-text); }} .delta.down {{ color: var(--critical); }}
+.filters {{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; margin: 14px 0; }}
+.filters .lbl {{ font-size: 12px; color: var(--ink2); margin-right: 2px; }}
+.preset {{ border: 1px solid var(--border); background: none; color: var(--ink);
+  font: 600 12px system-ui, sans-serif; border-radius: 999px; padding: 4px 12px; cursor: pointer; }}
+.preset:hover {{ background: var(--wash); }}
+.preset.on {{ background: var(--ink); color: var(--page); border-color: var(--ink); }}
+.filters input[type=date] {{ border: 1px solid var(--border); background: none; color: var(--ink);
+  border-radius: 7px; padding: 3px 7px; font: 12px system-ui, sans-serif; }}
+.rangenote {{ font-size: 12px; color: var(--muted); margin-left: auto; }}
 .cards {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }}
 .card {{ background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }}
 .card h3 {{ font-size: 13px; font-weight: 600; margin-bottom: 8px; }}
@@ -336,7 +320,8 @@ tr:last-child td {{ border-bottom: 0; }}
 td.num, th.num {{ font-variant-numeric: tabular-nums; }}
 .chip {{ display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }}
 .chip.c1 {{ background: var(--s1); }} .chip.c2 {{ background: var(--s2); }}
-.st-good {{ color: var(--good-text); }} .st-serious {{ color: var(--critical); }} .st-critical {{ color: var(--critical); font-weight: 600; }}
+.st-good {{ color: var(--good-text); }} .st-serious {{ color: var(--critical); }}
+.st-critical {{ color: var(--critical); font-weight: 600; }} .st-muted {{ color: var(--muted); }}
 .muted {{ color: var(--muted); }}
 ul.flags {{ list-style: none; display: grid; gap: 8px; }}
 ul.flags li {{ background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
@@ -344,6 +329,18 @@ ul.flags li {{ background: var(--surface); border: 1px solid var(--border); bord
 li.flag-critical {{ border-left: 3px solid var(--critical); }}
 li.flag-serious {{ border-left: 3px solid var(--serious); }}
 .flag-ico {{ margin-right: 4px; }}
+details.report {{ background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  margin-bottom: 8px; }}
+details.report summary {{ cursor: pointer; padding: 10px 14px; font-weight: 600; font-size: 13px; }}
+details.report .rbody {{ padding: 4px 16px 14px; font-size: 13px; border-top: 1px solid var(--grid); }}
+.rbody h3 {{ font-size: 15px; margin: 12px 0 6px; }}
+.rbody h4 {{ font-size: 13.5px; margin: 12px 0 4px; }}
+.rbody h5 {{ font-size: 13px; margin: 10px 0 4px; color: var(--ink2); }}
+.rbody .li {{ margin: 2px 0 2px 10px; }}
+.rbody .gap {{ height: 8px; }}
+.rbody hr {{ border: 0; border-top: 1px solid var(--grid); margin: 10px 0; }}
+.rbody pre.mdtable {{ overflow-x: auto; background: var(--wash); border-radius: 8px;
+  padding: 8px 10px; font-size: 12px; line-height: 1.5; margin: 6px 0; }}
 footer {{ margin-top: 26px; color: var(--muted); font-size: 12px; }}
 </style></head><body><div class="wrap">
 <header>
@@ -366,45 +363,178 @@ footer {{ margin-top: 26px; color: var(--muted); font-size: 12px; }}
     <div class="sub">{matched_fb}/{total_fb} rows matched</div></div>
 </div>
 
-<h2>Last 14 days</h2>
+<div class="filters">
+  <span class="lbl">Range</span>
+  <button class="preset" data-days="1">Today</button>
+  <button class="preset" data-days="7">7D</button>
+  <button class="preset on" data-days="14">14D</button>
+  <button class="preset" data-days="30">30D</button>
+  <button class="preset" data-days="all">All V3</button>
+  <span class="lbl" style="margin-left:8px">From</span><input type="date" id="from">
+  <span class="lbl">To</span><input type="date" id="to">
+  <span class="rangenote" id="rangenote"></span>
+</div>
+
 <div class="cards">
   <div class="card"><h3>Leads per day</h3>
     <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
-    {leads_svg}</div>
+    <div id="chart-leads"></div></div>
   <div class="card"><h3>Spend per day</h3>
     <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
-    {spend_svg}</div>
+    <div id="chart-spend"></div></div>
 </div>
 
-<h2>Campaigns</h2>
+<h2>Campaigns — selected range</h2>
 <div class="tablewrap"><table>
-<thead><tr><th>Campaign</th><th class="num">Spend today</th><th class="num">Leads</th><th class="num">CPL</th>
-<th class="num">CTR</th><th class="num">Freq</th><th class="num">Spend yday</th><th class="num">Leads yday</th>
-<th class="num">Spend 30d</th><th class="num">Leads 30d</th><th class="num">CPL 30d</th></tr></thead>
-<tbody>{camp_html}</tbody></table></div>
+<thead><tr><th>Campaign</th><th class="num">Spend</th><th class="num">Meta leads</th><th class="num">CPL</th>
+<th class="num">CTR</th><th class="num">CPC</th><th class="num">CPM</th><th class="num">CRM leads</th></tr></thead>
+<tbody id="camp-body"></tbody></table></div>
 
-<h2>Speed to lead — last 48 hours</h2>
+<h2>Speed to lead — selected range</h2>
 <div class="tablewrap"><table>
-<thead><tr><th>Lead</th><th>Campaign</th><th class="num">Arrived (IST)</th><th>Intent</th><th>Budget</th><th>Contacted</th></tr></thead>
-<tbody>{speed_html}</tbody></table></div>
+<thead><tr><th>Lead</th><th>Campaign</th><th class="num">Arrived (IST)</th><th>Intent</th><th>Budget</th>
+<th>Logged in sheet</th><th>Lag</th></tr></thead>
+<tbody id="speed-body"></tbody></table></div>
 
-<h2>Site visits — last 30 days (SVD vs CRM)</h2>
+<h2>Site visits — selected range (SVD vs CRM)</h2>
 <div class="tablewrap"><table>
 <thead><tr><th class="num">Date</th><th>Name</th><th class="num">Phone</th><th>Verification</th></tr></thead>
-<tbody>{visits_html}</tbody></table></div>
+<tbody id="visits-body"></tbody></table></div>
 
 <h2>Open integrity flags</h2>
 <ul class="flags">{flags_html}</ul>
 
-<footer>Verified visit = phone matches an OTP-verified CRM lead (either form tab). Contact lag comes from
-Drive revision history of the team sheet — brackets, not exact call times. Source of truth for leads:
-CRM Event sheet; for visits: SVD tab cross-checked against CRM. Baseline visit rate {BASELINE_VISIT_RATE}%.</footer>
-</div></body></html>"""
+<h2>Daily reports archive</h2>
+{reports_html}
+
+<footer>Verified visit = phone matches an OTP-verified CRM lead (either form tab). "Logged in sheet" comes from
+the team sheet's Drive revision history (bracket upper bound) when available, else the sheet row's created date
+(day-level). Meta spend/CTR data covers the trailing 30 days only; CRM leads go back to V3 start ({V3_START}).
+Baseline visit rate {BASELINE_VISIT_RATE}%.</footer>
+</div>
+
+<script>
+const DATA = {payload};
+const $ = (s) => document.querySelector(s);
+const fromEl = $("#from"), toEl = $("#to");
+const fmtR = (v) => "₹" + Math.round(v).toLocaleString("en-IN");
+
+function isoAddDays(iso, n) {{
+  const d = new Date(iso + "T00:00:00");
+  d.setDate(d.getDate() + n);
+  return d.toISOString().slice(0, 10);
+}}
+function setRangeDays(days) {{
+  toEl.value = DATA.today;
+  fromEl.value = days === "all" ? DATA.v3Start : isoAddDays(DATA.today, -(days - 1));
+  render();
+}}
+function listDays(from, to) {{
+  const out = [];
+  for (let d = from; d <= to && out.length < 400; d = isoAddDays(d, 1)) out.push(d);
+  return out;
+}}
+function niceMax(v) {{
+  if (v <= 0) return 1;
+  for (const m of [1,2,2.5,5,10,20,25,50,100,200,250,500,1000,2000,2500,5000,10000]) if (m >= v) return m;
+  return Math.ceil(v);
+}}
+function barChart(el, days, val, fmt) {{
+  const W = 660, H = 200, PL = 46, PB = 26, PT = 12;
+  const pw = W - PL - 12, ph = H - PB - PT;
+  const mx = niceMax(Math.max(1, ...days.flatMap(dt => [val("Studio", dt), val("2BHK", dt)])));
+  const n = days.length, gw = pw / Math.max(n, 1);
+  const bw = Math.max(2, Math.min(22, (gw - 4) / 2));
+  let s = "";
+  [0, mx / 2, mx].forEach((yv, gi) => {{
+    const yy = PT + ph - ph * yv / mx;
+    if (gi) s += `<line x1="${{PL}}" y1="${{yy}}" x2="${{W - 12}}" y2="${{yy}}" class="grid"/>`;
+    s += `<text x="${{PL - 6}}" y="${{yy + 4}}" class="tick" text-anchor="end">${{fmt(yv)}}</text>`;
+  }});
+  const step = Math.max(1, Math.ceil(n / 8));
+  days.forEach((dt, i) => {{
+    const x0 = PL + i * gw + (gw - 2 * bw - 2) / 2;
+    ["Studio", "2BHK"].forEach((c, si) => {{
+      const v = val(c, dt), bh = ph * v / mx;
+      s += `<rect x="${{(x0 + si * (bw + 2)).toFixed(1)}}" y="${{(PT + ph - bh).toFixed(1)}}"` +
+           ` width="${{bw.toFixed(1)}}" height="${{Math.max(bh, 0).toFixed(1)}}" rx="2" class="s${{si + 1}}">` +
+           `<title>${{dt.slice(5)}} · ${{c}}: ${{fmt(v)}}</title></rect>`;
+    }});
+    if (i % step === (n - 1) % step)
+      s += `<text x="${{x0 + bw}}" y="${{H - 8}}" class="tick" text-anchor="middle">${{+dt.slice(8)}}/${{+dt.slice(5, 7)}}</text>`;
+  }});
+  s += `<line x1="${{PL}}" y1="${{PT + ph}}" x2="${{W - 12}}" y2="${{PT + ph}}" class="axis"/>`;
+  el.innerHTML = `<svg viewBox="0 0 ${{W}} ${{H}}" role="img">${{s}}</svg>`;
+}}
+function render() {{
+  let from = fromEl.value || DATA.dailyMin, to = toEl.value || DATA.today;
+  if (from > to) [from, to] = [to, from];
+  const inR = (d) => d >= from && d <= to;
+  const note = from < DATA.dailyMin ? `Meta spend/CTR data starts ${{DATA.dailyMin}}; CRM leads shown for the full range.` : "";
+  $("#rangenote").textContent = note;
+
+  const dayList = listDays(from < DATA.dailyMin ? DATA.dailyMin : from, to);
+  const byKey = {{}};
+  DATA.daily.forEach(r => {{ byKey[r.camp + "|" + r.date] = r; }});
+  const get = (c, dt, f) => (byKey[c + "|" + dt] || {{}})[f] || 0;
+  barChart($("#chart-leads"), dayList, (c, dt) => get(c, dt, "leads"), v => String(v));
+  barChart($("#chart-spend"), dayList, (c, dt) => get(c, dt, "spend"),
+           v => v >= 1000 ? "₹" + (v / 1000) + "k" : "₹" + Math.round(v));
+
+  // campaign aggregates over range
+  let rows = "";
+  ["Studio", "2BHK"].forEach((c, si) => {{
+    const rs = DATA.daily.filter(r => r.camp === c && inR(r.date));
+    const sp = rs.reduce((a, r) => a + r.spend, 0), ld = rs.reduce((a, r) => a + r.leads, 0);
+    const im = rs.reduce((a, r) => a + r.imp, 0), ck = rs.reduce((a, r) => a + r.clicks, 0);
+    const crmN = DATA.crm.filter(r => r.camp === c && inR(r.ts.slice(0, 10))).length;
+    rows += `<tr><td><span class="chip c${{si + 1}}">${{c}}</span></td>` +
+      `<td class="num">${{fmtR(sp)}}</td><td class="num">${{ld}}</td>` +
+      `<td class="num">${{ld ? fmtR(sp / ld) : "—"}}</td>` +
+      `<td class="num">${{im ? (100 * ck / im).toFixed(2) + "%" : "—"}}</td>` +
+      `<td class="num">${{ck ? fmtR(sp / ck) : "—"}}</td>` +
+      `<td class="num">${{im ? fmtR(1000 * sp / im) : "—"}}</td>` +
+      `<td class="num">${{crmN}}</td></tr>`;
+  }});
+  $("#camp-body").innerHTML = rows;
+
+  // speed to lead
+  const sp = DATA.crm.filter(r => inR(r.ts.slice(0, 10)));
+  $("#speed-body").innerHTML = sp.map(r => {{
+    const cls = r.st === "warn" ? "st-serious" : "st-good";
+    const ico = r.st === "warn" ? "⚠" : "✓";
+    return `<tr><td>${{r.name}}</td><td><span class="chip ${{r.camp === "Studio" ? "c1" : "c2"}}">${{r.camp}}</span></td>` +
+      `<td class="num">${{r.ts.slice(5, 16)}}</td><td>${{r.intent}}</td><td>${{r.budget || "—"}}</td>` +
+      `<td>${{r.logged}}</td><td class="${{cls}}">${{ico}} ${{r.lag}}</td></tr>`;
+  }}).join("") || `<tr><td colspan="7" class="muted">No CRM leads in this range.</td></tr>`;
+
+  // visits
+  const ic = {{verified: ["st-good", "✓"], annotated: ["st-good", "✓"], unverified: ["st-serious", "⚠"],
+              bad: ["st-critical", "✗"], prev3: ["st-muted", "•"]}};
+  const vs = DATA.visits.filter(v => inR(v.date));
+  $("#visits-body").innerHTML = vs.map(v =>
+    `<tr><td class="num">${{v.date}}</td><td>${{v.name}}</td><td class="num">${{v.phone}}</td>` +
+    `<td class="${{ic[v.status][0]}}">${{ic[v.status][1]}} ${{v.status === "verified" ? "" : ""}}${{v.note}}</td></tr>`
+  ).join("") || `<tr><td colspan="4" class="muted">No Facebook-sourced visits in this range.</td></tr>`;
+}}
+document.querySelectorAll(".preset").forEach(b => b.addEventListener("click", () => {{
+  document.querySelectorAll(".preset").forEach(x => x.classList.remove("on"));
+  b.classList.add("on");
+  setRangeDays(b.dataset.days === "all" ? "all" : +b.dataset.days);
+}}));
+[fromEl, toEl].forEach(el => el.addEventListener("change", () => {{
+  document.querySelectorAll(".preset").forEach(x => x.classList.remove("on"));
+  render();
+}}));
+setRangeDays(14);
+</script>
+</body></html>"""
 
     out = os.path.join(HERE, "dashboard.html")
     with open(out, "w", encoding="utf-8") as f:
         f.write(page)
-    print(f"Wrote dashboard.html ({len(page):,} bytes, {len(visits)} visits, {len(speed_rows)} recent leads, {len(flags)} flags)")
+    print(f"Wrote dashboard.html ({len(page):,} bytes, {len(crm_rows)} CRM leads, "
+          f"{len(visits)} visits, {len(report_files)} reports, {len(flags)} flags)")
 
 if __name__ == "__main__":
     build()

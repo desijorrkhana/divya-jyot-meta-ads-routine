@@ -11,18 +11,19 @@
   --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,.10);
   --s1: #2a78d6; --s2: #eb6834;
   --good: #0ca30c; --serious: #ec835a; --critical: #d03b3b; --good-text: #006300;
+  --wash: rgba(11,11,11,.045);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   color-scheme: dark;
   --surface: #1a1a19; --page: #0d0d0d; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c;
+  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
 } }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --surface: #1a1a19; --page: #0d0d0d; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c;
+  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
 }
 * { box-sizing: border-box; margin: 0; }
 body { background: var(--page); color: var(--ink);
@@ -40,6 +41,17 @@ h2 { font-size: 13px; font-weight: 600; color: var(--ink2); text-transform: uppe
 .tile .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
 .delta { font-size: 12px; margin-top: 2px; }
 .delta.up { color: var(--good-text); } .delta.down { color: var(--critical); }
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; margin: 14px 0; }
+.filters .lbl { font-size: 12px; color: var(--ink2); margin-right: 2px; }
+.preset { border: 1px solid var(--border); background: none; color: var(--ink);
+  font: 600 12px system-ui, sans-serif; border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.preset:hover { background: var(--wash); }
+.preset.on { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.filters input[type=date] { border: 1px solid var(--border); background: none; color: var(--ink);
+  border-radius: 7px; padding: 3px 7px; font: 12px system-ui, sans-serif; }
+.rangenote { font-size: 12px; color: var(--muted); margin-left: auto; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
 .card h3 { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
@@ -59,7 +71,8 @@ tr:last-child td { border-bottom: 0; }
 td.num, th.num { font-variant-numeric: tabular-nums; }
 .chip { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }
 .chip.c1 { background: var(--s1); } .chip.c2 { background: var(--s2); }
-.st-good { color: var(--good-text); } .st-serious { color: var(--critical); } .st-critical { color: var(--critical); font-weight: 600; }
+.st-good { color: var(--good-text); } .st-serious { color: var(--critical); }
+.st-critical { color: var(--critical); font-weight: 600; } .st-muted { color: var(--muted); }
 .muted { color: var(--muted); }
 ul.flags { list-style: none; display: grid; gap: 8px; }
 ul.flags li { background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
@@ -67,11 +80,23 @@ ul.flags li { background: var(--surface); border: 1px solid var(--border); borde
 li.flag-critical { border-left: 3px solid var(--critical); }
 li.flag-serious { border-left: 3px solid var(--serious); }
 .flag-ico { margin-right: 4px; }
+details.report { background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  margin-bottom: 8px; }
+details.report summary { cursor: pointer; padding: 10px 14px; font-weight: 600; font-size: 13px; }
+details.report .rbody { padding: 4px 16px 14px; font-size: 13px; border-top: 1px solid var(--grid); }
+.rbody h3 { font-size: 15px; margin: 12px 0 6px; }
+.rbody h4 { font-size: 13.5px; margin: 12px 0 4px; }
+.rbody h5 { font-size: 13px; margin: 10px 0 4px; color: var(--ink2); }
+.rbody .li { margin: 2px 0 2px 10px; }
+.rbody .gap { height: 8px; }
+.rbody hr { border: 0; border-top: 1px solid var(--grid); margin: 10px 0; }
+.rbody pre.mdtable { overflow-x: auto; background: var(--wash); border-radius: 8px;
+  padding: 8px 10px; font-size: 12px; line-height: 1.5; margin: 6px 0; }
 footer { margin-top: 26px; color: var(--muted); font-size: 12px; }
 </style></head><body><div class="wrap">
 <header>
   <h1>Divya Jyot LYF Rewa — Meta Ads</h1>
-  <span class="updated">Updated Wed 22 Jul 2026, 12:22 IST · auto-rebuilds every 4h · tab refreshes every 15m</span>
+  <span class="updated">Updated Wed 22 Jul 2026, 12:30 IST · auto-rebuilds every 4h · tab refreshes every 15m</span>
 </header>
 
 <div class="tiles">
@@ -89,37 +114,493 @@ footer { margin-top: 26px; color: var(--muted); font-size: 12px; }
     <div class="sub">157/161 rows matched</div></div>
 </div>
 
-<h2>Last 14 days</h2>
+<div class="filters">
+  <span class="lbl">Range</span>
+  <button class="preset" data-days="1">Today</button>
+  <button class="preset" data-days="7">7D</button>
+  <button class="preset on" data-days="14">14D</button>
+  <button class="preset" data-days="30">30D</button>
+  <button class="preset" data-days="all">All V3</button>
+  <span class="lbl" style="margin-left:8px">From</span><input type="date" id="from">
+  <span class="lbl">To</span><input type="date" id="to">
+  <span class="rangenote" id="rangenote"></span>
+</div>
+
 <div class="cards">
   <div class="card"><h3>Leads per day</h3>
     <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
-    <svg viewBox="0 0 660 200" role="img"><text x="38" y="178.0" class="tick" text-anchor="end">0</text><line x1="44" y1="93.0" x2="648" y2="93.0" class="grid"/><text x="38" y="97.0" class="tick" text-anchor="end">5</text><line x1="44" y1="12.0" x2="648" y2="12.0" class="grid"/><text x="38" y="16.0" class="tick" text-anchor="end">10</text><rect x="46.0" y="141.6" width="18.6" height="32.4" rx="2" class="s1"><title>07-08 · Studio: 2</title></rect><rect x="66.6" y="125.4" width="18.6" height="48.6" rx="2" class="s2"><title>07-08 · 2BHK: 3</title></rect><rect x="89.1" y="157.8" width="18.6" height="16.2" rx="2" class="s1"><title>07-09 · Studio: 1</title></rect><rect x="109.7" y="93.0" width="18.6" height="81.0" rx="2" class="s2"><title>07-09 · 2BHK: 5</title></rect><text x="107.7" y="192" class="tick" text-anchor="middle">09/7</text><rect x="132.3" y="109.2" width="18.6" height="64.8" rx="2" class="s1"><title>07-10 · Studio: 4</title></rect><rect x="152.9" y="93.0" width="18.6" height="81.0" rx="2" class="s2"><title>07-10 · 2BHK: 5</title></rect><rect x="175.4" y="125.4" width="18.6" height="48.6" rx="2" class="s1"><title>07-11 · Studio: 3</title></rect><rect x="196.0" y="141.6" width="18.6" height="32.4" rx="2" class="s2"><title>07-11 · 2BHK: 2</title></rect><text x="194.0" y="192" class="tick" text-anchor="middle">11/7</text><rect x="218.6" y="125.4" width="18.6" height="48.6" rx="2" class="s1"><title>07-12 · Studio: 3</title></rect><rect x="239.1" y="109.2" width="18.6" height="64.8" rx="2" class="s2"><title>07-12 · 2BHK: 4</title></rect><rect x="261.7" y="93.0" width="18.6" height="81.0" rx="2" class="s1"><title>07-13 · Studio: 5</title></rect><rect x="282.3" y="125.4" width="18.6" height="48.6" rx="2" class="s2"><title>07-13 · 2BHK: 3</title></rect><text x="280.3" y="192" class="tick" text-anchor="middle">13/7</text><rect x="304.9" y="93.0" width="18.6" height="81.0" rx="2" class="s1"><title>07-14 · Studio: 5</title></rect><rect x="325.4" y="109.2" width="18.6" height="64.8" rx="2" class="s2"><title>07-14 · 2BHK: 4</title></rect><rect x="348.0" y="174.0" width="18.6" height="0.0" rx="2" class="s1"><title>07-15 · Studio: 0</title></rect><rect x="368.6" y="174.0" width="18.6" height="0.0" rx="2" class="s2"><title>07-15 · 2BHK: 0</title></rect><text x="366.6" y="192" class="tick" text-anchor="middle">15/7</text><rect x="391.1" y="157.8" width="18.6" height="16.2" rx="2" class="s1"><title>07-17 · Studio: 1</title></rect><rect x="411.7" y="93.0" width="18.6" height="81.0" rx="2" class="s2"><title>07-17 · 2BHK: 5</title></rect><rect x="434.3" y="60.6" width="18.6" height="113.4" rx="2" class="s1"><title>07-18 · Studio: 7</title></rect><rect x="454.9" y="125.4" width="18.6" height="48.6" rx="2" class="s2"><title>07-18 · 2BHK: 3</title></rect><text x="452.9" y="192" class="tick" text-anchor="middle">18/7</text><rect x="477.4" y="157.8" width="18.6" height="16.2" rx="2" class="s1"><title>07-19 · Studio: 1</title></rect><rect x="498.0" y="157.8" width="18.6" height="16.2" rx="2" class="s2"><title>07-19 · 2BHK: 1</title></rect><rect x="520.6" y="157.8" width="18.6" height="16.2" rx="2" class="s1"><title>07-20 · Studio: 1</title></rect><rect x="541.1" y="141.6" width="18.6" height="32.4" rx="2" class="s2"><title>07-20 · 2BHK: 2</title></rect><text x="539.1" y="192" class="tick" text-anchor="middle">20/7</text><rect x="563.7" y="109.2" width="18.6" height="64.8" rx="2" class="s1"><title>07-21 · Studio: 4</title></rect><rect x="584.3" y="93.0" width="18.6" height="81.0" rx="2" class="s2"><title>07-21 · 2BHK: 5</title></rect><rect x="606.9" y="157.8" width="18.6" height="16.2" rx="2" class="s1"><title>07-22 · Studio: 1</title></rect><rect x="627.4" y="174.0" width="18.6" height="0.0" rx="2" class="s2"><title>07-22 · 2BHK: 0</title></rect><text x="625.4" y="192" class="tick" text-anchor="middle">22/7</text><line x1="44" y1="174" x2="648" y2="174" class="axis"/></svg></div>
+    <div id="chart-leads"></div></div>
   <div class="card"><h3>Spend per day</h3>
     <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
-    <svg viewBox="0 0 660 200" role="img"><text x="38" y="178.0" class="tick" text-anchor="end">₹0</text><line x1="44" y1="93.0" x2="648" y2="93.0" class="grid"/><text x="38" y="97.0" class="tick" text-anchor="end">₹1k</text><line x1="44" y1="12.0" x2="648" y2="12.0" class="grid"/><text x="38" y="16.0" class="tick" text-anchor="end">₹2k</text><rect x="46.0" y="108.4" width="18.6" height="65.6" rx="2" class="s1"><title>07-08 · Studio: ₹810</title></rect><rect x="66.6" y="53.7" width="18.6" height="120.3" rx="2" class="s2"><title>07-08 · 2BHK: ₹1.48499k</title></rect><rect x="89.1" y="118.2" width="18.6" height="55.8" rx="2" class="s1"><title>07-09 · Studio: ₹688.49</title></rect><rect x="109.7" y="56.0" width="18.6" height="118.0" rx="2" class="s2"><title>07-09 · 2BHK: ₹1.45652k</title></rect><text x="107.7" y="192" class="tick" text-anchor="middle">09/7</text><rect x="132.3" y="114.7" width="18.6" height="59.3" rx="2" class="s1"><title>07-10 · Studio: ₹731.87</title></rect><rect x="152.9" y="91.2" width="18.6" height="82.8" rx="2" class="s2"><title>07-10 · 2BHK: ₹1.02273k</title></rect><rect x="175.4" y="123.7" width="18.6" height="50.3" rx="2" class="s1"><title>07-11 · Studio: ₹621.22</title></rect><rect x="196.0" y="115.2" width="18.6" height="58.8" rx="2" class="s2"><title>07-11 · 2BHK: ₹726.04</title></rect><text x="194.0" y="192" class="tick" text-anchor="middle">11/7</text><rect x="218.6" y="80.5" width="18.6" height="93.5" rx="2" class="s1"><title>07-12 · Studio: ₹1.15463k</title></rect><rect x="239.1" y="88.0" width="18.6" height="86.0" rx="2" class="s2"><title>07-12 · 2BHK: ₹1.06171k</title></rect><rect x="261.7" y="86.5" width="18.6" height="87.5" rx="2" class="s1"><title>07-13 · Studio: ₹1.08061k</title></rect><rect x="282.3" y="88.4" width="18.6" height="85.6" rx="2" class="s2"><title>07-13 · 2BHK: ₹1.05709k</title></rect><text x="280.3" y="192" class="tick" text-anchor="middle">13/7</text><rect x="304.9" y="103.7" width="18.6" height="70.3" rx="2" class="s1"><title>07-14 · Studio: ₹867.63</title></rect><rect x="325.4" y="102.4" width="18.6" height="71.6" rx="2" class="s2"><title>07-14 · 2BHK: ₹884.22</title></rect><rect x="348.0" y="173.3" width="18.6" height="0.7" rx="2" class="s1"><title>07-15 · Studio: ₹9.06</title></rect><rect x="368.6" y="172.8" width="18.6" height="1.2" rx="2" class="s2"><title>07-15 · 2BHK: ₹14.51</title></rect><text x="366.6" y="192" class="tick" text-anchor="middle">15/7</text><rect x="391.1" y="67.2" width="18.6" height="106.8" rx="2" class="s1"><title>07-17 · Studio: ₹1.31826k</title></rect><rect x="411.7" y="60.5" width="18.6" height="113.5" rx="2" class="s2"><title>07-17 · 2BHK: ₹1.40123k</title></rect><rect x="434.3" y="47.9" width="18.6" height="126.1" rx="2" class="s1"><title>07-18 · Studio: ₹1.55668k</title></rect><rect x="454.9" y="50.4" width="18.6" height="123.6" rx="2" class="s2"><title>07-18 · 2BHK: ₹1.52535k</title></rect><text x="452.9" y="192" class="tick" text-anchor="middle">18/7</text><rect x="477.4" y="115.7" width="18.6" height="58.3" rx="2" class="s1"><title>07-19 · Studio: ₹719.22</title></rect><rect x="498.0" y="106.4" width="18.6" height="67.6" rx="2" class="s2"><title>07-19 · 2BHK: ₹834.01</title></rect><rect x="520.6" y="95.7" width="18.6" height="78.3" rx="2" class="s1"><title>07-20 · Studio: ₹966.51</title></rect><rect x="541.1" y="93.7" width="18.6" height="80.3" rx="2" class="s2"><title>07-20 · 2BHK: ₹991.71</title></rect><text x="539.1" y="192" class="tick" text-anchor="middle">20/7</text><rect x="563.7" y="102.0" width="18.6" height="72.0" rx="2" class="s1"><title>07-21 · Studio: ₹888.75</title></rect><rect x="584.3" y="106.1" width="18.6" height="67.9" rx="2" class="s2"><title>07-21 · 2BHK: ₹838.45</title></rect><rect x="606.9" y="144.3" width="18.6" height="29.7" rx="2" class="s1"><title>07-22 · Studio: ₹367.2</title></rect><rect x="627.4" y="145.9" width="18.6" height="28.1" rx="2" class="s2"><title>07-22 · 2BHK: ₹347.46</title></rect><text x="625.4" y="192" class="tick" text-anchor="middle">22/7</text><line x1="44" y1="174" x2="648" y2="174" class="axis"/></svg></div>
+    <div id="chart-spend"></div></div>
 </div>
 
-<h2>Campaigns</h2>
+<h2>Campaigns — selected range</h2>
 <div class="tablewrap"><table>
-<thead><tr><th>Campaign</th><th class="num">Spend today</th><th class="num">Leads</th><th class="num">CPL</th>
-<th class="num">CTR</th><th class="num">Freq</th><th class="num">Spend yday</th><th class="num">Leads yday</th>
-<th class="num">Spend 30d</th><th class="num">Leads 30d</th><th class="num">CPL 30d</th></tr></thead>
-<tbody><tr><td><span class="chip c1">Studio</span></td><td class="num">₹367</td><td class="num">1</td><td class="num">₹367</td><td class="num">1.86%</td><td class="num">1.14</td><td class="num">₹889</td><td class="num">4</td><td class="num">₹22,244</td><td class="num">95</td><td class="num">₹234</td></tr><tr><td><span class="chip c2">2BHK</span></td><td class="num">₹347</td><td class="num">0</td><td class="num">—</td><td class="num">1.39%</td><td class="num">1.26</td><td class="num">₹838</td><td class="num">5</td><td class="num">₹16,967</td><td class="num">68</td><td class="num">₹250</td></tr></tbody></table></div>
+<thead><tr><th>Campaign</th><th class="num">Spend</th><th class="num">Meta leads</th><th class="num">CPL</th>
+<th class="num">CTR</th><th class="num">CPC</th><th class="num">CPM</th><th class="num">CRM leads</th></tr></thead>
+<tbody id="camp-body"></tbody></table></div>
 
-<h2>Speed to lead — last 48 hours</h2>
+<h2>Speed to lead — selected range</h2>
 <div class="tablewrap"><table>
-<thead><tr><th>Lead</th><th>Campaign</th><th class="num">Arrived (IST)</th><th>Intent</th><th>Budget</th><th>Contacted</th></tr></thead>
-<tbody><tr><td>Sundar Suvarna</td><td><span class="chip c1">Studio</span></td><td class="num">07-21 22:55</td><td>within_3_months</td><td>—</td><td class="st-good">✓ ≤ 12h37m</td></tr><tr><td>Nita Shah</td><td><span class="chip c1">Studio</span></td><td class="num">07-21 19:56</td><td>within_3_months</td><td>—</td><td class="st-good">✓ ≤ 15h36m</td></tr><tr><td>jai shri krishna</td><td><span class="chip c2">2BHK</span></td><td class="num">07-21 17:11</td><td>within_3_months</td><td>below_₹1.55_cr</td><td class="st-good">✓ repeat lead (row pre-exists)</td></tr><tr><td>Chirag Mota</td><td><span class="chip c2">2BHK</span></td><td class="num">07-21 14:56</td><td>6+_months_/_just_exploring</td><td>below_₹1.55_cr</td><td class="st-good">✓ ≤ 34m</td></tr><tr><td>Dimple Chothani</td><td><span class="chip c2">2BHK</span></td><td class="num">07-21 14:45</td><td>3–6_months</td><td>₹1.5_cr_–_₹1.75_cr</td><td class="st-good">✓ ≤ 45m</td></tr><tr><td>Falguni Deep Thakker</td><td><span class="chip c2">2BHK</span></td><td class="num">07-21 11:09</td><td>within_3_months</td><td>below_₹1.55_cr</td><td class="st-good">✓ ≤ 25m</td></tr><tr><td>Manoj Kumar Surana</td><td><span class="chip c1">Studio</span></td><td class="num">07-21 08:19</td><td>within_3_months</td><td>—</td><td class="st-good">✓ ≤ 3h15m</td></tr><tr><td>Jigna rathod</td><td><span class="chip c2">2BHK</span></td><td class="num">07-21 06:48</td><td>within_3_months</td><td>below_₹1.55_cr</td><td class="st-serious">⚠ NOT in sheet yet</td></tr><tr><td>roy  Miryala</td><td><span class="chip c1">Studio</span></td><td class="num">07-21 06:20</td><td>within_3_months</td><td>—</td><td class="st-good">✓ ≤ 5h15m</td></tr></tbody></table></div>
+<thead><tr><th>Lead</th><th>Campaign</th><th class="num">Arrived (IST)</th><th>Intent</th><th>Budget</th>
+<th>Logged in sheet</th><th>Lag</th></tr></thead>
+<tbody id="speed-body"></tbody></table></div>
 
-<h2>Site visits — last 30 days (SVD vs CRM)</h2>
+<h2>Site visits — selected range (SVD vs CRM)</h2>
 <div class="tablewrap"><table>
 <thead><tr><th class="num">Date</th><th>Name</th><th class="num">Phone</th><th>Verification</th></tr></thead>
-<tbody><tr><td class="num">2026-07-20</td><td>Jagdish ravasia {Sushma}</td><td class="num">9372158643</td><td class="st-good">✓ relative&#x27;s phone; team-annotated {Sushma} — ties to real CRM lead</td></tr><tr><td class="num">2026-07-20</td><td>Vidhi thakkar</td><td class="num">9820194111</td><td class="st-serious">⚠ no CRM record in any tab — ask the team</td></tr><tr><td class="num">2026-07-18</td><td>Payal shah</td><td class="num">9769884201</td><td class="st-serious">⚠ no CRM record in any tab — ask the team</td></tr><tr><td class="num">2026-07-14</td><td>Kapil chheda</td><td class="num">9702830390</td><td class="st-good">✓ 2BHK</td></tr><tr><td class="num">2026-07-14</td><td>Hemang shah</td><td class="num">9820863199</td><td class="st-good">✓ Studio</td></tr><tr><td class="num">2026-07-12</td><td>Deep biren</td><td class="num">9820414043</td><td class="st-good">✓ 2BHK</td></tr><tr><td class="num">2026-07-12</td><td>Deepak chaurasia</td><td class="num">9892394757</td><td class="st-good">✓ 2BHK</td></tr><tr><td class="num">2026-07-12</td><td>Vimesh</td><td class="num">7977760493</td><td class="st-good">✓ 2BHK</td></tr><tr><td class="num">2026-07-11</td><td>Santosh utekar</td><td class="num">8291803488</td><td class="st-good">✓ Studio</td></tr><tr><td class="num">2026-07-10</td><td>Asha joshi</td><td class="num">7506456852</td><td class="st-good">✓ Studio</td></tr><tr><td class="num">2026-07-08</td><td>Pravin bhuingul</td><td class="num">8104623437</td><td class="st-good">✓ Studio</td></tr><tr><td class="num">2026-07-05</td><td>Vipul rakhasia</td><td class="num">9967421298</td><td class="st-good">✓ Studio</td></tr><tr><td class="num">2026-07-05</td><td>Christina Dias</td><td class="num">9702293067</td><td class="st-good">✓ Studio</td></tr><tr><td class="num">2026-07-04</td><td>Hitendra dedhia</td><td class="num">9673213241</td><td class="st-critical">✗ never a Meta lead (Dedhia case, 4 Jul)</td></tr><tr><td class="num">2026-06-27</td><td>Naveen suvarna</td><td class="num">8976779929</td><td class="st-critical">✗ pre-V3 lead (Apr) — not a V3 result</td></tr><tr><td class="num">2026-06-24</td><td>Rewashankar gomtiwal</td><td class="num">8355882399</td><td class="st-good">✓ Studio</td></tr></tbody></table></div>
+<tbody id="visits-body"></tbody></table></div>
 
 <h2>Open integrity flags</h2>
 <ul class="flags"><li class="flag-critical"><span class="flag-ico">✗</span> SVD visit 2026-06-27 — Naveen suvarna (8976779929): pre-V3 lead (Apr) — not a V3 result; conversion pushed to Meta pollutes optimization.</li><li class="flag-critical"><span class="flag-ico">✗</span> SVD visit 2026-07-04 — Hitendra dedhia (9673213241): never a Meta lead (Dedhia case, 4 Jul); conversion pushed to Meta pollutes optimization.</li><li class="flag-serious"><span class="flag-ico">⚠</span> SVD visit 2026-07-18 — Payal shah (9769884201): no CRM record in any tab, but conversion was pushed to Meta.</li><li class="flag-serious"><span class="flag-ico">⚠</span> SVD visit 2026-07-20 — Vidhi thakkar (9820194111): no CRM record in any tab, but conversion was pushed to Meta.</li><li class="flag-serious"><span class="flag-ico">⚠</span> Phone typo suspected: CRM lead Jigna rathod is 9969283483, sheet has 9969283482 — team may be dialing a wrong number.</li></ul>
 
-<footer>Verified visit = phone matches an OTP-verified CRM lead (either form tab). Contact lag comes from
-Drive revision history of the team sheet — brackets, not exact call times. Source of truth for leads:
-CRM Event sheet; for visits: SVD tab cross-checked against CRM. Baseline visit rate 4.5%.</footer>
-</div></body></html>
+<h2>Daily reports archive</h2>
+<details class="report" open><summary>2026-07-21</summary><div class="rbody"><h3>Divya Jyot LYF Rewa — Daily Snapshot — Tuesday, 21 July 2026 (CORRECTED)</h3>
+<div class="gap"></div>
+<h4>⚠️ CORRECTION — read this first</h4>
+<div>The version of this report sent earlier today had a <b>central finding that was wrong</b>, and</div>
+<div>Keval caught it. Full retraction and root cause below; the rest of the report is rebuilt from</div>
+<div>corrected data.</div>
+<div class="gap"></div>
+<div><b>What was wrong:</b> the original report&#x27;s headline claimed the &quot;Divya Jyot V3 July 26 - 2BHK&quot;</div>
+<div>campaign was completely invisible to the CRM Event tracking — zero leads, zero speed-to-lead,</div>
+<div>zero visit verification. <b>That was false.</b></div>
+<div class="gap"></div>
+<div><b>Root cause:</b> `fetch_all.py` reads the CRM Event spreadsheet (`LEADS_SHEET_ID`) by hardcoding</div>
+<div>`Sheet1!A1:Q5000`. What I didn&#x27;t check is that this spreadsheet has <b>two tabs</b>: `Sheet1` is</div>
+<div>the Studio form&#x27;s feed, and **`Sheet2` is a separate, fully-working feed for the &quot;2BHK&quot; lead</div>
+<div>form** — created 2026-07-06, the same day the 2BHK campaign launched, complete with exact</div>
+<div>timestamps, phone, intent, platform, AND a real budget-qualifying question</div>
+<div>(`what_is_your_budget_for_this_purchase?`, e.g. &quot;below ₹1.55 cr&quot; / &quot;₹1.5–1.75 cr&quot;). `fetch_all.py`</div>
+<div>never read it, so every 2BHK lead was silently missing from `data.json`, and I built an entire</div>
+<div>&quot;critical tracking gap&quot; narrative on that absence without checking for a second tab. Keval</div>
+<div>pushed back three times (on the lead count, the CRM completeness, and specific named leads)</div>
+<div>before this surfaced — each of his challenges was correct and this correction exists because of</div>
+<div>that persistence, not because I caught it myself.</div>
+<div class="gap"></div>
+<div><b>Fixed:</b> `fetch_all.py` now enumerates every tab in the CRM spreadsheet automatically (see</div>
+<div>commit) instead of hardcoding `Sheet1`, so a third form/tab in the future won&#x27;t repeat this.</div>
+<div>Everything below is rebuilt using both tabs. Note the reporting window also became a genuinely</div>
+<div><b>complete day</b> for 21 July in the process (this correction is being finished after midnight),</div>
+<div>so funnel numbers below are slightly higher than the original partial-day (up to ~7 PM) report.</div>
+<div class="gap"></div>
+<h4>1. HEADLINE (corrected)</h4>
+<div>The 2BHK campaign is <b>not</b> an integrity gap — it has its own working, OTP-verified CRM feed</div>
+<div>(Sheet2) that matches Meta&#x27;s real numbers almost exactly (67 CRM leads vs. 68 reported by Meta</div>
+<div>lifetime). With both tabs included, the Facebook-tab-to-CRM match rate for the last 30 days is</div>
+<div><b>87.9%</b> (123/140), not the 48.9% the broken version reported — much closer to the historical</div>
+<div>93.6% baseline. The two real open items from the original report <b>do still stand</b>: two SVD</div>
+<div>site visits (Vidhi Thakkar, Payal Shah) still have no CRM record in *either* tab despite a</div>
+<div>&quot;Meta Sent ✅&quot; conversion pushed for them, and a live phone-typo was caught in today&#x27;s own data</div>
+<div>(Jigna Rathod: CRM has ...283<b>3</b>, the Facebook tab logged ...283<b>2</b> — one digit off, same</div>
+<div>shape as the Atul Thorat case from 4 July). Underneath the correction, the actual day was solid:</div>
+<div>9 fresh leads (4 Studio + 5 &quot;2BHK&quot;), same-day contact on all of them, and the &quot;2BHK&quot; product</div>
+<div>(confirmed via the ad creative: ₹1.55 Cr+, 2BHK, Mulund West, 5 min from MG Road station) is</div>
+<div>real, distinct inventory.</div>
+<div class="gap"></div>
+<h4>2. THE FUNNEL — 21 July, full day (corrected/complete)</h4>
+<div class="li">• <b>Spend:</b> ₹1,727.20 (₹888.75 Studio + ₹838.45 &quot;2BHK&quot;)</div>
+<div class="li">• <b>Impressions:</b> 5,852 · <b>Reach:</b> ~4,637 (two campaigns, some overlap)</div>
+<div class="li">• <b>Clicks:</b> 156 (<b>link clicks:</b> 88)</div>
+<div class="li">• <b>Leads:</b> 9 — canonical count, verified against `lead_actions_raw`, matches CRM (both tabs)</div>
+<div>  almost lead-for-lead.</div>
+<div>  - Studio: 4 leads, CPL ₹222.19 — 3 Facebook / 1 Instagram (roy Miryala, Manoj Kumar Surana,</div>
+<div>    Sundar Suvarna on FB; Nita Shah on IG)</div>
+<div>  - &quot;2BHK&quot;: 5 leads, CPL ₹167.69 — 3 Facebook / 2 Instagram (Jigna Rathod, Dimple Chothani,</div>
+<div>    Chirag Mota on FB; Falguni Deep Thakker, jai shri krishna on IG)</div>
+<div>  - <b>Blended CPL: ₹191.91</b></div>
+<div class="li">• <b>Contacted by team:</b> all 9 got a same-day row/feedback in the Facebook tab (see Section 4</div>
+<div>  for exact brackets). <b>Untouched: 0.</b></div>
+<div class="li">• <b>Site visits logged 21 July:</b> 0.</div>
+<div class="gap"></div>
+<h4>3. AD PERFORMANCE (agency hat)</h4>
+<pre class="mdtable">
+| Metric | Studio | &quot;2BHK&quot; |
+|---|---|---|
+| Spend | ₹888.75 | ₹838.45 |
+| Leads | 4 | 5 |
+| CPL | ₹222.19 | ₹167.69 |
+| CTR | 2.32% | 3.10% |
+| CPC | ₹11.69 | ₹10.48 |
+| CPM | ₹271.79 | ₹324.73 |
+| Frequency | 1.20 | 1.36 |
+</pre>
+<div class="gap"></div>
+<div class="li">• Both campaigns had a good day — &quot;2BHK&quot; in particular (CPL ₹168, CTR 3.1%) is now clearly</div>
+<div>  pulling its weight, not just Studio&#x27;s sidecar.</div>
+<div class="li">• Lifetime (since the 2BHK campaign&#x27;s actual creation, 6 July): 68 leads / ₹17,298 spend</div>
+<div>  (60 leads on the &quot;36 Seconds&quot; cut, 8 on &quot;57 Seconds&quot; — 36s remains the stronger creative,</div>
+<div>  84% of spend, better CTR).</div>
+<div class="li">• Delivery healthy on both, no fatigue signal (frequency both under 1.4 for the day).</div>
+<div class="gap"></div>
+<h4>4. SPEED-TO-LEAD (sales-manager hat) — the most important section</h4>
+<div>All 9 of 21 July&#x27;s CRM leads (both campaigns), matched by phone with real arrival timestamps</div>
+<div>and Drive-revision brackets for when the row/feedback appeared in the Facebook tab:</div>
+<div class="gap"></div>
+<pre class="mdtable">
+| Lead | Campaign | Arrival (IST) | Intent / Budget | Row+feedback appeared by | Lag |
+|---|---|---|---|---|---|
+| roy Miryala | Studio | 06:20 | within_3_months | by 11:35 | ≤ ~5h15m |
+| **Jigna Rathod** | 2BHK | 06:48 | within_3mo, &lt;₹1.55cr | **never found** | **see phone-typo flag below** |
+| Manoj Kumar Surana | Studio | 08:19 | within_3_months | by 11:35 | ≤ ~3h16m |
+| Falguni Deep Thakker | 2BHK | 11:09 | within_3mo, &lt;₹1.55cr | by 11:35 | ≤ ~26m |
+| Dimple Chothani | 2BHK | 14:45 | 3-6mo, ₹1.5-1.75cr | by 15:31 | ≤ ~46m |
+| Chirag Mota | 2BHK | 14:56 | 6+mo/exploring, &lt;₹1.55cr | by 15:31 | ≤ ~35m |
+| jai shri krishna | 2BHK | 17:11 | within_3mo, &lt;₹1.55cr | ambiguous — see note | n/a |
+| Nita Shah | Studio | 19:56 | within_3_months | by 22/7 11:32 | ≤ ~15h |
+| Sundar Suvarna | Studio | 22:55 | within_3_months | by 22/7 11:32 | ≤ ~12h |
+</pre>
+<div class="gap"></div>
+<div><b>Jigna Rathod — live phone-typo catch, same shape as the 4 Jul Atul Thorat case:</b> the CRM</div>
+<div>(Sheet2, OTP-verified) has her number as <b>9969283483</b>. The team&#x27;s Facebook tab (row 202,</div>
+<div>21/7) logged her as <b>9969283482</b> — last digit wrong. The automated tracking correctly</div>
+<div>reports &quot;never found&quot; for the real number, because the team is holding the wrong one. **If</div>
+<div>anyone calls the number in the sheet, they&#x27;re calling a stranger, not Jigna.** Get the real</div>
+<div>number (983) from the CRM and re-enter it.</div>
+<div class="gap"></div>
+<div>**jai shri krishna — a genuine repeat lead, not a duplicate row (this was my second error,</div>
+<div>now corrected):<b> this person is in </b>both<b> CRM tabs — a Studio lead on </b>1 July** (phone</div>
+<div>ending 6376, `within_3_months`) and a fresh, separate <b>2BHK</b> lead on <b>21 July</b>, same phone.</div>
+<div>Two real, distinct lead events 3 weeks apart. I&#x27;d previously told Keval this was &quot;just an old</div>
+<div>lead being re-logged&quot; — that was also wrong; it&#x27;s a real return visit to the funnel, this time</div>
+<div>for the 2BHK product. The Drive-revision bracket can&#x27;t cleanly time this one because the phone</div>
+<div>was already present in the sheet from the 1 July row before the 2-day lookback window started.</div>
+<div class="gap"></div>
+<div><b>Bottom line:</b> every fresh lead today got same-day attention (worst case ~15h for Nita Shah,</div>
+<div>who arrived at 19:56 IST — still well within the day). Credit holds from the original report.</div>
+<div class="gap"></div>
+<h4>5. LEAD QUALITY (sales-manager hat)</h4>
+<div class="li">• <b>Blended 30-day CPL: ₹240.55</b> (₹39,210.84 / 163 leads across both campaigns).</div>
+<div class="li">• The 2BHK product is confirmed real (via the ad creative): 2BHK, ₹1.55 Cr onwards, 600 sq ft</div>
+<div>  carpet, Mulund West, 5 min from MG Road station — a genuine second SKU, not a mislabeled</div>
+<div>  studio ad. Sheet2&#x27;s budget-qualifying answers show most 2BHK leads self-report &quot;below ₹1.55</div>
+<div>  cr&quot; — worth a look at whether the entry price is priced right for the volume of interest</div>
+<div>  it&#x27;s pulling in, but that&#x27;s a pricing/product question, not a tracking one.</div>
+<div class="li">• <b>Real cost-per-site-visit, corrected with both CRM tabs:</b></div>
+<div>  - SVD claims 16 Facebook-sourced visits in the last 30 days.</div>
+<div>  - <b>12 are now CRM-verified</b> (up from 7 in the broken version): 7 Studio + <b>5 &quot;2BHK&quot;</b></div>
+<div>    (Deep Biren, Deepak Chaurasia, Vimesh, Kapil Chheda — all previously flagged as merely</div>
+<div>    &quot;plausible&quot; are now confirmed genuine via Sheet2; plus Rewashankar Gomtiwal, Vipul</div>
+<div>    Rakhasia, Christina Dias, Pravin Bhuingul, Asha Joshi, Santosh Utekar, Hemang Shah on</div>
+<div>    Studio).</div>
+<div>  - <b>2 remain KNOWN non-V3</b> (unchanged, still unresolved from 4 Jul): Naveen Suvarna</div>
+<div>    (pre-V3 lead), Hitendra Dedhia (fabricated Facebook attribution).</div>
+<div>  - <b>2 remain unverified in EITHER tab</b> (see 5b): Payal Shah, Vidhi Thakkar. Sushma</div>
+<div>    Ravasia&#x27;s visit (logged under a relative&#x27;s number, team-annotated &quot;{Sushma}&quot;) ties to a</div>
+<div>    real CRM lead by name/date even though the phone doesn&#x27;t match — treated as genuine.</div>
+<div>  - **Corrected number: ₹39,210.84 / 13 (12 verified + Sushma) = ₹3,016/visit, 8.0% visit</div>
+<div>    rate — clearly beats the ~4.5% V3 baseline**, and this is now a real, mostly-verified</div>
+<div>    number rather than a heavily-caveated estimate.</div>
+<div class="gap"></div>
+<h4>5b. DATA INTEGRITY CROSS-CHECK (corrected)</h4>
+<div class="li">• <b>The structural &quot;2BHK gap&quot; from the earlier version of this report is retracted.</b> Sheet2</div>
+<div>  is a working, real-time CRM feed for the 2BHK form — 67 leads, matching Meta&#x27;s 68 lifetime</div>
+<div>  count almost exactly (the 1-lead gap is normal timing/attribution noise, not a tracking</div>
+<div>  failure).</div>
+<div class="li">• <b>Still open, unchanged: two CAPI-pollution candidates</b>, same shape as the 4 Jul Dedhia</div>
+<div>  case — checked again against BOTH CRM tabs this time, still no match:</div>
+<div>  - <b>Vidhi Thakkar</b>, 9820194111 — visited 20/7, &quot;Meta Sent ✅&quot; pushed, not in Sheet1, not in</div>
+<div>    Sheet2, not in the Facebook tab. No paper trail anywhere before the SVD row.</div>
+<div>  - <b>Payal Shah</b>, 9769884201 — in the Facebook tab (Studio-shaped ask: 300 sqft/₹60L) but</div>
+<div>    in neither CRM tab; her visit also got &quot;Meta Sent ✅&quot;.</div>
+<div>  - Ask the team directly where these two came from before trusting their conversions.</div>
+<div class="li">• <b>New, live phone-typo catch (today, not historical):</b> Jigna Rathod — CRM 9969283<b>3</b>,</div>
+<div>  sheet 9969283<b>2</b>. See Section 4. Fix this one today; it&#x27;s fresh, not a cold case.</div>
+<div class="li">• <b>Match-rate, corrected:</b> last-30-day Facebook-tab-to-CRM match rate is <b>87.9% (123/140)</b></div>
+<div>  with both tabs included — not last version&#x27;s artificially-low 48.9%. Much closer to the 3</div>
+<div>  July baseline of 93.6%; the remaining ~12% gap is normal (some genuinely unlogged leads,</div>
+<div>  some date-parsing noise from a literal sheet typo found earlier — &quot;02/09/2525&quot;).</div>
+<div class="gap"></div>
+<h4>6. DIAGNOSTIC STEPS (corrected)</h4>
+<div>1. <b>[Sales, urgent, live]</b> Fix Jigna Rathod&#x27;s phone number in the Facebook tab —</div>
+<div>   9969283483, not …82. She hasn&#x27;t actually been called yet; whoever&#x27;s dialing the sheet&#x27;s</div>
+<div>   number is reaching someone else.</div>
+<div>2. <b>[Sales, urgent]</b> Ask the team where Vidhi Thakkar and Payal Shah actually came from —</div>
+<div>   both visited and got a Meta conversion pushed with no lead record in either CRM tab or</div>
+<div>   (for Vidhi) the Facebook tab at all.</div>
+<div>3. <b>[Agency]</b> The 2BHK campaign is working — treat it as a real, proven second product line</div>
+<div>   in the standing business context, not a leak to be filtered out. Worth reviewing whether</div>
+<div>   ₹1.55 Cr is priced right, since most self-reported budgets in the CRM&#x27;s own qualifying</div>
+<div>   question come in &quot;below ₹1.55 cr.&quot;</div>
+<div>4. <b>[Agency]</b> &quot;2BHK 57 Seconds&quot; is still the weaker of the two creatives (16% of 2BHK</div>
+<div>   spend, worse CTR) — consider pausing it in favor of &quot;36 Seconds.&quot;</div>
+<div>5. <b>[Process]</b> `fetch_all.py` now auto-discovers CRM tabs so this specific failure mode</div>
+<div>   (a new form/tab silently missing from the data) can&#x27;t recur — but the broader lesson is</div>
+<div>   to sanity-check totals (like today&#x27;s Meta-vs-CRM lead counts) before writing a headline</div>
+<div>   finding, not just trust the first data pull.</div>
+<div class="gap"></div>
+<h4>7. ANYTHING ELSE</h4>
+<div>This correction happened because Keval checked the work — specifically challenged the lead</div>
+<div>count, then the &quot;no CRM coverage&quot; claim, then two individual leads by name — and each check</div>
+<div>found something real. That&#x27;s exactly the workflow this routine should support: treat today&#x27;s</div>
+<div>corrected numbers with the same scrutiny next time, not as settled just because they&#x27;re now</div>
+<div>&quot;fixed.&quot;</div>
+<div class="gap"></div>
+<hr>
+<div>*Corrected match rate: 123/140 (87.9%) of the last 30 days&#x27; Facebook-tab entries matched to</div>
+<div>the CRM (both tabs) by phone. All 9 of 21 July&#x27;s leads got same-day contact. No fabricated</div>
+<div>numbers — anything not directly computable from data.json is marked as such above.*</div>
+<div class="gap"></div></div></details><details class="report"><summary>2026-07-03</summary><div class="rbody"><h3>Divya Jyot LYF Rewa — Daily Snapshot — Thursday, 3 July 2026</h3>
+<div class="gap"></div>
+<div><b>Window: yesterday, full day (midnight–midnight IST).</b> This is the first automated run of</div>
+<div>this routine — no prior report to follow up on, and no `reports/_memory.md` yet.</div>
+<div class="gap"></div>
+<div>⚠️ <b>Data pipeline note:</b> before this report could be generated, `fetch_all.py` was pulling</div>
+<div><b>zero</b> Meta Ads data — every single Meta API call was failing with HTTP 400</div>
+<div>(`action_attribution_windows[0] must be one of...`). Meta&#x27;s v25.0 API changed the attribution</div>
+<div>format the script used; it&#x27;s fixed now (verified against the live API) and this report runs on</div>
+<div>real numbers. Separately, the Facebook/SVD Google Sheet reads were intermittently corrupting</div>
+<div>mid-fetch (&quot;decryption failed or bad record mac&quot;) because three concurrent reads shared one</div>
+<div>un-thread-safe HTTP connection — also fixed. Flagging both so you know the last several days of</div>
+<div>&quot;no data&quot; or partial reports (if any) were an infra problem, not an ad or team problem.</div>
+<div class="gap"></div>
+<h4>1. HEADLINE</h4>
+<div>CPL looks mediocre (₹180) but the <b>real number is good</b>: ~₹2,200–2,550 per confirmed site</div>
+<div>visit and a <b>6.7% visit rate — beating the ~4.5% V3 baseline</b>. The problem yesterday wasn&#x27;t</div>
+<div>the ad, it was the sales side: a 3–6-month-intent lead (<b>Sunil Bagul</b>) sat completely</div>
+<div><b>unlogged and uncalled for 20+ hours</b>, and 3 older leads from weeks ago were never entered</div>
+<div>in the sheet at all.</div>
+<div class="gap"></div>
+<h4>2. THE FUNNEL — yesterday, 3 July, full day IST</h4>
+<div class="li">• <b>Spend:</b> ₹721.26</div>
+<div class="li">• <b>Impressions:</b> 3,583 · <b>Reach:</b> 2,838</div>
+<div class="li">• <b>Clicks:</b> 78 (<b>link clicks:</b> 50)</div>
+<div class="li">• <b>Leads:</b> 4 — canonical count (`onsite_conversion.lead_grouped` = 4), matches `lead` = 4 and</div>
+<div>  every other lead-ish action type exactly. No double-count anomaly — this is what you&#x27;ll see</div>
+<div>  in Ads Manager. <b>CPL: ₹180.31.</b></div>
+<div class="li">• <b>Platform split:</b> 2 Facebook / 2 Instagram</div>
+<div class="li">• <b>Contacted by team:</b> 3 of 4 same-day · <b>Untouched:</b> 1 of 4 (still zero contact as of</div>
+<div>  this report)</div>
+<div class="li">• <b>Site visits logged yesterday:</b> 1 (see note below — a returning Facebook lead, not one of</div>
+<div>  yesterday&#x27;s 4 fresh Meta leads)</div>
+<div class="gap"></div>
+<h4>3. AD PERFORMANCE (agency hat)</h4>
+<pre class="mdtable">
+| Window | CTR | CPC | CPM | Frequency | Reach |
+|---|---|---|---|---|---|
+| Yesterday | 2.18% | ₹9.25 | ₹201.30 | 1.26 | 2,838 |
+| Last 7 days | 2.48% | ₹8.32 | ₹205.95 | 1.80 | 11,828 |
+| Last 30 days | 2.78% | ₹8.48 | ₹235.52 | 2.73 | 23,717 |
+</pre>
+<div class="gap"></div>
+<div class="li">• <b>Not fatigue.</b> Frequency yesterday (1.26) is *lower* than the 7-day (1.80) and 30-day</div>
+<div>  (2.73) figures — the audience is turning over, not getting hammered repeatedly. CTR softening</div>
+<div>  slightly (2.78% → 2.48% → 2.18%) alongside falling frequency is a mild, inconclusive trend,</div>
+<div>  not a fatigue alarm. Don&#x27;t touch the creative on this signal alone.</div>
+<div class="li">• <b>Single creative, single real adset.</b> Every rupee of real spend and every lead is one ad</div>
+<div>  (&quot;Studio&quot;) in one adset (&quot;Open - DJR&quot;). The other adset, &quot;Luxury - DJ&quot;, spent ₹7.76 over 30</div>
+<div>  days for 0 leads and 0 clicks — immaterial in size but dead weight; fold its tiny budget into</div>
+<div>  the working adset.</div>
+<div class="li">• Delivery is healthy post-pause (per the June 22 account-security pause / resume) — spend and</div>
+<div>  leads are flowing normally both yesterday and over the trailing week.</div>
+<div class="li">• <b>Today so far (partial, forward glance):</b> ₹570.10 spent, 4 leads already, CPL ₹142.53, CTR</div>
+<div>  2.55% — tracking fine, nothing actionable yet since the day isn&#x27;t over.</div>
+<div class="gap"></div>
+<h4>4. SPEED-TO-LEAD (sales-manager hat) — the most important section</h4>
+<div>All 4 of yesterday&#x27;s Meta leads, matched by phone to the Facebook tab:</div>
+<div class="gap"></div>
+<pre class="mdtable">
+| Lead | Meta arrival (IST) | Intent | Sheet status / first contact | Lag |
+|---|---|---|---|---|
+| Doshi Jaswant | 15:20 | just_exploring | Cold — &quot;Ringing&quot; (attempted, no connect) | 0 days (attempted same day) |
+| Dhanraj | 15:21 | within_3_months | Cold — &quot;Details shared, coming Sunday&quot; | 0 days — **connected** |
+| **Sunil Bagul** | **19:41** | **3–6_months** | **Not in the sheet at all** | **⚠️ untouched, 20+ hrs and counting** |
+| Amey Angane | 22:09 | within_3_months | Cold — &quot;1RK, ₹70L budget, coming tomorrow&quot; | 0 days — **connected** (see budget flag below) |
+</pre>
+<div class="gap"></div>
+<div><b>Precision note:</b> the sheet has no per-call timestamps for these entries, only the row&#x27;s</div>
+<div>&quot;Created&quot; date and free-text feedback — so lag is day-level, not hour-level, for anyone who</div>
+<div>*was* contacted. Exact hour-level lag isn&#x27;t available in the data as logged.</div>
+<div class="gap"></div>
+<div><b>Credit where due:</b> 3 of 4 leads got a real same-day attempt, and 2 of those turned into an</div>
+<div>actual conversation with real intel captured (budget, timeline). That&#x27;s solid work.</div>
+<div class="gap"></div>
+<div><b>The miss:</b> Sunil Bagul is exactly the case this section exists to catch — OTP-verified,</div>
+<div>phone in hand, 3–6-month intent (better odds than &quot;just exploring&quot;), and as of this report he</div>
+<div>has never been called or logged. Call him first thing.</div>
+<div class="gap"></div>
+<div><b>Bigger pattern — leads going missing, not just slow:</b> widening to the trailing 30 days (94</div>
+<div>Meta leads, 88 matched to the sheet = <b>93.6% match rate</b>, 6 leads never entered at all), 3 of</div>
+<div>those 6 aren&#x27;t recent — they&#x27;re <b>weeks old</b> and simply never made it into the sheet:</div>
+<div>Ravi DU (arrived 10 Jun), Andre Brian Edward Rozario (14 Jun), Atul Thorat (24 Jun). These</div>
+<div>aren&#x27;t a speed problem, they&#x27;re a logging/process leak — leads falling out of the pipeline</div>
+<div>before anyone gets a chance to call them. Worth checking why (form → sheet handoff gap?</div>
+<div>name/number parsing issue?) since it&#x27;s now happened 6 times in a month.</div>
+<div class="gap"></div>
+<h4>5. LEAD QUALITY (sales-manager hat)</h4>
+<div class="li">• <b>Status breakdown, last 30 days (94 leads):</b> 76 Cold, 11 Dead, 6 never logged, 1 Warm.</div>
+<div>  Most &quot;Cold&quot; leads are early-stage (rung once, no connect yet) rather than confirmed</div>
+<div>  low-quality — too soon to call them dead weight.</div>
+<div class="li">• <b>Dominant quality leak, confirmed in the data:</b> of 88 leads matched to real feedback text,</div>
+<div>  <b>36 (41%) explicitly asked for a 1BHK / 2BHK / 1RK</b> — a flat product mismatch, since this</div>
+<div>  project is a bare-shell <b>studio only</b>. Zero matched leads&#x27; feedback mentions &quot;studio&quot;</div>
+<div>  specifically. That&#x27;s a strong signal the ad/instant-form isn&#x27;t making the product clear</div>
+<div>  before people submit their number — the team is spending call time discovering a mismatch</div>
+<div>  the ad copy could screen out up front.</div>
+<div class="li">• <b>Budget mismatches spotted directly in yesterday&#x27;s/recent feedback:</b> Amey Angane offered</div>
+<div>  ₹70L against the ₹87L ask (1RK); several recent leads in the last 7 days cited ₹75–90L for</div>
+<div>  1BHK requests — under or borderline vs. what this project can serve.</div>
+<div class="li">• <b>Real cost-per-site-visit vs. vanity CPL</b> (the metric that actually matters):</div>
+<div>  - <b>Last 30 days:</b> 6 confirmed visits (SVD tab) / ₹15,259.80 spent / 90 leads →</div>
+<div>    <b>₹2,543 per visit, 6.7% visit rate.</b> Beats the ~4.5% V3 baseline.</div>
+<div>  - <b>Last 7 days:</b> 2 visits / ₹4,384.74 / 27 leads → <b>₹2,192 per visit, 7.4% visit rate.</b></div>
+<div>    Trending better than the 30-day average.</div>
+<div>  - <b>Yesterday alone:</b> 1 visit / ₹721.26 — too small a single day to trend, but noted.</div>
+<div>  - <b>Bottom line: don&#x27;t touch this ad on CPL.</b> The number that matters is beating baseline.</div>
+<div class="gap"></div>
+<h4>6. DIAGNOSTIC STEPS</h4>
+<div>1. <b>[Sales, urgent]</b> Call Sunil Bagul (8108715063) today — untouched 3–6-month lead, already</div>
+<div>   20+ hours cold.</div>
+<div>2. <b>[Sales]</b> Investigate the 3 fully-orphaned leads from weeks ago (Ravi DU, Andre Rozario,</div>
+<div>   Atul Thorat) — find where they fell out between the form and the sheet, and check today</div>
+<div>   forward that new leads aren&#x27;t silently dropping the same way (today&#x27;s 2 newest leads,</div>
+<div>   Manoj Agrawal and Subhash Soni, aren&#x27;t logged yet either — likely just too fresh, but worth</div>
+<div>   a same-day check given the pattern).</div>
+<div>3. <b>[Agency]</b> Tighten ad copy/creative to make &quot;bare-shell STUDIO&quot; explicit before the click —</div>
+<div>   41% of engaged leads are asking for a BHK layout this project doesn&#x27;t have. This is a</div>
+<div>   messaging fix, not a budget or pause decision.</div>
+<div>4. <b>[Agency]</b> Fold the &quot;Luxury - DJ&quot; adset&#x27;s token spend into &quot;Open - DJR&quot; — it&#x27;s produced 0</div>
+<div>   leads for ₹7.76 over 30 days. Immaterial money, but no reason to leave it split.</div>
+<div>5. <b>[Sales]</b> When a call connects, screen budget in the first minute (per the Amey Angane</div>
+<div>   example, ₹70L vs. the ₹87L ask) — saves follow-up cycles on leads that can&#x27;t close here</div>
+<div>   regardless of how warm they get.</div>
+<div class="gap"></div>
+<h4>7. ANYTHING ELSE</h4>
+<div>The SVD tab&#x27;s &quot;Meta Sent&quot; column (confirms whether a site-visit conversion event was pushed</div>
+<div>back to Meta via CAPI) shows **❌ Invalid parameter for essentially every visit logged from</div>
+<div>August 2025 through mid-June 2026<b>, and only starts showing </b>✅ success from ~19 June 2026</div>
+<div>onward** (6 straight successes through yesterday&#x27;s visit). If that sync was broken for ~10</div>
+<div>months, Meta&#x27;s algorithm had zero real-world signal on which leads actually converted to</div>
+<div>visits for most of this campaign&#x27;s life — it&#x27;s only had usable optimization data for about two</div>
+<div>weeks. Worth keeping an eye on: if it silently breaks again, you&#x27;ll lose the one signal that</div>
+<div>actually correlates with revenue, not just clicks.</div>
+<div class="gap"></div>
+<hr>
+<div>*Match rate: 88/94 (93.6%) of the last 30 days&#x27; Meta leads found in the Facebook tab; 3/4</div>
+<div>(75%) of yesterday&#x27;s. No fabricated numbers — anything not directly computable from data.json</div>
+<div>is marked as such above.*</div>
+<div class="gap"></div></div></details>
+
+<footer>Verified visit = phone matches an OTP-verified CRM lead (either form tab). "Logged in sheet" comes from
+the team sheet's Drive revision history (bracket upper bound) when available, else the sheet row's created date
+(day-level). Meta spend/CTR data covers the trailing 30 days only; CRM leads go back to V3 start (2026-06-10).
+Baseline visit rate 4.5%.</footer>
+</div>
+
+<script>
+const DATA = {"daily": [{"date": "2026-06-23", "camp": "Studio", "spend": 399.29, "leads": 4, "imp": 1482, "clicks": 38, "link": 21}, {"date": "2026-06-24", "camp": "Studio", "spend": 712.16, "leads": 7, "imp": 2706, "clicks": 90, "link": 54}, {"date": "2026-06-25", "camp": "Studio", "spend": 608.61, "leads": 3, "imp": 2543, "clicks": 41, "link": 26}, {"date": "2026-06-26", "camp": "Studio", "spend": 581.7, "leads": 3, "imp": 2735, "clicks": 61, "link": 34}, {"date": "2026-06-27", "camp": "Studio", "spend": 421.01, "leads": 2, "imp": 1860, "clicks": 40, "link": 23}, {"date": "2026-06-28", "camp": "Studio", "spend": 715.02, "leads": 2, "imp": 3335, "clicks": 90, "link": 65}, {"date": "2026-06-29", "camp": "Studio", "spend": 639.97, "leads": 1, "imp": 3117, "clicks": 74, "link": 51}, {"date": "2026-06-30", "camp": "Studio", "spend": 651.74, "leads": 5, "imp": 3299, "clicks": 79, "link": 51}, {"date": "2026-07-01", "camp": "Studio", "spend": 637.2, "leads": 6, "imp": 3110, "clicks": 100, "link": 63}, {"date": "2026-07-02", "camp": "Studio", "spend": 598.54, "leads": 7, "imp": 2986, "clicks": 66, "link": 48}, {"date": "2026-07-03", "camp": "Studio", "spend": 721.26, "leads": 4, "imp": 3584, "clicks": 78, "link": 50}, {"date": "2026-07-04", "camp": "Studio", "spend": 641.48, "leads": 4, "imp": 2963, "clicks": 75, "link": 43}, {"date": "2026-07-05", "camp": "Studio", "spend": 1064.47, "leads": 4, "imp": 5103, "clicks": 106, "link": 67}, {"date": "2026-07-06", "camp": "Studio", "spend": 946.07, "leads": 1, "imp": 4932, "clicks": 107, "link": 70}, {"date": "2026-07-06", "camp": "2BHK", "spend": 812.54, "leads": 9, "imp": 3040, "clicks": 76, "link": 41}, {"date": "2026-07-07", "camp": "Studio", "spend": 1492.17, "leads": 5, "imp": 7139, "clicks": 158, "link": 102}, {"date": "2026-07-07", "camp": "2BHK", "spend": 2856.12, "leads": 17, "imp": 13500, "clicks": 256, "link": 159}, {"date": "2026-07-08", "camp": "Studio", "spend": 810.0, "leads": 2, "imp": 4610, "clicks": 88, "link": 59}, {"date": "2026-07-08", "camp": "2BHK", "spend": 1484.99, "leads": 3, "imp": 7012, "clicks": 149, "link": 78}, {"date": "2026-07-09", "camp": "Studio", "spend": 688.49, "leads": 1, "imp": 3971, "clicks": 86, "link": 48}, {"date": "2026-07-09", "camp": "2BHK", "spend": 1456.52, "leads": 5, "imp": 5722, "clicks": 99, "link": 65}, {"date": "2026-07-10", "camp": "Studio", "spend": 731.87, "leads": 4, "imp": 4136, "clicks": 84, "link": 56}, {"date": "2026-07-10", "camp": "2BHK", "spend": 1022.73, "leads": 5, "imp": 3270, "clicks": 76, "link": 41}, {"date": "2026-07-11", "camp": "Studio", "spend": 621.22, "leads": 3, "imp": 3478, "clicks": 59, "link": 36}, {"date": "2026-07-11", "camp": "2BHK", "spend": 726.04, "leads": 2, "imp": 2514, "clicks": 51, "link": 31}, {"date": "2026-07-12", "camp": "Studio", "spend": 1154.63, "leads": 3, "imp": 6305, "clicks": 122, "link": 85}, {"date": "2026-07-12", "camp": "2BHK", "spend": 1061.71, "leads": 4, "imp": 3602, "clicks": 87, "link": 44}, {"date": "2026-07-13", "camp": "Studio", "spend": 1080.61, "leads": 5, "imp": 6388, "clicks": 95, "link": 62}, {"date": "2026-07-13", "camp": "2BHK", "spend": 1057.09, "leads": 3, "imp": 3524, "clicks": 81, "link": 45}, {"date": "2026-07-14", "camp": "Studio", "spend": 867.63, "leads": 5, "imp": 5709, "clicks": 109, "link": 71}, {"date": "2026-07-14", "camp": "2BHK", "spend": 884.22, "leads": 4, "imp": 3277, "clicks": 63, "link": 29}, {"date": "2026-07-15", "camp": "Studio", "spend": 9.06, "leads": 0, "imp": 85, "clicks": 6, "link": 5}, {"date": "2026-07-15", "camp": "2BHK", "spend": 14.51, "leads": 0, "imp": 77, "clicks": 2, "link": 0}, {"date": "2026-07-17", "camp": "Studio", "spend": 1318.26, "leads": 1, "imp": 6256, "clicks": 126, "link": 78}, {"date": "2026-07-17", "camp": "2BHK", "spend": 1401.23, "leads": 5, "imp": 3969, "clicks": 80, "link": 45}, {"date": "2026-07-18", "camp": "Studio", "spend": 1556.68, "leads": 7, "imp": 7287, "clicks": 119, "link": 83}, {"date": "2026-07-18", "camp": "2BHK", "spend": 1525.35, "leads": 3, "imp": 4294, "clicks": 78, "link": 46}, {"date": "2026-07-19", "camp": "Studio", "spend": 719.22, "leads": 1, "imp": 3245, "clicks": 77, "link": 54}, {"date": "2026-07-19", "camp": "2BHK", "spend": 834.01, "leads": 1, "imp": 2613, "clicks": 78, "link": 39}, {"date": "2026-07-20", "camp": "Studio", "spend": 966.51, "leads": 1, "imp": 5849, "clicks": 111, "link": 63}, {"date": "2026-07-20", "camp": "2BHK", "spend": 991.71, "leads": 2, "imp": 3466, "clicks": 77, "link": 39}, {"date": "2026-07-21", "camp": "Studio", "spend": 888.75, "leads": 4, "imp": 3270, "clicks": 76, "link": 45}, {"date": "2026-07-21", "camp": "2BHK", "spend": 838.45, "leads": 5, "imp": 2582, "clicks": 80, "link": 43}, {"date": "2026-07-22", "camp": "Studio", "spend": 367.2, "leads": 1, "imp": 1557, "clicks": 29, "link": 20}, {"date": "2026-07-22", "camp": "2BHK", "spend": 347.46, "leads": 0, "imp": 1151, "clicks": 16, "link": 13}], "crm": [{"ts": "2026-07-21 22:55:21", "name": "Sundar Suvarna", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9699340058", "logged": "by 07-22 11:32", "lag": "≤ 12h37m", "st": "ok"}, {"ts": "2026-07-21 19:56:36", "name": "Nita Shah", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "7400119009", "logged": "by 07-22 11:32", "lag": "≤ 15h36m", "st": "ok"}, {"ts": "2026-07-21 17:11:28", "name": "jai shri krishna", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9664658376", "logged": "row pre-exists (repeat lead)", "lag": "repeat lead", "st": "ok"}, {"ts": "2026-07-21 14:56:39", "name": "Chirag Mota", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "below_₹1.55_cr", "phone": "9870893252", "logged": "by 07-21 15:31", "lag": "≤ 34m", "st": "ok"}, {"ts": "2026-07-21 14:45:54", "name": "Dimple Chothani", "camp": "2BHK", "intent": "3–6_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "8779899248", "logged": "by 07-21 15:31", "lag": "≤ 45m", "st": "ok"}, {"ts": "2026-07-21 11:09:41", "name": "Falguni Deep Thakker", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9769992326", "logged": "by 07-21 11:35", "lag": "≤ 25m", "st": "ok"}, {"ts": "2026-07-21 08:19:46", "name": "Manoj Kumar Surana", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9154094096", "logged": "by 07-21 11:35", "lag": "≤ 3h15m", "st": "ok"}, {"ts": "2026-07-21 06:48:23", "name": "Jigna rathod", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9969283483", "logged": "—", "lag": "NOT in sheet yet", "st": "warn"}, {"ts": "2026-07-21 06:20:28", "name": "roy  Miryala", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9892609733", "logged": "by 07-21 11:35", "lag": "≤ 5h15m", "st": "ok"}, {"ts": "2026-07-20 08:10:38", "name": "Nishit Shah", "camp": "2BHK", "intent": "3–6_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "8369741692", "logged": "on 2026-07-20 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-20 01:19:03", "name": "Karishma Viresh Chheda", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9167525540", "logged": "on 2026-07-20 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-20 00:14:25", "name": "Kanaiya Vador", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9967026141", "logged": "on 2026-07-20 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-19 23:48:10", "name": "Sunil Guraldas Sidhwani", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9175119337", "logged": "on 2026-07-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-19 19:46:33", "name": "Kulin Ganatra", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9820154624", "logged": "on 2026-07-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 19:03:44", "name": "Tanvi Ashish joshi", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9930977944", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 14:52:54", "name": "Ashok Savalkar", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "7738344377", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 13:46:15", "name": "subhash Ambure", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9850895534", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 07:15:14", "name": "Surendra Gupta", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9755039651", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 05:56:48", "name": "Poonam Lalwani", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9987406924", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 04:52:01", "name": "Bhupen Gala", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9082455136", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 01:42:06", "name": "Chhaya", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9920556517", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 00:24:24", "name": "Sushma Ravasia", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8850455636", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 00:13:48", "name": "Sandesh Sansare", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9619822746", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-18 00:07:56", "name": "Harish", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9222166100", "logged": "on 2026-07-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-17 23:46:52", "name": "Nirav Ashar", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.75_cr_–_₹2_cr", "phone": "9987266191", "logged": "on 2026-07-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-17 18:41:05", "name": "Sunil Kittur", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9819307336", "logged": "on 2026-07-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-17 18:38:44", "name": "Shekher Kishore", "camp": "2BHK", "intent": "3–6_months", "budget": "₹1.75_cr_–_₹2_cr", "phone": "9766071953", "logged": "on 2026-07-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-17 14:53:16", "name": "Mehul Joshi", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "8928058588", "logged": "on 2026-07-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-17 14:19:09", "name": "Manoj", "camp": "2BHK", "intent": "3–6_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9529006823", "logged": "on 2026-07-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-17 12:34:54", "name": "Nilesh Takalikar", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9930366709", "logged": "on 2026-07-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 20:06:36", "name": "Mehul Naram", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9223325781", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 19:41:27", "name": "Jayesh  p sheth", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9029199750", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 19:31:59", "name": "Vilas Shah", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9223590058", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 18:38:17", "name": "Laxman Shimpi", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "8286558111", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 18:21:01", "name": "Ajay Barbhaya", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9819227920", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 13:59:25", "name": "Elizabeth Mathew", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9867613228", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 10:40:17", "name": "Anita  Sawane", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9594964488", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 10:15:44", "name": "Manish", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "8108698174", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-14 00:07:18", "name": "Alpesh Gada", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9322978910", "logged": "on 2026-07-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 22:29:31", "name": "Mehul Savla", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9773749909", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 22:17:26", "name": "Hemang Shah", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9820863199", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 22:02:21", "name": "Mehul Savla", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9773749909", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 21:31:24", "name": "Pawan Varma", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9867136281", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 10:44:13", "name": "Pramod Agare", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9323470326", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 09:37:04", "name": "Hemant Ranpise", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9004488465", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 01:34:19", "name": "kapila Mandalia", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9920522953", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 01:07:14", "name": "sk", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9076316330", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-13 00:26:58", "name": "Chandrashekhar Ahirwar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9322075060", "logged": "on 2026-07-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-12 19:31:48", "name": "kavitajj", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9082542988", "logged": "on 2026-07-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-12 18:33:31", "name": "vinaya jain", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "₹1.75_cr_–_₹2_cr", "phone": "7276020294", "logged": "on 2026-07-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-12 16:19:26", "name": "Kevin Thakker", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "7972786306", "logged": "on 2026-07-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-12 16:14:54", "name": "vimessh", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "7977760493", "logged": "on 2026-07-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-12 14:22:17", "name": "Dharmesh Thakkar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9773332736", "logged": "on 2026-07-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-12 14:16:10", "name": "Sonu Shah", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9607731098", "logged": "on 2026-07-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-12 09:54:27", "name": "Hemangi Athalye Karmalkar", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9870442356", "logged": "on 2026-07-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-11 18:11:18", "name": "Manojkumar Shukla", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9004798249", "logged": "on 2026-07-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-11 15:38:58", "name": "9867291111", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9867291111", "logged": "on 2026-07-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-11 14:55:53", "name": "Anil Soares", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9820522236", "logged": "on 2026-07-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-11 13:33:59", "name": "Prajakta Bhorkar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9867010287", "logged": "on 2026-07-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-11 13:21:28", "name": "naval Gupta", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "8108999655", "logged": "on 2026-07-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-10 19:48:24", "name": "Santosh Utekar", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8291803488", "logged": "on 2026-07-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-10 19:12:31", "name": "Asha Joshi", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "7506456852", "logged": "on 2026-07-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-10 18:33:02", "name": "Vishal Pisal", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9819114468", "logged": "on 2026-07-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-10 11:03:46", "name": "Sangita Kadam", "camp": "2BHK", "intent": "3–6_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9820146662", "logged": "—", "lag": "never logged", "st": "warn"}, {"ts": "2026-07-10 10:00:23", "name": "Akash Vinod Pithadia", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9699811388", "logged": "on 2026-07-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-10 09:53:18", "name": "Meet jain", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "8652006315", "logged": "on 2026-07-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-10 09:27:16", "name": "vig", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "8655275106", "logged": "on 2026-07-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-10 01:34:08", "name": "Pooja Khade", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8104949139", "logged": "on 2026-07-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-09 23:24:18", "name": "Vijay Vojhala", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9987642207", "logged": "on 2026-07-09 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-09 17:06:10", "name": "Paras Bajpai", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9702213756", "logged": "on 2026-07-09 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-09 09:34:53", "name": "Prashant Deshmukh", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9322330784", "logged": "on 2026-07-09 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-09 08:43:14", "name": "Archana Jadeja", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9967766278", "logged": "on 2026-07-09 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-09 08:29:50", "name": "Ashita Pichad Shene", "camp": "2BHK", "intent": "3–6_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9819219615", "logged": "on 2026-07-09 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-09 07:30:22", "name": "Narendra B. Mandot", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "7977410881", "logged": "on 2026-07-09 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-08 22:48:14", "name": "Gobind Nagpal", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9892826018", "logged": "on 2026-07-08 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-08 17:08:26", "name": "Mithilesh Dubey", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9892292180", "logged": "on 2026-07-08 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-08 15:09:24", "name": "Deepak Chaurasia", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9892394757", "logged": "on 2026-07-08 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-08 14:03:40", "name": "Backup", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9819996475", "logged": "on 2026-07-08 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-08 11:04:19", "name": "Yogesh Wail", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8097244214", "logged": "on 2026-07-08 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 23:37:25", "name": "Sunil Thomas", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "below_₹1.55_cr", "phone": "9920363095", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 23:22:52", "name": "Bharat Shah", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "below_₹1.55_cr", "phone": "9324245679", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 23:15:25", "name": "hemali panchal", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9619586655", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 23:09:43", "name": "Deep Biren", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9820414043", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 22:22:21", "name": "Milan Satardekar", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "8097929729", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 21:37:02", "name": "Shailesh", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9405725745", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 21:13:51", "name": "Amit Lakhani", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9892185581", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 20:56:17", "name": "Nitin Kinger", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8286020505", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 20:06:57", "name": "Kapil Pravin Chheda", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9702830390", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 19:17:47", "name": "Smruti Doshi", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9870051095", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 16:13:57", "name": "Rajendra P", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "below_₹1.55_cr", "phone": "9768931525", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 16:08:32", "name": "Jigar Thakkar", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9773349353", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 14:10:21", "name": "Amit Visaria", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "below_₹1.55_cr", "phone": "9819584940", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 12:48:24", "name": "Vijay Tribhuwan", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9921230244", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 12:45:22", "name": "Deepali Jain", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "below_₹1.55_cr", "phone": "8879635566", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 09:41:44", "name": "Pravin Shimpi", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9819367164", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 09:35:04", "name": "Shruti T", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "8904016106", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 09:22:24", "name": "makeup and hair by nipa", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9819620970", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 09:07:05", "name": "Navin Bhanushali", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "7738082590", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 08:19:01", "name": "laxman Gawde", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9820236506", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 07:36:32", "name": "Santoshi Talgeri", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9819192455", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-07 00:25:20", "name": "raju Kumar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "7972829064", "logged": "on 2026-07-07 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 21:31:06", "name": "Priyanka Bhagwat", "camp": "2BHK", "intent": "3–6_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9987512226", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 21:11:50", "name": "Shradha Mhamunkar", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "9987326564", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 20:47:02", "name": "shveta thakker", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9821392391", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 20:01:02", "name": "Paresh Khatri", "camp": "2BHK", "intent": "6+_months_/_just_exploring", "budget": "below_₹1.55_cr", "phone": "9892954990", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 19:56:11", "name": "ANANT R", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "8779546600", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 19:27:16", "name": "Dharmendra Doshi", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9324139959", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 19:00:11", "name": "Aishwarya Nagrajan", "camp": "2BHK", "intent": "3–6_months", "budget": "below_₹1.55_cr", "phone": "9833551916", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 17:47:21", "name": "Abhishek Tiwari", "camp": "2BHK", "intent": "within_3_months", "budget": "below_₹1.55_cr", "phone": "9819910626", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 16:23:06", "name": "Suvi&Sanvi_LifelongAllies", "camp": "2BHK", "intent": "within_3_months", "budget": "₹1.5_cr_–_₹1.75_cr", "phone": "8655491103", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-06 16:01:47", "name": "Haresh Lulla", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9822110242", "logged": "on 2026-07-06 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-05 17:50:10", "name": "Rajesh Shah", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9029796251", "logged": "on 2026-07-05 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-05 15:38:21", "name": "Nitin Patkar", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9773129257", "logged": "on 2026-07-05 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-05 13:20:10", "name": "Jinal Shah", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9820477153", "logged": "on 2026-07-05 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-05 11:42:25", "name": "Gautam Ray", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9029538436", "logged": "on 2026-07-05 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-04 19:36:32", "name": "Subhash Soni", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9224597069", "logged": "on 2026-07-04 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-04 18:15:45", "name": "Manoj Agrawal", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8976012013", "logged": "on 2026-07-04 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-04 13:34:03", "name": "Raju Shinde", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9987335339", "logged": "on 2026-07-04 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-04 10:03:15", "name": "Rushikesh Bagayatkar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9869603316", "logged": "on 2026-07-04 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-03 22:09:14", "name": "Amey Ashwini Ajit Angane", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9594583138", "logged": "on 2026-07-03 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-03 19:41:02", "name": "Sunil Bagul", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "8108715063", "logged": "on 2026-07-03 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-03 15:21:08", "name": "Dhanraj", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9773525617", "logged": "on 2026-07-03 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-03 15:20:06", "name": "Doshi Jaswant", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9224542504", "logged": "on 2026-07-03 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-02 23:35:32", "name": "Chavan", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9967531417", "logged": "on 2026-07-02 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-02 23:22:04", "name": "Mital Joshi", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9892486411", "logged": "on 2026-07-02 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-02 21:41:02", "name": "Manisha Shah", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "8433782376", "logged": "on 2026-07-02 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-02 20:05:34", "name": "Navin Maru", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9860534333", "logged": "on 2026-07-02 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-02 18:47:59", "name": "Anjali Warang", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9969670647", "logged": "on 2026-07-02 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-02 16:16:37", "name": "Dilip Gawai", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8693862849", "logged": "on 2026-07-02 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-02 09:46:20", "name": "shanker tekwani", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9822299969", "logged": "on 2026-07-02 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-01 23:09:20", "name": "Neeta Nit", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9167189674", "logged": "on 2026-07-01 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-01 22:25:03", "name": "jai shri krishna", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9664658376", "logged": "by 07-20 12:04", "lag": "≤ 445h38m", "st": "ok"}, {"ts": "2026-07-01 17:41:27", "name": "Riya R Dalvi", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8291705962", "logged": "on 2026-07-01 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-01 15:31:53", "name": "Manisha Bhagwanani", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9892463191", "logged": "on 2026-07-01 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-01 11:41:21", "name": "Sachi Iyer", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9619011375", "logged": "on 2026-07-01 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-07-01 00:31:53", "name": "Rahul Padaya", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9004035089", "logged": "older row only (repeat?)", "lag": "day-level unknown", "st": "ok"}, {"ts": "2026-06-30 22:10:05", "name": "Naresh Khatri", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9987547830", "logged": "on 2026-06-30 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-30 16:46:52", "name": "Hiren Kenia", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9820346090", "logged": "on 2026-06-30 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-30 14:38:50", "name": "saumya", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9372528503", "logged": "on 2026-06-30 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-30 12:32:45", "name": "Vikas Bodwade", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9869338388", "logged": "on 2026-06-30 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-30 12:31:58", "name": "Nishant Kamdar", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9920496601", "logged": "on 2026-06-30 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-29 19:24:17", "name": "Kumar C Kummi", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9108146320", "logged": "older row only (repeat?)", "lag": "day-level unknown", "st": "ok"}, {"ts": "2026-06-28 18:53:58", "name": "Paresh shah", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9321468065", "logged": "on 2026-06-28 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-28 14:50:18", "name": "mittal devesh gangani", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9920299250", "logged": "on 2026-06-28 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-27 09:47:49", "name": "Parag Chavan", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9867799251", "logged": "on 2026-06-27 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-27 01:08:33", "name": "Jyothi Gowda", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "7304218100", "logged": "on 2026-06-27 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-26 22:30:27", "name": "Surendra Prajapati", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9867714652", "logged": "on 2026-06-27 (day-level)", "lag": "+1d", "st": "ok"}, {"ts": "2026-06-26 14:17:42", "name": "Priya", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "7208141086", "logged": "on 2026-06-26 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-26 10:00:11", "name": "Rashmi", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9820723248", "logged": "on 2026-06-26 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-25 07:43:01", "name": "Vivek Dwivedi", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9022424525", "logged": "on 2026-06-25 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-25 02:59:48", "name": "Rajesh  Kothari", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9582879141", "logged": "on 2026-06-25 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-25 00:12:22", "name": "Mitesh Shah", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "8369885799", "logged": "older row only (repeat?)", "lag": "day-level unknown", "st": "ok"}, {"ts": "2026-06-24 22:42:44", "name": "Naresh Sachade", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "7498415864", "logged": "on 2026-06-25 (day-level)", "lag": "+1d", "st": "ok"}, {"ts": "2026-06-24 20:57:40", "name": "Chandrashekhar", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9561653953", "logged": "on 2026-06-25 (day-level)", "lag": "+1d", "st": "ok"}, {"ts": "2026-06-24 16:22:41", "name": "Atul Thorat", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9819877789", "logged": "—", "lag": "never logged", "st": "warn"}, {"ts": "2026-06-24 13:31:24", "name": "Shradha Mhamunkar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9987326564", "logged": "on 2026-06-24 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-24 12:37:56", "name": "Rewashankar Gomtiwal", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8355882399", "logged": "on 2026-06-24 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-24 09:49:58", "name": "Gaykawad Sushant", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9769347132", "logged": "on 2026-06-24 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-24 05:32:41", "name": "Tilak Deorukhakar", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9820212237", "logged": "on 2026-06-24 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-23 22:47:44", "name": "Shraddha Narvekar", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9833089952", "logged": "on 2026-06-24 (day-level)", "lag": "+1d", "st": "ok"}, {"ts": "2026-06-23 21:39:16", "name": "Dhiraj Dand", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9167428720", "logged": "on 2026-06-24 (day-level)", "lag": "+1d", "st": "ok"}, {"ts": "2026-06-23 19:56:07", "name": "vikas V.kamble", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9699568006", "logged": "on 2026-06-24 (day-level)", "lag": "+1d", "st": "ok"}, {"ts": "2026-06-23 19:53:51", "name": "Shersingh Yadav", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9336324065", "logged": "on 2026-06-24 (day-level)", "lag": "+1d", "st": "ok"}, {"ts": "2026-06-21 10:11:43", "name": "vikramjit kaushal", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9876455912", "logged": "older row only (repeat?)", "lag": "day-level unknown", "st": "ok"}, {"ts": "2026-06-20 14:49:03", "name": "Dimple Dedhia", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9819292880", "logged": "on 2026-06-20 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-20 09:58:06", "name": "Suman Yadav", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8108958550", "logged": "on 2026-06-20 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-20 01:54:54", "name": "Sandeep Shah", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8850364329", "logged": "on 2026-06-20 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-19 23:25:50", "name": "Himalaya Agrawal", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9920455937", "logged": "on 2026-06-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-19 23:08:03", "name": "Vishram Kudalkar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9820026678", "logged": "on 2026-06-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-19 22:35:21", "name": "Manjula Mahida", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9619289985", "logged": "on 2026-06-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-19 15:08:39", "name": "Vanita Gala | Hairstylist & Saree Draper", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9867228425", "logged": "on 2026-06-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-19 05:51:19", "name": "norwin saloman", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9765266639", "logged": "on 2026-06-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-19 02:56:35", "name": "rahul jethwa", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9323401714", "logged": "on 2026-06-19 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-18 16:55:16", "name": "Noorjaha Shaikh", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9867333413", "logged": "on 2026-06-18 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-17 22:29:43", "name": "Naresh", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9833988019", "logged": "on 2026-06-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-17 18:12:45", "name": "kiran_dharamshi", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9769170945", "logged": "on 2026-06-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-17 13:26:48", "name": "Jaideep Salunke", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9892953782", "logged": "on 2026-06-17 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-17 12:27:17", "name": "Priyanka Sangar", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9819495426", "logged": "older row only (repeat?)", "lag": "day-level unknown", "st": "ok"}, {"ts": "2026-06-17 12:02:47", "name": "Pravin Bhuingal", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8104623437", "logged": "older row only (repeat?)", "lag": "day-level unknown", "st": "ok"}, {"ts": "2026-06-15 08:53:41", "name": "Akshay Wagh", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9757287443", "logged": "on 2026-06-15 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-14 20:28:56", "name": "Sandeep Shah", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9223200118", "logged": "on 2026-06-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-14 12:58:34", "name": "ANDRE BRIAN EDWARD ROZARIO", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9821266080", "logged": "—", "lag": "never logged", "st": "warn"}, {"ts": "2026-06-14 01:40:08", "name": "Ashok Patel", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9322032922", "logged": "on 2026-06-14 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-13 17:56:55", "name": "Manal", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8850584609", "logged": "on 2026-06-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-13 15:27:20", "name": "Swati Wankhede", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8879901294", "logged": "on 2026-06-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-13 15:09:01", "name": "Reema P. Desai", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9819804948", "logged": "on 2026-06-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-13 09:50:20", "name": "Neeraj Neeraj", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9326066503", "logged": "on 2026-06-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-13 09:10:40", "name": "Haresh Gajanan Bhogte", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "9930556799", "logged": "on 2026-06-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-13 07:40:45", "name": "Aparna Pawar", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8976902153", "logged": "on 2026-06-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-13 02:04:10", "name": "Sachin Ajagekar", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "7387476325", "logged": "on 2026-06-13 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-12 12:37:09", "name": "nehal mota", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "7021164265", "logged": "on 2026-06-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-12 09:01:39", "name": "NIKHIl", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8286343368", "logged": "on 2026-06-12 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-11 14:11:08", "name": "Soni karan", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "8451858852", "logged": "on 2026-06-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-11 11:46:12", "name": "Christina Dias", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9702293067", "logged": "on 2026-06-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-11 01:14:05", "name": "Bhakti Bhanushali", "camp": "Studio", "intent": "just_exploring", "budget": "", "phone": "7506291988", "logged": "on 2026-06-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-11 00:44:37", "name": "anant", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8779546600", "logged": "on 2026-06-11 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 22:34:42", "name": "Vicky Ra", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9619133359", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 20:14:14", "name": "Vipul Rakhasia, studio", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9967421298", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 19:16:26", "name": "Sudarshan Gaikwad", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9029299735", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 19:00:40", "name": "Shweta Mahendra Singh", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8108728474", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 18:51:59", "name": "Deepali Gode", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9870755485", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 18:50:23", "name": "theDaniel", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9920877115", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 18:45:13", "name": "Uday Masurkar", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9833676559", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 17:16:42", "name": "Adarsh thakur", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9136937030", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 13:04:05", "name": "Ravi DU", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9321110668", "logged": "—", "lag": "never logged", "st": "warn"}, {"ts": "2026-06-10 12:39:14", "name": "Kadam Snehal Prathamesh", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9870543084", "logged": "older row only (repeat?)", "lag": "day-level unknown", "st": "ok"}, {"ts": "2026-06-10 11:58:04", "name": "Madhukar Bhavsar S .", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "9987097895", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 11:25:46", "name": "milind", "camp": "Studio", "intent": "within_3_months", "budget": "", "phone": "8383061069", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}, {"ts": "2026-06-10 08:41:13", "name": "Sailee Joag", "camp": "Studio", "intent": "3–6_months", "budget": "", "phone": "9833357342", "logged": "on 2026-06-10 (day-level)", "lag": "same day", "st": "ok"}], "visits": [{"date": "2025-08-08", "name": "Chandrasen/Kalpana Waje", "phone": "9423158396", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-08-10", "name": "Manisha Kotak", "phone": "9819541617", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-08-16", "name": "Sagar Vora Parshwa", "phone": "9833196906", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-08-17", "name": "Mahesh Vaja", "phone": "9699971814", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-12", "name": "Kavita Solanki", "phone": "8080158054", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-13", "name": "Deepak Furia", "phone": "9819898378", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-13", "name": "Pratiksha", "phone": "8655107224", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-21", "name": "--------------", "phone": "9082664879", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-19", "name": "Sagar/ Govind chawla", "phone": "8855008494", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-21", "name": "Gautam Shah", "phone": "7021887090", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-26", "name": "Nitin Hanvao", "phone": "9372685679", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-26", "name": "D J Jain", "phone": "8655690641", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-27", "name": "Usha Mehta/ Chandra", "phone": "8108410407", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-27", "name": "Bhupendra Shah/ Jaishree", "phone": "9699823608", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-27", "name": "Ajay Gangan", "phone": "9819914209", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-28", "name": "Dayalji Manani", "phone": "9322272564", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-10-06", "name": "Harish Doshi", "phone": "9930206993", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-10-14", "name": "Ela (Girish) Parmar", "phone": "9323221483", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-01-03", "name": "Aasha jain", "phone": "9821427527", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-01-29", "name": "Kavita jain", "phone": "9042305045", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-02-01", "name": "puchkala", "phone": "9820185894", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-02-08", "name": "Hetal Pandya", "phone": "9920389566", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-02-08", "name": "Jilesh knolia", "phone": "9082034396", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-03-28", "name": "Manoj kumar", "phone": "9892392375", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-02-21", "name": "Rajesh jain", "phone": "9224450170", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-03-21", "name": "Maulik sanghavi", "phone": "9699993767", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-02-06", "name": "hetal Pandya", "phone": "9920389566", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-03-15", "name": "Sejal golatkar", "phone": "9987185271", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-03-17", "name": "Deepa sauchala", "phone": "8097477143", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-03-18", "name": "Muthu selvi", "phone": "9629872042", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-03-26", "name": "Kuntal thakkar", "phone": "9820545881", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-27", "name": "parnav shah", "phone": "9699823608", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-26", "name": "Josal jain", "phone": "8655690641", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-25", "name": "Twinkle Mota", "phone": "8928905417", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-08-02", "name": "Samidha khandekar", "phone": "", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-12", "name": "Pratiksha", "phone": "8655107224", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-13", "name": "Deepak Furia", "phone": "9819898378", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2025-09-12", "name": "Kavitan  solanki", "phone": "8080158054", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-19", "name": "Deepak chaugale", "phone": "8976476718", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-19", "name": "Mehad shah", "phone": "9022810809", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-12", "name": "Chinmay shah", "phone": "9821927644", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-06", "name": "Sandesh veling", "phone": "9082079819", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-04", "name": "Ashish shah", "phone": "9323969890", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-21", "name": "Rinkesh shah", "phone": "9322188866", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-25", "name": "Shayam gavande", "phone": "8291895641", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-26", "name": "Sagar lathigara", "phone": "9920912683", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-04-27", "name": "Umesh kadam", "phone": "7977750535", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-05-03", "name": "Vinita gujar", "phone": "9833612851", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-05-10", "name": "Viraj lapasiya", "phone": "9167678090", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-05-16", "name": "Amit jadhav", "phone": "7738663432", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-05-17", "name": "Ninit", "phone": "9969762999", "status": "prev3", "note": "pre-V3 era visit (informational)"}, {"date": "2026-06-19", "name": "Swati wankhede", "phone": "8879901294", "status": "verified", "note": "Studio"}, {"date": "2026-06-20", "name": "Manjulamahida", "phone": "9619289985", "status": "verified", "note": "Studio"}, {"date": "2026-06-20", "name": "Sandeep shah", "phone": "8850364329", "status": "verified", "note": "Studio"}, {"date": "2026-06-24", "name": "Rewashankar gomtiwal", "phone": "8355882399", "status": "verified", "note": "Studio"}, {"date": "2026-06-27", "name": "Naveen suvarna", "phone": "8976779929", "status": "bad", "note": "pre-V3 lead (Apr) — not a V3 result"}, {"date": "2026-07-04", "name": "Hitendra dedhia", "phone": "9673213241", "status": "bad", "note": "never a Meta lead (Dedhia case, 4 Jul)"}, {"date": "2026-07-05", "name": "Vipul rakhasia", "phone": "9967421298", "status": "verified", "note": "Studio"}, {"date": "2026-07-05", "name": "Christina Dias", "phone": "9702293067", "status": "verified", "note": "Studio"}, {"date": "2026-07-08", "name": "Pravin bhuingul", "phone": "8104623437", "status": "verified", "note": "Studio"}, {"date": "2026-07-10", "name": "Asha joshi", "phone": "7506456852", "status": "verified", "note": "Studio"}, {"date": "2026-07-11", "name": "Santosh utekar", "phone": "8291803488", "status": "verified", "note": "Studio"}, {"date": "2026-07-12", "name": "Deep biren", "phone": "9820414043", "status": "verified", "note": "2BHK"}, {"date": "2026-07-12", "name": "Deepak chaurasia", "phone": "9892394757", "status": "verified", "note": "2BHK"}, {"date": "2026-07-12", "name": "Vimesh", "phone": "7977760493", "status": "verified", "note": "2BHK"}, {"date": "2026-07-14", "name": "Kapil chheda", "phone": "9702830390", "status": "verified", "note": "2BHK"}, {"date": "2026-07-14", "name": "Hemang shah", "phone": "9820863199", "status": "verified", "note": "Studio"}, {"date": "2026-07-18", "name": "Payal shah", "phone": "9769884201", "status": "unverified", "note": "no CRM record in any tab — ask the team"}, {"date": "2026-07-20", "name": "Jagdish ravasia {Sushma}", "phone": "9372158643", "status": "annotated", "note": "relative's phone; team-annotated {Sushma} — ties to real CRM lead"}, {"date": "2026-07-20", "name": "Vidhi thakkar", "phone": "9820194111", "status": "unverified", "note": "no CRM record in any tab — ask the team"}], "today": "2026-07-22", "dailyMin": "2026-06-23", "v3Start": "2026-06-10"};
+const $ = (s) => document.querySelector(s);
+const fromEl = $("#from"), toEl = $("#to");
+const fmtR = (v) => "₹" + Math.round(v).toLocaleString("en-IN");
+
+function isoAddDays(iso, n) {
+  const d = new Date(iso + "T00:00:00");
+  d.setDate(d.getDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+function setRangeDays(days) {
+  toEl.value = DATA.today;
+  fromEl.value = days === "all" ? DATA.v3Start : isoAddDays(DATA.today, -(days - 1));
+  render();
+}
+function listDays(from, to) {
+  const out = [];
+  for (let d = from; d <= to && out.length < 400; d = isoAddDays(d, 1)) out.push(d);
+  return out;
+}
+function niceMax(v) {
+  if (v <= 0) return 1;
+  for (const m of [1,2,2.5,5,10,20,25,50,100,200,250,500,1000,2000,2500,5000,10000]) if (m >= v) return m;
+  return Math.ceil(v);
+}
+function barChart(el, days, val, fmt) {
+  const W = 660, H = 200, PL = 46, PB = 26, PT = 12;
+  const pw = W - PL - 12, ph = H - PB - PT;
+  const mx = niceMax(Math.max(1, ...days.flatMap(dt => [val("Studio", dt), val("2BHK", dt)])));
+  const n = days.length, gw = pw / Math.max(n, 1);
+  const bw = Math.max(2, Math.min(22, (gw - 4) / 2));
+  let s = "";
+  [0, mx / 2, mx].forEach((yv, gi) => {
+    const yy = PT + ph - ph * yv / mx;
+    if (gi) s += `<line x1="${PL}" y1="${yy}" x2="${W - 12}" y2="${yy}" class="grid"/>`;
+    s += `<text x="${PL - 6}" y="${yy + 4}" class="tick" text-anchor="end">${fmt(yv)}</text>`;
+  });
+  const step = Math.max(1, Math.ceil(n / 8));
+  days.forEach((dt, i) => {
+    const x0 = PL + i * gw + (gw - 2 * bw - 2) / 2;
+    ["Studio", "2BHK"].forEach((c, si) => {
+      const v = val(c, dt), bh = ph * v / mx;
+      s += `<rect x="${(x0 + si * (bw + 2)).toFixed(1)}" y="${(PT + ph - bh).toFixed(1)}"` +
+           ` width="${bw.toFixed(1)}" height="${Math.max(bh, 0).toFixed(1)}" rx="2" class="s${si + 1}">` +
+           `<title>${dt.slice(5)} · ${c}: ${fmt(v)}</title></rect>`;
+    });
+    if (i % step === (n - 1) % step)
+      s += `<text x="${x0 + bw}" y="${H - 8}" class="tick" text-anchor="middle">${+dt.slice(8)}/${+dt.slice(5, 7)}</text>`;
+  });
+  s += `<line x1="${PL}" y1="${PT + ph}" x2="${W - 12}" y2="${PT + ph}" class="axis"/>`;
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img">${s}</svg>`;
+}
+function render() {
+  let from = fromEl.value || DATA.dailyMin, to = toEl.value || DATA.today;
+  if (from > to) [from, to] = [to, from];
+  const inR = (d) => d >= from && d <= to;
+  const note = from < DATA.dailyMin ? `Meta spend/CTR data starts ${DATA.dailyMin}; CRM leads shown for the full range.` : "";
+  $("#rangenote").textContent = note;
+
+  const dayList = listDays(from < DATA.dailyMin ? DATA.dailyMin : from, to);
+  const byKey = {};
+  DATA.daily.forEach(r => { byKey[r.camp + "|" + r.date] = r; });
+  const get = (c, dt, f) => (byKey[c + "|" + dt] || {})[f] || 0;
+  barChart($("#chart-leads"), dayList, (c, dt) => get(c, dt, "leads"), v => String(v));
+  barChart($("#chart-spend"), dayList, (c, dt) => get(c, dt, "spend"),
+           v => v >= 1000 ? "₹" + (v / 1000) + "k" : "₹" + Math.round(v));
+
+  // campaign aggregates over range
+  let rows = "";
+  ["Studio", "2BHK"].forEach((c, si) => {
+    const rs = DATA.daily.filter(r => r.camp === c && inR(r.date));
+    const sp = rs.reduce((a, r) => a + r.spend, 0), ld = rs.reduce((a, r) => a + r.leads, 0);
+    const im = rs.reduce((a, r) => a + r.imp, 0), ck = rs.reduce((a, r) => a + r.clicks, 0);
+    const crmN = DATA.crm.filter(r => r.camp === c && inR(r.ts.slice(0, 10))).length;
+    rows += `<tr><td><span class="chip c${si + 1}">${c}</span></td>` +
+      `<td class="num">${fmtR(sp)}</td><td class="num">${ld}</td>` +
+      `<td class="num">${ld ? fmtR(sp / ld) : "—"}</td>` +
+      `<td class="num">${im ? (100 * ck / im).toFixed(2) + "%" : "—"}</td>` +
+      `<td class="num">${ck ? fmtR(sp / ck) : "—"}</td>` +
+      `<td class="num">${im ? fmtR(1000 * sp / im) : "—"}</td>` +
+      `<td class="num">${crmN}</td></tr>`;
+  });
+  $("#camp-body").innerHTML = rows;
+
+  // speed to lead
+  const sp = DATA.crm.filter(r => inR(r.ts.slice(0, 10)));
+  $("#speed-body").innerHTML = sp.map(r => {
+    const cls = r.st === "warn" ? "st-serious" : "st-good";
+    const ico = r.st === "warn" ? "⚠" : "✓";
+    return `<tr><td>${r.name}</td><td><span class="chip ${r.camp === "Studio" ? "c1" : "c2"}">${r.camp}</span></td>` +
+      `<td class="num">${r.ts.slice(5, 16)}</td><td>${r.intent}</td><td>${r.budget || "—"}</td>` +
+      `<td>${r.logged}</td><td class="${cls}">${ico} ${r.lag}</td></tr>`;
+  }).join("") || `<tr><td colspan="7" class="muted">No CRM leads in this range.</td></tr>`;
+
+  // visits
+  const ic = {verified: ["st-good", "✓"], annotated: ["st-good", "✓"], unverified: ["st-serious", "⚠"],
+              bad: ["st-critical", "✗"], prev3: ["st-muted", "•"]};
+  const vs = DATA.visits.filter(v => inR(v.date));
+  $("#visits-body").innerHTML = vs.map(v =>
+    `<tr><td class="num">${v.date}</td><td>${v.name}</td><td class="num">${v.phone}</td>` +
+    `<td class="${ic[v.status][0]}">${ic[v.status][1]} ${v.status === "verified" ? "" : ""}${v.note}</td></tr>`
+  ).join("") || `<tr><td colspan="4" class="muted">No Facebook-sourced visits in this range.</td></tr>`;
+}
+document.querySelectorAll(".preset").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".preset").forEach(x => x.classList.remove("on"));
+  b.classList.add("on");
+  setRangeDays(b.dataset.days === "all" ? "all" : +b.dataset.days);
+}));
+[fromEl, toEl].forEach(el => el.addEventListener("change", () => {
+  document.querySelectorAll(".preset").forEach(x => x.classList.remove("on"));
+  render();
+}));
+setRangeDays(14);
+</script>
+</body></html>
