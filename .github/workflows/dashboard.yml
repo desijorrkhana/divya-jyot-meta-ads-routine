@@ -2,7 +2,11 @@ name: Rebuild dashboard
 
 on:
   schedule:
-    - cron: "30 3-13 * * *"   # hourly 03:30-13:30 UTC = 9AM-7PM IST
+    # Two chances per hour, 9AM-7PM IST. GitHub fires scheduled runs best-effort
+    # (busy minutes like :00/:30 get skipped often — 24 Jul only 1 of 5 fired),
+    # so use off-peak minutes and rely on the pair for at-least-once per hour.
+    - cron: "12 3-13 * * *"
+    - cron: "42 3-13 * * *"
   workflow_dispatch: {}
 
 permissions:
