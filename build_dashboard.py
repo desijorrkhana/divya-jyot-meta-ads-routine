@@ -449,8 +449,10 @@ const fromEl = $("#from"), toEl = $("#to");
 const fmtR = (v) => "₹" + Math.round(v).toLocaleString("en-IN");
 
 function isoAddDays(iso, n) {{
-  const d = new Date(iso + "T00:00:00");
-  d.setDate(d.getDate() + n);
+  // Parse and add in UTC: local-time parse + toISOString() made +1 day a no-op
+  // for viewers ahead of UTC (IST), so the charts' day list never advanced.
+  const d = new Date(iso + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + n);
   return d.toISOString().slice(0, 10);
 }}
 function setRangeDays(days) {{

@@ -1,63 +1,52 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Tuesday, 21 July 2026 — CORRECTED, full day
+Thursday, 23 July 2026 (today so far, midnight-~7:15PM IST; no report went out for 22 July)
 
-CORRECTION: the earlier report today claimed the 2BHK campaign had zero CRM tracking. That was wrong. The CRM Event spreadsheet has TWO tabs — Sheet1 (Studio) and Sheet2 (2BHK, added when that campaign launched). fetch_all.py only ever read Sheet1, so every 2BHK lead was silently missing from the data. Keval caught this by pushing back three times (on the lead count, the "no CRM" claim, and specific named leads) before it surfaced. Fixed the script to auto-discover every tab so this cannot recur. Everything below is rebuilt with correct data.
+FOLLOW-UP FROM LAST REPORT (21 July)
+Jigna Rathod phone typo — still NOT fixed. CRM has 9969283483, sheet still shows ...82. Still not called.
+Vidhi Thakkar and Payal Shah — still unverified in any CRM tab, no new info.
+Sundar Suvarna — resolved, not a loss: sheet now tags him "Broker," correctly triaged as a non-buyer.
+New verified visit since last report: Parshant Deshmukh (2BHK, visited 22 July, CRM-matched to a 9 July lead) — genuine 13-day nurture, not a speed issue.
 
-HEADLINE (corrected)
-The 2BHK campaign is NOT an integrity gap. It has its own working, OTP-verified CRM feed (Sheet2) that matches Meta's real numbers almost exactly (67 CRM leads vs 68 Meta reports lifetime). With both tabs included, the Facebook-tab-to-CRM match rate for the last 30 days is 87.9% (123/140), not the 48.9% the broken version reported. Two real open items still stand: Vidhi Thakkar and Payal Shah still have no CRM record in either tab despite a Meta Sent conversion pushed for them, and a live phone typo was caught in today's own data (Jigna Rathod, one digit off, same shape as the Atul Thorat case from 4 July). The actual day was solid: 9 fresh leads (4 Studio + 5 "2BHK"), same-day contact on all of them, and the 2BHK product (confirmed via the ad creative: Rs 1.55 Cr+, 2BHK, Mulund West, 5 min from MG Road station) is real, distinct inventory.
+HEADLINE
+Solid, fast day so far: 4 fresh leads (3 Studio + 1 "2BHK"), all contacted within 3 hours, three within 1.5h. Recurring quality leak is back: 3 of the last 5 fresh leads (today + yesterday) self-report budgets below what the product costs. One open, unexplained data gap: Meta counted 2 Studio leads yesterday but only 1 shows up in the CRM or the team sheet.
 
-THE FUNNEL — 21 July, full day (corrected/complete)
-Spend: Rs 1,727 (Rs 889 Studio + Rs 838 "2BHK")
-Impressions 5,852 / Reach ~4,637 / Clicks 156 (link clicks 88)
-Leads: 9 total (Studio 4, CPL Rs 222, 3 fb/1 ig / "2BHK" 5, CPL Rs 168, 3 fb/2 ig). Blended CPL Rs 192.
-Contacted: all 9 got a same-day row/feedback in the sheet. Untouched: 0.
-Site visits 21 July: 0.
+THE FUNNEL — today so far
+Spend: Rs 1,468 (Rs 751 Studio + Rs 718 "2BHK")
+Impressions 5,398 / Reach ~4,463 / Clicks 108 (link clicks 60)
+Leads: 4 total — Studio 3 (CPL Rs 250), "2BHK" 1 (CPL Rs 718). Blended CPL Rs 367. All 4 on Facebook, none on Instagram today.
+Contacted: all 4 within 3 hours. Untouched: 0. Site visits today: 0.
 
 AD PERFORMANCE
-Studio: CTR 2.32%, CPC Rs 11.69, CPM Rs 272, freq 1.20.
-"2BHK": CTR 3.10%, CPC Rs 10.48, CPM Rs 325, freq 1.36 — pulling its weight now, not just a sidecar.
-Lifetime since the 2BHK campaign's actual creation (6 July): 68 leads / Rs 17,298 spend. "36 Seconds" creative carries 84% of that spend and has the better CTR; "57 Seconds" is the weaker one.
-Delivery healthy on both, no fatigue signal.
+Studio: CTR 2.20%, CPC Rs 9.88, CPM Rs 217, freq 1.18 — best of today/yesterday/7-day-trend on both CPL (Rs 250) and CTR. No fatigue.
+"2BHK": CTR 1.65%, CPC Rs 22.43, CPM Rs 371, freq 1.26 — soft two days running (1 lead today, 0 yesterday), CTR below its own 7-day average. Only 1.5 days of data — not a pause signal, watch a full day tomorrow before acting. No fatigue (freq still low).
 
 SPEED-TO-LEAD (most important section)
-All 9 of 21 July's CRM leads, both campaigns, matched by phone with real arrival times:
-- Roy Miryala (Studio) 06:20 IST — contacted within about 5h15m.
-- Jigna Rathod (2BHK) 06:48 IST — SEE PHONE-TYPO FLAG BELOW, her row was never found because the sheet has the wrong number.
-- Manoj Kumar Surana (Studio) 08:19 IST — contacted within about 3h16m.
-- Falguni Deep Thakker (2BHK) 11:09 IST — contacted within about 26m.
-- Dimple Chothani (2BHK) 14:45 IST — contacted within about 46m.
-- Chirag Mota (2BHK) 14:56 IST — contacted within about 35m.
-- jai shri krishna (2BHK) 17:11 IST — a genuine SECOND lead from this person (also a Studio lead on 1 July, different campaign) — timing ambiguous due to the old row already existing.
-- Nita Shah (Studio) 19:56 IST — contacted within about 15h.
-- Sundar Suvarna (Studio) 22:55 IST — contacted within about 12h.
-Every fresh lead today got same-day attention. Credit holds.
-
-JIGNA RATHOD — LIVE PHONE-TYPO CATCH, same shape as the 4 July Atul Thorat case: CRM (OTP-verified) has her number as 9969283483. The team's sheet logged her as 9969283482 — last digit wrong. Whoever calls the number in the sheet is calling a stranger, not Jigna. Get the real number from the CRM and re-enter it. This is live, not historical — fix it today.
+Jitesh Tandel (22 Jul, Studio) 18:21 IST — contacted within about 46m.
+kunal jain (Studio, just_exploring) 08:41 IST — contacted within about 3h.
+Sasikumar Kounder (Studio, within_3_months) 09:04 IST — contacted within about 1h34m.
+Jagruti Trivedi ("2BHK") 09:54 IST — contacted within about 44m.
+Santosh Pawar (Studio, within_3_months) 10:16 IST — contacted within about 22m.
+All 5 contacted well inside the day. Correctly prioritized by intent — both within_3_months leads got the fastest turnarounds; the just_exploring lead was appropriately slowest, still fast at ~3h. Credit the team.
 
 LEAD QUALITY
-Blended 30-day CPL Rs 241 (163 leads, both campaigns).
-2BHK product confirmed real: 2BHK, Rs 1.55 Cr onwards, 600 sqft carpet, Mulund West, 5 min from MG Road station. Most 2BHK leads self-report "below Rs 1.55 cr" on the CRM's own budget question — worth checking if the entry price matches the volume of interest it's pulling.
-Real cost-per-visit, corrected with both CRM tabs:
-SVD claims 16 Facebook visits in the last 30 days.
-12 are now CRM-verified (up from 7): 7 Studio + 5 "2BHK" (Deep Biren, Deepak Chaurasia, Vimesh, Kapil Chheda, previously only "plausible", now confirmed via Sheet2).
-2 remain KNOWN non-V3, unchanged: Naveen Suvarna, Hitendra Dedhia.
-2 remain unverified in EITHER tab: Payal Shah, Vidhi Thakkar (see below). Sushma Ravasia's visit (relative's number, team-annotated) still counted as genuine.
-Corrected number: Rs 39,211 / 13 (12 verified + Sushma) = Rs 3,016/visit, 8.0% visit rate — clearly beats the ~4.5% baseline, and now a real number, not a heavily-caveated estimate.
+Blended 30-day CPL Rs 249 (165 leads, both campaigns).
+Budget mismatch is the dominant leak again — 3 of 5 fresh leads: Sasikumar Kounder wants a 1BHK at Rs 70L (product is a Rs 87L studio); Jagruti Trivedi self-reports "below Rs 1.55cr" on the 2BHK's own budget question (2BHK starts at Rs 1.55cr); Jitesh Tandel (22 Jul) also Rs 70L vs the Rs 87L ask.
+Real cost-per-visit, last 30 days: 17 Facebook-sourced SVD visits claimed, 13 count as real V3 visits (12 CRM-verified + Sushma Ravasia via name/date match). 2 known non-V3 (Naveen Suvarna, Hitendra Dedhia), 2 still unverified (Payal Shah, Vidhi Thakkar).
+Corrected: Rs 41,159 / 13 = Rs 3,166/visit, 7.9% visit rate — flat vs 21 July's Rs 3,016/8.0%, still well clear of the ~4.5% V3 baseline.
 
-DATA INTEGRITY CROSS-CHECK (corrected)
-The "2BHK gap" from the earlier report today is retracted — Sheet2 is a working CRM feed, 67 leads matching Meta's 68 lifetime almost exactly.
-Still open, unchanged: Vidhi Thakkar (9820194111, visited 20/7, Meta Sent pushed, not in either CRM tab or the Facebook tab at all) and Payal Shah (9769884201, in the Facebook tab but neither CRM tab, Meta Sent also pushed). Ask the team where these two came from.
-New live catch: Jigna Rathod's phone typo (see Speed-to-Lead above) — fix today, not a cold case.
-Match rate corrected: 87.9% (123/140) over the last 30 days with both tabs included, close to the 3 July baseline of 93.6%.
+DATA INTEGRITY CROSS-CHECK
+New, unresolved: Meta shows 2 Studio leads for 22 July (all lead_actions_raw fields agree at 2, not the old double-count bug) but only 1 shows up in the CRM or the team sheet. Can't reconcile from data.json alone — flagging honestly, not guessing. Worth a manual check in Ads Manager's raw leads export if it recurs.
+Match rate this week (17-23 Jul): 34/36, 94.4% — above the 30-day baseline of 87.9%. The 2 misses: Jigna Rathod (known typo) and Sandesh Howal (9324595862, 21 Jul) — no match, no nearby typo-shaped number in the CRM, looks like normal unlogged-lead noise, named for the record.
+Carried forward: Vidhi Thakkar, Payal Shah still unverified in either CRM tab.
 
-DIAGNOSTIC STEPS (corrected)
-1. URGENT, live: fix Jigna Rathod's phone number in the sheet to 9969283483 — she hasn't actually been called yet.
-2. URGENT: ask the team where Vidhi Thakkar and Payal Shah came from before trusting their pushed conversions.
-3. (Agency) Treat 2BHK as a real, proven second product line going forward, not a leak to filter. Worth checking if Rs 1.55 Cr pricing matches what leads say they can afford.
-4. (Agency) "2BHK 57 Seconds" is the weaker creative (16% of 2BHK spend, worse CTR) — consider pausing it in favor of "36 Seconds."
-5. (Process) fetch_all.py now auto-discovers every CRM tab so this specific failure can't recur — but the bigger lesson is to sanity-check totals before writing a headline finding.
+DIAGNOSTIC STEPS
+1. URGENT, carried 2 days: fix Jigna Rathod's number in the sheet to 9969283483 — still not done, she still hasn't been called.
+2. Budget-screen on the FIRST call — 3 of the last 5 fresh leads are well under the asking price (Rs 70L vs Rs 87L twice, "below Rs 1.55cr" once). Catch it on call 1, not after days of follow-up.
+3. Carried: ask the team where Vidhi Thakkar and Payal Shah actually came from — now 3+ days open.
+4. Agency: watch "2BHK" through a full day tomorrow before acting on the softer CPL/CTR — sample is tiny (1 lead today, 0 yesterday), no fatigue signal, not a pause call yet.
+5. Process: the 22 July 2-vs-1 lead gap doesn't match any known bug pattern — spot-check Ads Manager's raw leads export if it repeats.
 
 ANYTHING ELSE
-This correction happened because Keval checked the work — challenged the lead count, then the "no CRM coverage" claim, then two individual leads by name — and each check found something real. Treat today's corrected numbers with the same scrutiny next time, not as settled just because they're now fixed.
+Two small wins: Sundar Suvarna's "Broker" tag shows the team correctly triaging a non-buyer instead of leaving him in limbo, and Parshant Deshmukh's 9 Jul to 22 Jul conversion is a reminder the "call fast" rule is about first contact — some genuine buyers take two weeks to actually visit, and that's fine as long as first contact was quick, which it was.
 
-Corrected match rate: 123/140 (87.9%) of last-30-day Facebook-tab entries matched to CRM (both tabs) by phone. All 9 of 21 July's leads got same-day contact. No fabricated numbers — anything not directly computable is marked as such.
+Match rate 34/36 (94.4%) this week vs 87.9% 30-day baseline. Cost-per-visit Rs 3,166/visit, 7.9% visit rate, 30-day window. One unresolved data gap (22 Jul) and two carried-over unverified SVD visits (Vidhi Thakkar, Payal Shah). No fabricated numbers — anything not directly computable from data.json is marked as such above.
