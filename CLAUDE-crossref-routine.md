@@ -250,8 +250,30 @@ the list. Commit message must say what was learned in one line.
   coverage" claim, two named leads) before it surfaced — treat persistent user pushback on a
   headline number as a strong signal to re-derive from raw sources, not to re-explain the same
   conclusion more confidently.
+- 2026-07-26: a GitHub repo TRANSFER silently de-registers cron schedules (workflow still
+  shows "active"; dashboard went dark 25 Jul 19:47 IST after keval-create → desijorrkhana).
+  Fix: push an edit to the workflow file on the default branch. If dashboard commits ever
+  stop for >2h inside the 9AM-7PM IST window, check Actions run history first.
+- 2026-07-26: the daily schedule itself skips days — 20, 22, 24 Jul all have no report
+  (every-other-day pattern). The session cannot see or fix the claude.ai schedule config;
+  if a gap is noticed, fold the missed day into the current report (as 23 & 25 Jul did)
+  AND tell Keval in the notification that the scheduler skipped, so he can check the
+  schedule on the claude.ai side.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
 apply any SELF-LEARNING updates (this file / _memory.md / fetch_all.py),
 commit all to the repo, then run python3 fetch_all.py --send to push report.md to Telegram.
+
+### ⚠️ THE REPORT MUST REACH `main` — a session-branch commit alone is NOT delivered.
+Each scheduled session commits to its own `claude/*` branch. The dashboard is built FROM
+`main`, and the NEXT day's session clones FROM `main` — so a report (or a _memory.md update,
+or a learned rule in this file) that only exists on a session branch is invisible to both.
+This caused two real incidents: 26 reports stranded across dead branches (recovered 22 Jul),
+and the 25 Jul report + Keval seeing "reports not appended" (26 Jul).
+The `.github/workflows/report-sync.yml` workflow auto-copies report.md, reports/**, this
+file, and fetch_all.py from any pushed `claude/*` branch onto `main`. EVERY run, after
+pushing the session branch: wait ~2 min, then VERIFY main received the report
+(`git fetch origin main && git ls-tree origin/main reports/ | grep <today>`). If the sync
+didn't land, push the report files to main directly — Keval explicitly authorized pushing
+routine output files to main (26 Jul 2026, "make sure the architecture is reliable").

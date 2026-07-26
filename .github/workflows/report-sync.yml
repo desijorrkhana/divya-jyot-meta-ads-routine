@@ -1,0 +1,46 @@
+name: Sync report to main
+
+# Daily Claude sessions commit reports to per-session claude/* branches that
+# nothing merges. This mirrors the routine's output files onto main so the
+# dashboard (built from main) and the next day's session (cloned from main)
+# always see them. Content-level copy, so it never hits merge conflicts.
+on:
+  push:
+    branches: ["claude/**"]
+    paths:
+      - "report.md"
+      - "reports/**"
+      - "CLAUDE-crossref-routine.md"
+      - "fetch_all.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: report-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Copy routine output files from pushed branch onto main
+        run: |
+          git config user.name "report-sync-bot"
+          git config user.email "actions@github.com"
+          git fetch origin "$BRANCH"
+          git checkout FETCH_HEAD -- report.md reports/ CLAUDE-crossref-routine.md fetch_all.py
+          git add report.md reports/ CLAUDE-crossref-routine.md fetch_all.py
+          git diff --cached --quiet && echo "No changes to sync" && exit 0
+          git commit -m "Sync daily report from $BRANCH"
+          for i in 1 2 3; do
+            git push origin main && exit 0
+            git pull --rebase origin main
+          done
+          git push origin main
