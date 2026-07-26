@@ -5,6 +5,10 @@ on:
     # Two chances per hour, 9AM-7PM IST. GitHub fires scheduled runs best-effort
     # (busy minutes like :00/:30 get skipped often — 24 Jul only 1 of 5 fired),
     # so use off-peak minutes and rely on the pair for at-least-once per hour.
+    # NOTE: a repo TRANSFER de-registers cron schedules even though the workflow
+    # still shows "active" (happened 25 Jul 2026, keval-create -> desijorrkhana;
+    # schedule went dark 19:47 IST). Pushing an edit to this file on the default
+    # branch re-registers them — that's why this comment exists.
     - cron: "12 3-13 * * *"
     - cron: "42 3-13 * * *"
   workflow_dispatch: {}
