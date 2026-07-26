@@ -259,6 +259,13 @@ the list. Commit message must say what was learned in one line.
   if a gap is noticed, fold the missed day into the current report (as 23 & 25 Jul did)
   AND tell Keval in the notification that the scheduler skipped, so he can check the
   schedule on the claude.ai side.
+- 2026-07-26: an SVD row with a "Meta Sent ✅" tag but no CRM phone match is NOT automatically
+  a fabrication like Hitendra/Heena Dedhia — check the name for a bracketed relative tag
+  (e.g. "Jagdish Ravasia {Sushma}") and cross-check THAT name/date against the CRM before
+  flagging it as fake; it may be a real V3 lead visiting under a family member's phone.
+  Conversely, this run also found 2 MORE genuine fakes this way (Payal Shah, Vidhi Thakkar) —
+  no name/phone match anywhere — raising the confirmed-fake Meta-Sent count from 2 to 4 in
+  30 days. Both checks matter: don't undercount real visits, don't undercount fake ones either.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

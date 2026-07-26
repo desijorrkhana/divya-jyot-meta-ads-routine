@@ -1,32 +1,30 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-07-25 (no report ran 24 July — two days folded into this run)
+## Updated 2026-07-26
 
-- **URGENT NEW: Sandesh Manohar Padwal (CRM 9819910669, Studio, 3-6mo intent, arrived 24 Jul 08:20)** — real
-  number NEVER dialed, 34+h and counting. Sheet has him as 9819910699 (single-digit transposition, same bug
-  class as Atul Thorat), and that wrong number gave unrelated feedback ("Looking for 1bhk"), confirming it's
-  a stranger. Fix: dial 9819910669 directly from the CRM, and correct the sheet. Check every run until fixed.
-- **Jigna Rathod phone typo — STILL unresolved, now 4+ days (21→25 Jul).** CRM 9969283483, sheet still
-  9969283482. Latest sheet note: "22/7/26 Cut the call" (dialing the wrong stranger). Keep checking.
-- **Vidhi Thakkar (9820194111) and Payal Shah (9769884201) — still unverified in any CRM tab, 5+ days.**
-  No new information. Keep asking.
-- **Ashok Savalkar — new CRM-verified visit** (18 Jul Studio lead → 24 Jul visit, 6-day nurture). Rolled
-  into the 30-day cost/visit calc; Rewashankar Gomtiwal rolled OFF the window at the same time, so the
-  verified count held flat at 13. Cost/visit ticked up to ₹3,386 (7.8%) from ₹3,166 (7.9%) purely from added
-  spend, not fewer visits — still far ahead of the ~4.5% V3 baseline, not a concern.
-- **2BHK campaign RECOVERED — drop the "soft" watch item from 23 Jul.** 0 leads (22nd) → 1 (23rd) → 3 (24th)
-  → 2 (25th so far); CTR bounced 1.53%→2.31%→1.81%. No longer a live concern.
-- **Kunal Jain (23 Jul) resolved "Broker" 24 Jul** — not a loss, same triage as Sundar Suvarna. jagurti
-  trivedi (23 Jul) self-closed "Plan drop" 24 Jul, consistent with the budget-mismatch flag raised at intake.
-- **Budget mismatch still the dominant "2BHK" leak:** Hetal Dedhia (1.50cr) and Pradeep Shukla (1.30cr) both
-  below the ~1.55cr entry price; Dharmesh Kamdar (1.55cr) right at the line. Carried: Sasikumar Kounder
-  (23 Jul, wants 1BHK at 70L vs 87L studio) still unresolved as of 24 Jul ("Ringing").
-- **Match rate 19-25 Jul: 29/32 raw (90.6%); adjusted for the 2 typo cases (both real CRM leads): 31/32
-  (96.9%).** Only Sandesh Howal (21 Jul) remains an unexplained ordinary gap.
-- **22 July "2-vs-1 lead" reporting gap did NOT recur** on 24 or 25 Jul — both days reconcile exactly
-  between Meta and the CRM. Stop actively worrying about it unless it happens again.
-- **Process pattern worth naming:** two live phone-typos active in one week (Jigna Rathod + Sandesh Padwal),
-  same bug class both times (single-digit transposition when hand-typing from the CRM). Recommended fix:
-  copy numbers directly from the CRM tab, don't re-type. Watch whether this recommendation gets adopted.
-- **Carried, unchanged:** "write call TIME next to date" still not adopted by the team. Naveen Suvarna and
-  Hitendra Dedhia remain the 2 known non-V3/fabricated SVD visits in the 30-day window.
+- **Sandesh Manohar Padwal — still uncalled on real number 9819910669, now 59+ hours (24→26 Jul).**
+  Sheet still 9819910699, last touched "25/7/26 Ringing" (wrong stranger). #1 open item, day 3.
+- **Jigna Rathod — still uncalled on real number 9969283483, now 6 days (21→26 Jul).** Sheet still
+  9969283482, last touched "25/7/26 Voicemail" (wrong stranger). #2 open item.
+- **ESCALATED: 4 (not 2) confirmed fake/unverifiable "Meta Sent ✅" conversions in the 30-day SVD window** —
+  Naveen Suvarna (27 Jun), Hitendra Dedhia (4 Jul), and newly-confirmed **Payal Shah (18 Jul)** and
+  **Vidhi Thakkar (20 Jul)**, none matching any CRM phone or name. **Vidhi Thakkar has a second appointment
+  "26/7/26 Coming today in evening"** — check next run whether that visit also got Meta-Sent (would be #5).
+  Recommend investigating whether the team ticks "Meta Sent" reflexively for any Facebook-sourced visit
+  instead of confirming against the CRM first.
+- **Resolved, not fake: Jagdish Ravasia {Sushma} (20 Jul SVD, phone 9372158643) matches real CRM lead
+  Sushma Ravasia (18 Jul, 8850455636) by name/date** — almost certainly a real visit under a relative's
+  phone, correctly counted as a real V3 visit, not lumped in with the 4 fakes above.
+- **Celine (within_3_months, Studio, arrived 26 Jul 15:19) — new same-day miss, uncalled 4+ hours** as of
+  the last sheet scan (16:58:28 IST). Check first thing next run whether she got contacted.
+- **Manmohan Singh (arrived 26 Jul 19:02, minutes before this report) — too new to judge**, check next run.
+- **2 new CRM-verified site visits landed 26 Jul: Jayesh Sheth (14 Jul lead, 12-day nurture) and Pramod
+  Agare (13 Jul lead, 13-day nurture).** Cost/visit improved to ₹3,085 (8.6%) from ₹3,386 (7.8%) on 25 Jul.
+- **Ashok Savalkar — still actively engaged post-visit (24 Jul).** New note 26 Jul: "Max budget is 1cr with
+  parking 420 carpet" — comfortably above the ₹87L ask, worth a same-day close-the-loop call.
+- **2BHK campaign had its best lead day since recovery: 4 leads 26 Jul** (vs 0→1→3→2 the prior four days).
+  No longer any softness to watch.
+- **Match rate 20-26 Jul: 32/36 raw (88.9%); adjusted for 2 known typos + 1 too-new lead: 35/36 (97.2%).**
+- **Carried, unchanged:** Vidhi Thakkar and Payal Shah's underlying identity is still not in any CRM tab
+  (separate from the Meta-Sent-tag issue above — even if they DID visit, Meta never sent them as leads).
+  "Write call TIME next to date" still not adopted by the team.
