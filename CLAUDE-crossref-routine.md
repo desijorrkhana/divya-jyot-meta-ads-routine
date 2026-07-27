@@ -250,6 +250,13 @@ the list. Commit message must say what was learned in one line.
   coverage" claim, two named leads) before it surfaced — treat persistent user pushback on a
   headline number as a strong signal to re-derive from raw sources, not to re-explain the same
   conclusion more confidently.
+- 2026-07-27: once a lead has a logged site visit, POST-VISIT follow-up call notes get added as
+  trailing dated columns on that lead's SVD-tab row itself, NOT as new rows in the Facebook tab —
+  e.g. Ashok Savalkar's "26/7/26 Max budget is 1cr" note (referenced in the 26 Jul report) lives in
+  his SVD row, not facebook_tab, and initially looked missing/reverted until found there. Standing
+  rule: to check a post-visit lead's latest status, read the SVD row's trailing columns, not just
+  facebook_tab — the two tabs split a lead's lifecycle (pre-visit nurture vs post-visit nurture)
+  rather than one tab owning the whole history.
 - 2026-07-26: a GitHub repo TRANSFER silently de-registers cron schedules (workflow still
   shows "active"; dashboard went dark 25 Jul 19:47 IST after keval-create → desijorrkhana).
   Fix: push an edit to the workflow file on the default branch. If dashboard commits ever
