@@ -273,6 +273,16 @@ the list. Commit message must say what was learned in one line.
   Conversely, this run also found 2 MORE genuine fakes this way (Payal Shah, Vidhi Thakkar) —
   no name/phone match anywhere — raising the confirmed-fake Meta-Sent count from 2 to 4 in
   30 days. Both checks matter: don't undercount real visits, don't undercount fake ones either.
+- 2026-07-29: `sheet.contact_history` is keyed by PHONE NUMBER, so it breaks on a duplicate-phone
+  re-lead (same person submits the Meta form twice). Only one bracket set survives per phone,
+  and it gets attached to whichever sheet row the code finds for that phone — usually the OLDER
+  row, even when the team correctly creates a SEPARATE row for the new submission. Real precedent:
+  Kritika (8652003209) submitted for "2BHK" on 26 Jul and again for "Studio" on 28 Jul; the team
+  logged two distinct facebook_tab rows, but `contact_history`'s bracket for that phone described
+  the OLD row's appearance (predating the 2nd arrival entirely), making the 2nd submission's
+  contact lag unmeasurable via the tool. Standing rule: before trusting a `contact_history`
+  bracket, check `meta_leads_timed` for duplicate phones — if found, read the matching
+  `facebook_tab` row directly instead (day-level precision only) and say so explicitly.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

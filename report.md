@@ -1,67 +1,67 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Tuesday, 28 July 2026 (today so far, midnight-~7:15PM IST)
+Wednesday, 29 July 2026 (today so far, midnight-~7:15PM IST)
 
-FOLLOW-UP FROM LAST REPORT (27 July)
-Celine — escalated further, still ZERO record in the sheet, now ~52 hours after arrival. No row under her name or matching phone anywhere. Over two full days, completely invisible to the sales process. #1 open item, worse than yesterday.
-Mahesh Tawade — RESOLVED, good news. Contacted within ~34min-2h34m of his 18:46 arrival (resolves yesterday's "too new to judge"). His first-call feedback confirms the below-Rs 1.55cr budget mismatch the form flagged. Credit here.
-Sandesh Manohar Padwal — still uncalled on his real number, now ~5 days (24-28 Jul). Unchanged since "25/7/26 Ringing" on the typo'd number.
-Jigna Rathod — worse: the team called the WRONG number again today ("28/7/26 Busy"), still not her real CRM number. Now 7.5 days open, three straight reports flagging this with no fix.
-Sagar Rane — NEW integrity problem: his phone number was overwritten in the sheet (see below).
-No new site visits since 26 Jul — Meta-Sent fake-conversion count unchanged, no new instance today.
-Ashok Savalkar — still no update since 26 Jul's "1cr budget" note, now two days quiet.
+FOLLOW-UP FROM LAST REPORT (28 July)
+Celine — still ZERO record, now ~76 hours (3+ days) after arrival. Checked facebook_tab and svd_tab again by name and phone fragment — genuinely still not entered anywhere. 4th straight report flagging her. #1 open item.
+Sagar Rane — corruption still unresolved, unchanged since yesterday. Row still shows the overwritten phone 9870380830 (Sunil Raorane's real number) instead of his own 7738037947, which appears nowhere in the sheet. One full day passed with no fix.
+Jigna Rathod — unchanged, no new call today, still on the wrong number. Day 8.5 (21-29 Jul), real number 9969283483 still not dialed.
+Sandesh Manohar Padwal — unchanged, no new activity, day 5.5 (24-29 Jul). Still on the wrong number.
+Devangi Piprani Mehta — still only a voicemail on record, ~25 hours later, no second attempt logged.
+Confirmed: yesterday's real-time report undercounted AGAIN, 2nd day in a row. 28 Jul closed at 3 leads/Rs 1,345 reported, finalized at 6 leads/Rs 1,999 (CPL Rs 333) — 3 more leads landed after ~7:15PM. Same shape as 27-28 Jul (2 reported, 4 finalized). Now a repeating pattern, see ANYTHING ELSE.
+No new SVD visits again — now 3 straight days (27, 28, 29 Jul) with zero. Meta-Sent fake-conversion count unchanged at 4.
+Ashok Savalkar — still no update since 26 Jul's "1cr budget" note, now 3 days quiet.
 
 HEADLINE
-Today is actually a strong speed-to-lead day — all 3 fresh Meta leads got a first-contact attempt within hours, the fastest turnaround in recent reports. But Celine is now 52+ hours completely unlogged (never happened, not just slow), and a brand-new sheet-integrity failure surfaced: Sagar Rane's real phone number was silently overwritten by a different lead's number, so his "purchased in Pune" status can't currently be trusted.
+Speed-to-lead is now a 3-day streak of real strength — all 3 fresh leads today got a contact attempt within roughly 30 minutes to 2.5 hours, and one (Viren) is already booked for a Saturday site visit. But the back end of the funnel is the real problem: zero new site visits for three straight days even as leads keep arriving on schedule, and Celine has now gone 76+ hours with literally no record in the sheet — worse than any prior report. The team is fast at the front door; something is stalling between "contacted" and "visited."
 
 THE FUNNEL — today so far
-Spend: Rs 1,345 (Rs 720 Studio + Rs 625 "2BHK")
-Impressions 6,293 / Reach 5,092 / Clicks 126 (link clicks 86)
-Leads: 3 total, matches CRM exactly — Studio 2 (Sunil Raorane fb, Devangi Piprani Mehta ig within_3mo), CPL Rs 360. "2BHK" 1 (Tejas Prajapati fb, low intent + budget flagged below Rs 1.55cr), CPL Rs 625. Blended CPL Rs 448 — 48% above 7-day avg (Rs 302), but better than yesterday's real-time Rs 555.
-Correction on yesterday: that report was cut off at 2 leads; the finalized 27 Jul day actually closed at 4 leads, blended CPL Rs 404 — not as quiet as it looked in real time.
-Contacted: all 3 of today's leads, within hours. Untouched, carried: Celine (~52h, still zero record).
-Site visits today: 0.
+Spend: Rs 1,357 (Rs 652 Studio + Rs 705 "2BHK")
+Impressions 6,037 / Reach 4,812 / Clicks 111 (link clicks 58)
+Leads: 3 total, matches CRM exactly, platform split 2 fb / 1 ig — Studio 1 (Priyank Thakkar fb, 3-6mo), CPL Rs 652. "2BHK" 2 (Viren ig 3-6mo, budget Rs 1.5-1.75cr — a GOOD match above the ~1.55cr entry price; Raju Patil fb within_3mo, budget flagged below Rs 1.55cr), CPL Rs 353. Blended CPL Rs 452 — 36% above 7-day avg (Rs 332).
+Contacted: all 3 of today's leads, within hours. Untouched, carried: Celine (~76h, still zero record).
+Site visits today: 0. Third straight day with none.
 
 AD PERFORMANCE
-Studio: CTR 2.16% (7-day avg 1.94% — better), CPC Rs 9.00 (7-day avg Rs 11.18 — cheaper), CPM Rs 194 (7-day avg Rs 217 — cheaper), freq 1.19 (7-day avg 1.72 — much lower, fresh reach). Every metric at or above trend.
-"2BHK": CTR 1.77% (7-day avg 2.08% — slightly softer), CPC Rs 13.60 (7-day avg Rs 15.44 — cheaper), CPM Rs 241 (7-day avg Rs 321 — notably cheaper), freq 1.30 (7-day avg 2.47 — much lower). "57 Seconds" ad negligible (0 leads, Rs 7 spend).
-Bottom line: delivery healthy to improving on both campaigns, no fatigue signature. Higher CPL today is a low-lead-count day, not a delivery problem. No agency action.
+Studio: CTR 1.68% (7-day avg 1.94% — softer), CPC Rs 10.51 (7-day avg Rs 10.65 — flat), CPM Rs 177 (7-day avg Rs 207 — cheaper), freq 1.20 (7-day avg 1.71 — much lower, fresh reach). Softer CTR on a 1-lead day isn't a signal on its own; CPM/frequency (the real fatigue indicators) look healthy.
+"2BHK": CTR 2.08% (7-day avg 1.90% — better), CPC Rs 14.40 (7-day avg Rs 16.10 — cheaper), CPM Rs 300 (7-day avg Rs 305 — flat), freq 1.34 (7-day avg 2.45 — much lower). "36 Seconds" ad carried both leads; "57 Seconds" negligible (0 leads, Rs 0.19 spend).
+Bottom line: both campaigns at or better than the 7-day trend on cost efficiency, no fatigue signature anywhere. Higher CPL today is a 3-lead sample, not a delivery problem. No agency action.
 
 SPEED-TO-LEAD (most important section)
-NaviN T Thakkar (3-6mo) 27 Jul 23:10 — contacted within ~13h overnight batch; quick disqualify ("not looking for any property").
-Shashank Sadadekar (exploring) 27 Jul 20:15 — within ~16h, same batch; still following up.
-Mahesh Tawade (within_3mo) 27 Jul 18:46 — contacted within ~34min-2h34m, fast; budget mismatch confirmed on the call.
-Sagar Rane (within_3mo) 27 Jul 12:16 — UNVERIFIABLE, his row's phone was overwritten by a different lead's number (see integrity note).
-Tejas Prajapati (exploring) 28 Jul 07:59 — contacted within ~4h16m.
-Sunil Raorane (just_exploring) 28 Jul 15:50 — contacted within ~0-25min, fast.
-Devangi Piprani Mehta (within_3mo) 28 Jul 18:15 — contacted within ~0-56min, fast, but only reached voicemail so far — needs a second attempt tonight.
-Celine (within_3mo) 26 Jul 15:19 — STILL NO ROW, ~52h and counting. The standout failure.
-Bottom line: today is the best speed-to-lead day recently — credit the team. But a lead that's never logged (Celine) or whose row gets corrupted after entry (Sagar Rane) won't be fixed by calling faster — both need a data-integrity fix.
+Viren (3-6mo) 29 Jul 08:26 — contacted within ~0-2h27m; "Coming Saturday in afternoon" — BOOKED A VISIT, credit this.
+Raju Patil (within_3mo) 29 Jul 15:42 — contacted within ~0-55min; "Ringing," attempted, not yet reached.
+Priyank Thakkar (3-6mo) 29 Jul 16:06 — contacted within ~0-31min; "Ringing," attempted.
+Akshay Rahate (within_3mo, budget below Rs 1.55cr, carried from 28 Jul 23:59) — contacted within ~10h55m; "Ringing," attempted.
+Mithun Gagat (just_exploring, carried from 28 Jul 21:07) — contacted within ~13h46m; "Ringing," attempted.
+Kritika's 2nd submission (3-6mo, Studio, carried from 28 Jul 19:18) — lag UNMEASURABLE this run; the sheet has a separate row ("Ringing," no date) but the contact-time tool's bracket for this phone is misattributed to her OLD 26 Jul row — see integrity note.
+Celine (within_3mo) 26 Jul 15:19 — STILL NO ROW, ~76h and counting. The standout failure.
+Bottom line: 3rd straight day of fast first-contact on every fresh lead — a real, sustained improvement, credit it. But speed doesn't fix a lead that's never logged (Celine) or a row with corrupted data (Sagar Rane).
 
 LEAD QUALITY
-Blended 30-day CPL Rs 271 (180 leads, both campaigns, 28 Jun-28 Jul).
-Budget mismatches: Hetal Dedhia, Pradeep Shukla, Dharmesh Kamdar carried, below/at the "2BHK" ~1.55cr entry price. New: Tejas Prajapati — low intent AND flagged below-threshold budget, quick-screen only.
-Real cost-per-visit, last 30 days (28 Jun-28 Jul): 20 Facebook-sourced SVD visits claimed (1 fewer than yesterday — but ONLY because Naveen Suvarna's 27 Jun visit rolled out of the 30-day window, not because anything was fixed). 16 count as real V3 visits (unchanged): 15 CRM phone-verified plus Jagdish Ravasia/Sushma Ravasia via name match. 4 excluded as fake (down from 5, same window-roll reason — Naveen Suvarna is still a confirmed fake historically): Hitendra Dedhia, Payal Shah, Vidhi Thakkar, Subhash Raichura, all carried, no new instance today.
-Rs 48,792 / 16 = Rs 3,049/visit, 8.9% visit rate — slightly worse than yesterday's Rs 2,960/9.0% (spend and leads grew, no new real visit). Still far ahead of the ~4.5% V3 baseline. Vanity number if all 20 counted uncritically: Rs 2,440/11.1% — 20% overclaim rate, also just a window-roll effect, not real improvement.
+Blended 30-day CPL Rs 272 (184 leads, both campaigns, 30 Jun-29 Jul).
+Budget mismatches: Hetal Dedhia, Pradeep Shukla, Dharmesh Kamdar carried, no change. New: Raju Patil flagged below Rs 1.55cr on the form, quick-screen only. Good news: Viren's budget (Rs 1.5-1.75cr) is a real match, prioritize him.
+Real cost-per-visit, last 30 days (30 Jun-29 Jul): 20 Facebook-sourced SVD visits claimed (unchanged — zero new SVD activity for 3 days). 16 count as real V3 visits (unchanged, 4th straight day at this number): 15 CRM phone-verified plus Jagdish Ravasia/Sushma Ravasia via name match. 4 excluded as fake (unchanged): Hitendra Dedhia, Payal Shah, Vidhi Thakkar, Subhash Raichura.
+Rs 49,448 / 16 = Rs 3,090/visit, 8.7% visit rate — slightly worse than yesterday's Rs 3,049/8.9% (spend and leads keep growing, no new real visit in 4 days — this is the real trend to watch). Still far ahead of the ~4.5% V3 baseline. Vanity number if all 20 counted uncritically: Rs 2,472/10.9%, 20% overclaim rate, unchanged.
 
 DATA INTEGRITY CROSS-CHECK
-NEW: Sagar Rane's phone number was overwritten in the sheet after entry. Yesterday's scan captured his row with his real CRM number (7738037947) and a fast, clean contact. Today that same row shows a different number — 9870380830 — which is the real, distinct CRM number of a brand-new lead today, Sunil Raorane. Sagar Rane's actual number now appears nowhere in the sheet. Today's "Purchased in Pune" note on his row can't be trusted as being about him until re-verified directly. This is a new failure mode — a full number swap on an already-correct row, not a typo at entry.
-Jigna Rathod got a fresh wrong-number call today, proof the fix still hasn't landed after three reports.
-Reverse check since 10 June: still 6 rows with no CRM match, unchanged (2 known typos, rest ordinary gaps). Doesn't catch the Sagar Rane case since his row's phone now matches a different real CRM lead.
-Match rate 22-28 Jul: 33/34 raw (97.1%), only 1 miss (known typo). CRM shows 35 leads vs 34 sheet rows in the window — consistent with Celine's non-entry.
-Meta-Sent tagging: no new instance today (no new visits at all); still 4 active unresolved fake conversions, procedural fix still not in place.
+NEW finding: the contact-time tool (contact_history) breaks on duplicate-phone re-leads. Kritika (8652003209) submitted the Meta form twice — 26 Jul for "2BHK," again 28 Jul for "Studio." The team correctly created two separate sheet rows. But the tool's bracket for that phone describes her OLD row's appearance, predating her second arrival entirely — so her second lead's contact lag can't be measured automatically, only the raw sheet ("Ringing," no timestamp) confirms an attempt was made. Not a fabrication risk, just a blind spot for anyone who submits twice.
+Sagar Rane — unresolved, unchanged from yesterday. Row still shows phone 9870380830 (Sunil Raorane's real number), his own 7738037947 nowhere in the sheet, no correction in 24 hours.
+Reverse check since 10 June: still 6 rows with no CRM match, unchanged (2 known typos, rest ordinary gaps). No new misses out of 246 rows scanned.
+Match rate 23-29 Jul: 38/39 raw (97.4%), only 1 miss (known typo). CRM shows 40 leads vs 39 sheet rows — consistent with Celine's non-entry.
+Name-consistency spot check: a few spelling slips (Monica/Monlca, Shashank/Shanshank, Tejas/Tejs) are the same person, not real mismatches. The one real mismatch remains Sagar Rane/Sunil Raorane, above.
+Meta-Sent tagging: no new instance today (zero SVD visits at all); still 4 active unresolved fake conversions, procedural fix still not in place.
 
 DIAGNOSTIC STEPS
-1. URGENT — Celine (9967446816, within_3mo, arrived 26 Jul 15:19) now 52+ hours with zero record. Needs same-day-logging enforced today, not another day of watching.
-2. URGENT, day 7.5 — fix Jigna Rathod's number to 9969283483. Wrong number dialed again today.
-3. URGENT, day 5 — call Sandesh Manohar Padwal at 9819910669. Unchanged since 25 Jul.
-4. NEW — re-verify Sagar Rane by calling 7738037947 directly; his sheet row's phone was overwritten by a different lead's number.
-5. Follow up with Devangi Piprani Mehta tonight — high-intent, only reached voicemail on a fast first attempt.
-6. Credit the team — today's 3 fresh leads were all contacted within hours, the fastest turnaround in recent reports.
-7. Meta-Sent tagging fix still pending — require a CRM lookup before tagging any SVD row as sent.
-8. No agency action — both campaigns' efficiency metrics are healthy to improving vs trend; today's higher CPL is a 3-lead sample, not a delivery problem.
+1. URGENT, day 4 — Celine (9967446816, within_3mo, arrived 26 Jul 15:19) now 76+ hours with zero record. Four straight reports flagging this. Needs a daily manual CRM-vs-sheet check, not another reminder.
+2. URGENT — re-verify Sagar Rane by calling 7738037947 directly; the corrupted row (day 2) still hasn't been fixed.
+3. URGENT, day 8.5 — fix Jigna Rathod to 9969283483. Longest-open item in this routine's history.
+4. URGENT, day 5.5 — call Sandesh Manohar Padwal at 9819910669. Unchanged since 25 Jul.
+5. Investigate why site visits have stalled for 3 straight days while lead flow and speed-to-lead are both healthy — this is now the real funnel bottleneck. Push Viren's booked Saturday visit to actually land and get logged.
+6. Follow up with Devangi Piprani Mehta today — still only a voicemail on record, ~25 hours in, no second attempt logged.
+7. Credit the team — 3rd straight day of fast first-contact, and Viren's booked visit is exactly the outcome the "call in minutes" premise is meant to produce.
+8. No agency action — both campaigns healthy to improving vs the 7-day trend; today's higher CPL is a 3-lead sample, not a delivery problem.
 
 ANYTHING ELSE
-Naveen Suvarna aging out of the 30-day window today makes the SVD-claim and fake-conversion counts look like they improved (21 to 20, 5 to 4) — they didn't, it's just the trailing window rolling forward. The real signal (16 verified real visits, unchanged for two days) is the number to track.
-Ashok Savalkar remains a live, warm post-visit negotiation (1cr budget, above the 87L ask), no update in two days — worth a same-day nudge. Jitendra Raval logged another stalling note today, still not really engaged.
+The "today so far" undercount is now a confirmed 2-day pattern: 27 Jul closed 2 reported to 4 finalized, 28 Jul closed 3 reported to 6 finalized — both roughly doubling by end of day, with the extra leads landing after ~7PM. If this holds a third time, today's 3-lead figure is a floor, not a forecast — expect the finalized 29 Jul day to land closer to 5-6 leads. Not a data problem, just a reminder that evening traffic is a real, recurring chunk of the day this snapshot's ~7PM run time can't see yet.
+Ashok Savalkar remains a live, warm post-visit negotiation (Rs 1cr max budget, above the Rs 87L ask), no update in 3 days now — worth a same-day nudge. Jitendra Raval unchanged since 28 Jul's "busy on meeting," still low urgency.
 
-Today: 3 leads, Rs 1,345 spend, all 3 contacted within hours — best speed-to-lead day recently. Celine still totally unlogged, ~52h. New integrity issue: Sagar Rane's real phone overwritten by a different lead's number — re-verify him directly. Jigna Rathod called on the wrong number again (day 7.5); Sandesh Padwal unchanged (day 5). Real cost-per-visit Rs 3,049/visit, 8.9% visit rate — 16 real visits unchanged; apparent improvement in SVD-claim/fake counts is a window-rollover artifact, not a fix. Nothing here is fabricated — anything not directly computable from data.json is marked as such.
+Today: 3 leads, Rs 1,357 spend, all 3 contacted within hours (3rd straight strong speed-to-lead day) — Viren already booked for a Saturday visit. Celine still totally unlogged, now 76+ hours (day 4 flagged). Sagar Rane's overwritten phone still unresolved (day 2). Jigna Rathod (day 8.5) and Sandesh Padwal (day 5.5) both still on wrong numbers. Site visits have stalled for 3 straight days despite healthy lead flow — the real bottleneck. Real cost-per-visit Rs 3,090/visit, 8.7% visit rate, 16 real visits unchanged for 4 straight days. New finding: the contact-time tool can't measure lag for duplicate-phone re-leads (Kritika, 2 submissions, 2 products) — flagged for future runs. Nothing here is fabricated — anything not directly computable from data.json is marked as such.
