@@ -1,48 +1,48 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-07-29
+## Updated 2026-07-30
 
-- **Celine — #1 open item, now ~76 hours (3+ days), still ZERO record anywhere in the sheet** (26 Jul
-  15:19:14, within_3_months, phone 9967446816). 4th straight report flagging this. Checked broadly again
-  (name/phone fragments) across facebook_tab and svd_tab — genuinely not entered. Next run: check first
-  thing whether finally logged; if still not, this needs escalating beyond another reminder (a daily manual
-  CRM-vs-sheet audit, not another data-only flag).
-- **Sagar Rane's phone corruption is now DAY 2 UNRESOLVED, unchanged from yesterday.** Row 1453 still shows
-  9870380830 (Sunil Raorane's real number) instead of his own 7738037947, which is nowhere in the sheet.
-  No new note beyond "28/7/26 Purchased in Pune" (unverified). Next run: check if finally corrected. Per
-  the 28 Jul memory note, this was slated to graduate to a LEARNED RULE if it recurred once more as a NEW
-  instance — it hasn't recurred elsewhere yet, so held off again; if it happens to a THIRD lead, add the
-  rule next time.
-- **NEW finding — contact_history (the Drive-revision contact-time tool) is keyed by phone and breaks on
-  duplicate-phone re-leads.** Kritika (8652003209) submitted twice (26 Jul "2BHK", 28 Jul "Studio"); the
-  team correctly made 2 separate facebook_tab rows, but the tool's bracket for that phone describes the
-  OLD row, not the new one — so her 2nd lead's lag is unmeasurable via the tool, only the raw sheet
-  ("Ringing," no date) confirms an attempt. Added as a LEARNED RULE this run (see spec file).
-- **Site visits: 0 for THREE straight days now (27, 28, 29 Jul).** Last real visit still 26 Jul. Lead flow
-  and speed-to-lead are both healthy, so this is now the real funnel bottleneck to watch — check next run
-  whether Viren's booked "Coming Saturday" visit lands and gets logged.
-- **Jigna Rathod — day 8.5 (21→29 Jul), still wrong number (9969283482 vs real 9969283483), no new call
-  today.** Sandesh Manohar Padwal — day 5.5 (24→29 Jul), still wrong number (9819910699 vs real
-  9819910669), no new activity. Both fully stalled, not just slow — worth asking directly why the fix
-  ("copy from CRM") still hasn't been applied after 3+ reports each.
-- **Devangi Piprani Mehta (within_3_months, phone 8169341650) — still only a voicemail on record, ~25h+
-  since first attempt, no second attempt logged.** Check next run whether she was finally reached.
-- **Confirmed 2-day-running pattern: "today so far" reports have undercounted by ~2x both days checked.**
-  27 Jul: 2 reported → 4 finalized. 28 Jul: 3 reported → 6 finalized (Kritika's 2nd, Mithun Gagat, Akshay
-  Rahate all arrived 7PM-midnight). If today (29 Jul, 3 leads/₹1,357 reported) follows the same shape,
-  expect ~5-6 leads finalized. Watch a 3rd day before calling this a hard rule for the spec.
-- **Today's 3 leads all got fast first-contact again (3rd straight day)** — Viren (2BHK, budget
-  ₹1.5-1.75cr, a real match) already has a booked visit ("Coming Saturday in afternoon"). Raju Patil and
-  Priyank Thakkar both "Ringing" (attempted, not yet reached) — check next run if they were reached.
-- **Meta-Sent fake-conversion count: 4 active (Hitendra Dedhia, Payal Shah, Vidhi Thakkar, Subhash
-  Raichura), unchanged — no new instance possible with 0 new visits.** Real visits held flat at 16 for a
-  4th straight day.
-- **Cost-per-visit: ₹3,090/visit, 8.7% visit rate** (from ₹3,049/8.9% yesterday) — spend/leads keep
-  growing, no new real visit landing; the trend to watch, not the daily CPL noise.
-- **Match rate 23-29 Jul: 38/39 raw (97.4%)** — 1 miss (Sandesh Padwal typo). CRM shows 40 leads vs 39
-  sheet rows in window, consistent with (not proof of) Celine's non-entry.
-- **Ashok Savalkar — still no update since 26 Jul's "1cr max budget" note, now 3 days quiet.** Worth a
-  nudge if he goes quiet much longer.
-- **Carried, unchanged:** the other 5 reverse-check misses (Ravi, Atul Thorat, Nikita Gaurav, Sandesh
-  Howal, plus the 2 typo cases above) are unchanged from prior runs. "Write call TIME next to date" still
-  not adopted by the team.
+- **Celine — #1 open item, now ~100 hours (day 5), still ZERO record anywhere in the sheet** (26 Jul
+  15:19:14, within_3_months, phone 9967446816). 5th straight report flagging this. Next run: check first
+  thing whether finally logged; if not, this needs escalating beyond another data-only flag.
+- **Sagar Rane — day 4 unresolved, and NOW KNOWN within_3_months intent (escalated priority).** Row 1453
+  still shows 9870380830 (Sunil Raorane's real number) instead of his own 7738037947. No fix in 4 days.
+  Next run: check if finally corrected/called.
+- **Site visits: STREAK BROKEN 30 Jul — Pawan Varma, real CRM-verified visit** (13 Jul lead, within_3mo,
+  budget 1.5-1.75cr), ending 3 zero-visit days (27,28,29). Real V3 visit count now 17 (up from 16),
+  cost-per-visit Rs 2,973 (30-day window, 1-30 Jul), 9.39% visit rate.
+- **NEW pattern: a backlog of carried leads stuck at "attempted, not reached" after 2-3 calls** — Raju
+  Patil, Akshay Rahate, Mithun Gagat, Kritika (both submissions) all got a 2nd/3rd call today (Ringing/
+  Busy) without connecting. This is now the real speed-to-lead gap, not response time. Watch next run
+  whether any of these finally connect, and whether WhatsApp/text gets tried as a fallback.
+- **Priyank Thakkar's number now reads "Out of service"** (30/7) after "Ringing" on 29/7 — check next run
+  if this is a genuinely dead number (real lost lead) or temporary.
+- **Jigna Rathod (day 9.5) and Sandesh Padwal (day 6.5) both had NEW call attempts today on their WRONG
+  numbers** (typo'd numbers, not their real ones) — team is actively working these leads but on the wrong
+  digits. Fix is still trivial (copy from CRM) and still not applied after 9+ and 6+ days respectively.
+- **DATA CORRECTION this run: Ravi (10 Jun) was wrongly carried as a reverse-check "miss" for multiple
+  reports.** His sheet cell has TWO phone numbers separated by "/" ("9321110668 / 8369593191"); the first
+  matches CRM lead "Ravi DU" exactly. Removed from the miss roster; Norwin Saloman (19 Jun, self-flagged
+  "Inavlid" phone) is the correct 6th entry instead. Added as a LEARNED RULE (multi-number cells) — see
+  spec file. Also fixed a date-parsing bug this run: 2025-vintage sheet rows use MM/DD/YYYY while 2026
+  V3-era rows use DD/MM/YYYY; a parser that tries MM/DD first misclassifies ~119 old rows as being in a
+  recent window. Also added as a LEARNED RULE.
+- **Sandesh Howal (reverse-check miss, 21 Jul) — new note today says "Broker"**, meaning the registered
+  number reaches a broker, not the lead. Worth confirming next run whether this is a data-entry error or
+  a genuine dead-end; don't just keep re-dialing it blindly.
+- **Viren's booked Saturday visit — today's confirmation call went unanswered ("Busy").** Booking still
+  on the calendar as of now; check next run whether it actually happens.
+- **Jagdish Ravasia {Sushma} — real revisit happened 29 Jul, client says will "update in two days" (~1
+  Aug).** Track that date for a response.
+- **Ashok Savalkar — now day 4 quiet** since 26 Jul's "1cr budget" note. Live warm negotiation going cold;
+  worth a nudge if it extends further.
+- **Today's new leads (30 Jul): Jagdish Rathod (within_3mo, but wants 2BHK despite coming via Studio ad —
+  product mismatch, not budget), Prashant Tribhuvan (just_exploring), Vicky Arundekar (within_3mo).** All
+  contacted same day; none yet reached live.
+- **29 Jul finalized at exactly 3 leads (matching the real-time report) — the 2-day lead-count-undercount
+  streak did NOT repeat.** But spend kept growing after report time (Rs 1,357 to a final Rs 1,924, CPL
+  452 to 641). Watch whether future evenings bring new leads, more spend on existing leads, or both.
+- **"2BHK" campaign had 0 leads and its softest CTR (1.26%) in 30 days today** — frequency flat, so no
+  fatigue signature yet. Watch tomorrow before considering any creative refresh recommendation.
+- **Carried, unchanged:** Devangi Piprani Mehta (2 attempts now, still no live contact), Nikita Gaurav and
+  Atul Thorat (reverse-check misses, unchanged), Jitendra Raval (minor touch today, still low priority).
