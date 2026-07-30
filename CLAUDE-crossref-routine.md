@@ -283,6 +283,17 @@ the list. Commit message must say what was learned in one line.
   contact lag unmeasurable via the tool. Standing rule: before trusting a `contact_history`
   bracket, check `meta_leads_timed` for duplicate phones — if found, read the matching
   `facebook_tab` row directly instead (day-level precision only) and say so explicitly.
+- 2026-07-30: some `facebook_tab` phone cells hold TWO numbers separated by "/" (e.g. Ravi, row 1221:
+  "9321110668 / 8369593191"). Naive digit-only extraction concatenates both into one garbled string that
+  matches nothing, wrongly flagging a real, matched lead ("Ravi DU", 10 Jun) as a reverse-check miss for
+  multiple reports running. Fix: split phone cells on non-digit separators and check each 10-digit number
+  separately against the CRM.
+- 2026-07-30: `facebook_tab`'s Created column is NOT uniformly DD/MM/YYYY — pre-V3 rows from 2025 use
+  MM/DD/YYYY (unambiguous only when day>12, e.g. "07/27/2025"), while 2026 V3-era rows use DD/MM/YYYY
+  (e.g. "21/7/2026"). A parser that tries MM/DD first silently misreads ~120 old 2025 rows with
+  day-of-month <=12 as being in a recent window (e.g. "7/2/2026" read as "Jul 2" instead of "7 Feb").
+  Fix: try DD/MM/YYYY first (the current convention), fall back to MM/DD only when the day component
+  is invalid (>12).
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
