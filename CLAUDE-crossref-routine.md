@@ -294,6 +294,12 @@ the list. Commit message must say what was learned in one line.
   day-of-month <=12 as being in a recent window (e.g. "7/2/2026" read as "Jul 2" instead of "7 Feb").
   Fix: try DD/MM/YYYY first (the current convention), fall back to MM/DD only when the day component
   is invalid (>12).
+- 2026-07-31: on a fresh container, `python3 fetch_all.py` can crash immediately with
+  `ModuleNotFoundError: No module named '_cffi_backend'` (a pyo3 panic) when it imports
+  `google.oauth2.service_account` — the container's pre-installed system `cryptography` package is
+  missing its Rust/cffi backend, unrelated to the `pip install` step in section 0. Fix:
+  `pip install --ignore-installed cffi cryptography` before running fetch_all.py. If this recurs,
+  this is the first thing to check, not a Google Sheets/Meta API problem.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
