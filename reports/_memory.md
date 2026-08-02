@@ -1,47 +1,44 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-08-01
+## Updated 2026-08-02
 
-- **Viren — TOP PRIORITY for next run.** His booked visit was scheduled for "Saturday" (1 Aug, today) but
-  as of this run (~7:20 PM IST) there is no 3rd confirmation call logged (last touch still 31/7 Busy) and
-  no SVD entry. Next run: check whether he visited, was contacted late tonight, or the whole thing fell
-  through silently. This is now the single most concerning item, ahead of Celine.
-- **The ENTIRE carried backlog went silent today — a new, worse pattern than yesterday's partial silence.**
-  Sagar Rane, Jigna Rathod, Sandesh Padwal, Raju Patil, Akshay Rahate, both Kritika submissions, Priyank
-  Thakkar, Devangi Piprani Mehta: zero new dated entries for ANY of them on 1 Aug, confirmed by reading
-  each row directly (not revision-history dependent, so reliable). Only fresh leads got touched. Next run:
-  is this a one-day anomaly (reversed tomorrow) or the start of a real process gap? If backlog silence
-  continues a 2nd/3rd day, escalate explicitly as a process failure, not just a data note.
-- **Celine — still ZERO record, now ~148 hours (day 7), 7th straight report.** Longest-open item in this
-  routine's history. Next run: if still unlogged, keep escalating — automated flagging alone isn't fixing it.
-- **Sagar Rane — day 6, unresolved.** Still on Sunil Raorane's phone (9870380830); his real number
-  7738037947 (within_3_months) still nowhere in the sheet, no new note in 5 days.
-- **Jigna Rathod (day 11.5) and Sandesh Padwal (day 8.5) — 2nd straight day of complete silence**, on top
-  of both being on wrong/typo'd numbers for 11+ and 8+ days. Correct numbers: Jigna 9969283483, Sandesh
-  9819910669 — still never dialed.
-- **2 genuine site visits landed today (Parag Chavan, Suryakant Kajrolkar) — best day in over a week**,
-  both CRM-verified. Real V3 visit count now 19 (30-day window 3 Jul–1 Aug), cost-per-visit Rs 2,784.54,
-  10.80% visit rate — best rate in several days. BUT both visitors are confirmed 1BHK-seekers on a
-  Studio/2BHK project — the "1BHK-on-Studio" pattern flagged 31 Jul is now consuming real visit slots, not
-  just lead volume. Watch whether future visits keep landing mismatched.
-- **Ronak Shah and Sujit Gupta — today's best-fit leads, both quote real Rs 1.5-1.75cr budgets for 2BHK**,
-  but both calls were "Cut the call" with zero details exchanged. Next run: were they successfully
-  recalled? These are higher-value than the backlog and worth checking specifically.
-- **Sujit Gupta is a NEW duplicate-phone case** (submitted 5 Feb 2026 and again 1 Aug 2026) — confirms the
-  29 Jul LEARNED RULE about contact_history mis-attaching to old rows is a recurring issue, not a one-off.
-  Always check for duplicate phones on fresh leads before trusting a contact_history bracket.
-- **"2BHK" CTR bounced off yesterday's 30-day low (1.43%→1.77%) but the recovery looks thin** — driven by
-  a tiny-sample spike on "57 Seconds" (73 impressions, 6.85% CTR), while "36 Seconds" (nearly all spend)
-  stayed soft at 1.57%. The creative-test recommendation from 2 days ago still hasn't been started (both
-  ads are pre-existing, not a new variant). Watch next run whether a real test launches or the CTR relapses.
-- **Ashok Savalkar — day 6 quiet** since his 26 Jul "1cr budget" note. Needs a nudge.
-- **Jagdish Ravasia {Sushma}'s promised update was due ~1 Aug (today)** — nothing yet as of this run.
-  Check again next run; not yet overdue by more than a few hours.
+- **Viren — still not resolved, escalate further.** 3rd Busy logged today (2/8), but the team never called
+  him ON his actual booked "Saturday" (1 Aug) — only before (30/7, 31/7) and after (2/8). Still no SVD
+  entry — genuinely unknown whether he ever visited. Next run: this needs a direct outcome check (ask the
+  team explicitly), not another routine dial-and-log.
+- **Celine — still ZERO record, now ~172 hours (day 8), 8th straight report.** Longest-open item in this
+  routine's history. Next run: keep escalating; consider recommending a manual sheet check by name.
+- **Ajay Gupta — NEW unverified SVD visit claim (2 Aug, "Facebook", 2BHK, Rs1.2cr, phone 9820857378).**
+  Zero match anywhere (CRM, facebook_tab, any phone fragment). No "Meta Sent" tag yet — catch it before one
+  gets added. This raises the 30-day unverified-visit count from 4 to 5. Next run: check whether a Meta
+  Sent tag has appeared on this row, and whether the real source ever gets clarified.
+- **Backlog silence now 3rd straight day for most names.** Sagar Rane (day 7), Jigna Rathod (day 12.5),
+  Sandesh Padwal (day 9.5), Raju Patil, Akshay Rahate, both Kritika submissions, Priyank Thakkar, Ashok
+  Savalkar (day 7), Jagdish Ravasia {Sushma} (promised update now 3 days overdue) — all zero attempts
+  today. Viren and Devangi Piprani Mehta DID get touched today, breaking out of the backlog freeze
+  partially. Next run: is the backlog moving at all, or is this now the steady state?
+- **Zero-connect day: all 5 fresh leads + 4 backlog touches (9 total dials) came back Busy/Ringing/Out of
+  Service — nobody actually spoken to today**, despite fast same-day dialing (fastest: Suhas Kuchekar,
+  contacted within 2h32m). Next run: did any of today's Busy/Ringing leads get a successful 2nd attempt?
+- **Ajay Sharma (today, within_3mo, real 2BHK budget disclosed) is the highest-value miss of the day** —
+  Ringing then Busy, never connected. Worth checking specifically next run.
+- **Vishal Kasar shows a genuine logged-vs-called gap:** row appeared in the sheet within ~51min of
+  arrival, but the first real call/feedback didn't appear until 3h42m–5h08m later. Distinct from the
+  row-creation speed — worth watching if this pattern (fast logging, slow calling) recurs on other leads.
+- **Real V3 visit count holds at 19 (30-day window now 4 Jul–2 Aug)** — no new CRM-verified visit landed
+  today. Cost-per-visit ticked up slightly to Rs 2,842.90 (10.73% visit rate), from Rs 2,784.54/10.80%
+  yesterday — dilution from added spend/leads, not a real quality drop.
+- **"2BHK" CTR recovery is now CONFIRMED real, not a tiny-sample fluke** (yesterday's caution was
+  justified but the trend held anyway) — 1.70% (1 Aug) → 1.95% (2 Aug), this time earned by "36 Seconds"
+  itself (98% of spend), while "57 Seconds" had a dead day (24 impr, 0 clicks). Next run: does it hold a
+  3rd day?
+- **"57 Seconds" has been under 5% of daily 2BHK ad-set spend for 10+ straight days** (Meta's delivery
+  algorithm, confirmed via last30_daily_ads) — this is why the "start a new creative test" recommendation
+  has stalled for a week: the existing pair can never get a fair A/B under current budget optimization.
+  Recommended fix (min spend / ABO, or drop it for a real new variant) is new this run — watch if acted on.
+- **Ronak Shah and Sujit Gupta were both recalled today** as recommended (Busy, Ringing) — still not
+  reached, but the team is following through on named recommendations. Keep tracking.
 - **Reverse-check misses (5, unchanged): Atul Thorat, Nikita Gaurav, Jigna Rathod, Sandesh Howal, Sandesh
-  Padwal.** Re-verified Norwin Saloman (19 Jun) is NOT a new miss — his own row already says "Inavlid"
-  (self-flagged bad phone), consistent with the explanation from late June/30 Jul. Phone-typo/never-logged
-  gaps in the tightest week window (2, Celine + Sagar Rane) — Sandesh Padwal's CRM lead (24 Jul) has aged
-  just outside the 25 Jul–1 Aug window but stays open via the reverse-check list. Match rate 36/38 (94.7%)
-  this week, no new mystery gaps.
-- **Meta-Sent fake-conversion count holds at 4** (Hitendra Dedhia, Payal Shah, Vidhi Thakkar, Subhash
-  Raichura) — both of today's new "Meta Sent" tags checked out clean against the CRM.
+  Padwal** — all pre-26 Jul, no new ones. This week's (26 Jul–2 Aug) match rate: 37/37 = 100%, clean.
+- **Meta-Sent fake-conversion count: 4 confirmed (Hitendra Dedhia, Payal Shah, Vidhi Thakkar, Subhash
+  Raichura), unchanged** — plus the new unverified-but-not-yet-tagged Ajay Gupta case above (5th, watching).
