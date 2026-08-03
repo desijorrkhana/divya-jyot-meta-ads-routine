@@ -227,12 +227,6 @@ the list. Commit message must say what was learned in one line.
   in the Telegram section above).
 - 2026-07-04: xlsx revision exports give phone cells as floats (9224542504.0) — collapse
   integral floats before matching, or every phone silently mismatches.
-- 2026-07-04: the team's sheet can't be trusted on source attribution — "Hitendra/Heena
-  dedhia" was entered as a Facebook lead Meta never sent, visited 3/7, and the visit was
-  pushed to Meta as a conversion. Hence the standing integrity check in section 5b.
-- 2026-07-04: "never logged" leads may actually be logged under a MISTYPED phone (Atul
-  Thorat: CRM 9819877789, sheet 8198777789) — always name+date match before declaring a
-  lead unlogged, and flag that the team dialed a wrong number.
 - 2026-07-21: the Facebook tab's Created column contains at least one literal typo year
   ("02/09/2525") — always bound parsed dates to a plausible range (e.g. 2024-01-01 through
   today) before treating them as "recent," or garbage rows silently pass date-range filters.
@@ -300,6 +294,12 @@ the list. Commit message must say what was learned in one line.
   missing its Rust/cffi backend, unrelated to the `pip install` step in section 0. Fix:
   `pip install --ignore-installed cffi cryptography` before running fetch_all.py. If this recurs,
   this is the first thing to check, not a Google Sheets/Meta API problem.
+- 2026-08-03: the Sheets API values.get() call for `facebook_tab`/`svd_tab` can 503 ("service is
+  currently unavailable") with no retry, silently reducing them to `["error", ...]` while the rest
+  of data.json fetches fine — easy to miss since the run still exits 0. Fixed: `fetch_sheets()`'s
+  `read()` helper now retries up to 4 times with backoff (matching the spirit of the Drive revision
+  pacing). Always check `sheet.facebook_tab[0]`/`sheet.svd_tab[0]` for an `"error"` sentinel before
+  trusting either tab is populated.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

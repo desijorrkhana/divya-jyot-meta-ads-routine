@@ -231,12 +231,20 @@ def fetch_sheets():
     except Exception as e:
         return {"error": f"google auth failed: {e}"}
 
-    def read(sid, rng):
-        try:
-            svc = google_sheets(creds)   # fresh http per thread — see NOTE above
-            return svc.spreadsheets().values().get(spreadsheetId=sid, range=rng).execute().get("values", [])
-        except Exception as e:
-            return [["error", str(e)]]
+    # Sheets API occasionally 503s ("service is currently unavailable") — transient, seen
+    # in production 2026-08-03 wiping facebook_tab + svd_tab for a whole run. Retry a few
+    # times with backoff before giving up, same spirit as the Drive revision pacing below.
+    def read(sid, rng, attempts=4):
+        last = None
+        for i in range(attempts):
+            try:
+                svc = google_sheets(creds)   # fresh http per thread — see NOTE above
+                return svc.spreadsheets().values().get(spreadsheetId=sid, range=rng).execute().get("values", [])
+            except Exception as e:
+                last = e
+                if i < attempts - 1:
+                    time.sleep(3 * (i + 1))
+        return [["error", str(last)]]
 
     # The CRM Event spreadsheet gets a NEW TAB per lead form (Sheet1 = Studio, Sheet2 =
     # "2BHK" added 2026-07-06, and any future form gets its own tab too) — enumerate every
