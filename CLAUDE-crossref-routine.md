@@ -300,6 +300,12 @@ the list. Commit message must say what was learned in one line.
   `read()` helper now retries up to 4 times with backoff (matching the spirit of the Drive revision
   pacing). Always check `sheet.facebook_tab[0]`/`sheet.svd_tab[0]` for an `"error"` sentinel before
   trusting either tab is populated.
+- 2026-08-05: Meta's attribution window keeps revising a day's numbers well AFTER that day's report was
+  written — not just spend rounding, but the actual lead COUNT. 4 Aug was reported same-day as ₹1,062
+  spend / 6 leads / ₹177 blended CPL; refetched the next day it read ₹1,648 spend (+55%) / 8 leads (+2,
+  both Studio) / ₹206 CPL. Standing rule: never treat a previous report's "today" figures as final when
+  comparing — always recompute "yesterday" from the freshly pulled data.json, and say so if the delta
+  vs. the prior report is large enough to matter (it can flip a headline like "best CPL day in weeks").
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
