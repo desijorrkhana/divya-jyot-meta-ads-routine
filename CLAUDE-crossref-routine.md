@@ -300,12 +300,16 @@ the list. Commit message must say what was learned in one line.
   `read()` helper now retries up to 4 times with backoff (matching the spirit of the Drive revision
   pacing). Always check `sheet.facebook_tab[0]`/`sheet.svd_tab[0]` for an `"error"` sentinel before
   trusting either tab is populated.
-- 2026-08-05: Meta's attribution window keeps revising a day's numbers well AFTER that day's report was
-  written — not just spend rounding, but the actual lead COUNT. 4 Aug was reported same-day as ₹1,062
-  spend / 6 leads / ₹177 blended CPL; refetched the next day it read ₹1,648 spend (+55%) / 8 leads (+2,
-  both Studio) / ₹206 CPL. Standing rule: never treat a previous report's "today" figures as final when
-  comparing — always recompute "yesterday" from the freshly pulled data.json, and say so if the delta
-  vs. the prior report is large enough to matter (it can flip a headline like "best CPL day in weeks").
+- 2026-08-05/06 (CORRECTED): a prior day's "today so far" figures always look low compared to a later
+  refetch of that same day — not because Meta silently revises attribution, but because the report
+  window is midnight–~7PM IST and anything that lands after ~7PM is invisible until "yesterday" is
+  refetched the next day. Confirmed directly: 5 Aug was reported same-day as 4 leads/₹1,580.80; refetched
+  6 Aug it read 6 leads/₹1,912.17 — the 2 extra leads (Bosco Ferreira 20:53, Rajesh K. Chheda 22:21) both
+  arrived after 7PM. (A similar 4 Aug jump, previously blamed on "Meta re-attribution," almost certainly
+  has the same cause.) Standing rule: never treat a previous report's "today" figures as final when
+  comparing — recompute "yesterday" from the freshly pulled data.json, and when the delta is large,
+  attribute it to the 7PM cutoff by default rather than an unexplained Meta revision, unless the specific
+  late-arriving leads/spend can't account for the gap.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
