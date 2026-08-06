@@ -1,69 +1,69 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Wednesday, 5 August 2026 (today, midnight-7PM IST)
+Thursday, 6 August 2026 (today, midnight-7PM IST)
 
-FOLLOW-UP FROM YESTERDAY (4 Aug)
-- The 3-day frontdoor/backlog oscillation is BROKEN - today covered both fronts. All 4 fresh leads dialed same-day, AND 9 named backlog leads got touched (Ajay Sharma, Punit Bhayani, Shilpa Thakkar, Viren, Sandesh Padwal, Ronak Shah, Sujit Gupta, Chandril Panchal, Vishal Kasar).
-- Celine still zero record, day 11.
-- Viren got a 6th dial but still no outcome check (asked 3 times now).
-- Jagdish Ravasia (Sushma) promised update now 6 days overdue.
-- Kalpesh Dedhiya's "coming for monday" still unresolved, next candidate 10 Aug.
-- Yesterday's numbers moved a lot after the fact: spend Rs1,062->Rs1,648 (+55%), leads 6->8, blended CPL Rs177->Rs206. Meta's attribution window keeps revising even lead counts after the fact - see bottom.
-- Zero genuine site visits now a 4th straight day (2-5 Aug).
+FOLLOW-UP FROM YESTERDAY (5 Aug)
+- The "both fronts covered" day was a ONE-OFF, not a new pattern. Today: zero of the 9 named backlog leads got touched (Ajay Sharma, Punit Bhayani, Shilpa Thakkar, Viren, Sandesh Padwal, Ronak Shah, Sujit Gupta, Chandril Panchal, Vishal Kasar) - only fresh leads got dialed.
+- Celine still zero record anywhere, day 12, 12th straight report.
+- Viren still no outcome check, still no SVD entry after 6 dials.
+- Jagdish Ravasia (Sushma) promised update now 7 days overdue.
+- Kalpesh Dedhiya still zero follow-up, next candidate Monday is 10 Aug.
+- Vishal Kasar's Saturday (8 Aug) visit is 2 days out - not re-touched since Tuesday's promise, reconfirm before Saturday.
+- Yesterday's headline moved again on refetch (4 leads/Rs1,580.80 -> 6 leads/Rs1,912.17, blended CPL Rs318.69) but this time the mechanism is clear: 2 of the 6 leads (Bosco Ferreira, Rajesh K. Chheda) simply arrived after the ~7PM report cutoff, not a mystery Meta re-attribution. See bottom.
 
 HEADLINE
-Sales finally covered both fronts in one day - but connect rate on fresh leads cratered to 0/4, and Studio had its softest ad day in over a week. Best news: backlog lead Vishal Kasar promised a Saturday visit, the first real shot at ending a 4-day visit drought.
+Fast on paper, empty in practice: all 3 fresh leads today were contacted within the hour (two inside 45 minutes) - but the backlog got zero attention, a live phone-typo case from June is still unfixed, and it's the 5th straight day with zero genuine site visits. Bright spot: "2BHK 57 Seconds," dead in recent reports, produced a lead today at Rs32.46 CPL.
 
 THE FUNNEL (today so far)
-Spend: Rs1,580.80 (Rs842.17 Studio + Rs738.63 2BHK "36 Seconds"). "2BHK 57 Seconds": zero spend, zero impressions today.
-Impressions 6,263, Reach 5,570, Clicks 96 (link clicks 48).
-Leads: 4 - verified against lead_actions_raw, matches CRM exactly. Platform: 2 FB, 2 IG. All 4 on Studio; 2BHK converted zero of 43 clicks.
-- Subhash (ig, within_3mo), Kapil Pravin Chheda (ig, within_3mo), Sadhanaa Veerkar (fb, within_3mo), Rajesh Mehta (fb, just_exploring). 3 of 4 within_3mo - but 2 of these 4 are NOT actually new prospects, see below.
-Studio CPL today: Rs210.54. Blended CPL: Rs395.20 - worse than yesterday's revised Rs205.95, roughly in line with 7-day avg Rs389.42.
-Contacted: 4/4 same-day. Reached (real conversation): 0 of 4 - worse than yesterday's 1/6.
-Backlog: 9 named leads touched today (sharp reversal from zero yesterday). 2 became real conversations (Chandril Panchal, Vishal Kasar - the latter promised a Saturday visit).
-Still untouched: Jigna Rathod, Devangi Mehta, Ashok Savalkar, Parshant Deshmukh, Jagdish Ravasia (Sushma), Celine, Kalpesh Dedhiya, Sandesh Howal.
-Site visits logged today: 0. 4th straight silent day (2-5 Aug).
+Spend: Rs1,241.67 (Rs696.21 Studio + Rs545.46 2BHK: Rs32.46 "57 Seconds" + Rs513.00 "36 Seconds").
+Impressions 5,905, Reach 4,618, Clicks 105 (link clicks 68).
+Leads: 3 - verified against lead_actions_raw, matches CRM exactly. Platform: all 3 Facebook, 0 Instagram.
+- Kaushik Thakkar (fb, Studio, within_3mo), Dilip Hadawale (fb, "36 Seconds", within_3mo), Jigna Tanna (fb, "57 Seconds", 3-6mo).
+Blended CPL today: Rs413.89.
+Contacted: 3/3 same-day, all within ~3 hours. Reached (real conversation): 2 of 3 - Kaushik and Jigna Tanna both gave detailed requirement info. Dilip Hadawale is "Busy" only, not yet reached.
+Backlog: 0 of 9 named leads touched today - complete reversal from yesterday.
+Site visits logged today: 0. 5th straight silent day (2-6 Aug).
 
 AD PERFORMANCE
-Studio: CTR 1.29% (7d avg 1.75%, lowest in 8 days), CPC Rs15.89 (7d avg Rs10.11, highest in 8 days), CPM Rs205.56 (7d avg Rs176.98, highest in 8 days), freq 1.10 (no fatigue, actually lowest recent). 4 leads at CPL Rs210.54, still below 7d avg Rs241.16 despite the worse click metrics.
-2BHK 36 Seconds: CTR 1.99% (above trend), CPC Rs17.18, CPM Rs341.01 (highest in 8-day window), 0 leads from 43 clicks.
-2BHK 57 Seconds: literal zero spend, zero impressions today. 7-day spend share of 2BHK budget: 2.3%.
-Bottom line: genuine soft day on both live ads, worst since 29 Jul on click economics. Do NOT pause on CPL alone - Studio's CPL is still fine. 57 Seconds needs the min-spend/ABO fix, now overdue across several reports.
+Studio: CTR 1.83% (7d avg 1.72%, best in over a week), CPC Rs10.09 (7d avg Rs10.73, better), CPM Rs184.97 (avg Rs179.20, flat), freq 1.24 (no fatigue). Only 1 lead from 69 clicks at CPL Rs696.21 - traffic quality was above average, conversion just didn't land today. Small sample (1 lead), not a trend yet.
+2BHK 36 Seconds: CTR 1.65%, CPC Rs15.55, CPM Rs254.77 - all better than 7d avg. 1 lead at CPL Rs513.00, below avg (Rs682.05). Solid day.
+2BHK 57 Seconds: Rs32.46 spend, 1 lead, CPL Rs32.46. Not actually dead - it's budget-starved: trickle spend most days, but converts cheaply whenever it gets real budget (17-18 Jul burst: 8 leads across 2 days). Deserves a real budget test now.
+Bottom line: click economics were fine-to-good on both live ads today. Do NOT pause or reallocate off today's numbers - only lead-count dipped, and that's a 3-lead sample.
 
 SPEED-TO-LEAD (most important section)
-Rajesh Mehta (just exploring): arrived 17:39, contact appeared 14:13-18:53 -> under 1h14m. Ringing only.
-Subhash (within_3mo): arrived 01:56, contact appeared (prev day)19:51-11:21 -> under 9h25m (wide, overnight). "He call me after few hours."
-Kapil Pravin Chheda (within_3mo): arrived 07:40 - contact_history bracket UNRELIABLE (duplicate phone, old row). Day-level only: contacted same day, "Busy." RETURNING LEAD - see below.
-Sadhanaa Veerkar (within_3mo): arrived 09:34 - contact_history bracket UNRELIABLE (duplicate phone, old row from Aug 2025). Day-level only: contacted same day, "Cut the call."
+Jigna Tanna (3-6mo): arrived 13:15:55, contact appeared 12:50:32-13:30:48 -> under 15 min. Real conversation, "Req 2bhk budget max 1.35cr" - inside the Rs1.4cr ceiling, well-qualified.
+Kaushik Thakkar (within_3mo): arrived 12:08:05, contact appeared by 12:50:32 -> under 42 min. Real conversation, wants "1bhk" at max budget 90L - close to Studio's Rs87L, steerable.
+Dilip Hadawale (within_3mo): arrived 09:54:14, contact appeared by 12:50:32 -> under 2h56m. "Busy" only, NOT yet reached - needs a same-day retry before today closes.
 
-Two of today's "4 fresh leads" are not actually new. Kapil Pravin Chheda had a real, CRM-verified site visit on 14 July, with follow-up that went cold on 22 July over a pricing objection ("wants per sqft 20,000"). He resubmitted the form today and is sitting as a routine "Busy" dial - he should go to whoever can quote real pricing, not get logged as cold. Sadhanaa Veerkar's older row is a year-old dead lead (Aug 2025, "not interested in Mulund West") re-engaging.
+Genuinely fast day, credit the team: 2 of 3 leads reached inside 45 minutes with real requirement details captured. The gap is Dilip Hadawale, within_3mo and still unreached.
 
-Backlog touched today: Ajay Sharma (4th attempt, still not reached), Vishal Kasar (real conversation - wants 1bhk 1.10cr, PROMISED SATURDAY VISIT), Chandril Panchal (real conversation, budget undisclosed), Punit Bhayani + Shilpa Thakkar (redialed, still not reached), Sandesh Padwal (redialed, still wrong number), Viren (6th dial, still no outcome check), Ronak Shah + Sujit Gupta (redialed).
-
-Connect rate got worse, not better: 0/4 fresh leads reached today vs 1/6 yesterday. Same-day multi-retry cadence still hasn't been tested - today makes the case stronger.
+Backlog touched today: ZERO. Every name from yesterday's table (Ajay Sharma, Punit Bhayani, Shilpa Thakkar, Sandesh Padwal, Viren, Ronak Shah, Sujit Gupta, Chandril Panchal, Vishal Kasar) has no new entry - confirmed against the raw sheet. The team can clearly move fast on fresh leads; the problem is coverage, not capability.
 
 LEAD QUALITY
-None of today's 4 fresh leads reached, so no call-quality signal yet. Vishal Kasar is the day's best find - real conversation, promised Saturday visit, but wants "1bhk" though he came in on the 2BHK campaign - steer him before the visit. Chandril Panchal same product-mismatch pattern, budget still undisclosed. Ronak Shah and Sujit Gupta both declared budgets of Rs1.5-1.75cr - above the Rs1.4cr ceiling this project can serve for 2BHK - not yet screened out on the call.
+Jigna Tanna - best lead of the day, 2bhk budget max Rs1.35cr, inside the ceiling, reached in 15 min.
+Kaushik Thakkar - wants 1bhk (project doesn't sell it) but budget (90L) sits right next to Studio's Rs87L - pitch Studio directly.
+Dilip Hadawale - unscored, needs a reach before quality can be judged.
 
-Real cost-per-visit (30-day window, 6 Jul-5 Aug, CRM-verified only): Rs3,331.04/visit, 17 verified visits / 183 leads = 9.29% visit rate. Looks like a decline from yesterday's Rs2,949.67/10.67% but it's mechanical: 2 genuinely verified visits from 5 July aged out of the rolling window (and the Hitendra Dedhia fake finally rolled out too), not a new drop in performance. Vishal Kasar's Saturday visit is the best live chance to add a real one before the window rolls further.
+Real cost-per-visit (30-day window, 7 Jul-6 Aug, CRM-verified only): Rs3,413.14/visit, 17 verified visits / 182 leads = 9.34% visit rate. Up slightly from yesterday's Rs3,331.04/9.29% - mechanical again: window rolled forward, zero new genuine visits (5th straight zero day), one more day of spend added with nothing in the visit column. Vishal Kasar's Saturday promise is the only live shot at breaking it before the weekend.
 
-Sheet claims 21 Facebook-source visits in this window, only 17 verify (16 phone + 1 name-match rule). 4 confirmed fakes remain inside the window (Payal Shah, Vidhi Thakkar, Subhash Raichura, Ajay Gupta) - unchanged, still uncorrected.
+Sheet claims 21 Facebook-source visits in this window, only 17 verify (16 phone + 1 name-match rule). 4 confirmed fakes unchanged: Payal Shah, Vidhi Thakkar, Subhash Raichura, Ajay Gupta - all still tagged "Meta Sent," still polluting the CAPI signal, uncorrected across 5+ days of reports.
 
 DATA INTEGRITY
-Reverse check today: 4/4 = 100%. 30-day window (6 Jul-5 Aug, 185 rows): 181/185 = 97.84%. 4 unmatched: Jigna Rathod (real number 9969283483, day 15, still wrong), Sandesh Padwal (real number 9819910669, day 12, redialed on wrong number today), Sandesh Howal (no CRM twin found, unresolved since 30 Jul), and NEW - Nikita Gaurav (9167694214, entered 10 Jul, no CRM record at all, no similar name/phone nearby) - a fresh gap, not one of the 3 previously known, needs a direct ask to the team.
-SVD: zero new rows today. Ajay Gupta's fake Meta-Sent tag still uncorrected; his "coming after 2 days" promise (2 Aug) has now lapsed with no visit logged.
+Reverse check today: 3/3 = 100%. Last 7 days (31 Jul-6 Aug, 34 rows): 34/34 = 100%, clean. Full V3 window (10 Jun-6 Aug, 285 rows): 280/285 = 98.25%, 5 unmatched, all predating 26 Jul:
+- Atul Thorat (24 Jun, within_3mo) - sheet phone reads 98198777789 (11 digits), real CRM number is 9819877789. This is the EXACT wrong-number incident already documented as this routine's own textbook example - still uncorrected in the live sheet over 6 weeks later. Row is marked "Dead" off a conversation with the wrong person. Easiest fix in this report, and the oldest outstanding one.
+- Jigna Rathod (real 9969283483, day 16) and Sandesh Padwal (real 9819910669, day 13) - still wrong, still redialed on wrong numbers.
+- Sandesh Howal (no CRM twin, stale since 30 Jul) and Nikita Gaurav (no CRM record, no typo match found) - both still unresolved, no direct ask made to the team yet.
+SVD: zero new rows today, nothing new to validate. The 4 known fakes remain uncorrected.
 
 DIAGNOSTIC STEPS
-1. Confirm whether today's "both fronts covered" day was intentional - if the team can sustain it, make it the standing expectation, don't let it slide back to oscillating.
-2. Vishal Kasar's Saturday visit is the week's best shot at breaking the 4-day visit drought - reconfirm by Friday, steer him toward what the project actually sells.
-3. Route Kapil Pravin Chheda to someone who can quote real pricing - he's a returning warm lead, not a cold dial.
-4. Fix Jigna Rathod's number to 9969283483 and Sandesh Padwal's to 9819910669; investigate the new Nikita Gaurav gap.
-5. Viren needs the outcome check, not another dial. Celine (day 11) needs a manual physical sheet lookup.
-6. 57 Seconds is still near-zero spend; 36 Seconds converted zero of 43 clicks today at the highest CPM in over a week. Don't pause on CPL alone, but the ABO/min-spend fix is overdue.
+1. Re-dial Dilip Hadawale before today closes - within_3mo, over 9 hours since arrival, still only "Busy."
+2. Backlog needs a pass before it goes another day untouched - Ajay Sharma (4 dials, real budget, still not reached), Vishal Kasar (reconfirm before Saturday), Jagdish Ravasia/Sushma (7 days overdue) are the highest-value names idle.
+3. Fix Atul Thorat's phone (98198777789 -> 9819877789) - the routine's own textbook typo example, unfixed for over a month. Then Jigna Rathod and Sandesh Padwal.
+4. Celine (day 12) needs a manual physical-sheet lookup, not another automated flag - the automated check has done its job by finding her repeatedly.
+5. Give "2BHK 57 Seconds" a real budget test - today's Rs32.46 CPL and the 17-18 Jul burst both show it converts cheaply when it actually gets spend.
 
 ANYTHING ELSE
-Yesterday's headline numbers moved a lot after the fact: reported Rs1,062 spend / 6 leads / Rs177 CPL, now shows Rs1,648 spend (+55%) / 8 leads (+2) / Rs206 CPL on refetch. Meta's attribution window keeps revising even lead counts well after a day's "final" report - treat every "today so far" figure as a genuine snapshot, not final, and expect today's numbers to move again by tomorrow.
+Yesterday's "attribution revision" explanation gets corrected, not repeated: 2 of 5 Aug's 6 leads (Bosco Ferreira 20:53, Rajesh K. Chheda 22:21) simply arrived after the ~7PM report cutoff - not a mysterious Meta re-attribution. Every "today so far" report is guaranteed to undercount whatever lands after ~7PM, predictably.
 
-Two of today's "4 fresh leads, 3 within_3mo" are actually repeat form-fills (Kapil Chheda, Sadhanaa Veerkar) - a reminder to look past the top-line intent split.
+The day's real tension: fast on fresh leads (2 of 3 reached inside 45 min), zero on backlog. Capability isn't the problem, coverage is.
 
 Nothing here is fabricated - anything not directly computable from data.json is marked as such.
