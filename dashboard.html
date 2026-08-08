@@ -96,7 +96,7 @@ footer { margin-top: 26px; color: var(--muted); font-size: 12px; }
 </style></head><body><div class="wrap">
 <header>
   <h1>Divya Jyot LYF Rewa — Meta Ads</h1>
-  <span class="updated">Updated Sat 08 Aug 2026, 19:25 IST · auto-rebuilds hourly 9AM–7PM IST · tab refreshes every 15m</span>
+  <span class="updated">Updated Sat 08 Aug 2026, 19:47 IST · auto-rebuilds hourly 9AM–7PM IST · tab refreshes every 15m</span>
 </header>
 
 <div class="tiles">
@@ -171,7 +171,222 @@ footer { margin-top: 26px; color: var(--muted); font-size: 12px; }
 <ul class="flags"><li class="flag-serious"><span class="flag-ico">⚠</span> SVD visit 2026-07-18 — Payal shah (9769884201): no CRM record in any tab, but conversion was pushed to Meta.</li><li class="flag-serious"><span class="flag-ico">⚠</span> SVD visit 2026-07-20 — Vidhi thakkar (9820194111): no CRM record in any tab, but conversion was pushed to Meta.</li><li class="flag-serious"><span class="flag-ico">⚠</span> SVD visit 2026-07-26 — Subhash raichura (9223501922): no CRM record in any tab, but conversion was pushed to Meta.</li><li class="flag-serious"><span class="flag-ico">⚠</span> SVD visit 2026-08-02 — Ajay gupta (9820857378): no CRM record in any tab, but conversion was pushed to Meta.</li></ul>
 
 <h2>Daily reports archive</h2>
-<details class="report" open><summary>2026-08-07</summary><div class="rbody"><h3>Divya Jyot LYF Rewa — Daily Snapshot — Friday, 7 August 2026</h3>
+<details class="report" open><summary>2026-08-08</summary><div class="rbody"><h3>Divya Jyot LYF Rewa — Daily Snapshot — Saturday, 8 August 2026</h3>
+<div class="gap"></div>
+<h4>FOLLOW-UP FROM LAST REPORT (7 August) — INCLUDING A CORRECTION TO IT</h4>
+<div class="li">• <b>Correcting the record: 7 August&#x27;s backlog completion was actually 9 of 9, not 7 of 9.</b> A real bug</div>
+<div>  in `fetch_all.py` (found and fixed today, see 5b) was silently truncating the Facebook tab&#x27;s follow-up</div>
+<div>  columns after the 4th, and the SVD tab&#x27;s trailing columns. Under the truncated data, Viren and Sandesh</div>
+<div>  Padwal looked skipped on 7 Aug. With the fix, both actually have `7/8/26 Ringing` entries that were</div>
+<div>  simply invisible to the old fetch range. **The team did NOT skip anyone on 7 Aug — apologies for the</div>
+<div>  bad call on that one.** Full detail in section 5b — this bug likely distorted &quot;untouched lead&quot; claims</div>
+<div>  in multiple past reports, not just 7 Aug&#x27;s.</div>
+<div class="li">• <b>Vishal Kasar&#x27;s promised Saturday (8 Aug — today) visit did NOT happen.</b> Today&#x27;s entry reads</div>
+<div>  `8/8/26 Coming tommrrow` — pushed to Sunday. This is the second slip (was &quot;coming Saturday&quot; as of</div>
+<div>  5 Aug, &quot;not reconfirmed&quot; per 7 Aug&#x27;s report, and now explicitly deferred a day). Most urgent open item.</div>
+<div class="li">• <b>Shilpa Thakkar</b> — no new entry today; her 7 Aug callback (₹1.50cr, over the 2BHK ceiling) is still</div>
+<div>  the last touch. Nothing new to report.</div>
+<div class="li">• <b>Dilip Hadawale</b> — still no entry today (last: `7/8/26 Busy`), now 2 days on one unreached dial.</div>
+<div class="li">• <b>Site-visit picture, corrected:</b> SVD tab shows nothing new today, but the **Facebook tab shows</div>
+<div>  `8/8/26 Visit done` for Bhavin Vora** — a visit SVD hasn&#x27;t recorded yet. See FUNNEL and 5b — this is</div>
+<div>  an OLD (13 Jun) lead with <b>no CRM phone match ever</b>, so it cannot be counted as a V3 result and needs</div>
+<div>  verification before any &quot;Meta Sent&quot; tag goes on it.</div>
+<div class="li">• <b>Atul Thorat — STILL uncorrected, now 45 days since 24 Jun.</b> Sheet phone still reads `98198777789`.</div>
+<div class="li">• <b>Jigna Rathod and Sandesh Padwal — reframed, not resolved.</b> Both were actually dialed repeatedly</div>
+<div>  through the 18-25 day window (see 5b) — this was never neglect — but BOTH are still on unconfirmed/</div>
+<div>  wrong-looking numbers, and neither got a fresh touch today.</div>
+<div class="li">• <b>Jagdish Ravasia {Sushma} — reframed.</b> Was actually contacted `3/8/26 Busy` (invisible before the</div>
+<div>  fix); the real gap is 5 days idle since 3 Aug, not &quot;8 days since 30 Jul&quot; as previously stated.</div>
+<div class="li">• <b>Celine (9967446816, within_3mo) — 14 straight reports, still zero record anywhere</b>, confirmed again</div>
+<div>  even with the full (unrestricted) column range. This one is real, not a fetch artifact.</div>
+<div class="li">• <b>4 confirmed fake &quot;Meta Sent&quot; visits — still uncorrected, now 7+ days running</b> (Payal Shah, Vidhi</div>
+<div>  Thakkar, Subhash Raichura, Ajay Gupta) — re-verified today with the wider column range, unchanged.</div>
+<div class="gap"></div>
+<h4>1. HEADLINE</h4>
+<div>**The ad account went completely dark today — Meta&#x27;s own API reports `account_status: 3` (UNSETTLED,</div>
+<div>i.e. an unpaid balance is blocking delivery) — zero spend, zero impressions, zero leads, all day, on</div>
+<div>campaigns that are still formally &quot;Active.&quot; This needs Keval&#x27;s attention in Ads Manager billing before</div>
+<div>anything else in this report matters.** Separately, today&#x27;s data pull surfaced and fixed a real bug that</div>
+<div>has been silently hiding leads&#x27; 5th-8th follow-up notes for weeks — several &quot;the team went quiet on</div>
+<div>this lead&quot; claims in recent reports were wrong because of it (see FOLLOW-UP above and 5b). Sales-side,</div>
+<div>the backlog got worked today (11 touches, just not the 4 specific named-priority leads), and one</div>
+<div>old (pre-V3) lead visited the site — but it isn&#x27;t Meta-attributable and isn&#x27;t logged in SVD yet.</div>
+<div class="gap"></div>
+<h4>2. THE FUNNEL (today, midnight–7PM IST, 8 August)</h4>
+<div class="li">• <b>Spend: ₹0.00.</b> Confirmed via `data.json` (`today_campaigns` / `today_ads` both empty) AND a direct</div>
+<div>  live query against the Meta Graph API for `since=2026-08-08&amp;until=2026-08-08` at campaign level —</div>
+<div>  genuinely zero rows returned, not a fetch error.</div>
+<div class="li">• <b>Impressions: 0 · Reach: 0 · Clicks: 0 · Leads: 0.</b> The account has not delivered a single impression</div>
+<div>  today.</div>
+<div class="li">• <b>Root cause, confirmed directly against the Ads Manager API (not inferred):</b></div>
+<div>  - `act_1078185463738176` → `account_status: 3` = <b>UNSETTLED</b> (Meta&#x27;s documented enum: 1=Active,</div>
+<div>    2=Disabled, 3=Unsettled, 7=Pending risk review, 9=In grace period, 101=Closed). `disable_reason: 0`</div>
+<div>    (NONE) — this is <b>not</b> a policy/security disable like the 22 June incident; it reads as a billing</div>
+<div>    hold.</div>
+<div>  - Account balance (API `balance` field): <b>714185</b>, amount spent all-time: <b>21904652</b> — in Meta&#x27;s</div>
+<div>    standard minor-currency-unit convention for the ad account object, that&#x27;s <b>₹7,141.85 outstanding</b></div>
+<div>    against <b>₹2,19,046.52</b> total spend to date. Funding source on file: VISA card ending <b>0005</b>.</div>
+<div>  - Both active campaigns (&quot;Divya Jyot V3 June26&quot;, &quot;Divya Jyot V3 July 26 - 2BHK&quot;) and their adsets show</div>
+<div>    `effective_status: ACTIVE` with `budget_remaining: 0` — consistent with delivery being blocked at</div>
+<div>    the account/billing level, not the campaign level.</div>
+<div>  - <b>Action needed: Keval — check Ads Manager → Billing / Payment Settings today.</b> Every hour this</div>
+<div>    sits is an hour of the daily budget (~₹1,200-1,900) not spent and zero leads generated. This is the</div>
+<div>    single highest-priority item in this report.</div>
+<div class="li">• <b>Site visits: 1 claimed, not yet verifiable.</b> Bhavin Vora&#x27;s Facebook-tab row got `8/8/26 Visit done`</div>
+<div>  today — but there&#x27;s no corresponding SVD-tab row yet, and his phone (9601341394) has never matched any</div>
+<div>  CRM record across the full V3 window (he&#x27;s a 13 June lead, predates V3). Treat as unverified until</div>
+<div>  logged in SVD; if it gets a &quot;Meta Sent&quot; tag without a CRM match, that&#x27;s a repeat of the Hitendra/Heena</div>
+<div>  Dedhia pattern from 1 Jul.</div>
+<div class="li">• <b>Backlog dialing: 11 touches logged today</b> across the Facebook tab (Bhavin Vora ×2, Manish, Karishma</div>
+<div>  Chheda, Falguni Thakkar, Dimple Chothani, Kanhaiyalal Jain, Pradeep Shukla, Vishal Kasar, Ameya</div>
+<div>  Mahajan, Devendra Shah) and SVD (Suryakant Kajrolakal) — a real, working day for the team, just not</div>
+<div>  on the 4 specific leads (Jigna Rathod, Sandesh Padwal, Atul Thorat&#x27;s phone, Celine) flagged as</div>
+<div>  priorities in the routine&#x27;s memory. None of today&#x27;s touches produced a confirmed reach beyond &quot;Ringing</div>
+<div>  / Busy / Switch off / Voicemail.&quot;</div>
+<div class="gap"></div>
+<h4>3. AD PERFORMANCE (agency hat)</h4>
+<div><b>Nothing to analyze today — the account did not deliver a single impression.</b> See FUNNEL for the</div>
+<div>confirmed root cause (account_status UNSETTLED). This is not a creative, audience, or budget-pacing</div>
+<div>question; it is a billing hold, and no amount of creative refresh or budget reallocation fixes it.</div>
+<div class="gap"></div>
+<div><b>Yesterday (7 Aug), for the most recent real delivery data:</b> Studio spend ₹621.15, 2 leads, CPL</div>
+<div>₹310.57 (7-day avg CPL ~₹234 on this campaign — worse, but off a small 2-lead sample, consistent with</div>
+<div>normal daily variance, not a real problem). &quot;2BHK 36 Seconds&quot; spent ₹619.30 for <b>0 leads again</b> — its</div>
+<div>2nd zero-lead day, following the same pattern flagged multiple times before. &quot;2BHK 57 Seconds&quot; got</div>
+<div><b>zero spend on 7 Aug too</b> — checking the fuller 30-day ad-level history, this ad rarely gets more than</div>
+<div>₹0-60/day trickle spend except two real days (17-18 Jul, ₹1,000+/day) — this reads as a persistent</div>
+<div>ABO/budget-allocation starvation on this ad, not an isolated blip. **Still no pause recommendation on</div>
+<div>CPL alone, per standing rule** — but the account being dark today makes the delivery-allocation question</div>
+<div>moot until billing is resolved.</div>
+<div class="gap"></div>
+<h4>4. SPEED-TO-LEAD (sales-manager hat) — the most important section</h4>
+<div><b>Zero fresh leads arrived today (dark account), so there is nothing to measure for &quot;today.&quot;</b> The</div>
+<div>5 most recent leads (all from 6-7 Aug, still open) are the live speed-to-lead picture:</div>
+<div class="gap"></div>
+<pre class="mdtable">
+| Lead | Intent | Arrived (IST) | Contact appeared (bracket) | Lag | Status now (8 Aug, ~7PM) |
+|---|---|---|---|---|---|
+| Bahrati Soni | within_3mo | 6 Aug 21:09 | 6 Aug 13:30–7 Aug 13:21 | ~16h–40h | Still just &quot;Ringing,&quot; **no retry in 2 days** |
+| Sangita Samant | 3-6mo | 6 Aug 21:10 | 6 Aug 13:30–7 Aug 13:21 | ~16h–40h | Still just &quot;Ringing,&quot; **no retry in 2 days** |
+| Sangeeta Rohit Keshariya | within_3mo | 6 Aug 20:19 | 6 Aug 13:30–7 Aug 13:21 | ~16h–41h | Still just &quot;Ringing,&quot; **no retry in 2 days** |
+| Surendra S Patil | within_3mo | 7 Aug 09:05 | (predates)–7 Aug 13:21 | ≤4h17m | &quot;Cut the call&quot; — dialed, unreached, no retry since |
+| pooja | within_3mo | 7 Aug 16:55 | 7 Aug 17:05–18:47 | ~10min–1h51m | &quot;Ringing&quot; — dialed, unreached, no retry since |
+</pre>
+<div class="gap"></div>
+<div>**3 of these 5 (Bahrati Soni, Sangita Samant, Sangeeta Rohit Keshariya) are now sitting 2 full days on a</div>
+<div>single unanswered dial with zero retry** — that&#x27;s the real speed-to-lead failure today, not a slow first</div>
+<div>contact. All 3 are Ringing-status with no second attempt logged anywhere in the (now-complete) follow-up</div>
+<div>history. 2 of 3 are within_3mo. **These need a retry before end of day, at a different time than the</div>
+<div>first attempt** (all three were first dialed within hours of arrival — the problem isn&#x27;t speed-to-first-</div>
+<div>dial, it&#x27;s speed-to-first-*retry*).</div>
+<div class="gap"></div>
+<h4>5. LEAD QUALITY (sales-manager hat)</h4>
+<div class="li">• No new Meta leads today to assess for quality — dark account.</div>
+<div class="li">• <b>Bhavin Vora&#x27;s claimed visit today is the one live quality question</b>: if real and Meta-attributed,</div>
+<div>  it would be a good outcome from an old lead re-engaging (mirrors Sunil Sidhwani&#x27;s pattern from</div>
+<div>  yesterday). But his phone has never matched CRM across the whole V3 window, so — per the standing</div>
+<div>  data-integrity rule — do not count it as a V3 result or tag it &quot;Meta Sent&quot; until verified.</div>
+<div class="li">• <b>Vishal Kasar (2/8 lead, 1BHK budget ₹1.10cr)</b> — the visit slip is now the top open item; his</div>
+<div>  requirement is on-budget for this project, so this is a real loss risk if the visit keeps slipping.</div>
+<div class="gap"></div>
+<div>**Real cost-per-visit (30-day window, 9 Jul–7 Aug, CRM-verified only): ₹53,223.15 spend / 17 verified</div>
+<div>visits = ₹3,131.95/visit, 160 Meta-reported leads → 10.63% visit rate.** The 17 = 16 SVD rows with a</div>
+<div>direct CRM phone match + Jagdish Ravasia {Sushma} (real visit, pre-V3 lead re-engaging, not a V3 result,</div>
+<div>counted as genuine per standing rule but excluded from V3 attribution). **Lead-count reconciliation is</div>
+<div>clean this run**: Meta-reported leads (160) vs a direct CRM count for the same window (159) — a 1-lead,</div>
+<div>immaterial gap. This resolves cleanly, unlike the ~163-vs-~182 mismatch flagged on 7 Aug — that one</div>
+<div>remains unexplained from today&#x27;s data and is not re-litigated here.</div>
+<div class="gap"></div>
+<h4>5b. DATA INTEGRITY CROSS-CHECK</h4>
+<div class="gap"></div>
+<h5>⚠️ Bug found and fixed today: the Facebook and SVD tab reads were silently truncating recent history</h5>
+<div>`fetch_all.py` read `Facebook!A1:N2000` and `SVD!A1:O500`. Querying the spreadsheet&#x27;s actual structure</div>
+<div>today revealed the Facebook tab has follow-up columns through <b>col AG (&quot;8th follow up&quot;)</b> — column N</div>
+<div>only captures the 1st through 4th. The SVD tab similarly carries dated post-visit notes in unlabeled</div>
+<div>columns out to <b>col AF</b>. Any lead dialed more than 4 times, or any post-visit lead with more than a</div>
+<div>few follow-up notes, had its <b>most recent</b> contact history invisible to every report using the old</div>
+<div>range — the truncation always cuts off the newest entries, so it systematically made recently-active</div>
+<div>leads look stale or abandoned. Confirmed concretely: with the old range, Viren and Sandesh Padwal looked</div>
+<div>untouched on 7 Aug (they weren&#x27;t — see FOLLOW-UP above), and Jagdish Ravasia {Sushma} looked 8-9 days</div>
+<div>neglected (he was actually contacted 3 Aug). <b>Fixed</b>: ranges widened to `Facebook!A1:AG2500` and</div>
+<div>`SVD!A1:AF1200` (matching the sheets&#x27; actual `columnCount`/`rowCount` from the Sheets API, with headroom).</div>
+<div>Re-ran the fetch and rebuilt this entire report against the corrected data. This is the same *class* of</div>
+<div>bug as the 21-22 Jul &quot;CRM tab enumeration&quot; incident (a scope-limited read masquerading as a data gap) —</div>
+<div>worth remembering that pattern generally: before reporting a lead/column/tab as &quot;missing,&quot; check whether</div>
+<div>the read is scoped too narrowly before concluding the team dropped the ball.</div>
+<div class="gap"></div>
+<div class="li">• <b>Reverse check (facebook_tab → CRM), last 8 days (1-8 Aug, 36 rows): 36/36 = 100%.</b></div>
+<div class="li">• <b>Reverse check, full V3 window (10 Jun–8 Aug, 290 rows): 283/290 = 97.59%.</b> Known unresolved:</div>
+<div>  - <b>Atul Thorat</b> (24 Jun) — phone `98198777789` → wrong number. <b>45 days unfixed</b>, oldest and</div>
+<div>    easiest fix sitting in this report.</div>
+<div>  - <b>Jigna Rathod</b> (sheet `9969283482`, real `9969283483`) — 18 days on the wrong number, despite</div>
+<div>    7 dial attempts across that window (see FOLLOW-UP — this was active work, not neglect, but the</div>
+<div>    number itself was never corrected).</div>
+<div>  - <b>Sandesh Padwal</b> (sheet `9819910699`, real `9819910669`) — same pattern, 15 days.</div>
+<div>  - <b>Sandesh Howal</b> (`9324595862`, 21 Jul) and <b>Nikita Gaurav</b> (`9167694214`, 10 Jul) — no CRM twin,</div>
+<div>    unresolved since prior reports.</div>
+<div>  - <b>Bhavin Vora</b> (`9601341394`, 13 Jun) — <b>newly surfaced this run</b>, no CRM twin, no plausible</div>
+<div>    phone-typo match found. Notable because he&#x27;s also today&#x27;s claimed site visit (see above) — flagging</div>
+<div>    both together since they compound into the same open question.</div>
+<div>  - <b>Norwin Saloman</b> (`639765266639`, 19 Jun) — not a real miss: this is a garbled/invalid phone</div>
+<div>    number and the team&#x27;s own sheet already marks his status &quot;Dead&quot;/&quot;Invalid.&quot; Not a data-integrity risk.</div>
+<div class="li">• <b>SVD validation, 9 Jul-7 Aug window:</b> 21 Facebook-source rows, 16 CRM-verified directly + 1</div>
+<div>  (Jagdish) verified-but-non-V3 = 17 genuine. **4 confirmed fakes, unchanged and re-verified with the</div>
+<div>  wider column range: Payal Shah, Vidhi Thakkar, Subhash Raichura, Ajay Gupta** — none has a CRM phone</div>
+<div>  match anywhere, all 4 still carry &quot;Meta Sent ✅,&quot; now 7+ days uncorrected and still polluting the CAPI</div>
+<div>  signal.</div>
+<div class="li">• <b>Today&#x27;s one SVD-relevant item</b>: Bhavin Vora&#x27;s &quot;Visit done&quot; note exists only in the Facebook tab —</div>
+<div>  not yet in SVD. When it is logged, verify the phone against CRM before any &quot;Meta Sent&quot; tag (it will</div>
+<div>  fail — see reverse-check miss above), same as the Hitendra/Heena Dedhia and Payal/Vidhi/Subhash/Ajay</div>
+<div>  precedents.</div>
+<div class="gap"></div>
+<h4>6. DIAGNOSTIC STEPS</h4>
+<div>1. <b>Agency — URGENT: resolve the account billing hold.</b> `account_status` is UNSETTLED, ~₹7,141.85</div>
+<div>   outstanding against the VISA card on file. Every hour unresolved is an hour of zero delivery and zero</div>
+<div>   leads on a campaign that&#x27;s otherwise been converting fine. Check Ads Manager → Billing today.</div>
+<div>2. <b>Sales — retry Bahrati Soni, Sangita Samant, and Sangeeta Rohit Keshariya now.</b> All 3 have sat</div>
+<div>   2 full days on a single unanswered &quot;Ringing&quot; with zero retry logged — the actual speed-to-lead gap</div>
+<div>   this week is retry cadence, not first-dial speed. Vary the call time from the original attempt.</div>
+<div>3. **Sales — get a verbal reconfirmation from Vishal Kasar today or tomorrow morning, don&#x27;t let this</div>
+<div>   slip a third time.** His requirement (1BHK, ₹1.10cr) is on-budget; today&#x27;s &quot;coming tomorrow&quot; is the</div>
+<div>   second deferral of a promise first made 5 Aug.</div>
+<div>4. **Sales/Data — log Bhavin Vora&#x27;s visit into SVD and flag it for phone verification before any &quot;Meta</div>
+<div>   Sent&quot; tag** — his number has no CRM match anywhere in the V3 window.</div>
+<div>5. **Data fix — Atul Thorat&#x27;s phone typo (`98198777789`→`9819877789`) is the single easiest fix in this</div>
+<div>   report, now 45 days old.** Then Jigna Rathod (`9969283482`→`9969283483`) and Sandesh Padwal</div>
+<div>   (`9819910699`→`9819910669`) — both leads have proven they&#x27;re reachable/being worked, they just need</div>
+<div>   the correct number dialed.</div>
+<div>6. <b>Sales — Celine (day 14) still needs a manual physical-sheet lookup</b>, not another automated flag;</div>
+<div>   confirmed missing even against the full unrestricted sheet read today, so this is not a fetch</div>
+<div>   artifact — it&#x27;s genuinely never been logged.</div>
+<div>7. <b>Agency — once billing is resolved, look at &quot;2BHK 57 Seconds&quot; budget allocation.</b> It&#x27;s been starved</div>
+<div>   to ₹0-60/day trickle spend on all but 2 days in the last 30, despite converting at ₹28-37 CPL on the</div>
+<div>   days it does get real spend.</div>
+<div class="gap"></div>
+<h4>7. ANYTHING ELSE</h4>
+<div><b>Today&#x27;s real story is a fetch-pipeline bug, not a sales-team failure.</b> The account being dark is a</div>
+<div>clean, unambiguous, directly-verified finding (Meta&#x27;s own API says so) — that part needs Keval&#x27;s action,</div>
+<div>not more analysis. But the bigger structural finding is that this routine has been silently reading an</div>
+<div>incomplete slice of the team&#x27;s sheet for an unknown length of time, and it produced at least two</div>
+<div>concretely wrong claims in the last report alone (Viren and Sandesh Padwal &quot;skipped&quot; on 7 Aug — they</div>
+<div>weren&#x27;t). That&#x27;s now fixed and re-verified against the full column range. Given this bug could have</div>
+<div>been live since the routine started, **treat any &quot;lead X has been abandoned/untouched for N days&quot; claim</div>
+<div>in reports older than today with some skepticism** — they were generated against the truncated read.</div>
+<div>Nothing else in today&#x27;s report is speculative: every number here is either directly from `data.json`</div>
+<div>after the fix, or from a live, explicit Meta Graph API query run during this session (account status,</div>
+<div>campaign/adset status, account balance).</div>
+<div class="gap"></div>
+<hr>
+<div>*Today: account dark all day — `account_status: 3` (UNSETTLED), ₹0 spend, 0 leads, 0 impressions, a</div>
+<div>billing hold needing Keval&#x27;s action in Ads Manager. Fixed a real bug today (`fetch_all.py` was truncating</div>
+<div>Facebook/SVD tab columns, hiding leads&#x27; 5th-8th follow-ups) — corrected two wrong claims from the 7 Aug</div>
+<div>report in the process (Viren and Sandesh Padwal were NOT skipped on 7 Aug). Backlog dialing was real</div>
+<div>today (11 touches) but missed all 4 named-priority leads. Vishal Kasar&#x27;s promised visit slipped a second</div>
+<div>time. One claimed visit (Bhavin Vora) is unverified — no CRM match, not yet in SVD. Real cost-per-visit</div>
+<div>₹3,131.95/visit, 10.63% visit rate (9 Jul–7 Aug, 30-day window) — lead-count reconciles cleanly this run</div>
+<div>(160 Meta vs 159 CRM). 4 confirmed fake &quot;Meta Sent&quot; visits still uncorrected, 7+ days running. Atul</div>
+<div>Thorat&#x27;s phone typo still unfixed at 45 days.*</div>
+<div class="gap"></div></div></details><details class="report"><summary>2026-08-07</summary><div class="rbody"><h3>Divya Jyot LYF Rewa — Daily Snapshot — Friday, 7 August 2026</h3>
 <div class="gap"></div>
 <h4>FOLLOW-UP FROM LAST REPORT (6 August)</h4>
 <div class="li">• <b>The 3-day backlog-oscillation question is answered — today broke the pattern with real coverage.</b></div>
