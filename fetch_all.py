@@ -261,8 +261,14 @@ def fetch_sheets():
 
     # Run the sheet/tab reads concurrently (independent network calls).
     with ThreadPoolExecutor(max_workers=2 + len(crm_tabs)) as ex:
-        f_fb   = ex.submit(read, sheet_id, "Facebook!A1:N2000")
-        f_svd  = ex.submit(read, sheet_id, "SVD!A1:O500")
+        # Facebook tab has follow-up columns up to "8th follow up" (col AG, confirmed via
+        # spreadsheets().get() column count 2026-08-08) — A1:N2000 was silently truncating
+        # every lead's 5th-8th follow-up entries. SVD tab similarly runs unlabeled trailing
+        # columns out to col AF holding post-visit follow-up notes (see LEARNED RULES
+        # 2026-07-27). Both were cutting off the MOST RECENT contact notes for any lead
+        # with more than 4 follow-ups, making actively-worked leads look abandoned.
+        f_fb   = ex.submit(read, sheet_id, "Facebook!A1:AG2500")
+        f_svd  = ex.submit(read, sheet_id, "SVD!A1:AF1200")
         f_leads = {tab: ex.submit(read, LEADS_SHEET_ID, f"{tab}!A1:Z5000") for tab in crm_tabs}
         fb, svd = f_fb.result(), f_svd.result()
         leads_by_tab = {tab: fut.result() for tab, fut in f_leads.items()}

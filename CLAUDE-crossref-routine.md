@@ -251,15 +251,13 @@ the list. Commit message must say what was learned in one line.
   rule: to check a post-visit lead's latest status, read the SVD row's trailing columns, not just
   facebook_tab — the two tabs split a lead's lifecycle (pre-visit nurture vs post-visit nurture)
   rather than one tab owning the whole history.
-- 2026-07-26: a GitHub repo TRANSFER silently de-registers cron schedules (workflow still
-  shows "active"; dashboard went dark 25 Jul 19:47 IST after keval-create → desijorrkhana).
-  Fix: push an edit to the workflow file on the default branch. If dashboard commits ever
-  stop for >2h inside the 9AM-7PM IST window, check Actions run history first.
-- 2026-07-26: the daily schedule itself skips days — 20, 22, 24 Jul all have no report
-  (every-other-day pattern). The session cannot see or fix the claude.ai schedule config;
-  if a gap is noticed, fold the missed day into the current report (as 23 & 25 Jul did)
-  AND tell Keval in the notification that the scheduler skipped, so he can check the
-  schedule on the claude.ai side.
+- 2026-07-26: two distinct scheduling-infra failure modes seen so far, both silent (workflow/schedule
+  still shows "active" while nothing runs) — check Actions run history first if commits stop for >2h
+  inside 9AM-7PM IST. (1) A GitHub repo TRANSFER de-registers cron schedules (dashboard went dark
+  25 Jul 19:47 IST after keval-create → desijorrkhana); fix by pushing an edit to the workflow file on
+  the default branch. (2) The claude.ai schedule itself has skipped days outright (20, 22, 24 Jul, no
+  report at all) — the session can't see/fix that config; if a gap is noticed, fold the missed day into
+  the current report and tell Keval in the notification so he can check the schedule on claude.ai.
 - 2026-07-26: an SVD row with a "Meta Sent ✅" tag but no CRM phone match is NOT automatically
   a fabrication like Hitendra/Heena Dedhia — check the name for a bracketed relative tag
   (e.g. "Jagdish Ravasia {Sushma}") and cross-check THAT name/date against the CRM before
@@ -310,6 +308,21 @@ the list. Commit message must say what was learned in one line.
   comparing — recompute "yesterday" from the freshly pulled data.json, and when the delta is large,
   attribute it to the 7PM cutoff by default rather than an unexplained Meta revision, unless the specific
   late-arriving leads/spend can't account for the gap.
+- 2026-08-08 (SAME CLASS OF BUG AS 07-21/22, worse impact): `fetch_all.py` read `Facebook!A1:N2000` and
+  `SVD!A1:O500` — but the Facebook tab actually has follow-up columns through col AG ("8th follow up";
+  N only covers 1st-4th) and SVD carries dated post-visit notes in unlabeled columns through col AF.
+  Because the truncation always cuts the NEWEST entries, any lead dialed more than 4 times (or any
+  post-visit lead with several follow-up notes) had its most RECENT contact silently invisible —
+  making actively-worked leads look abandoned, the opposite failure mode of a normal missing-data bug.
+  Concretely wrong as a result: the 7 Aug report said Viren and Sandesh Padwal were "skipped" that day
+  (both were actually dialed) and said Jagdish Ravasia {Sushma} was "8 days overdue" (he was actually
+  contacted 3 Aug, 5-day gap). Fixed: ranges widened to `Facebook!A1:AG2500` / `SVD!A1:AF1200` (matched
+  to the sheets' real `columnCount`/`rowCount` via `spreadsheets().get()`, same technique as the 07-21/22
+  fix). **Standing rule: this is the SAME failure pattern as the 07-21/22 CRM-tab gap — a range/scope
+  limit masquerading as a data/behavior finding — just inverted (there it was a whole tab missing, here
+  it's trailing columns). Whenever a lead/tab/column looks "stale" or "abandoned," check the actual
+  fetch range against the sheet's real dimensions (`spreadsheets().get()` → `gridProperties`) before
+  concluding the team dropped it — recurring enough now to check this FIRST, not last, on any anomaly.**
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

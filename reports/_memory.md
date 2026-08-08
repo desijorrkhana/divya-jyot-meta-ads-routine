@@ -1,40 +1,35 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-08-07
+## Updated 2026-08-08
 
-- **Backlog oscillation broke today (in the good direction) — 7 of 9 named leads touched**, including
-  one real reach (Shilpa Thakkar called back). Watch tomorrow: does this hold, or revert to zero per
-  the established 3-day oscillation pattern? Viren and Sandesh Padwal were the 2 skipped.
-- **Site-visit drought is over — Sunil Sidhwani (19 Jul lead, within_3mo, Studio) visited today,
-  verified clean against CRM, ending 5 straight zero-visit days (2–6 Aug).** Note it happened via an
-  OLDER lead re-engaging, not via Vishal Kasar's promised Saturday visit — that one is still pending
-  tomorrow (8 Aug) and still only "dialed, not reconfirmed" as of today.
-- **Vishal Kasar's Saturday (8 Aug) visit — dialed today ("Busy") but NOT verbally reconfirmed.**
-  Tomorrow is the day. This is now the most time-critical open item, not a "watch" item.
-- **2BHK 57 Seconds had a SECOND zero-spend day in 3 (5 Aug and 7 Aug)**, despite converting at
-  ₹32.46 CPL (6 Aug) and ₹28.03 CPL (1 Aug) whenever it does get spend. This is now a pattern, not a
-  one-off — the ABO/min-spend fix recommendation has been repeated across many reports without visible
-  action. Worth escalating language next time if still zero.
-- **2BHK 36 Seconds' CPM was 31% above 7-day average today (₹364.92 vs ₹278.72) with 0 leads off 31
-  clicks**, despite CTR being fine and frequency showing no fatigue. Watch tomorrow — if CPM stays
-  elevated, it's an auction/targeting question, not creative.
-- **Real cost-per-visit: ₹3,192.68/visit, 10.43% visit rate (17 verified / 163 leads, 30-day window
-  8 Jul–6 Aug).** IMPORTANT: this window's lead count (163) does NOT reconcile with the ~182 cited in
-  the 6 Aug report for a similarly-described "7 Jul–6 Aug" window, despite today's number being
-  internally consistent across last30_ads, daily-campaign sums, and a direct CRM count. Next run:
-  re-derive the prior day's number if possible, or treat day-over-day comparisons on this metric as
-  provisional until the gap is explained — don't silently carry forward either number as if trended.
-- **Atul Thorat (9819877789, within_3mo, 24 Jun) — STILL uncorrected, now 44 days (6.5 weeks).** Sheet
-  phone still reads 98198777789. Oldest, easiest, most-repeated fix in this routine — still unfixed.
-- **Jigna Rathod (real 9969283483, day 17) and Sandesh Padwal (real 9819910669, day 14)** — both
-  untouched today, both still on wrong numbers.
-- **Celine (9967446816, within_3mo) — 13 straight reports, still zero record anywhere.** Automated
-  flagging has produced nothing for 13 days; needs a manual physical-sheet check, not another flag.
+- **URGENT, top priority next run: check whether the account billing hold is resolved.** Today
+  (8 Aug) the account showed `account_status: 3` (UNSETTLED) via a direct Meta Graph API query —
+  zero spend/impressions/leads all day despite campaigns showing "Active." ~Rs 7,141.85 balance
+  outstanding, VISA ending 0005. First thing next run: query account_status again; if still 3, this
+  is now a multi-day outage and needs escalated language.
+- **A real fetch bug was found and fixed today** — `fetch_all.py` read `Facebook!A1:N2000` and
+  `SVD!A1:O500`, missing the sheets' 5th-8th follow-up columns (real range needed: through col AG/AF).
+  Fixed to `Facebook!A1:AG2500` / `SVD!A1:AF1200`. This means multiple PAST reports' "lead X abandoned
+  for N days" claims may be wrong (confirmed wrong for Viren, Sandesh Padwal, Jagdish Ravasia on 7 Aug).
+  Don't re-litigate old reports, but trust today's (8 Aug) figures as the first fully-correct read.
+- **Vishal Kasar's promised visit slipped a SECOND time** — was "coming Saturday" (8 Aug), today's
+  entry says "coming tomorrow" (9 Aug, Sunday). Check tomorrow whether it finally happens. 1BHK,
+  Rs 1.10cr, on-budget — a real loss risk if this keeps sliding.
+- **Bhavin Vora — claimed site visit today (8 Aug, "Visit done" in Facebook tab) but NOT in SVD yet,
+  and his phone (9601341394, 13 Jun lead) has never matched CRM.** Check next run whether SVD logs it
+  and whether it gets tagged "Meta Sent" — if so, that's a 5th fake, same pattern as Payal/Vidhi/
+  Subhash/Ajay.
+- **Bahrati Soni, Sangita Samant, Sangeeta Rohit Keshariya — all 3 sitting 2+ days on one unanswered
+  "Ringing" with zero retry as of 8 Aug.** Check tomorrow whether they were finally retried.
+- **Atul Thorat (9819877789, within_3mo, 24 Jun) — STILL uncorrected, 45 days.** Sheet phone still
+  `98198777789`. Oldest, easiest, most-repeated fix in this routine.
+- **Jigna Rathod (real 9969283483) and Sandesh Padwal (real 9819910669)** — both actively dialed
+  (7 and 8 touches respectively over 15-18 days) but never corrected to the right number. Not neglect,
+  just an uncorrected typo blocking real contact.
+- **Celine (9967446816, within_3mo) — 14 straight reports, still zero record anywhere**, reconfirmed
+  even against the full unrestricted column range today (this one is real, not a fetch artifact).
 - **4 confirmed fake "Meta Sent" visits still uncorrected** (Payal Shah, Vidhi Thakkar, Subhash
-  Raichura, Ajay Gupta) — same 4, now 6+ days running.
-- **3 leads that arrived after yesterday's 7PM cutoff (Sangeeta Rohit Keshariya, Bahrati Soni — both
-  within_3mo — and Sangita Samant) are still sitting at first-dial-only ("Ringing"), not retried today.**
-  Check tomorrow whether they've been reached; if not, they're aging toward 48h unreached.
-- **Kaplesh Dedhiya — retried today ("Ringing"), still 2bhk at ₹1.70cr (over ceiling), coming Monday
-  (10 Aug) regardless.** Worth a budget-screening call before then.
-- **Jagdish Ravasia {Sushma}'s "update in two days" (30/7) is now 8 days overdue.**
+  Raichura, Ajay Gupta) — re-verified today with the wider column range, unchanged, now 7+ days.
+- **30-day cost-per-visit (9 Jul-7 Aug): Rs 3,131.95/visit, 10.63% visit rate, 17 verified visits /
+  160 leads.** Lead count reconciled cleanly against CRM (160 vs 159) this run — the earlier
+  163-vs-182 mismatch flagged 7 Aug remains unresolved and unrelated to this window.
