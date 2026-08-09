@@ -222,9 +222,6 @@ the list. Commit message must say what was learned in one line.
 ## LEARNED RULES (dated, curated — see SELF-LEARNING above)
 - 2026-07-04: Meta API v25.0 rejects the old object-form attribution windows — flat
   strings ("7d_click") required. If every Meta call 400s, check this first.
-- 2026-07-04: report.md in the repo root is the ONLY file --send delivers to Telegram —
-  a run that only writes reports/*.md delivered nothing (this happened; now a hard rule
-  in the Telegram section above).
 - 2026-07-04: xlsx revision exports give phone cells as floats (9224542504.0) — collapse
   integral floats before matching, or every phone silently mismatches.
 - 2026-07-21: the Facebook tab's Created column contains at least one literal typo year
@@ -323,6 +320,12 @@ the list. Commit message must say what was learned in one line.
   it's trailing columns). Whenever a lead/tab/column looks "stale" or "abandoned," check the actual
   fetch range against the sheet's real dimensions (`spreadsheets().get()` → `gridProperties`) before
   concluding the team dropped it — recurring enough now to check this FIRST, not last, on any anomaly.**
+- 2026-08-09: the ad account's `balance` field reaching 0 does NOT mean `account_status` flips back
+  to 1 (ACTIVE) at the same time. During the Aug 8-9 billing outage, `balance` dropped from
+  ₹7,141.85 to ₹0 between runs while `account_status` stayed 3 (UNSETTLED) and delivery stayed
+  fully dark both days. Standing rule: always check `account_status` explicitly on every run during
+  an outage — never infer "the bill is paid, this must be resolved" from `balance` alone; say
+  plainly in the report that the two signals disagree and it needs a human to check Ads Manager.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
