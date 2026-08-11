@@ -320,12 +320,20 @@ the list. Commit message must say what was learned in one line.
   it's trailing columns). Whenever a lead/tab/column looks "stale" or "abandoned," check the actual
   fetch range against the sheet's real dimensions (`spreadsheets().get()` → `gridProperties`) before
   concluding the team dropped it — recurring enough now to check this FIRST, not last, on any anomaly.**
-- 2026-08-09: the ad account's `balance` field reaching 0 does NOT mean `account_status` flips back
-  to 1 (ACTIVE) at the same time. During the Aug 8-9 billing outage, `balance` dropped from
-  ₹7,141.85 to ₹0 between runs while `account_status` stayed 3 (UNSETTLED) and delivery stayed
-  fully dark both days. Standing rule: always check `account_status` explicitly on every run during
-  an outage — never infer "the bill is paid, this must be resolved" from `balance` alone; say
-  plainly in the report that the two signals disagree and it needs a human to check Ads Manager.
+- 2026-08-09 (UPDATED 08-11): the ad account's `balance` field reaching 0 does NOT mean
+  `account_status` flips back to 1 (ACTIVE) at the same time. During the Aug 8-9 billing outage,
+  `balance` dropped from ₹7,141.85 to ₹0 between runs while `account_status` stayed 3 (UNSETTLED)
+  and delivery stayed fully dark both days. Standing rule: always check `account_status` explicitly
+  on every run during an outage — never infer "the bill is paid, this must be resolved" from
+  `balance` alone; say plainly in the report that the two signals disagree and it needs a human to
+  check Ads Manager. NOTE: `fetch_all.py` does NOT fetch `account_status`/`balance` at all — prior
+  reports citing those fields did so via a one-off direct Graph API call
+  (`GET /act_<id>?fields=account_status,balance,disable_reason`) using `META_ADS_TOKEN`, not from
+  `data.json`. During any suspected outage, make that direct call yourself rather than looking for
+  the fields in `data.json` — they aren't there. Confirmed working 08-11 (reactivation): returned
+  `account_status: 1`, `balance: "102108"`, matching the real spend/leads that appeared in
+  `today_campaigns` the same run — the two signals should always be cross-checked against each
+  other, not just against `data.json`.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

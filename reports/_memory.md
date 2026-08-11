@@ -1,36 +1,39 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-08-10
+## Updated 2026-08-11
 
-- **Billing outage now DAY 3.** Balance has read Rs 0 for over 24 hours (since it cleared on 9
-  Aug) with `account_status` still stuck at 3 (UNSETTLED) and delivery still fully dark. Next run:
-  check `account_status` first thing — if it's flipped to 1 (ACTIVE) and today_campaigns has real
-  rows, report the reactivation. If still 3, this is now a genuinely stuck reactivation past the
-  point of "wait for it" — the language in the report should keep escalating.
-- **Team activity collapsed 10 Aug: only 2 touches logged all day** (vs 129 on 9 Aug, 11 on 8
-  Aug), with zero fresh leads to explain it either way. None of the 8 named priority leads from
-  the 9 Aug report were retried. Next run: check whether 11 Aug returns to a normal dialing
-  cadence, or whether the drop is now a pattern. If the named leads below are STILL untouched a
-  2nd day running, escalate — that's no longer a one-off lull.
-- **6th confirmed fake Meta-Sent visit: Sunil Prajapati** (9594868604, SVD row created and Meta
-  Sent same-day 10 Aug, zero CRM match, zero prior facebook_tab row — no paper trail at all before
-  the "visit"). This is a new, more brazen variant of the fake-visit pattern — worth watching
-  whether it recurs, since it means a fake can be manufactured and pushed to Meta within hours.
-  Fake count timeline: 4 fakes flat for 2+ weeks -> +1 (Bhavin Vora) 9 Aug -> +1 (Sunil Prajapati)
-  10 Aug. Both new fakes landed on dark-account days — check next run whether that correlation
-  holds or breaks.
-- **Bhavin Vora (5th fake) got "10/8/26 Coming this sunday"** — watch for a "Revisit done"-style
-  2nd fake entry against him, same pattern as Ajay Gupta's 9 Aug second fake visit.
-- **Named leads to check on next run** (all untouched 10 Aug, all still open):
-  - Bahrati Soni / Sangita Samant (6 Aug priority, 1 unanswered Ringing each, 4 days now) — still
-    untested on the "different time of day" recommendation.
-  - Sangeeta Rohit Keshariya (within_3mo, 6 Aug) — STILL has zero record in facebook_tab, 4 days.
-  - Vishal Kasar (1BHK, Rs 1.10cr, on-budget) — promised visit since 5 Aug, day 5 now with no hard
-    reconfirmation and no dial at all on 10 Aug. Highest live loss risk in the pipeline right now.
-  - Jigna Rathod (real 9969283483) / Sandesh Padwal (real 9819910669) — both still on wrong
-    numbers, 20 and 17 days respectively, not redialed 10 Aug.
-  - Atul Thorat (9819877789, within_3mo) — 47 days, easiest fix in the report, still not done.
-  - Celine (9967446816, within_3mo) — 16 straight reports now, still zero record anywhere.
-- **30-day cost-per-visit (11 Jul-10 Aug): Rs 3,288.28/visit, 10.34% visit rate, 15 verified
-  visits / 145 leads — unchanged from 9 Aug (no new spend or visits).** Lead count reconciled
-  exactly (145 Meta vs 145 CRM) again this run.
+- **Billing outage is OVER.** account_status flipped to 1 (ACTIVE), balance topped up to
+  Rs 1,02,108 (direct Graph API check, see updated LEARNED RULE in CLAUDE-crossref-routine.md —
+  fetch_all.py itself doesn't fetch these fields). Real delivery resumed 11 Aug: Rs 2,023.52
+  spend, 6 leads, CTR/CPM/frequency all healthy, no sign of damage from the 3-day dark period.
+  Next run: confirm delivery holds at a normal pace for a 2nd day — if it drops again, that's a
+  new problem, not a continuation of the old one.
+- **Team activity fully recovered same day**: 116 touches on 11 Aug vs 2 on 10 Aug. Worth noting
+  whether this was leftover backlog-clearing or the new normal.
+- **Urgent open item: Ankit (7021116501 real / 7201116501 in sheet)** — phone typo found 11 Aug,
+  within_3_months, may not have been actually reached ("Ringing" logged against wrong number).
+  Check next run whether this got fixed and redialed.
+- **8 named/flagged leads status after 11 Aug:**
+  - Redialed 11 Aug: Sandesh Padwal (still WRONG number, 18 days uncorrected), Sangeeta Rohit
+    Keshariya, Bahrati Soni, Sangita Samant.
+  - NOT touched 11 Aug: Jigna Rathod (21 days, wrong number), Atul Thorat (48 days, garbled
+    phone), Celine (17 straight reports, zero record), Vishal Kasar (day 6, no reconfirmation,
+    highest live loss risk).
+- **Suspected-fake "Meta Sent" count: 6 confirmed -> 8 pending (added Ajay Gupta 2 Aug, Subhash
+  Raichura 26 Jul this run, both zero-paper-trail).** Need a closer look next run — if they check
+  out as real, correct the count back down; if not, they're permanent confirmed fakes.
+  Also reframed Bhavin Vora: he has a genuine facebook_tab row from 13 June (not a total
+  fabrication like Sunil Prajapati) but still never entered the CRM — his visit is still a
+  mis-attributed conversion, just not an invented person.
+- **Two unresolved reverse-check misses, no verdict yet**: "Nikita Gaurav" (9167694214, 10 Jul)
+  and "Sandesh Howal" (9324595862, 21 Jul) — no CRM match, no name-similarity candidate found.
+  Don't call these typos or fakes without more evidence; revisit if a matching CRM lead surfaces.
+- **"2BHK 57 Seconds" — 0 leads again on real spend (Rs 81.80), 11 Aug.** This is now the 4th+
+  report flagging the same zero-conversion pattern on this specific ad. Next run: check whether
+  Keval acted on the reallocate/pause recommendation; if not, escalate the phrasing.
+- **30-day cost-per-visit (12 Jul-11 Aug): Rs 3,333.36/visit, 10.27% visit rate, 15 verified
+  visits / 146 leads / Rs 50,000.47 spend.** Essentially flat vs the pre-outage 9/10 Aug figure
+  (Rs 3,288.28, 10.34%) since nothing new landed during the 3 dark days.
+- **Two re-leads worth tracking**: milind (8383061069, gave up on in June, resubmitted 11 Aug,
+  team already flagged "Low budget") and CS (8080820319, marked Dead in Jan, resubmitted 11 Aug
+  after 6+ months) — watch whether either converts this time.
