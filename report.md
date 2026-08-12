@@ -1,50 +1,55 @@
-DIVYA JYOT LYF REWA — DAILY SNAPSHOT — Tuesday, 11 August 2026
+DIVYA JYOT LYF REWA — DAILY SNAPSHOT
+Wednesday, 12 August 2026
 
-FOLLOW-UP FROM LAST REPORT (10 August)
-- THE ACCOUNT IS BACK. today_campaigns shows real spend/leads for the first time since 7 Aug, and a direct Graph API check confirms account_status 1 (ACTIVE), disable_reason 0, balance Rs 1,02,108 — a real top-up, not the Rs 0 that sat there 24+ hours on 10 Aug. The 3-day billing outage (8-10 Aug) is over.
-- Team activity fully recovered: 10 Aug had 2 touches, today had 116.
-- Sandesh Padwal, Sangeeta Rohit Keshariya, Bahrati Soni, Sangita Samant were redialed today. Jigna Rathod, Atul Thorat, Celine, Vishal Kasar were NOT touched today.
-- Sandesh Padwal dialed again today but still on the wrong number — 18 days now, never corrected.
-- New phone-typo case found today, same pattern as Atul Thorat/Jigna Rathod: Ankit's number is mistyped in the sheet.
-- Two NEW suspected fake "Meta Sent" visits found (Ajay Gupta 2 Aug, Subhash Raichura 26 Jul) — same zero-paper-trail signature as the 6 already confirmed.
+FOLLOW-UP FROM 11 AUG
+11 Aug's real total was higher than reported: 8 leads / Rs 2,839.68 (not 6 / Rs 2,023.52) — 2 leads arrived after the 7PM cutoff. Both got contacted.
+Ankit's phone typo is STILL not fixed — 2nd straight report, zero action. Real number 7021116501 has never been dialed.
+Sandesh Padwal still wrong number, day 19. Jigna Rathod day 22, untouched. Atul Thorat day 49, abandoned. Celine — 18 straight reports, zero record.
+2BHK 57 Seconds: went from zero leads to zero SPEND today — first Rs 0 day in 30 days.
 
-1. HEADLINE
-Delivery is back after 3 dark days — Rs 2,023.52 spent, 6 leads today, all 6 already contacted same-day by the team, and 5 of 6 are self-declared within-3-months intent. Account status confirmed ACTIVE with a fresh Rs 1,02,108 balance. One thing needs action in the next hour: Ankit (within_3_months) has a phone typo in the sheet and may have been called at the wrong number.
+HEADLINE
+Delivery held steady — Rs 2,120.15 spent, 8 leads today, 5 within_3_months. But the sales sheet went quiet after ~11:51AM IST, and Ankit's typo lead has now sat 2 full days uncorrected. New open item: a likely 8th lead (Srikant Iyer, 2BHK feedback) is in the team's sheet but not yet in the CRM — probably sync lag, confirm next run.
 
-2. THE FUNNEL (today so far, midnight-~7PM IST)
-Spend Rs 2,023.52 (Studio Rs 1,043.69 + 2BHK campaign Rs 979.83)
-Impressions 6,845 · Reach 5,139 · Clicks 156 · Link clicks 84
-Leads: 6 — canonical count checked against lead_actions_raw, no double-count bug. Blended CPL Rs 337.25.
-Studio ad: 1 lead. "2BHK 36 Seconds": all 5 2BHK leads, CPL Rs 179.61 — sharp. "2BHK 57 Seconds": 0 leads again on Rs 81.80 spend, same pattern as prior reports.
-Contacted: 6 of 6 (100%), all same-day. Zero untouched.
-Site visits logged today: 0 — expected this early, all leads arrived 8AM-3:30PM.
-Today's figures are partial and will move — treat as a floor.
+THE FUNNEL (midnight to ~7:15PM IST)
+Spend Rs 2,120.15 — Studio Rs 975.71 + 2BHK Rs 1,144.44
+Impressions 8,344 — Reach 6,329 — Clicks 180 — Link clicks 112
+Leads: 8 (canonical, matches Ads Manager, no double-count bug). Blended CPL Rs 265.02.
+Studio: 4 leads, CPL Rs 243.93. 2BHK 36 Seconds: 4 leads, CPL Rs 286.11. 2BHK 57 Seconds: 0 spend, 0 leads.
+7 of 8 leads confirmed in CRM with exact times. The 8th, Srikant Iyer, is in the team's sheet with 2BHK-flavored feedback but no CRM record yet — likely sync lag.
+Contacted: 8 of 8, same day. Zero untouched.
+Site visits logged today: 0 — watch tonight for kajal padhi ("coming today") and Dhananjay Kholamkar ("coming this evening").
 
-3. AD PERFORMANCE (agency hat)
-Delivery resumed clean, no sign of damage from the outage. Frequency reset to a fresh 1.29-1.40. CTR today (2.27-2.29%) is above the trailing 7-day blended CTR (1.86-1.90%, dragged down by 3 dark days) and above the pre-outage 30-day per-ad CTRs (1.85-1.99%). CPM and CPC both normal range. This reads like a clean restart, not a damaged account.
-Per-ad: Studio Rs 1,043.69/1 lead (small sample). 2BHK 36 Seconds Rs 898.03/5 leads/CPL Rs 179.61 — best of the day. 2BHK 57 Seconds Rs 81.80/0 leads — needs a decision, see diagnostics.
-Trailing 7 days (aggregate, includes 3 dark days): Rs 6,645.62 spend / 22 leads / blended CPL Rs 302.07 — depressed by the outage, will normalize.
+AD PERFORMANCE
+Healthy, no fatigue. Frequency low (1.24 Studio, 1.42 2BHK), CTR above pre-outage baseline (2.17% / 2.14%), CPM/CPC normal. Nothing here says pause or refresh.
+2BHK 57 Seconds went from token spend every day to literally Rs 0 today — first zero-spend day in 30 days. This needs an Ads Manager check, not another CPL call. Flagged 5 straight reports now (7, 8, 9, 11, 12 Aug).
+Trailing 7 days: Rs 7,837.16 spend, 22 leads, blended CPL Rs 356.23 — rising as dark outage days roll out of the window.
 
-4. SPEED-TO-LEAD (sales-manager hat)
-Fast, good response today. Rajesh Bhagat arrived 08:38, contacted within ~2h. Nitin Sawant arrived 09:36, contacted within ~1h. Shweta arrived 09:38, contacted within ~1h. Ankit, milind and CS all got same-day contact but exact lag isn't measurable — milind and CS are re-submissions of numbers already in the sheet from months ago (known limitation: contact_history is phone-keyed and breaks on duplicate-phone re-leads), and Ankit's sheet phone has a typo so the precision tool can't find his row at all.
-Cross-referencing intent: 5 of 6 leads today are within_3_months and all 5 got same-day contact — exactly the behavior wanted on high-intent leads.
-URGENT: Ankit's phone. CRM has 7021116501; the sheet logged 7201116501 (same failure mode as Atul Thorat and Jigna Rathod). "Ringing" is logged against the wrong number today — pull the number from the CRM directly and redial, this is a within_3_months lead who may never have been actually reached.
+SPEED-TO-LEAD
+All 8 leads contacted before 11:51AM IST (the last Drive revision captured today) — but only 11 revisions were scanned in the 2-day window, so every lead falls into ONE wide bracket (11 Aug 6:54PM to 12 Aug 11:51AM). Can't give tighter lag than that today — genuinely worse precision than usual, not fabricating false precision.
+No new phone typos among today's 8 arrivals.
 
-5. LEAD QUALITY (sales-manager hat)
-Strong intent mix: 5 of 6 leads (83%) self-declared within_3_months. Rajesh Bhagat is 3-6_months with a stated budget (Rs 1.75-2cr) above the ~Rs 1.4cr 2BHK ceiling this project can serve — flag before chasing hard. milind's team-logged feedback today ("Low budget") independently confirms a mismatch on a self-reported "below Rs 1.55cr" lead — caught on the first call, exactly the screening the process wants.
-Two of today's six are re-leads: milind (first submitted 10 June, called then, resubmitted today) and CS (first submitted 25 Jan, marked Dead, resubmitted today after 6+ months) — worth a different approach since a straight redial already failed once each.
-Real cost-per-visit vs vanity CPL (30-day window, 12 Jul-11 Aug, CRM-verified visits only): spend Rs 50,000.47, 146 leads, vanity CPL Rs 342.47. SVD claims 21 Facebook-sourced visits; only 15 verify against the CRM. Real cost-per-visit Rs 3,333.36, verified visit rate 10.27% — essentially flat vs the 9/10 Aug figure since no new spend or verified visits landed during the outage.
+LEAD QUALITY
+Intent: 5 of 7 CRM-confirmed leads within_3_months (71%), 2 just_exploring.
+Budget flag: Vishal s stated Rs 1.5-1.75cr, above the ~Rs 1.4cr 2BHK ceiling — screen this early. Hitesh (Rs 1.20cr) and Naresh (Rs 1.30cr) both in range.
 
-5b. DATA INTEGRITY CROSS-CHECK
-Reverse check (V3-era facebook_tab rows since 10 Jun with no CRM phone match): 7 found. Known typo cases unchanged: Jigna Rathod, Sandesh Padwal, Atul Thorat. New today: Ankit. Bhavin Vora nuance: he DOES have a real facebook_tab row from 13 June (never followed up), so not a total fabrication like Sunil Prajapati — but he's never in the CRM, so his 8 Aug visit is still a real person's visit wrongly credited as a Meta conversion. Two new unresolved cases with no CRM match and no name-similarity found: "Nikita Gaurav" (10 Jul) and "Sandesh Howal" (21 Jul) — not calling these typos or fakes without more to go on.
-SVD validation (30-day window, source=Facebook): 21 rows, 15 verify, 6 do not. Confirmed genuine despite no direct phone match: Jagdish Ravasia {Sushma} — real CRM lead "Sushma Ravasia" visited under the family member's name. Do NOT verify, all tagged "Meta Sent" with no CRM record: Payal Shah and Vidhi Thakkar (previously confirmed fake), Subhash Raichura (26 Jul, NEW — zero paper trail), Ajay Gupta (2 Aug, NEW — zero paper trail, already has a second "Revisit done" follow-up compounding on it), Bhavin Vora and Sunil Prajapati (previously confirmed). This raises the suspected-fake "Meta Sent" count from 6 to 8 in the last 30 days, pending confirmation on the 2 new ones.
+REAL COST PER VISIT (30-day window, 13 Jul-12 Aug, CRM-verified only)
+Spend Rs 50,720.44, Leads 149, vanity CPL Rs 340.41.
+18 SVD Facebook-sourced visits, 12 verify against CRM, 6 do not (same 6 as 11 Aug — Payal Shah, Vidhi Thakkar, Subhash Raichura, Ajay Gupta, Bhavin Vora, Sunil Prajapati).
+Real cost per visit: Rs 4,226.70 — verified visit rate 8.05%. Worse than yesterday's Rs 3,333.36 / 10.27%, but mechanical: 3 genuine mid-July visits rolled out of the window, and no new verified visit has landed since 7 Aug (5 days). Watch if 11-12 Aug leads produce a visit by 18-19 Aug — if not, that's a real signal.
 
-6. DIAGNOSTIC STEPS
-1. Sales — fix and redial Ankit's number today: 7021116501, not 7201116501.
-2. Sales — Sandesh Padwal's wrong number still isn't fixed after 18 days of redialing it. Correct to the real number before the next call.
-3. Sales — 4 named leads went untouched again today: Jigna Rathod (21 days, wrong number still live), Atul Thorat (48 days, phone garbled in sheet), Celine (17 straight reports, zero record anywhere), Vishal Kasar (day 6 without reconfirmation, highest live loss risk right now). These need to move today.
-4. Agency — decide on "2BHK 57 Seconds." Zero leads again on real spend, same pattern flagged in the 7, 8, and 9 Aug reports. Either reallocate its budget to "2BHK 36 Seconds" (today's best performer) or pause that specific ad — a per-ad call, not a campaign-level pause on CPL.
-5. Agency/Sales — chase down Ajay Gupta and Subhash Raichura. If real, log them properly. If not, that's 2 more fake conversions degrading Meta's optimization signal on top of the 6 already confirmed.
+DATA INTEGRITY
+Reverse check: 8 facebook_tab rows since 10 Jun with no CRM match (up from 7). New: Srikant Iyer (12 Aug, likely sync lag). Unchanged and still unfixed: Jigna Rathod, Atul Thorat, Sandesh Padwal, Ankit (all typos), Bhavin Vora (real person, mis-attributed), Nikita Gaurav, Sandesh Howal (unresolved).
+SVD validation: 18 rows, 12 verify, 6 do not — same 6 as 11 Aug, no new fakes, none resolved. Suspected-fake Meta Sent count holds at 8.
 
-7. ANYTHING ELSE
-The account coming back with a Rs 1,02,108 top-up (not a token amount) suggests whoever funded it intends to run for a while — worth confirming the daily budget settings weren't altered during the suspension. Also worth naming: today is the best lead-intent mix seen in recent reports (83% within_3_months on a 6-lead day) landing on the first day back — worth watching whether that holds or was a backlog-clearing artifact.
+DIAGNOSTIC STEPS
+1. Fix Ankit's number today — real number never dialed, 2nd report flagging this.
+2. Sheet went quiet after 11:51AM — only 1 dated note written all afternoon (Dilip Hadawale) vs 110 yesterday. Every named priority lead had zero activity today. Close this gap before end of day.
+3. Move on the 4 chronically stuck leads: Jigna Rathod (22 days), Atul Thorat (49 days), Celine (18 reports, zero record), Vishal Kasar (3 days quiet).
+4. Get eyes on "2BHK 57 Seconds" in Ads Manager — find out WHY it hit Rs 0 spend, not just reallocate blindly.
+5. Watch for Srikant Iyer's CRM sync and tonight's two likely site visits.
+
+ANYTHING ELSE
+The quiet afternoon (nothing in the sheet since 11:51AM) is most likely a real lull, not a measurement gap, since today's own fresh leads all got contacted before that cutoff and no named priority lead moved after. Ad delivery is clean and stable two days post-outage — today's risk is entirely on sales-side follow-through in the afternoon, not the ad account.
+
+LOOKING AHEAD
+Ankit's real number needs its first-ever dial. Resolve whether Srikant Iyer is sync lag or a real gap. Check for the two likely site visits. Get a real answer on 2BHK 57 Seconds. If the afternoon quiet repeats tomorrow, escalate as a pattern.

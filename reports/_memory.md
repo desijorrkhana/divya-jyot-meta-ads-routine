@@ -1,39 +1,43 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-08-11
+## Updated 2026-08-12
 
-- **Billing outage is OVER.** account_status flipped to 1 (ACTIVE), balance topped up to
-  Rs 1,02,108 (direct Graph API check, see updated LEARNED RULE in CLAUDE-crossref-routine.md —
-  fetch_all.py itself doesn't fetch these fields). Real delivery resumed 11 Aug: Rs 2,023.52
-  spend, 6 leads, CTR/CPM/frequency all healthy, no sign of damage from the 3-day dark period.
-  Next run: confirm delivery holds at a normal pace for a 2nd day — if it drops again, that's a
-  new problem, not a continuation of the old one.
-- **Team activity fully recovered same day**: 116 touches on 11 Aug vs 2 on 10 Aug. Worth noting
-  whether this was leftover backlog-clearing or the new normal.
-- **Urgent open item: Ankit (7021116501 real / 7201116501 in sheet)** — phone typo found 11 Aug,
-  within_3_months, may not have been actually reached ("Ringing" logged against wrong number).
-  Check next run whether this got fixed and redialed.
-- **8 named/flagged leads status after 11 Aug:**
-  - Redialed 11 Aug: Sandesh Padwal (still WRONG number, 18 days uncorrected), Sangeeta Rohit
-    Keshariya, Bahrati Soni, Sangita Samant.
-  - NOT touched 11 Aug: Jigna Rathod (21 days, wrong number), Atul Thorat (48 days, garbled
-    phone), Celine (17 straight reports, zero record), Vishal Kasar (day 6, no reconfirmation,
-    highest live loss risk).
-- **Suspected-fake "Meta Sent" count: 6 confirmed -> 8 pending (added Ajay Gupta 2 Aug, Subhash
-  Raichura 26 Jul this run, both zero-paper-trail).** Need a closer look next run — if they check
-  out as real, correct the count back down; if not, they're permanent confirmed fakes.
-  Also reframed Bhavin Vora: he has a genuine facebook_tab row from 13 June (not a total
-  fabrication like Sunil Prajapati) but still never entered the CRM — his visit is still a
-  mis-attributed conversion, just not an invented person.
-- **Two unresolved reverse-check misses, no verdict yet**: "Nikita Gaurav" (9167694214, 10 Jul)
-  and "Sandesh Howal" (9324595862, 21 Jul) — no CRM match, no name-similarity candidate found.
-  Don't call these typos or fakes without more evidence; revisit if a matching CRM lead surfaces.
-- **"2BHK 57 Seconds" — 0 leads again on real spend (Rs 81.80), 11 Aug.** This is now the 4th+
-  report flagging the same zero-conversion pattern on this specific ad. Next run: check whether
-  Keval acted on the reallocate/pause recommendation; if not, escalate the phrasing.
-- **30-day cost-per-visit (12 Jul-11 Aug): Rs 3,333.36/visit, 10.27% visit rate, 15 verified
-  visits / 146 leads / Rs 50,000.47 spend.** Essentially flat vs the pre-outage 9/10 Aug figure
-  (Rs 3,288.28, 10.34%) since nothing new landed during the 3 dark days.
-- **Two re-leads worth tracking**: milind (8383061069, gave up on in June, resubmitted 11 Aug,
-  team already flagged "Low budget") and CS (8080820319, marked Dead in Jan, resubmitted 11 Aug
-  after 6+ months) — watch whether either converts this time.
+- **Ankit's phone typo is now a 2nd-report repeat failure, same class as Sandesh Padwal.** Real
+  number 7021116501 has NEVER been dialed — only the wrong number (7201116501) was tried once,
+  11 Aug, with zero follow-up since. Check next run whether it's finally fixed; if not, this
+  needs naming as a 3rd-report pattern, not another gentle flag.
+- **New open item: Srikant Iyer (8879085434), logged 12 Aug in facebook_tab with 2BHK-flavored
+  feedback ("Req 2bhk... 800+ carpet"), but NOT in the CRM (`meta_leads_timed`) as of this run.**
+  Meta's ad-level count said 4 2BHK leads today; CRM feed only had 3 — Srikant is the most likely
+  explanation (CRM webhook sync lag), not a fake or typo (no near-match phone anywhere). Confirm
+  next run: did he show up in the CRM feed retroactively? If he NEVER appears, escalate to a real
+  reverse-check miss, not a lag.
+- **The sheet went quiet after ~11:51AM IST on 12 Aug** — only 1 dated follow-up note written
+  all afternoon (Dilip Hadawale) vs 110 on 11 Aug. Every named priority lead had zero movement
+  after that time. Also explains why today's contact_history brackets were unusually wide (all 8
+  leads fell into one ~17h bracket, only 11 Drive revisions scanned). Watch next run: if this
+  repeats, it's a pattern (afternoon lull or team short-staffed), not a one-off.
+- **8 named/flagged leads status after 12 Aug, none moved since 11 Aug:**
+  - Sandesh Padwal — still wrong number, day 19.
+  - Jigna Rathod — day 22, last touched 9 Aug.
+  - Atul Thorat — day 49, garbled phone, Dead, zero followups ever — effectively abandoned.
+  - Celine — 18 straight reports, zero record anywhere.
+  - Vishal Kasar — last touched 9 Aug, 3 days quiet, no visit confirmed.
+  - milind, CS (both re-leads from 11 Aug) — no new activity today either.
+  - Bhavin Vora — no new note.
+- **Suspected-fake "Meta Sent" count holds at 8** (Ajay Gupta, Subhash Raichura still unresolved
+  pending a closer look — no new evidence either direction this run).
+- **2BHK 57 Seconds hit its first Rs 0-SPEND day today (12 Aug)**, after 5 straight reports (7, 8,
+  9, 11, 12 Aug) flagging zero/near-zero leads. This is now a delivery question (why did spend
+  stop entirely?), not just a CPL/creative call — needs an actual Ads Manager look, not another
+  restated recommendation.
+- **30-day cost-per-visit (13 Jul-12 Aug): Rs 4,226.70/visit, 8.05% visit rate, 12 verified
+  visits / 149 leads / Rs 50,720.44 spend.** Worse than 11 Aug's figure (Rs 3,333.36, 10.27%) —
+  mechanical (3 genuine mid-July visits rolled out of the window), not a fresh quality drop. BUT:
+  zero new verified visits have landed since 7 Aug (5 days now) — if 11-12 Aug's fresh leads
+  haven't produced a verified visit by ~18-19 Aug, treat that as a real signal, not window math.
+- **Two leads said they're visiting soon — check SVD next run:** kajal padhi (12 Aug lead, "coming
+  today") and Dhananjay Kholamkar (11 Aug lead, "coming this evening" = night of 12 Aug).
+- **11 Aug's reported "today" figures were revised up on refetch**: true total was 8 leads /
+  Rs 2,839.68 (2 leads landed after the 7PM cutoff — Ushma Katira, Dhananjay Kholamkar). Standard
+  pattern, not a new finding — just confirms the 7PM-cutoff rule is holding.

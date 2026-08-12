@@ -224,9 +224,6 @@ the list. Commit message must say what was learned in one line.
   strings ("7d_click") required. If every Meta call 400s, check this first.
 - 2026-07-04: xlsx revision exports give phone cells as floats (9224542504.0) — collapse
   integral floats before matching, or every phone silently mismatches.
-- 2026-07-21: the Facebook tab's Created column contains at least one literal typo year
-  ("02/09/2525") — always bound parsed dates to a plausible range (e.g. 2024-01-01 through
-  today) before treating them as "recent," or garbage rows silently pass date-range filters.
 - 2026-07-21/22 (CORRECTED — do not repeat this mistake): the CRM Event spreadsheet
   (`LEADS_SHEET_ID`) gets a NEW TAB per lead form, not one tab total — `Sheet1` (Studio) and
   `Sheet2` ("2BHK", added the day that campaign launched) both feed real, working data.
@@ -277,12 +274,15 @@ the list. Commit message must say what was learned in one line.
   matches nothing, wrongly flagging a real, matched lead ("Ravi DU", 10 Jun) as a reverse-check miss for
   multiple reports running. Fix: split phone cells on non-digit separators and check each 10-digit number
   separately against the CRM.
-- 2026-07-30: `facebook_tab`'s Created column is NOT uniformly DD/MM/YYYY — pre-V3 rows from 2025 use
-  MM/DD/YYYY (unambiguous only when day>12, e.g. "07/27/2025"), while 2026 V3-era rows use DD/MM/YYYY
-  (e.g. "21/7/2026"). A parser that tries MM/DD first silently misreads ~120 old 2025 rows with
-  day-of-month <=12 as being in a recent window (e.g. "7/2/2026" read as "Jul 2" instead of "7 Feb").
-  Fix: try DD/MM/YYYY first (the current convention), fall back to MM/DD only when the day component
-  is invalid (>12).
+- 2026-07-30 (MERGED with 07-21 typo-year note): `facebook_tab`'s Created column is NOT uniformly
+  DD/MM/YYYY — pre-V3 rows from 2025 use MM/DD/YYYY (unambiguous only when day>12, e.g.
+  "07/27/2025"), while 2026 V3-era rows use DD/MM/YYYY (e.g. "21/7/2026"). A parser that tries
+  MM/DD first silently misreads ~120 old 2025 rows with day-of-month <=12 as being in a recent
+  window (e.g. "7/2/2026" read as "Jul 2" instead of "7 Feb"). Fix: try DD/MM/YYYY first (the
+  current convention), fall back to MM/DD only when the day component is invalid (>12). Also at
+  least one row has a literal typo year ("02/09/2525") — always bound parsed dates to a plausible
+  range (2024-01-01 through today) before treating them as "recent," or garbage rows silently
+  pass date-range filters.
 - 2026-07-31: on a fresh container, `python3 fetch_all.py` can crash immediately with
   `ModuleNotFoundError: No module named '_cffi_backend'` (a pyo3 panic) when it imports
   `google.oauth2.service_account` — the container's pre-installed system `cryptography` package is
@@ -334,11 +334,29 @@ the list. Commit message must say what was learned in one line.
   `account_status: 1`, `balance: "102108"`, matching the real spend/leads that appeared in
   `today_campaigns` the same run — the two signals should always be cross-checked against each
   other, not just against `data.json`.
+- 2026-08-12: when `meta.today_ads`' per-ad lead count for TODAY is higher than the count of
+  same-day rows in `sheet.meta_leads_timed`, don't assume it's a phantom/error — check
+  `sheet.facebook_tab` for a same-day row with no CRM match first (the reverse-check already does
+  this). Real case: Meta said 4 "2BHK" leads today, the CRM feed only had 3; the team's sheet had
+  a 4th same-day row (Srikant Iyer) with clearly 2BHK-flavored feedback and no typo-candidate
+  phone anywhere — almost certainly a CRM webhook sync lag (the CRM Event sheet catching up to
+  Meta), not a fake or a missed integration. Standing rule: a same-day ad-level/CRM-feed
+  discrepancy on the day it happens is most likely sync lag, not a data-integrity miss — flag it
+  as unresolved and confirm on the NEXT run whether the lead appears retroactively in
+  `meta_leads_timed` before concluding either way.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
 apply any SELF-LEARNING updates (this file / _memory.md / fetch_all.py),
 commit all to the repo, then run python3 fetch_all.py --send to push report.md to Telegram.
+
+Note on the dated report filename: the outer scheduler's stored prompt has, at least once
+(12 Aug run), said "write to reports/[yesterday's date].md" — but `data.json`'s `dates.today`
+is always the actual run date, and every report to date is filed under the RUN date (the
+"today so far" convention this whole spec is built around), not the calendar day before it.
+If the scheduler wording and `dates.today` ever disagree, trust `dates.today` / this file, not
+the scheduler's date phrasing — filing under the wrong date would silently overwrite or
+shadow a different day's real report.
 
 ### ⚠️ THE REPORT MUST REACH `main` — a session-branch commit alone is NOT delivered.
 Each scheduled session commits to its own `claude/*` branch. The dashboard is built FROM
