@@ -1,47 +1,47 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Updated 2026-08-13
+## Updated 2026-08-14
 
-- **Srikant Iyer confirmed a real reverse-check gap, not sync lag.** Flagged 12 Aug as likely CRM
-  webhook lag; a full day + complete data refresh later, still zero CRM record. Next run: if he's
-  STILL missing, stop calling this "unresolved" and treat it as a genuine tracking miss worth a
-  direct question to whoever manages the CRM webhook.
-- **Fake "Meta Sent" pattern is accelerating: 3 in 4 days (Sunil Prajapati 10 Aug, Maya Jain 12
-  Aug, Pravin Jain 13 Aug).** All three: no facebook_tab pre-visit row, no CRM match, no name/phone
-  typo candidate anywhere. Running cumulative suspected-fake count: 10 (was 8 as of 12 Aug + these
-  2 new). Watch hard for a 4th — if it lands, this needs escalating from "pattern" to "process
-  failure" in the report, and probably a direct question to the team about how SVD rows get their
-  Facebook source + Meta Sent tag.
-- **Ankit's real number (7021116501) has now been never-dialed for 3 straight reports (11, 12, 13
-  Aug).** Wrong number (7201116501) tried once, 11 Aug, nothing since. This is now worse than
-  Sandesh Padwal's typo took to become a named pattern — needs sharper language next time if still
-  unfixed.
-- **Chronically stalled, no movement across 3+ reports:** Sandesh Padwal (day 20, wrong number),
-  Jigna Rathod (day 23, last touched 9 Aug), Atul Thorat (day 50, abandoned, Dead status, zero
-  followups ever), Celine (19 straight reports, ZERO record anywhere in the sheet — worth asking
-  directly if this lead even exists), Vishal Kasar (4 days quiet, no visit confirmed despite an
-  "8/8 coming tomorrow" note that never resolved).
-- **Dhananjay Kholamkar's predicted "12 Aug evening" visit never happened** — no SVD entry, no
-  followup note since 11 Aug creation. Chase directly next run, don't just watch.
-- **2BHK 57 Seconds: 6 straight reports (7,8,9,11,12,13 Aug), still effectively dead.** Went fully
-  Rs 0 on 12 Aug (confirmed real on refetch, not a reporting gap), today only Rs 1.98 token spend.
-  Needs an actual Ads Manager answer, not another repeated flag — if still dead next run, say so
-  even more bluntly.
-- **kajal padhi's visit CONFIRMED 12 Aug, CRM-verified** — good outcome, team was fast (contacted
-  same morning, converted same day as promised). No action needed, just closing the loop.
-- **Two leads said "coming tomorrow" as of 13 Aug — check SVD next run:** Dimple Dedhia (13 Aug
-  lead, "coming tomorrow" = 14 Aug).
-- **43% of today's (13 Aug) leads were resubmissions from Dead/Not-Interested contacts** (CS,
-  Mangesh, Dimple Dedhia). If this recurs at similar rate, it's worth pushing the audience-overlap /
-  exclusion-list diagnostic harder — check next run whether it's a one-off or a repeating share.
-- **30-day cost-per-visit (14 Jul-13 Aug): Rs 4,290.45/visit, 8.11% visit rate, 12 verified visits /
-  148 leads / Rs 51,485.44 spend.** Zero NEW verified visits since 7 Aug (Sunil Dhawani) beyond
-  kajal padhi's 12 Aug one — 6 days now. If 11-13 Aug's fresh leads haven't produced another clean
-  verified visit by ~18-19 Aug, that's a real signal, not window math.
-- **12 Aug's reported "today" figures were revised UP on refetch, but differently this time**: same
-  8 leads, spend jumped Rs 2,120.15 → Rs 2,849.38 (+34%) with ZERO extra leads — i.e. the post-7PM
-  spend that day bought nothing. Different from the usual "extra leads AND extra spend" pattern
-  (5/6/11 Aug). One day isn't a trend — watch if elevated post-7PM CPL recurs.
-- **Tina Shah (~27 min) and Gaurav Sharma (~29 min) were the fastest cleanly-measured contacts in
-  several reports** — worth citing as a positive benchmark if speed-to-lead needs a comparison point
-  going forward.
+- **Ankit's real number (7021116501) has now been never-dialed for 4 straight reports (11-14
+  Aug), and today got WORSE** — the team redialed the WRONG number again (14/8 "Busy") instead of
+  switching. Sharpest unresolved item in the report; needs a manual fix, not another flag.
+- **Srikant Iyer: 3 days, still zero CRM record, zero new follow-up since creation (12 Aug).**
+  Stalled with no new information either way — needs a direct question about whether this lead
+  ever actually came through Meta, not another wait cycle.
+- **Fake "Meta Sent" streak paused at 3-in-4-days (Sunil Prajapati 10 Aug, Maya Jain 12 Aug,
+  Pravin Jain 13 Aug) — no 4th appeared 14 Aug.** Today's only SVD visit (Dimple Dedhia) verifies
+  clean against the CRM. Cumulative suspected-fake count holds at 10. Keep watching for a 4th.
+- **2BHK 57 Seconds hit a new low: literally ZERO impressions on 14 Aug** (not even the Rs1-2
+  token spend of recent days) — 7th consecutive real-delivery-day report flagging it (7,8,9,
+  11,12,13,14 Aug). Effectively dead since 19 July. Needs an actual Ads Manager decision, not
+  another repeated flag.
+- **Recurring "1bhk" product mismatch: 4 of the last 17 leads (13-14 Aug, ~24%) explicitly asked
+  for a 1BHK**, a config this project doesn't sell (Tina Shah + Dimple Dedhia on 13 Aug, Manoj
+  Goklani + Suraj Chormale on 14 Aug). Two days running — watch if it continues into a 3rd; if so
+  this graduates from a screening note to a targeting/creative-copy question for the agency.
+- **Post-7PM "spend without extra leads" has now happened 2 consecutive evenings** (12 Aug: +34%
+  spend, 0 extra leads; 13 Aug refetched: +25% spend, 0 extra leads). Watch for a 3rd — if it
+  recurs, this is a real efficiency leak worth a direct Ads Manager check (budget cap / bid
+  strategy), not window-math noise.
+- **Chronically stalled, no movement across 3+ reports:** Sandesh Padwal (day 21, wrong number, 3
+  days quiet), Jigna Rathod (day 24, 5 days quiet), Atul Thorat (day 51, abandoned, Dead, zero
+  followups ever), Celine (19 straight days, ZERO record anywhere in the sheet despite being a
+  real CRM lead from 26 Jul — worth asking directly if the team even received this one), Vishal
+  Kasar (day 12, 5 days quiet, the "8/8 coming tomorrow" note never resolved into a visit).
+- **New stalled-lead find: Sandesh Howal** (created 21 Jul, last touched 30 Jul — 15 days
+  silent). Not previously named; adding to the priority list.
+- **Dhananjay Kholamkar recontacted 14 Aug with a fresh commitment: "coming next Thursday" (20
+  Aug).** His earlier predicted 12 Aug visit never happened — replace that stale tracking with
+  this new date; check SVD around 20 Aug.
+- **Dimple Dedhia's visit CONFIRMED 14 Aug, CRM-verified** — good outcome, closes the loop from
+  13 Aug's "coming tomorrow" note. First new verified visit since kajal padhi (12 Aug), breaking
+  what had been a real drought. No action needed, just closing the loop.
+- **30-day cost-per-visit (15 Jul-14 Aug): Rs 4,337.52/visit, 8.05% visit rate, 12 verified
+  visits / 149 leads / Rs 52,050.26 spend.** Essentially flat vs 13 Aug (Rs 4,290.45 / 8.11%) —
+  two 14 Jul verified visits rolled out exactly as Dimple Dedhia's rolled in, a wash on the
+  number but real news underneath (see above). Watch for another clean verified visit soon now
+  that the drought is broken.
+- **14 Aug was the cleanest day in recent memory on both fronts**: best blended CPL in 2 weeks
+  (Rs 177.30, less than half the 7-day average), 10/10 same-day contact (median lag ~1h10m,
+  fastest 16 min), zero re-leads among today's 10 (contrast to 13 Aug's 43%), zero new
+  data-integrity gaps. Useful as a positive benchmark going forward.
