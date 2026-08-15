@@ -334,16 +334,20 @@ the list. Commit message must say what was learned in one line.
   `account_status: 1`, `balance: "102108"`, matching the real spend/leads that appeared in
   `today_campaigns` the same run — the two signals should always be cross-checked against each
   other, not just against `data.json`.
-- 2026-08-12: when `meta.today_ads`' per-ad lead count for TODAY is higher than the count of
-  same-day rows in `sheet.meta_leads_timed`, don't assume it's a phantom/error — check
-  `sheet.facebook_tab` for a same-day row with no CRM match first (the reverse-check already does
-  this). Real case: Meta said 4 "2BHK" leads today, the CRM feed only had 3; the team's sheet had
-  a 4th same-day row (Srikant Iyer) with clearly 2BHK-flavored feedback and no typo-candidate
-  phone anywhere — almost certainly a CRM webhook sync lag (the CRM Event sheet catching up to
-  Meta), not a fake or a missed integration. Standing rule: a same-day ad-level/CRM-feed
-  discrepancy on the day it happens is most likely sync lag, not a data-integrity miss — flag it
-  as unresolved and confirm on the NEXT run whether the lead appears retroactively in
-  `meta_leads_timed` before concluding either way.
+- 2026-08-12 (UPDATED 08-15, now confirmed in BOTH directions): a same-day mismatch between
+  `meta.today_ads`' per-ad lead count and the count of same-day rows in `sheet.meta_leads_timed`
+  is most likely a timing/attribution lag between two independently-updating sources, not a
+  phantom/error — check which side is behind before concluding anything. (1) Meta-ahead-of-CRM
+  case (12 Aug): Meta said 4 "2BHK" leads, CRM only had 3 — the team's sheet had the 4th
+  (Srikant Iyer) with clearly 2BHK-flavored feedback, so it was the CRM Event sheet catching up
+  to Meta. (2) CRM-ahead-of-Meta case (15 Aug, opposite direction): CRM's `meta_leads_timed`
+  showed 2 leads today (Vishal Gaikwad arriving literally 3 minutes before the fetch), but Meta's
+  own `today_ads` canonical `leads` field still only showed 1 — Meta's ad-level insights hadn't
+  caught up to its own webhook feed yet. Standing rule: don't assume either source is
+  authoritative in the moment — check `sheet.facebook_tab` for a same-day row with no CRM match
+  first (rules out a fake), note which side is lagging and why (arrival time vs. fetch time is
+  usually the tell), and confirm on the NEXT run whether the numbers reconcile before concluding
+  either way.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
