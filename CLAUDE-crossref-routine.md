@@ -223,7 +223,16 @@ the list. Commit message must say what was learned in one line.
 - 2026-07-04: Meta API v25.0 rejects the old object-form attribution windows — flat
   strings ("7d_click") required. If every Meta call 400s, check this first.
 - 2026-07-04: xlsx revision exports give phone cells as floats (9224542504.0) — collapse
-  integral floats before matching, or every phone silently mismatches.
+  integral floats before matching, or every phone silently mismatches. UPDATED 2026-08-17:
+  the raw `facebook_tab` values (not just xlsx exports) hit a related quirk — Google Sheets
+  sometimes auto-formats a bare 10-digit number as CURRENCY, so the cell literal becomes
+  something like `"$9,769,892,612.00"` (real number 9769892612 with an extra trailing "00"
+  from the fake ".00"). A naive digits-only extraction taking the LAST 10 digits (as
+  `normalize_phone()` does) grabs "6989261200" and silently mismatches a real, correctly-
+  logged lead (Sharayu Rane, 16 Aug) as a false reverse-check miss. Fix: when a phone cell
+  starts with "$" or contains a decimal point, strip the trailing ".00"/decimal remainder
+  before taking the last 10 digits, or try BOTH the first-10 and last-10-digit candidates
+  and accept either as a CRM match.
 - 2026-07-21/22 (CORRECTED — do not repeat this mistake): the CRM Event spreadsheet
   (`LEADS_SHEET_ID`) gets a NEW TAB per lead form, not one tab total — `Sheet1` (Studio) and
   `Sheet2` ("2BHK", added the day that campaign launched) both feed real, working data.
