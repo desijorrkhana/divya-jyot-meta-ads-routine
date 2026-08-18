@@ -16,7 +16,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 STUDIO = "Divya Jyot V3 June26"
 BHK2 = "Divya Jyot V3 July 26 - 2BHK"
-SHORT = {STUDIO: "Studio", BHK2: "2BHK"}
+BHK1 = "Divya Jyot V4 Aug26 - 1BHK"
+# Short display names, in a fixed display order — this dict IS the campaign list.
+# A new campaign just needs one entry here; every chart/table/legend below is
+# built from this dict's values (and its position gives it the next color/chip
+# class), so nothing else needs to change when a 4th campaign launches.
+SHORT = {STUDIO: "Studio", BHK2: "2BHK", BHK1: "1BHK"}
+CAMPS = list(SHORT.values())
 V3_START = "2026-06-10"
 BASELINE_VISIT_RATE = 4.5  # % — historical V3 baseline
 
@@ -249,6 +255,10 @@ def build():
             f'<div class="rbody">{md_lite(body)}</div></details>')
     reports_html = "".join(reports_html) or '<p class="muted">No reports committed yet.</p>'
 
+    camp_legend = "".join(
+        f'<span><i style="background:var(--s{i+1})"></i>{esc(c)}</span>' for i, c in enumerate(CAMPS))
+    leads_sub = " · ".join(f"{esc(name)} {t.get(camp, {}).get('leads', 0)}" for camp, name in SHORT.items())
+
     vr_txt = f"{visit_rate:.1f}%" if visit_rate is not None else "—"
     vr_delta = ""
     if visit_rate is not None:
@@ -259,6 +269,7 @@ def build():
     payload = json.dumps({
         "daily": daily, "dailyAds": daily_ads, "crm": crm_rows, "visits": visits,
         "today": today.isoformat(), "dailyMin": daily_min, "v3Start": V3_START,
+        "camps": CAMPS,
     }, ensure_ascii=False)
 
     page = f"""<!DOCTYPE html>
@@ -272,7 +283,7 @@ def build():
   color-scheme: light;
   --surface: #fcfcfb; --page: #f9f9f7; --ink: #0b0b0b; --ink2: #52514e;
   --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,.10);
-  --s1: #2a78d6; --s2: #eb6834;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1f9e6b;
   --good: #0ca30c; --serious: #ec835a; --critical: #d03b3b; --good-text: #006300;
   --wash: rgba(11,11,11,.045);
 }}
@@ -280,13 +291,13 @@ def build():
   color-scheme: dark;
   --surface: #1a1a19; --page: #0d0d0d; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
+  --s1: #3987e5; --s2: #d95926; --s3: #2bbf85; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
 }} }}
 :root[data-theme="dark"] {{
   color-scheme: dark;
   --surface: #1a1a19; --page: #0d0d0d; --ink: #ffffff; --ink2: #c3c2b7;
   --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
-  --s1: #3987e5; --s2: #d95926; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
+  --s1: #3987e5; --s2: #d95926; --s3: #2bbf85; --good-text: #0ca30c; --wash: rgba(255,255,255,.06);
 }}
 * {{ box-sizing: border-box; margin: 0; }}
 body {{ background: var(--page); color: var(--ink);
@@ -324,8 +335,8 @@ svg {{ width: 100%; height: auto; display: block; }}
 .grid {{ stroke: var(--grid); stroke-width: 1; }}
 .axis {{ stroke: var(--axis); stroke-width: 1; }}
 .tick {{ fill: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }}
-.s1 {{ fill: var(--s1); }} .s2 {{ fill: var(--s2); }}
-rect.s1:hover, rect.s2:hover {{ opacity: .8; }}
+.s1 {{ fill: var(--s1); }} .s2 {{ fill: var(--s2); }} .s3 {{ fill: var(--s3); }}
+rect.s1:hover, rect.s2:hover, rect.s3:hover {{ opacity: .8; }}
 .tablewrap {{ overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }}
 table {{ border-collapse: collapse; width: 100%; font-size: 13px; }}
 th {{ text-align: left; color: var(--ink2); font-weight: 600; font-size: 12px; }}
@@ -333,7 +344,7 @@ th, td {{ padding: 8px 12px; border-bottom: 1px solid var(--grid); white-space: 
 tr:last-child td {{ border-bottom: 0; }}
 td.num, th.num {{ font-variant-numeric: tabular-nums; }}
 .chip {{ display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }}
-.chip.c1 {{ background: var(--s1); }} .chip.c2 {{ background: var(--s2); }}
+.chip.c1 {{ background: var(--s1); }} .chip.c2 {{ background: var(--s2); }} .chip.c3 {{ background: var(--s3); }}
 .st-good {{ color: var(--good-text); }} .st-serious {{ color: var(--critical); }}
 .st-critical {{ color: var(--critical); font-weight: 600; }} .st-muted {{ color: var(--muted); }}
 .muted {{ color: var(--muted); }}
@@ -365,7 +376,7 @@ footer {{ margin-top: 26px; color: var(--muted); font-size: 12px; }}
 <div class="tiles">
   <div class="tile"><div class="k">Spend today (so far)</div><div class="v">{rupees(spend_today)}</div></div>
   <div class="tile"><div class="k">Leads today</div><div class="v">{leads_today}</div>
-    <div class="sub">Studio {t.get(STUDIO,{}).get("leads",0)} · 2BHK {t.get(BHK2,{}).get("leads",0)}</div></div>
+    <div class="sub">{leads_sub}</div></div>
   <div class="tile"><div class="k">Blended CPL today</div>
     <div class="v">{rupees(spend_today/leads_today) if leads_today else "—"}</div></div>
   <div class="tile"><div class="k">Cost / verified visit (30d)</div>
@@ -391,17 +402,17 @@ footer {{ margin-top: 26px; color: var(--muted); font-size: 12px; }}
 
 <div class="cards">
   <div class="card"><h3>Leads per day</h3>
-    <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
+    <div class="legend">{camp_legend}</div>
     <div id="chart-leads"></div></div>
   <div class="card"><h3>Spend per day</h3>
-    <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
+    <div class="legend">{camp_legend}</div>
     <div id="chart-spend"></div></div>
 </div>
 
 <h2>Cost per lead</h2>
 <div class="cards">
   <div class="card"><h3>CPL per day <span class="muted" style="font-weight:400">(days with 0 leads show no bar)</span></h3>
-    <div class="legend"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>2BHK</span></div>
+    <div class="legend">{camp_legend}</div>
     <div id="chart-cpl"></div></div>
   <div class="card"><h3>CPL over the selected range</h3>
     <div id="cpl-summary"></div></div>
@@ -447,6 +458,10 @@ const DATA = {payload};
 const $ = (s) => document.querySelector(s);
 const fromEl = $("#from"), toEl = $("#to");
 const fmtR = (v) => "₹" + Math.round(v).toLocaleString("en-IN");
+// chip/series class per campaign, by its position in DATA.camps — so a new
+// campaign just needs adding to CAMPS in build_dashboard.py and gets the next
+// color/chip class automatically, no chart code changes.
+const campClass = (c) => "c" + (Math.max(0, DATA.camps.indexOf(c)) + 1);
 
 function isoAddDays(iso, n) {{
   // Parse and add in UTC: local-time parse + toISOString() made +1 day a no-op
@@ -473,9 +488,11 @@ function niceMax(v) {{
 function barChart(el, days, val, fmt) {{
   const W = 660, H = 200, PL = 46, PB = 26, PT = 12;
   const pw = W - PL - 12, ph = H - PB - PT;
-  const mx = niceMax(Math.max(1, ...days.flatMap(dt => [val("Studio", dt), val("2BHK", dt)])));
+  const camps = DATA.camps, N = camps.length;
+  const mx = niceMax(Math.max(1, ...days.flatMap(dt => camps.map(c => val(c, dt)))));
   const n = days.length, gw = pw / Math.max(n, 1);
-  const bw = Math.max(2, Math.min(22, (gw - 4) / 2));
+  const bw = Math.max(2, Math.min(22, (gw - (N - 1) * 2) / N));
+  const groupW = N * bw + (N - 1) * 2;
   let s = "";
   [0, mx / 2, mx].forEach((yv, gi) => {{
     const yy = PT + ph - ph * yv / mx;
@@ -484,8 +501,8 @@ function barChart(el, days, val, fmt) {{
   }});
   const step = Math.max(1, Math.ceil(n / 8));
   days.forEach((dt, i) => {{
-    const x0 = PL + i * gw + (gw - 2 * bw - 2) / 2;
-    ["Studio", "2BHK"].forEach((c, si) => {{
+    const x0 = PL + i * gw + (gw - groupW) / 2;
+    camps.forEach((c, si) => {{
       const v = val(c, dt), bh = ph * v / mx;
       s += `<rect x="${{(x0 + si * (bw + 2)).toFixed(1)}}" y="${{(PT + ph - bh).toFixed(1)}}"` +
            ` width="${{bw.toFixed(1)}}" height="${{Math.max(bh, 0).toFixed(1)}}" rx="2" class="s${{si + 1}}">` +
@@ -518,7 +535,7 @@ function render() {{
   // CPL summary tiles for the range
   let cplHtml = '<div class="tiles" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">';
   let tsp = 0, tld = 0;
-  ["Studio", "2BHK"].forEach(c => {{
+  DATA.camps.forEach(c => {{
     const rs = DATA.daily.filter(r => r.camp === c && inR(r.date));
     const sp = rs.reduce((a, r) => a + r.spend, 0), ld = rs.reduce((a, r) => a + r.leads, 0);
     tsp += sp; tld += ld;
@@ -541,7 +558,7 @@ function render() {{
   const adRows = Object.values(adAgg).sort((a, b) => b.spend - a.spend);
   const totalAdSpend = adRows.reduce((a, r) => a + r.spend, 0);
   $("#ads-body").innerHTML = adRows.map(r =>
-    `<tr><td>${{r.ad}}</td><td><span class="chip ${{r.camp === "Studio" ? "c1" : "c2"}}">${{r.camp}}</span></td>` +
+    `<tr><td>${{r.ad}}</td><td><span class="chip ${{campClass(r.camp)}}">${{r.camp}}</span></td>` +
     `<td class="num">${{fmtR(r.spend)}}</td><td class="num">${{r.leads}}</td>` +
     `<td class="num">${{r.leads ? fmtR(r.spend / r.leads) : "—"}}</td>` +
     `<td class="num">${{r.imp ? (100 * r.clicks / r.imp).toFixed(2) + "%" : "—"}}</td>` +
@@ -552,7 +569,7 @@ function render() {{
 
   // campaign aggregates over range
   let rows = "";
-  ["Studio", "2BHK"].forEach((c, si) => {{
+  DATA.camps.forEach((c, si) => {{
     const rs = DATA.daily.filter(r => r.camp === c && inR(r.date));
     const sp = rs.reduce((a, r) => a + r.spend, 0), ld = rs.reduce((a, r) => a + r.leads, 0);
     const im = rs.reduce((a, r) => a + r.imp, 0), ck = rs.reduce((a, r) => a + r.clicks, 0);
@@ -572,7 +589,7 @@ function render() {{
   $("#speed-body").innerHTML = sp.map(r => {{
     const cls = r.st === "warn" ? "st-serious" : "st-good";
     const ico = r.st === "warn" ? "⚠" : "✓";
-    return `<tr><td>${{r.name}}</td><td><span class="chip ${{r.camp === "Studio" ? "c1" : "c2"}}">${{r.camp}}</span></td>` +
+    return `<tr><td>${{r.name}}</td><td><span class="chip ${{campClass(r.camp)}}">${{r.camp}}</span></td>` +
       `<td class="num">${{r.ts.slice(5, 16)}}</td><td>${{r.intent}}</td><td>${{r.budget || "—"}}</td>` +
       `<td>${{r.logged}}</td><td class="${{cls}}">${{ico}} ${{r.lag}}</td></tr>`;
   }}).join("") || `<tr><td colspan="7" class="muted">No CRM leads in this range.</td></tr>`;
