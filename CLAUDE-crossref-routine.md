@@ -39,14 +39,30 @@ Non-negotiable rules for EVERY run, regardless of what the day's task prompt say
 3. A run that commits reports but does not confirm Telegram delivery is a FAILED run.
 
 ## Business context (never forget)
-- Product: BARE SHELL studio, ₹87 lakh, Mulund West, 5 min from MG Road station.
+- Site: Divya Jyot LYF Rewa, Mulund West, 5 min from MG Road station. THREE unit types are
+  now actively marketed, each with its own Meta campaign — treat this as N campaigns, not a
+  fixed 2, and expect a 4th/5th to launch the same way in future:
+  - **Studio** — ₹87 lakh, BARE SHELL. Campaign "Divya Jyot V3 June26", ad "Studio". The
+    original/flagship product — most of the historical LEARNED RULES below were written
+    against this campaign alone.
+  - **2BHK** — ceiling ~₹1.4cr this project can serve (leads asking above that are a quality
+    mismatch, not a real match). Campaign "Divya Jyot V3 July 26 - 2BHK", ads "2BHK 36/57
+    Seconds" + "2BHK 29 Seconds" (two hook variants), launched 2026-07-06.
+  - **1BHK** — launched 2026-08-18. Campaign "Divya Jyot V4 Aug26 - 1BHK", ads "1BHK
+    Gujarati" / "1BHK Hindi" (language-targeted, same product). **Price band not yet
+    confirmed — ASK KEVAL** before making any budget-mismatch judgment calls on 1BHK leads;
+    don't guess a number. Historical `facebook_tab` feedback (pre-dating this campaign) shows
+    walk-in 1bhk asks ranging roughly ₹60L-1.1cr, but that's demand, not the actual unit price.
 - The REAL metric is **cost per site visit** and **warm-lead rate**, NOT CPL. High CPL is
   fine if leads are high-intent and convert to visits. NEVER recommend pausing an ad on CPL
   alone.
-- V3 strategy: OTP-verified higher-intent form deliberately trades lead volume for quality.
-  Historical baseline: ~2.3% warm, ~4.5% site-visit. Measure whether V3 beats that.
+- V3/V4 strategy: OTP-verified higher-intent form deliberately trades lead volume for quality.
+  Historical baseline: ~2.3% warm, ~4.5% site-visit. Measure whether each campaign beats that.
 - Dominant quality leak: leads wanting OTHER locations (Ghatkopar, Navi Mumbai, rentals,
-  other states) or budgets far below ₹87L, or 2BHK at 1.4cr+ this project can't serve.
+  other states), or a budget/config this project's *matching* unit type can't serve (e.g.
+  2BHK asks above ~1.4cr). Judge each lead against the unit type its OWN ad/campaign sells,
+  not against Studio's ₹87L by default — a 1BHK-ad lead asking for a 1BHK isn't a mismatch
+  just because it isn't a Studio.
 
 ## The data you have (data.json)
 - `meta.today_campaigns` + `meta.today_ads` — **TODAY so far**, from midnight IST up to the
@@ -101,20 +117,29 @@ Use yesterday / last7 / last30 for comparison and trend, not as the headline win
    - Impressions / reach
    - Clicks (and link clicks)
    - Leads (form submissions) — use the canonical `leads` count; verify against
-     `lead_actions_raw` so it matches Ads Manager. State the platform split (fb vs ig) from
-     `today_ads` when useful.
+     `lead_actions_raw` so it matches Ads Manager. Break out by CAMPAIGN (Studio / 2BHK /
+     1BHK / any future one — read whichever campaigns actually appear in `today_campaigns`,
+     don't hardcode the list) since each targets a different unit type and quality bar. State
+     the platform split (fb vs ig) from `today_ads` when useful.
    - Of those leads: how many CONTACTED by the team, and how many still untouched
    - Site visits logged today
    Present as a clean funnel so the drop-off at each stage is visible. State the window
    explicitly ("today, midnight–7PM IST") so Keval knows it's a partial day, and note that
    today's figures will keep moving after the report.
 
-**3. AD PERFORMANCE (agency hat)** — CTR, CPC, CPM, frequency, reach for today so far.
-   Compare to yesterday and the 7-day trend. Is the creative fatiguing (frequency climbing,
-   CTR dropping)? Is delivery healthy? Per-ad from `today_ads` if multiple ads run. This is
-   your ad-agency analysis. NOTE post-pause: the campaign was paused June 22 for a Meta
+**3. AD PERFORMANCE (agency hat)** — CTR, CPC, CPM, frequency, reach for today so far, BROKEN
+   OUT PER CAMPAIGN (Studio / 2BHK / 1BHK / whatever is actually live — read the campaign list
+   from the data, don't assume a fixed count). Compare each to its own yesterday and 7-day
+   trend — don't blend a fatiguing 2BHK creative into a healthy Studio number. Is any single
+   campaign's creative fatiguing (frequency climbing, CTR dropping)? Is delivery healthy across
+   all of them? Per-ad from `today_ads` when a campaign runs multiple ad variants (e.g. 2BHK's
+   "36/57/29 Seconds" hooks, 1BHK's Gujarati/Hindi language split). This is your ad-agency
+   analysis. A NEW campaign in its first days/weeks (like 1BHK from 2026-08-18) has no
+   meaningful trend yet — say so plainly rather than judging it against Studio's mature
+   baseline. NOTE post-pause: the ORIGINAL Studio campaign was paused June 22 for a Meta
    account-security flag and resumed after a budget-threshold protection was set — if today
-   shows delivery returning, say so; if still dark, flag it first thing.
+   shows Studio delivery returning, say so; if still dark, flag it first thing. This note is
+   about Studio specifically, not the other campaigns.
 
 **4. SPEED-TO-LEAD (sales-manager hat) — the most important section.**
    The premise: an OTP-verified lead has their phone in hand. Call in minutes → they answer.
@@ -233,20 +258,37 @@ the list. Commit message must say what was learned in one line.
   starts with "$" or contains a decimal point, strip the trailing ".00"/decimal remainder
   before taking the last 10 digits, or try BOTH the first-10 and last-10-digit candidates
   and accept either as a CRM match.
-- 2026-07-21/22 (CORRECTED — do not repeat this mistake): the CRM Event spreadsheet
-  (`LEADS_SHEET_ID`) gets a NEW TAB per lead form, not one tab total — `Sheet1` (Studio) and
-  `Sheet2` ("2BHK", added the day that campaign launched) both feed real, working data.
-  `fetch_all.py` used to hardcode `Sheet1!A1:Q5000`, so `Sheet2` was silently never read and
-  an entire real campaign's leads were invisible — reported to Keval as a "critical tracking
-  gap" that didn't actually exist. Fixed: `fetch_sheets()` now calls `spreadsheets().get()` to
-  enumerate every tab in the spreadsheet and reads all of them. **Standing rule: before ever
-  reporting a data-completeness problem (a campaign/form/source "not showing up"), check
-  whether the read is scoped to one sheet/tab/range that a newer form might have bypassed —
-  a missing read looks identical to a missing integration from the output alone, but they need
-  opposite fixes.** This one took Keval pushing back three separate times (lead count, "no CRM
-  coverage" claim, two named leads) before it surfaced — treat persistent user pushback on a
-  headline number as a strong signal to re-derive from raw sources, not to re-explain the same
-  conclusion more confidently.
+- 2026-07-21/22 (CORRECTED — do not repeat this mistake; UPDATED 2026-08-18, see below): the
+  CRM Event spreadsheet (`LEADS_SHEET_ID`) gets a NEW TAB per lead form, not one tab total —
+  `Sheet1` (Studio) and `Sheet2` ("2BHK", added the day that campaign launched) both feed real,
+  working data. `fetch_all.py` used to hardcode `Sheet1!A1:Q5000`, so `Sheet2` was silently
+  never read and an entire real campaign's leads were invisible — reported to Keval as a
+  "critical tracking gap" that didn't actually exist. Fixed: `fetch_sheets()` now calls
+  `spreadsheets().get()` to enumerate every tab in the spreadsheet and reads all of them.
+  **Standing rule: before ever reporting a data-completeness problem (a campaign/form/source
+  "not showing up"), check whether the read is scoped to one sheet/tab/range that a newer form
+  might have bypassed — a missing read looks identical to a missing integration from the
+  output alone, but they need opposite fixes.** This one took Keval pushing back three separate
+  times before it surfaced — treat persistent user pushback on a headline number as a strong
+  signal to re-derive from raw sources, not to re-explain the same conclusion more confidently.
+  **UPDATE 2026-08-18 — the OPPOSITE failure, confirmed for real this time:** a 3rd campaign
+  ("Divya Jyot V4 Aug26 - 1BHK") launched and was delivering same-day (Meta: ₹471.97 spend, 5
+  leads, confirmed via `spreadsheets().get()` returning ONLY `Sheet1`/`Sheet2`, no `Sheet3`).
+  This is a genuine missing INTEGRATION, not a missing read — the 1BHK lead form isn't feeding
+  the CRM Event sheet at all yet, so `meta_leads_timed` has zero record of any 1BHK lead
+  despite real ad spend. Compounding sign found the same day: `facebook_tab` picked up 3 new
+  rows (Urmi Gala, Vilas Shah, Lalji) with the phone cell literally `"---------"` instead of a
+  number, all instantly marked Dead/"Not contact" — plausibly the same 5 1BHK leads arriving
+  through a broken pipe that drops the phone digits before the team ever sees them (not
+  confirmed by name/time match, since there's no CRM record to match against — flag as a
+  strong hypothesis, not fact). **Standing rule, both directions: every run, compare the set of
+  campaigns with real spend/leads in `meta.today_campaigns` against the set of CRM tabs from
+  `spreadsheets().get()`. A campaign present in one but not the other is EITHER a stale-code
+  read-scope bug (fix the code) OR a live integration gap upstream of this pipeline (tell Keval,
+  don't try to code around it) — tell them apart by checking whether `spreadsheets().get()`
+  itself already lists the tab (if yes, code bug; if the tab plain doesn't exist yet, it's
+  upstream).** Also: any `facebook_tab` row with a dashed/placeholder phone cell instead of
+  digits is worth flagging on sight — a lead the team has no way to call.
 - 2026-07-27: once a lead has a logged site visit, POST-VISIT follow-up call notes get added as
   trailing dated columns on that lead's SVD-tab row itself, NOT as new rows in the Facebook tab —
   e.g. Ashok Savalkar's "26/7/26 Max budget is 1cr" note (referenced in the 26 Jul report) lives in
