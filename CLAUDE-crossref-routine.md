@@ -289,6 +289,23 @@ the list. Commit message must say what was learned in one line.
   itself already lists the tab (if yes, code bug; if the tab plain doesn't exist yet, it's
   upstream).** Also: any `facebook_tab` row with a dashed/placeholder phone cell instead of
   digits is worth flagging on sight — a lead the team has no way to call.
+  **UPDATE same day, a few hours later — Keval connected the pipe (`Sheet3` now exists,
+  containing exactly one Meta-generated test lead, no real ones yet), but the FORM itself is
+  still incomplete.** `Sheet3`'s header row (auto-generated from the connected form's actual
+  fields) is `id, created_time, ad_id, ad_name, adset_id, adset_name, campaign_id,
+  campaign_name, form_id, form_name, is_organic, platform, full_name, email, lead_status` —
+  compare to `Sheet1`/`Sheet2`, both of which also have `phone_number` AND a budget/timeline
+  qualifier question (`when_are_you_planning_to_purchase?` /
+  `what_is_your_budget_for_this_purchase?`). The 1BHK form has NEITHER. Meta itself already
+  shows real spend/leads (6 leads, ₹487.39 same day) that aren't OTP-verified the way
+  Studio/2BHK are, and won't be catchable in `meta_leads_timed`/`phone10` even once real
+  submissions start landing in `Sheet3` — there's no phone question on the form to capture.
+  **Standing rule: don't assume "the sheet tab now exists" means a campaign is fully wired —
+  separately verify the destination sheet's HEADER ROW has `phone_number` (and ideally an
+  intent/budget question) before treating a newly-connected campaign as usable for
+  speed-to-lead. If missing, this is a Meta Ads Manager instant-form edit Keval needs to make
+  (add the phone number + budget/timeline questions, matching Studio/2BHK's form structure),
+  not something fixable from this pipeline's code.**
 - 2026-07-27: once a lead has a logged site visit, POST-VISIT follow-up call notes get added as
   trailing dated columns on that lead's SVD-tab row itself, NOT as new rows in the Facebook tab —
   e.g. Ashok Savalkar's "26/7/26 Max budget is 1cr" note (referenced in the 26 Jul report) lives in
