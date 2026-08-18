@@ -1,83 +1,74 @@
 DIVYA JYOT LYF REWA - DAILY SNAPSHOT
-Monday, 17 August 2026
+Tuesday, 18 August 2026
 
-16 AUGUST REPORT WAS MISSED - folded into this run
-No report ran yesterday. The scheduler skipped the day entirely - same silent failure mode seen before. Nothing was lost data-wise: 16 Aug's numbers below are fully reconciled (Meta and CRM leads match exactly, 17=17). But you saw no report for 24+ hours. Worth checking the schedule on your end.
-
-FOLLOW-UP FROM LAST REPORT (15 August)
-- Ankit - 7th straight day, still never dialed correctly. Wrong number called again both 16 and 17 Aug. Real number never once tried in 7 days.
-- Sandesh Padwal - day 25, still a stranger's phone. Same wrong-number pattern since 24 Jul.
-- NEW third wrong-number case found today: Parag Gore. Same failure mode a third time in under a month - now a systemic process problem, not bad luck.
-- Srikant Iyer - still zero CRM record, day 6, zero follow-up ever.
-- Celine - day 22, still zero record anywhere.
-- Sandesh Howal - now 18 days silent (last touch 30 Jul), up from 16.
-- Jigna Rathod correction holds - called again 17 Aug on a normal cadence, not abandoned.
-- Vishal Kasar - touched again, still active, "coming tomorrow" from 8 Aug never resolved.
-- Dhananjay Kholamkar - re-confirmed today, "coming this Thursday" (20 Aug), same commitment restated.
-- Fake "Meta Sent" streak: no new one. Cumulative count holds at 10.
-- Correction: "2BHK 57 Seconds" is NOT dead - it picked back up with real spend and leads on 16 Aug. Reversing the 15 Aug call to escalate it.
+FOLLOW-UP FROM LAST REPORT (17 August)
+- 17 Aug FINAL numbers, refetched: Studio grew to Rs 773.32/4 leads (spend-only revision). 2BHK grew to Rs 1,170.69/4 leads - 2 more real leads landed after the ~7PM cutoff.
+- Ankit, Sandesh Padwal, Parag Gore - no new dial logged for any of them as of this run (~5PM). Real numbers unchanged: Ankit 7021116501, Padwal 9819910669, Parag Gore 9820973479. Push all three today.
+- Srikant Iyer - day 7, still zero CRM record, zero follow-up ever.
+- Shikha Thakkar's visit commitment slipped from "today" (16 Aug) to "next Sunday" (23 Aug).
+- Arvind Gupta's "coming tomorrow" did not convert - just another "Ringing" note on 17 Aug.
+- Sham Gosavi (created 16 Aug) has ZERO follow-up logged since creation - 2 days silent.
+- Dhananjay Kholamkar - no new note, 20 Aug commitment still stands.
+- Ushma Katira's revisit slipped from "today" to "coming tomorrow" - watch the next refetch.
+- No new CRM-verified site visit today.
 
 1. HEADLINE
-16 August (the missed day) was the best CPL day in over a month - Rs 132.65 blended, 17 leads, Meta and CRM in perfect agreement, plus one CRM-verified visit inside it (Manoj Goklani). Today so far is a smaller, clean 6-lead day (Rs 213.71 CPL, 100% same-day contacted). The real story is sales-side: a THIRD wrong-number case (Parag Gore) just surfaced - the same transcription failure that's already stranded Ankit (7 days) and Sandesh Padwal (25 days). Three live, real leads sitting unreachable behind fixable typos, not disinterest.
+The 1BHK campaign (launched yesterday) is today's cheapest lead source by far - Rs 76.33 CPL, best of all three campaigns - but it is currently producing ZERO contactable leads. Of 7 Meta-reported 1BHK leads today, 6 have turned up in the team's sheet with the phone field literally blank and were marked Dead/Not Contact within minutes, including one (Madhu Tiwari) now cross-confirmed as a genuine CRM lead with no phone captured at all. Real ad spend (Rs 534) is currently buying leads the sales team has no way to call.
 
-2. THE FUNNEL
-
-16 August - FULL DAY (missed report, filed today)
-- Spend Rs 2,255.10 (Studio Rs 1,166.76 + 2BHK Rs 1,088.34)
-- Impressions 12,040, Reach 9,347, Clicks 213, Link clicks 151
-- Leads: 17 - matches CRM exactly, no sync lag this time
-- Blended CPL: Rs 132.65 - cheapest day in at least a month
-- Contacted: 16 of 17 real (same-day, most within 1-2 hours). The 17th, Parag Gore, got a same-day attempt logged - but against the WRONG number. Under his real number, contact is still zero.
-- Site visits: 1 CRM-verified - Manoj Goklani (arrived 14 Aug, visited 16 Aug)
-
-17 August - TODAY SO FAR (midnight to about 7:15PM IST)
-- Spend Rs 1,282.25 (Studio Rs 686.41 + 2BHK Rs 595.84)
-- Impressions 6,599, Reach 5,579, Clicks 115, Link clicks 70
-- Leads: 6 (4 Studio + 2 2BHK) - canonical count matches CRM one-for-one, no double-count bug. Platform split: 5 Instagram, 1 Facebook.
-- Blended CPL: Rs 213.71 - cheaper than the 7-day average
-- Contacted: 6 of 6 (100%), all inside hours of arrival
-- Site visits today: 0. Dimple Dedhia and Ushma Katira (post-visit nurture) both have fresh "coming today" notes - check tomorrow.
+2. THE FUNNEL (today so far, midnight to about 5PM IST, 18 August) - by campaign
+- Studio: Rs 162.74 spend, 1,251 impr, 11 clicks, 6 link clicks, 0 leads. Early in the day, not yet alarming.
+- 2BHK: Rs 833.27 spend, 3,465 impr, 83 clicks, 52 link clicks, 1 lead (Sangeeta Asnani, contacted same-day, real info captured).
+- 1BHK (new): Rs 534.34 spend, 2,150 impr, 78 clicks, 38 link clicks, 7 leads per Meta - cheapest CPL at Rs 76.33. Only 1 of the 7 (Madhu Tiwari) has any CRM record at all.
+- Combined: Rs 1,530.35 spend, 6,866 impr, 172 clicks, 96 link clicks, 8 leads, blended CPL Rs 191.29.
+- Contacted: 2BHK 1 of 1. 1BHK 0 of 7 reachable by phone.
+- Site visits logged today: 0.
 
 3. AD PERFORMANCE (agency hat)
-Account confirmed healthy via direct API check - ACTIVE status, balance Rs 32,843, no disable flag. No fatigue signal - frequency has held flat all month on both campaigns, CTR stable too. 2BHK 57 Seconds is not dead (correcting 15 Aug) - it came back with real delivery and 2 leads on 16 Aug. Trailing 7 days: Studio Rs 7,466.74/31 leads/CPL Rs 240.86; 2BHK Rs 7,394.49/22 leads/CPL Rs 336.11 - both today and 16 Aug ran cheaper than this trend.
+Account confirmed healthy - ACTIVE status, balance Rs 50,489, no disable flag.
+Studio: CTR 0.88% today, below its usual 1.5-2.2% range, but small sample this early - not a fatigue call yet.
+2BHK: CTR 2.40%, frequency 1.38, normal. Nearly all spend and the lead ran through "2BHK 29 Seconds connectivity hook" - the older creative variants got token spend and 0 leads.
+1BHK: brand new, day 1 of real delivery, no trend yet. CTR strong out of the gate (3-5%), but undermined entirely by the tracking gap below. Setup note: "1BHK Gujarati" is running under two separate adsets simultaneously - looks like a duplicate splitting the same creative's data, worth consolidating.
+Trailing 7 days (pre-1BHK): Studio Rs 8,240.06/35 leads/CPL Rs 235.43; 2BHK Rs 8,565.45/26 leads/CPL Rs 329.44 - today sits within or better than this range.
 
 4. SPEED-TO-LEAD (sales-manager hat)
-Both days were fast overall. Genuinely quick daytime responses: Vithal 37 min, Ramchandra Gade 27 min, Ashwin Dhal 45 min, Anil Gawte 1hr17min. Overnight arrivals (9PM-midnight) got same-morning attention, which is reasonable, not slow.
-The one real miss: Parag Gore, arrived 16 Aug 8:29pm, a warm 3-6 month intent lead. Zero contact under his real number as of this fetch - see integrity section for why.
-Aparna Pawar and Jatin Gandhi are duplicate-phone re-leads, both correctly logged as new rows and both contacted same-day - good process, just not precisely timeable by the tool.
+Very little to measure today - only Sangeeta Asnani (2BHK) has a working CRM record with a phone, and she was contacted same-day with real info captured.
+The 1BHK campaign - which would otherwise be exactly the kind of fast-moving day this section rewards - cannot be measured at all today, because there is no phone number anywhere in the system for 6 of its 7 leads. The fastest possible sales response is worthless if the lead can never be dialed.
 
 5. LEAD QUALITY (sales-manager hat)
-16 August: 3 already Dead (Urmila Kumbhar-Salvi - budget/size mismatch, Sharayu Rane - budget below ask, Milind Apte - broker). 3 promising near-term visit signals to watch: Shikha Thakkar, Arvind Gupta, Sham Gosavi. Vishal Thakkar pushed back on price (wants Rs 22,000/sqft) - worth a scripted answer.
-17 August: too early to call quality, 4 of 6 still first-attempt. Jatin Gandhi wants a 2BHK in Kalyan at Rs 1.5-1.75cr - wrong location and above range. Chandresh Shial wants a 2BHK, budget undisclosed.
+Sangeeta Asnani: wants "both" (unspecified config), Mulund (matches project), budget undisclosed - too early to grade, no obvious mismatch.
+1BHK leads: quality is unassessable today - no phone, and for 5 of 6 dashed-phone rows, no requirement text either, just "Not contact."
 
-Real cost-per-visit vs vanity CPL (28-day window, 18 Jul to 17 Aug, CRM-verified only):
-- Spend Rs 55,271.48, Leads 169, vanity CPL Rs 327.05
-- 22 Facebook-sourced SVD visits, 14 verify against the CRM (up from 13 on 15 Aug, entirely from Manoj Goklani's new visit), 8 do not (all previously flagged, unchanged)
-- Real cost-per-visit: Rs 3,948. Visit rate 8.28% - cheaper in absolute terms than 15 Aug, though the rate dipped slightly since 16-17 Aug added 23 leads against only 1 confirmed new visit so far.
+Real cost-per-visit vs vanity CPL (28-day window, 19 Jul to 18 Aug, CRM-verified only, Studio+2BHK only - 1BHK has no visit history yet):
+- Spend Rs 54,381.83, Leads 169, vanity CPL Rs 321.79
+- 14 CRM-verified visits, unchanged from 17 Aug (no new SVD entries today)
+- Real cost-per-visit: about Rs 3,884. Visit rate 8.28%.
 
 5B. DATA INTEGRITY CROSS-CHECK
-NEW: third active wrong-number case - Parag Gore. Sheet has 9820973478; his real CRM phone is 9820973479 - a single-digit typo on the last digit, same failure class as Ankit and Sandesh Padwal. This is now the THIRD confirmed case of this exact bug in under a month. Three real, warm leads went uncalled not from disinterest but from a mistyped digit routing every attempt to a stranger. This has stopped being a one-off.
+CONFIRMED (was a hypothesis two reports ago): the 1BHK campaign's leads are landing with no phone number, and the team is marking them Dead within minutes without ever being able to call them.
 
-Reverse-check unresolved count holds at 8, no growth: Jigna Rathod, Atul Thorat, Sandesh Padwal, Ankit, Bhavin Vora, Nikita Gaurav, Sandesh Howal, Srikant Iyer. (Atul Thorat, Sandesh Padwal and Ankit are typo-explained wrong-number cases within this list; the other five remain genuinely unexplained.)
+What's been verified: yesterday there was no CRM tab at all for 1BHK - a missing integration. That got fixed, Sheet3 now exists and is connected. But Sheet3's only 2 rows so far (a Meta test lead, and a real lead - Madhu Tiwari, arrived 13:36 IST today) both predate the form being edited to add a phone question - neither has a phone number anywhere, because the question didn't exist on the form when they submitted.
 
-No new suspected-fake Meta Sent entry today. Cumulative all-time fake count holds at 10.
+Madhu Tiwari also appears in facebook_tab today - phone cell literally dashes, status Dead/Not Contact, logged the same session she arrived. That's the smoking gun: a name+email-only CRM lead cross-matches exactly to one of the "dashed phone, instant Dead" rows the team has been manually entering.
+
+Five more rows today match the identical pattern - Urmi Gala, Vilas Shah, Lalji, Priyanka Rane, Shailesh - all created today, all dashed phone, all Dead/Not Contact within minutes, no requirement notes. Strongly suspected to be the rest of today's 1BHK leads, entered manually from Ads Manager because the automated Sheets pipe hasn't caught up. Net effect: of 7 real 1BHK leads today, likely 6 are currently un-callable by design, not by team failure. Real money (Rs 534.34) is buying leads nobody can act on.
+
+Open question: has anyone submitted the 1BHK form SINCE the phone question was added? No such row exists yet anywhere as of this fetch. Can't confirm the fix works end-to-end until one does.
+
+Reverse-check / phone-typo tracked list carried forward unchanged from 17 Aug, not independently re-verified today (time went to the 1BHK investigation): Jigna Rathod, Atul Thorat, Sandesh Padwal, Ankit, Bhavin Vora, Nikita Gaurav, Sandesh Howal, Srikant Iyer. Will re-verify in full next run.
 
 6. DIAGNOSTIC STEPS
-1. Sales - Ankit, day 7. Dial 7021116501, not 7201116501. Fix today.
-2. Sales - Sandesh Padwal, day 25. Dial 9819910669, not 9819910699.
-3. Sales - NEW, Parag Gore. Dial 9820973479, not 9820973478. Warm lead going cold from zero real contact.
-4. Sales - process fix, now overdue. Three wrong-number cases in a month is a pattern. Copy-paste the phone from the CRM tab when opening a row - don't retype it. Worth a team huddle.
-5. Sales - Celine (22 days) and Srikant Iyer (day 6) still zero record. Ask both directly.
-6. Sales - Sandesh Howal, 18 days silent. Overdue for another call.
-7. Agency - no action needed on 2BHK 57 Seconds. It's delivering again, reversing the 15 Aug escalation call.
+1. URGENT - 1BHK campaign is spending real money on unreachable leads. Confirm the phone question is live on the form right now by sending one more test lead through the actual public ad. Until a real post-fix lead lands with a phone number, consider whether to keep spending at the current pace.
+2. Sales - Ankit (day 8), Sandesh Padwal (day 26), Parag Gore (day 3). None dialed correctly today as of this run.
+3. Sales - Sham Gosavi, zero contact in 2 days. Call him today regardless of his own timeline.
+4. Sales - Srikant Iyer (day 7) and Celine (day 23), still zero record. Ask directly.
+5. Agency - consolidate the duplicate "1BHK Gujarati" adset so its data isn't split.
 
 7. ANYTHING ELSE
-The ads are healthy - CTR, frequency and CPM all normal, and 16 Aug was one of the best days this campaign has had. The real risk is real, paid-for leads dying in the sheet from typos before sales gets a fair shot. Three cases in a month, all caught only because this routine cross-checks phone digits against the CRM - none would have surfaced from the sheet alone. Worth asking the team lead: how many other "Cold, never progressing" rows have the same problem nobody's checked yet?
+Real irony worth naming: 1BHK is the best-performing campaign today by every number Meta shows - and completely worthless in practice, because the one thing that matters, a phone number, isn't there yet. If this campaign scales before the fix is confirmed working, the wasted spend scales with it. Highest-leverage fix available right now.
 
 LOOKING AHEAD
-- Confirm Ankit's, Sandesh Padwal's and Parag Gore's real numbers all get dialed.
-- Watch whether Shikha Thakkar or Arvind Gupta show up in tomorrow's visit refetch.
-- Confirm Dimple Dedhia's and Ushma Katira's "coming today" 17 Aug notes resolve.
-- Confirm Dhananjay Kholamkar's 20 Aug visit commitment.
-- Get a straight answer on Celine and Srikant Iyer.
-- Check the schedule on your end - 16 Aug's report never ran.
+- Confirm a post-fix 1BHK submission lands with a working phone number.
+- Get Ankit's, Sandesh Padwal's, and Parag Gore's real numbers dialed today.
+- Call Sham Gosavi - 2 days silent.
+- Full reverse-check re-verification next run.
+- Watch for Ushma Katira's revisit and Shikha Thakkar's 23 Aug commitment.
