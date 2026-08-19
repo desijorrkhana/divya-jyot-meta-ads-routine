@@ -18,10 +18,16 @@
   (the V3 CRM Events dataset) — Studio's two ad sets have NO dataset/event attached (page_id
   only).** Recommended to Keval: attach the same dataset+SiteVisit event to Studio (accepting
   a learning-phase reset). **Track whether he does it, and watch Studio's delivery after.**
-- **Direct consequence for integrity checks: 2BHK/1BHK ads now literally optimize on pushed
-  SiteVisit conversions (~14 real/28d), so every fake "Meta Sent ✅" visit (4 confirmed in 30d)
-  is ~22%-level signal pollution — treat any NEW fake pushed visit as a top-severity finding,
-  not a bookkeeping note.**
+- **MAJOR CORRECTION (later same day): the "4 confirmed fakes" narrative was WRONG — every
+  flagged Meta-Sent visit (Dedhia, Payal Shah, Vidhi Thakkar, Subhash Raichura, Ajay Gupta,
+  Sunil Prajapati, Maya Jain, Pravin Jain) carries the team's "FB call" marker = direct
+  callers who skipped the OTP form. Per Keval these are real ad-driven conversions and
+  pushing them is correct. Full standing rule now in CLAUDE-crossref-routine.md (07-26 entry,
+  updated 08-19). Dashboard shows them as 📞 "fbcall", counted separately from CRM-verified.
+  ONE genuinely unexplained SVD row remains: Bhavin Vora 8/8 (no FB-call marker, no CRM
+  match, real 13-Jun sheet lead — likely phone typo; ask the team). Meta attributed only 7
+  SiteVisit conversions in the last 30d (Studio 4, 2BHK 3) — thin signal, so every real
+  visit push still matters.**
 - **Keval started updating Leads Center stages daily as of 19 Aug** — encourage/verify this
   keeps happening; it's the main quality signal for Studio until its dataset is wired, and
   supplementary signal for 2BHK/1BHK.

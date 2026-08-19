@@ -205,8 +205,16 @@ def build():
             continue
         ph = normphone(r[i_num])
         crm = crm_by_phone.get(ph)
+        # "FB call" anywhere in the row is the team's marker for a direct caller: saw the ad,
+        # skipped the OTP form, phoned and visited. Per Keval (19 Aug) these are legitimate
+        # ad-driven conversions — a form/CRM record is exactly what they can't have, so their
+        # absence is not evidence of fabrication. Checked before KNOWN_BAD because the Dedhia
+        # row carries this marker too and predates this understanding.
+        fb_call = any("fb call" in str(c).lower() for c in r)
         if crm:
             status, note = "verified", SHORT.get(crm["campaign"], crm["campaign"])
+        elif fb_call:
+            status, note = "fbcall", "direct FB caller — skipped the OTP form, no CRM record expected"
         elif ph in KNOWN_BAD:
             status, note = "bad", KNOWN_BAD[ph]
         elif ph in ANNOTATED_OK:
@@ -230,6 +238,10 @@ def build():
     cutoff30 = (today - timedelta(days=30)).isoformat()
     v30 = [v for v in visits if v["date"] >= cutoff30]
     n_ver = sum(1 for v in v30 if v["status"] in ("verified", "annotated"))
+    # Direct FB callers (OTP-form skippers) are counted separately: real ad-driven visits per
+    # Keval, but with no CRM record they can't be independently verified, so the headline
+    # cost-per-visit stays strictly CRM-verified and the tile shows both numbers.
+    n_fbcall = sum(1 for v in v30 if v["status"] == "fbcall")
     cost_per_visit = spend30 / n_ver if n_ver else None
     visit_rate = 100.0 * n_ver / leads30 if leads30 else None
     total_fb = matched_fb = 0
@@ -446,7 +458,7 @@ footer {{ margin-top: 26px; color: var(--muted); font-size: 12px; }}
     <div class="v">{rupees(spend_today/leads_today) if leads_today else "—"}</div></div>
   <div class="tile"><div class="k">Cost / verified visit (30d)</div>
     <div class="v">{rupees(cost_per_visit) if cost_per_visit else "—"}</div>
-    <div class="sub">{n_ver} CRM-verified visits</div></div>
+    <div class="sub">{n_ver} CRM-verified visits{f" + {n_fbcall} direct FB calls" if n_fbcall else ""}</div></div>
   <div class="tile"><div class="k">Visit rate (30d)</div><div class="v">{vr_txt}</div>{vr_delta}</div>
   <div class="tile"><div class="k">Sheet↔CRM match (30d)</div>
     <div class="v">{f"{match_rate:.0f}%" if match_rate is not None else "—"}</div>
@@ -661,7 +673,7 @@ function render() {{
 
   // visits
   const ic = {{verified: ["st-good", "✓"], annotated: ["st-good", "✓"], unverified: ["st-serious", "⚠"],
-              bad: ["st-critical", "✗"], prev3: ["st-muted", "•"]}};
+              bad: ["st-critical", "✗"], prev3: ["st-muted", "•"], fbcall: ["st-good", "📞"]}};
   const vs = DATA.visits.filter(v => inR(v.date));
   $("#visits-body").innerHTML = vs.map(v =>
     `<tr><td class="num">${{v.date}}</td><td>${{v.name}}</td><td class="num">${{v.phone}}</td>` +

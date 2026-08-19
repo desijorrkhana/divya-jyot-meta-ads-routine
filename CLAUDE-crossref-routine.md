@@ -320,13 +320,28 @@ the list. Commit message must say what was learned in one line.
   the default branch. (2) The claude.ai schedule itself has skipped days outright (20, 22, 24 Jul, no
   report at all) — the session can't see/fix that config; if a gap is noticed, fold the missed day into
   the current report and tell Keval in the notification so he can check the schedule on claude.ai.
-- 2026-07-26: an SVD row with a "Meta Sent ✅" tag but no CRM phone match is NOT automatically
-  a fabrication like Hitendra/Heena Dedhia — check the name for a bracketed relative tag
-  (e.g. "Jagdish Ravasia {Sushma}") and cross-check THAT name/date against the CRM before
-  flagging it as fake; it may be a real V3 lead visiting under a family member's phone.
-  Conversely, this run also found 2 MORE genuine fakes this way (Payal Shah, Vidhi Thakkar) —
-  no name/phone match anywhere — raising the confirmed-fake Meta-Sent count from 2 to 4 in
-  30 days. Both checks matter: don't undercount real visits, don't undercount fake ones either.
+- 2026-07-26 (SUPERSEDED IN LARGE PART 2026-08-19 — read the update): an SVD row with a
+  "Meta Sent ✅" tag but no CRM phone match is NOT automatically a fabrication — check for a
+  bracketed relative tag (e.g. "Jagdish Ravasia {Sushma}") and cross-check that name/date
+  against the CRM. This run originally concluded Payal Shah and Vidhi Thakkar were "genuine
+  fakes" (no name/phone match anywhere), for a running "4 confirmed fakes in 30 days" count.
+  **UPDATE 2026-08-19 — that conclusion was WRONG.** Keval explained the real mechanism: OTP
+  friction means many genuinely ad-driven prospects never submit the form — they call the
+  number directly and visit. The team marks these rows "FB call" in the SVD tab, and EVERY
+  name on the "fake" list (Dedhia, Payal Shah, Vidhi Thakkar, Subhash Raichura, Ajay Gupta,
+  Sunil Prajapati, Maya Jain, Pravin Jain) carries that marker. A direct caller BY DEFINITION
+  has no CRM/form record — its absence is not evidence of fabrication. Pushing these to Meta
+  is legitimate offline-conversion practice (Meta only attributes the event if it matches the
+  phone to someone who actually saw/clicked the ad). **Standing rule: an SVD row with an
+  "FB call" marker is a legitimate direct-caller visit — never report it as fake or as CAPI
+  pollution. Only a Facebook-sourced SVD row with NO FB-call marker, NO CRM match, NO relative
+  tag, and no typo explanation deserves an integrity flag (as of 19 Aug exactly one exists:
+  Bhavin Vora, 8/8 — likely phone typo, he's a real 13-Jun sheet lead). The residual thing to
+  keep watching: "FB" on a direct call must come from asking the caller where they saw us,
+  not be the default for unknown callers — spot-check occasionally, and never let a claimed
+  source get pushed for someone the team KNOWS came from elsewhere. Dashboard counts these
+  separately ("fbcall" status, 📞) and keeps the headline cost-per-visit strictly
+  CRM-verified, stating both numbers.**
 - 2026-07-29: `sheet.contact_history` is keyed by PHONE NUMBER, so it breaks on a duplicate-phone
   re-lead (same person submits the Meta form twice). Only one bracket set survives per phone,
   and it gets attached to whichever sheet row the code finds for that phone — usually the OLDER
