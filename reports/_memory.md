@@ -1,5 +1,35 @@
 # Routine memory — read at the start of every run, update at the end
 
+## Added 2026-08-19 (interactive session with Keval, morning)
+
+- **1BHK form fix CONFIRMED WORKING: 19 Aug leads carry real phone numbers** (Rashi 7208720970,
+  Manish Doshi 9029026060, Gunjan Gangar 9022112040, Reva Amit 9699998599, Shailesh 8433533722 —
+  all in `facebook_tab` with digits, team already dialing). Yesterday's 6 no-phone leads remain
+  uncallable unless Keval exports them from Leads Center (told him how).
+- **NEW CRM tab AGAIN: `Sheet4`** (form renamed/re-created "1BHK form 8/18/26",
+  form_id f:2132729500922621) — third tab churn in 2 days (Sheet3 → Sheet4). Only 1 of the 5
+  19-Aug leads (Raju Dangi, 11:11 IST, within_3_months, ₹1.01–1.10cr) synced to Sheet4; the
+  other 4 are sheet-only ("Unsynced" on the dashboard). **Next run: check whether the remaining
+  4 backfilled into Sheet4, and watch for yet another new tab whenever the form is edited.**
+- **VERIFIED VIA API (adsets endpoint, 19 Aug): ALL active ad sets already run
+  `optimization_goal: QUALITY_LEAD`** ("Maximize qualified leads") — do NOT advise "switch to
+  conversion leads," that was wrong; it's already on. Key difference found: **2BHK + both 1BHK
+  ad sets have `promoted_object` wired to pixel 1523674755877090 / custom event "SiteVisit"
+  (the V3 CRM Events dataset) — Studio's two ad sets have NO dataset/event attached (page_id
+  only).** Recommended to Keval: attach the same dataset+SiteVisit event to Studio (accepting
+  a learning-phase reset). **Track whether he does it, and watch Studio's delivery after.**
+- **Direct consequence for integrity checks: 2BHK/1BHK ads now literally optimize on pushed
+  SiteVisit conversions (~14 real/28d), so every fake "Meta Sent ✅" visit (4 confirmed in 30d)
+  is ~22%-level signal pollution — treat any NEW fake pushed visit as a top-severity finding,
+  not a bookkeeping note.**
+- **Keval started updating Leads Center stages daily as of 19 Aug** — encourage/verify this
+  keeps happening; it's the main quality signal for Studio until its dataset is wired, and
+  supplementary signal for 2BHK/1BHK.
+- Dashboard code (build_dashboard.py) gained two features on 19 Aug, both live on main:
+  no-phone leads and CRM-unsynced leads now appear in Open integrity flags AND the Speed to
+  lead table ("Unsynced" campaign chip, ⚠ by name). Live URL:
+  https://divya-jyot-meta-ads-routine-dashboard.keval-921.workers.dev
+
 ## Updated 2026-08-18 (2nd run today, ~7PM check)
 
 - **1BHK phone-number gap: unresolved across TWO checks today (~5PM and ~7PM), zero movement.**
