@@ -92,6 +92,8 @@ def build():
     # ---- Facebook tab: phone -> sorted list of row-created dates (for day-level contact) ----
     fhdr = [h.strip().lower() for h in fb_tab[0]]
     fi_created, fi_phone = fhdr.index("created"), fhdr.index("phone")
+    fi_name = fhdr.index("name") if "name" in fhdr else None
+    fi_status = fhdr.index("status") if "status" in fhdr else None
     fb_dates_by_phone = {}
     for r in fb_tab[1:]:
         if len(r) <= fi_phone:
@@ -239,6 +241,25 @@ def build():
         if near:
             flags.append(("serious", f"Phone typo suspected: CRM lead {esc(l['name'])} is {p}, "
                                      f"sheet has {near[0]} — team may be dialing a wrong number."))
+    # Leads logged with a placeholder/blank phone (e.g. a form missing the phone question) are
+    # invisible everywhere else on this dashboard, since every table above is keyed by phone10 —
+    # surface them here by name instead so real spend on an uncallable lead never goes unseen.
+    if fi_name is not None:
+        no_phone_cutoff = (today - timedelta(days=7)).isoformat()
+        for r in fb_tab[1:]:
+            if len(r) <= fi_phone:
+                continue
+            raw_phone = r[fi_phone] or ""
+            if normphone(raw_phone) or any(c.isdigit() for c in str(raw_phone)):
+                continue  # has a usable or at least partially-digit number — not this case
+            dt = parse_dmy(r[fi_created], today)
+            if not dt or dt.isoformat() < no_phone_cutoff:
+                continue
+            nm = (r[fi_name] if len(r) > fi_name else "").strip() or "(no name)"
+            status = (r[fi_status] if fi_status is not None and len(r) > fi_status else "").strip()
+            flags.append(("serious", f"{esc(nm)} (created {dt.isoformat()}) — no phone number captured "
+                                     f"anywhere{f', status {esc(status)}' if status else ''}; "
+                                     f"currently un-callable by the sales team."))
     flags_html = "".join(
         f'<li class="flag-{sev}"><span class="flag-ico">{"✗" if sev=="critical" else "⚠"}</span> {msg}</li>'
         for sev, msg in flags) or '<li class="muted">No open integrity flags. ✓</li>'
