@@ -260,6 +260,28 @@ def build():
             flags.append(("serious", f"{esc(nm)} (created {dt.isoformat()}) — no phone number captured "
                                      f"anywhere{f', status {esc(status)}' if status else ''}; "
                                      f"currently un-callable by the sales team."))
+    # A recent facebook_tab row WITH a real phone but no matching CRM (meta_leads_timed) record
+    # is a different gap than the no-phone case above: the team can see and call this lead, but
+    # it's absent from the dashboard's main leads table (which is sourced from the CRM sheet
+    # only) and from every CRM-based stat on this page. Short 2-day window — this is meant to
+    # catch a live sync gap, not relitigate old/non-Meta rows the reverse-check in the report
+    # already handles with more care (name-typo matching, known-fake precedents, etc).
+    if fi_name is not None:
+        unsynced_cutoff = today - timedelta(days=2)
+        for r in fb_tab[1:]:
+            if len(r) <= fi_phone:
+                continue
+            ph = normphone(r[fi_phone] or "")
+            if not ph or ph in crm_by_phone:
+                continue
+            dt = parse_dmy(r[fi_created], today)
+            if not dt or dt < unsynced_cutoff:
+                continue
+            nm = (r[fi_name] if len(r) > fi_name else "").strip() or "(no name)"
+            flags.append(("serious", f"{esc(nm)} ({ph}, created {dt.isoformat()}) — has a real phone number "
+                                     f"in the team's sheet but no matching CRM record yet; not on this "
+                                     f"dashboard's leads table or in any CRM-based stat until it syncs. "
+                                     f"Verify it's a live sync lag and not a non-Meta entry."))
     flags_html = "".join(
         f'<li class="flag-{sev}"><span class="flag-ico">{"✗" if sev=="critical" else "⚠"}</span> {msg}</li>'
         for sev, msg in flags) or '<li class="muted">No open integrity flags. ✓</li>'
