@@ -1,82 +1,48 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Added 2026-08-19 (interactive session with Keval, morning)
+## Added 2026-08-19 (evening run, ~7:11PM IST)
 
-- **1BHK form fix CONFIRMED WORKING: 19 Aug leads carry real phone numbers** (Rashi 7208720970,
-  Manish Doshi 9029026060, Gunjan Gangar 9022112040, Reva Amit 9699998599, Shailesh 8433533722 —
-  all in `facebook_tab` with digits, team already dialing). Yesterday's 6 no-phone leads remain
-  uncallable unless Keval exports them from Leads Center (told him how).
-- **NEW CRM tab AGAIN: `Sheet4`** (form renamed/re-created "1BHK form 8/18/26",
-  form_id f:2132729500922621) — third tab churn in 2 days (Sheet3 → Sheet4). Only 1 of the 5
-  19-Aug leads (Raju Dangi, 11:11 IST, within_3_months, ₹1.01–1.10cr) synced to Sheet4; the
-  other 4 are sheet-only ("Unsynced" on the dashboard). **Next run: check whether the remaining
-  4 backfilled into Sheet4, and watch for yet another new tab whenever the form is edited.**
-- **VERIFIED VIA API (adsets endpoint, 19 Aug): ALL active ad sets already run
-  `optimization_goal: QUALITY_LEAD`** ("Maximize qualified leads") — do NOT advise "switch to
-  conversion leads," that was wrong; it's already on. Key difference found: **2BHK + both 1BHK
-  ad sets have `promoted_object` wired to pixel 1523674755877090 / custom event "SiteVisit"
-  (the V3 CRM Events dataset) — Studio's two ad sets have NO dataset/event attached (page_id
-  only).** Recommended to Keval: attach the same dataset+SiteVisit event to Studio (accepting
-  a learning-phase reset). **Track whether he does it, and watch Studio's delivery after.**
-- **MAJOR CORRECTION (later same day): the "4 confirmed fakes" narrative was WRONG — every
-  flagged Meta-Sent visit (Dedhia, Payal Shah, Vidhi Thakkar, Subhash Raichura, Ajay Gupta,
-  Sunil Prajapati, Maya Jain, Pravin Jain) carries the team's "FB call" marker = direct
-  callers who skipped the OTP form. Per Keval these are real ad-driven conversions and
-  pushing them is correct. Full standing rule now in CLAUDE-crossref-routine.md (07-26 entry,
-  updated 08-19). Dashboard shows them as 📞 "fbcall", counted separately from CRM-verified.
-  ONE genuinely unexplained SVD row remains: Bhavin Vora 8/8 (no FB-call marker, no CRM
-  match, real 13-Jun sheet lead — likely phone typo; ask the team). Meta attributed only 7
-  SiteVisit conversions in the last 30d (Studio 4, 2BHK 3) — thin signal, so every real
-  visit push still matters.**
-- **Keval started updating Leads Center stages daily as of 19 Aug** — encourage/verify this
-  keeps happening; it's the main quality signal for Studio until its dataset is wired, and
-  supplementary signal for 2BHK/1BHK.
-- Dashboard code (build_dashboard.py) gained two features on 19 Aug, both live on main:
-  no-phone leads and CRM-unsynced leads now appear in Open integrity flags AND the Speed to
-  lead table ("Unsynced" campaign chip, ⚠ by name). Live URL:
-  https://divya-jyot-meta-ads-routine-dashboard.keval-921.workers.dev
-
-## Updated 2026-08-18 (2nd run today, ~7PM check)
-
-- **1BHK phone-number gap: unresolved across TWO checks today (~5PM and ~7PM), zero movement.**
-  Same 2 blank-name/blank-phone rows in `Sheet3`, same 6 dashed-phone rows in `facebook_tab`
-  (Urmi Gala, Vilas Shah, Lalji, Priyanka Rane, Shailesh, Madhu Tiwari). No live test of the
-  fixed form has been done by anyone yet. **Next run: check for ANY post-fix submission with a
-  real phone. If still none after a full second day, escalate to "ask Keval to test it live"
-  explicitly rather than waiting for organic traffic — a full business day of silence is now the
-  norm, not a fluke.** Duplicate-adset issue ("1BHK Gujarati" under two adsets) also still
-  unconsolidated.
-- **NEW FINDING — phone number mismatch for Ankit and Sandesh Padwal between the live sheet and
-  what prior reports/memory have been carrying.** Sheet today: Ankit `7201116501`, Sandesh Padwal
-  `9819910699`. Prior memory/reports: Ankit `7021116501`, Padwal `9819910669` (both have
-  transposed digits vs the sheet). Not yet determined which is correct — flagged in today's
-  report so nobody dials a possibly-wrong number off an old report. **Next run: check whether
-  this was a data-entry correction in the sheet, or whether the report has been carrying a typo
-  for weeks — resolve which number is real.**
-- **Studio: 0 leads for the FULL DAY on 18 Aug (₹180.65 spend)** — first full 0-lead day seen in
-  recent reports. Delivery itself healthy (impressions/clicks normal), account confirmed ACTIVE.
-  One day isn't a trend. **Next run: if Studio is also weak, treat as a real signal, not noise.**
-- **Ankit, Sandesh Padwal, Parag Gore — still zero dial today (18 Aug) as of ~7PM,** both checks.
-  Day 8 / day 26 / day 3. See phone-number caveat above before calling.
-- **Srikant Iyer — day 7, still zero CRM record, zero follow-up ever.** Unchanged.
-- **Celine — day 23+, still zero record anywhere** (not re-verified this run, carry forward).
-- **Sham Gosavi (created 16 Aug) — zero follow-up logged, now 2+ days.** Needs a call regardless
-  of his own "coming after 2 days" timeline.
-- **Ushma Katira — post-visit note still "coming tomorrow" as of 17 Aug, no update today.** Note:
-  her post-visit follow-ups live in the SVD-tab row (visited 14 Aug), not facebook_tab — check
-  there, not the pre-visit facebook_tab row, for her latest status.
-- **Shikha Thakkar's visit slipped to "next Sunday" (23 Aug)** — unchanged, watch that date.
-- **Arvind Gupta's "coming tomorrow" (16→17 Aug) did not convert** — no new note since 17 Aug.
-- **Dhananjay Kholamkar — 20 Aug (Thursday) commitment still stands,** no new note.
-- **Reverse-check/phone-typo tracked list NOT independently re-verified for TWO runs running**
-  (17 Aug and both 18 Aug runs) — do a full re-check first thing next calendar-day run, don't
-  carry forward a third time: Jigna Rathod, Atul Thorat (typo-explained), Bhavin Vora, Nikita
-  Gaurav, Sandesh Howal, Srikant Iyer.
-- **Cost-per-visit, 28-day window (19 Jul–18 Aug), Studio+2BHK only: ~₹3,852/visit, 8.64% visit
-  rate, 14 verified visits / 162 leads / ₹53,927.29 spend.** (1BHK's 7 leads/₹541.28 excluded —
-  no visit history yet.)
-- **Process note: this was the SECOND run of the daily routine on 18 Aug** (first at ~5PM,
-  reaching main at 11:39 UTC; this one ~7PM). Ran the full pipeline (fetch, analyze, write,
-  commit, Telegram send) as instructed rather than assuming duplicate — if a genuine same-day
-  double-fire recurs without new information to report, a future run should judge whether a
-  second Telegram send is warranted rather than sending automatically.
+- **Studio: TWO consecutive full 0-lead days (18 Aug ₹180.65, 19 Aug ₹193.77).** CTR/frequency
+  both healthy both days, account confirmed ACTIVE (₹96,503 balance) via direct Graph check.
+  This has crossed from "one day, could be noise" into a real signal. **Next run: if a 3rd
+  0-lead day happens, this is the headline. Check whether anyone tested the Studio form live
+  (recommended today) and whether the Studio pixel/dataset got attached (recommended
+  yesterday morning, confirmed still missing via adsets API today).**
+- **1BHK form fix CONFIRMED holding on day 2: 8/8 today's leads have real phones, all dialed
+  same-day.** But a NEW bottleneck replaced the old one: only 3 of 8 (Raju Dangi, Jinesh Shah,
+  Satyam Barnwal) synced to CRM `Sheet4`; the other 5 (Manish Doshi, Shailesh, Gunjan Gangar,
+  Reva Amit, Rashi) are sheet-only as of ~7PM. **Next run: check if these 5 backfilled
+  overnight — if not, this is now a standing sync-lag problem, not a one-off, escalate
+  explicitly to Keval.**
+- **Two NEW reverse-check misses found this run (full sweep re-verified, first time in 3
+  runs):** (1) Mahesh Gupta, 17 Aug, dashed phone — looks like the 1BHK form-bug pattern but
+  Meta shows ZERO 1BHK spend on 17 Aug, so it's unrelated/unexplained, not part of that chain —
+  keep watching, don't assume it's the same bug. (2) "Srishti [punit bhayani]", 15 Aug — solved:
+  relative-tag pattern like Jagdish Ravasia, real CRM lead "Punit Bhayani" exists from 3 Aug
+  with a different phone. No action needed, just documented.
+- **Atul Thorat's phone is STILL wrong, and changed shape again**: now `98198777789` (11
+  digits, extra stray "7"), still not the real `9819877789`. 8+ weeks unresolved since first
+  flagged 24 Jun. Push this explicitly next time — it's a 10-second fix nobody has done.
+- **Raju Dangi (today's 1BHK lead) wants COMMERCIAL, not residential** — flag if he calls back,
+  likely a mismatch not worth much more call time.
+- **3 straight zero-site-visit days now (17-19 Aug)** — last visit was Manoj Goklani, 16 Aug.
+  Watch if this breaks tomorrow or becomes its own trend alongside Studio's lead drought.
+- **Cost-per-visit, 28-day window (20 Jul-19 Aug), Studio+2BHK only: ~₹4,095/visit, 8.07% visit
+  rate, 13 CRM-verified visits / 161 leads / ₹53,234.68 spend.** Window shifted forward a day
+  from the last report (was 14 visits/₹53,927.29/19Jul-18Aug) — the drop from 14→13 is just the
+  window rolling forward with no new visit added, not a data problem.
+- **Sandesh Howal: zero calls logged in 20 days (last note 30 Jul, tagged "Broker") despite
+  still showing status "Cold".** Not previously flagged this way — worth asking the team
+  directly whether he was reclassified/dropped rather than simply forgotten.
+- **Watchlist, unchanged / still zero contact since 17 Aug:** Ankit (`7201116501` per sheet,
+  mismatch vs older memory value still unresolved), Sandesh Padwal (`9819910699` per sheet,
+  same caveat), Jigna Rathod, Nikita Gaurav, Parag Gore, Srikant Iyer (day 7, zero follow-up
+  ever), **Sham Gosavi (created 16 Aug, zero follow-up in 3 days now — longest untouched)**.
+- **Ushma Katira** — post-visit "coming tomorrow" note (17 Aug) still stale, 2 days now (check
+  her SVD-tab row, not facebook_tab, for updates).
+- **Shikha Thakkar** — still "next Sunday" (23 Aug), no change. **Dhananjay Kholamakar**
+  (note: sheet spells it "kholamakar") — "coming this Thursday" = 20 Aug, tomorrow, watch it.
+- Reverse-check / phone-typo list fully re-verified THIS run (was overdue 2 runs) — do NOT
+  need a full re-sweep next run unless something looks off; spot-check is enough.
+- Telegram delivery: confirm this run's send succeeded before assuming the routine is done —
+  check the printed line after `--send`.
