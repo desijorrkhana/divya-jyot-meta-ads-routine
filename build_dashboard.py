@@ -149,6 +149,28 @@ def build():
             "phone": l["phone10"], "logged": logged, "lag": lag, "st": st,
         })
 
+    # A recent facebook_tab lead with a real phone but no CRM match (see the matching flag
+    # above) needs to show up here too — this table, not the flags list, is what gets checked
+    # day to day. There's no CRM arrival time to measure a real lag against, so it's shown
+    # day-level only with the campaign left honestly unattributed rather than guessed.
+    if fi_name is not None:
+        unsynced_cutoff = today - timedelta(days=2)
+        for r in fb_tab[1:]:
+            if len(r) <= fi_phone:
+                continue
+            ph = normphone(r[fi_phone] or "")
+            if not ph or ph in crm_by_phone:
+                continue
+            dt = parse_dmy(r[fi_created], today)
+            if not dt or dt < unsynced_cutoff:
+                continue
+            nm = (r[fi_name] if len(r) > fi_name else "").strip() or "(no name)"
+            crm_rows.append({
+                "ts": dt.isoformat(), "name": f"{nm} ⚠", "camp": "Unsynced",
+                "intent": "", "budget": "",
+                "phone": ph, "logged": "not in CRM — see team sheet", "lag": "not computable", "st": "warn",
+            })
+
     # ---- daily meta series (30d, per campaign, with clicks/impressions for range aggregates) ----
     daily = []
     for r in d["meta"].get("last30_daily_campaigns", []):
