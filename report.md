@@ -1,79 +1,73 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Thursday, 20 August 2026 (midnight-~7:15PM IST)
+Friday, 21 August 2026 (midnight-~7:15PM IST)
 
 HEADLINE
-Studio's lead drought broke today (1 lead, healthy delivery) and 2BHK's CPL improved sharply (Rs140.98 vs Rs353.25 yesterday) — but the funnel's bottom is now the real problem: zero site visits for a 4th straight day (17-20 Aug), and one CRM lead (budget Rs1.75-2cr against 2BHK's ~Rs1.4cr ceiling) is a clear-cut budget mismatch.
+The site-visit drought broke today (2 CRM-verified visits, ending a 4-day gap) but a fresh, within_3_months 2BHK lead (Arvind Gupta) has his phone mistyped in the sheet — same failure pattern as Atul Thorat — meaning the team can't actually reach him even though his row shows "Ringing." Underneath both: the sales team has gone almost completely quiet on every pre-18-Aug lead for 4 straight days, a systemic backlog freeze bigger than any single lead.
 
 FOLLOW-UP FROM LAST REPORT
-- Studio's 2-day zero-lead streak: BROKEN. 1 lead today (just_exploring, Rs140.88 CPL), CTR/frequency both healthy. Too early to call it fixed off one low-intent lead, but the drought is over.
-- Studio pixel/dataset: re-checked directly via Graph API — still NOT attached. Same finding as yesterday, now reconfirmed live.
-- 1BHK CRM sync lag: RESOLVED today — all 9 leads across all 3 campaigns matched Meta's counts exactly, no gap. Keep watching, it was a 2-day pattern before.
-- Atul Thorat's phone: still wrong (unchanged), AND his row status flipped to "Dead" without the correct number ever being dialed. 8+ weeks unresolved, now compounding.
-- Ankit/Sandesh Padwal phone mismatch: still unresolved, both untouched since 17 Aug (3 days).
-- Duplicate "1BHK Gujarati" adset: still not consolidated.
+- Site-visit drought: BROKEN. 2 CRM-verified visits today (Vishal Thakkar, Urmila Salvi), neither from the watchlist names (Dhananjay/Ushma/Shikha) — those three are still unconverted.
+- Studio's "recovery" didn't repeat: 0 leads today vs 1 yesterday, though CTR/frequency stayed healthy. Pixel gap reconfirmed still missing via direct Graph check.
+- 1BHK CRM sync structurally improved: a new tab (Sheet4) appeared with phone_number + budget fields matching Studio/2BHK — closes out the 18 Aug "form incomplete" finding.
+- Atul Thorat: still unresolved, now 8+ weeks (61 days).
+- Ankit/Sandesh Padwal mismatch: still unresolved — and today shows this isn't isolated, see below.
+- Correcting last report: "consolidate duplicate 1BHK Gujarati adset" was likely bad advice — the two adsets are an intentional language split (Hindi/Gujarati), not a duplicate. Retracted.
 
 THE FUNNEL (today so far)
-Studio: Rs140.88 spend, 879 impr, 15 clicks, 1 lead, CPL Rs140.88
-2BHK: Rs422.94 spend, 1575 impr, 34 clicks, 3 leads, CPL Rs140.98
-1BHK: Rs358.09 spend, 1522 impr, 41 clicks, 5 leads, CPL Rs71.62
-Combined: Rs921.91 spend, 3976 impr, 90 clicks, 9 leads, CPL Rs102.43
-Contacted: 8 of 9 dialed same-day. The 1 exception (jennifer dsouza) arrived at 18:25, under an hour before this report — too recent to judge, not a miss.
-Site visits today: 0 — 4th straight day with none (last real visit: Manoj Goklani, 16 Aug).
+Studio: Rs162.15 spend, 1046 impr, 20 clicks, 0 leads
+2BHK: Rs475.87 spend, 2109 impr, 47 clicks, 1 lead, CPL Rs475.87
+1BHK: Rs428.47 spend, 1688 impr, 41 clicks, 1 lead, CPL Rs428.47
+Combined: Rs1066.49 spend, 4843 impr, 108 clicks, 2 leads (Meta), CPL Rs533.25
+CRM shows 3 leads today (Arvind Gupta 2BHK matches Meta; Gandhi Vaibhav + Komal both 1BHK vs Meta's 1) — a timing lag (Komal arrived 11 min before this pull; Gandhi's raw timestamp buckets to "yesterday" in Meta's own account timezone), not an error.
+Contacted: 1 of 3 (Gandhi Vaibhav, feedback logged). Arvind Gupta shows "Ringing" but the phone on file is wrong (see Data Integrity). Komal too new to judge.
+Site visits today: 2 — Vishal Thakkar and Urmila Salvi, both CRM-verified. Drought broken after 4 days (17-20 Aug). Both leads are from 16 Aug — a 5-day lead-to-visit lag.
 
 AD PERFORMANCE
-Studio: CTR 1.71%, frequency 1.18 — normal range, confirms this was never a delivery/fatigue problem. 1 just_exploring lead isn't enough to call the conversion issue fixed — needs another day, ideally with a higher-intent lead.
-2BHK: CPL Rs140.98, best in weeks (vs Rs353.25 yesterday, Rs371.11 trailing 7-day avg). CTR 2.16%, healthy. Spend still ~93% concentrated in "29 Seconds connectivity hook." One of today's 3 leads is a clear budget mismatch (Rs1.75-2cr ask) — cheap CPL doesn't yet mean cheap qualified leads.
-1BHK: CPL Rs71.62, best yet on day 3. CTR 2.69% (down slightly from 2.93% yesterday, not a fatigue signal on a 3-day-old campaign). "1BHK Hindi" carried all 5 leads; "1BHK Gujarati" spent Rs20.15 with 0 leads, third day barely spending.
+Studio: CTR 1.91% (up from 1.82%), frequency 1.12 — healthy delivery despite 0 leads; conversion is erratic day-to-day, not a trend yet. Pixel still not attached to "Open - DJR" (3rd consecutive check).
+2BHK: 1 lead (Arvind Gupta, within_3_months, in-budget), CPL Rs475.87 vs yesterday's Rs208.70 — one lead on a partial day, don't read into it. Notable: "2BHK 57 Seconds" had ZERO impressions today despite being the exact ad that sourced both of today's site visits — worth a budget/bid pacing check.
+1BHK: 1BHK Gujarati now on its 4th straight day of near-zero delivery (Rs17.45 spend, 0 leads) against a healthy Hindi sibling (Rs411.02 spend, 1 lead) — past "too early," looks like a real delivery problem, escalate to Keval.
 
 SPEED-TO-LEAD
-8 of 9 today's leads contacted, most within an hour:
-- Kalpesh Dagly (Studio): arrived 14:19, contacted within ~0-69 min
-- Ankit Parekh (2BHK, within_3_months): arrived 13:42, contacted within ~0-37 min
-- Niikkunj Gada (2BHK): arrived 11:38, contacted within ~0-54 min
-- Pritesh Jethva (1BHK): arrived 15:09, contacted within ~19min-1h44m
-- Divya (1BHK, within_3_months): arrived 11:48, contacted within ~0-44 min
-- Karan (1BHK): arrived 10:42, contacted within ~0-1h51m
-- Himanshu (1BHK): arrived 09:38, contacted within ~0-2h54m
-- Gajanand Shitole (1BHK re-lead, same phone as a 3 Aug lead): contacted same calendar day, day-level only — his contact_history bracket is broken by the duplicate-phone submission (known limitation).
-- jennifer dsouza (2BHK): arrived 18:25, row created, no call outcome yet — pending, under an hour old.
-Every within_3_months lead today was reached within an hour — credit the team.
+Arvind Gupta (2BHK, within_3_months): arrived 16:47, "Ringing" logged same day — but the phone entered (9234315180) doesn't match his real CRM number (9324315180), a digit transposition. Team may be dialing the wrong person.
+Gandhi Vaibhav (1BHK): arrived just past midnight IST (bucketed as "yesterday" by Meta), contacted within roughly half a day, feedback captured.
+Komal (1BHK): arrived 19:00, 11 minutes before this report — too new to judge.
+The bigger finding: checked all 99 leads created 1-17 Aug for any follow-up dated 18-21 Aug — only 2 got touched (Vishal Thakkar, Urmila Salvi, both of whom converted to today's visits). Every other pre-18-Aug lead has gone silent for the same 4 days. This is one systemic freeze, not scattered forgetfulness.
 
 LEAD QUALITY
-jennifer dsouza (2BHK): budget Rs1.75-2cr, 25%+ over the ~Rs1.4cr ceiling — clear mismatch, don't burn much call time past a first qualifying call.
-Ankit Parekh (2BHK): budget ~Rs1.55cr, ~11% over the ceiling — closer to the line, worth a clarifying question before writing off.
-Divya (1BHK): budget Rs60L — bottom of the historical 60L-1.1cr range; 1BHK's real price band still unconfirmed, not treating as a hard mismatch yet.
-Himanshu, Pritesh Jethva (1BHK): budget Rs1.01-1.10cr each, top of range, not connected yet.
-Kalpesh Dagly (Studio): just_exploring, lowest-intent lead of the day, the one that broke Studio's drought.
-Rest still at first-contact stage, no info captured yet.
+Arvind Gupta (2BHK): within_3_months, budget in-band — best lead of the day on paper, undermined by the phone typo.
+Gandhi Vaibhav, Komal (1BHK): budgets within historical range; 1BHK price band still unconfirmed, no mismatch judgment yet.
+Vishal Thakkar (visit today): stated budget Rs80L, likely well under actual 2BHK pricing — a mismatch that visited anyway; qualify before more time invested.
+Urmila Salvi (visit today): accepted 700+ carpet against a Rs1.20cr ask — reasonably in-band, the more promising visit. Her "coming Friday" commitment from 17 Aug landed exactly on schedule — credit the team.
 
-Real cost-per-visit, 28-day window (24 Jul-20 Aug), Studio+2BHK, CRM-verified only:
-Spend Rs46,509.14, 147 leads, vanity CPL Rs316.39.
-12 CRM-verified visits. Real cost-per-visit: ~Rs3,876. Visit rate: 8.16% — a shade better than last report's rolling figures, not a meaningful shift either way.
-Plus 5 legitimate "FB call" direct-caller visits, counted separately per standing policy.
-1BHK (3 days spend): Rs1,605.04 / 20 leads, CPL Rs80.25 — no visit history yet.
-Zero new site visits for 4 straight days now (17-20 Aug), up from 3 in yesterday's report — this is the funnel's real bottleneck right now.
+Real cost-per-visit, ~30-day window (22 Jul-21 Aug), all 3 campaigns, CRM-verified only:
+Spend Rs53,687.63, 181 leads, vanity CPL Rs296.61.
+15 CRM-verified visits. Real cost-per-visit: ~Rs3,579. Visit rate: 8.29% — roughly stable vs last report's Rs3,876/8.16% (window composition changed, added 1BHK).
+Plus 6 legitimate "FB call" direct-caller visits (21 total) — cost-per-visit incl. these: ~Rs2,557, rate 11.60%.
+1BHK (4 days spend): Rs2,254.23 / 24 leads, CPL Rs93.93 — no visit history yet.
 
 DATA INTEGRITY
-1. Reverse check on today's 9 leads: all matched to CRM, no new misses.
-2. Atul Thorat — escalating. Phone still wrong AND his row is now marked "Dead," closed out without the correct number ever being dialed. 8+ weeks since first flagged, needs a manual reopen once fixed.
-3. Gajanand Shitole re-lead (duplicate phone, 3 Aug + today) broke the contact_history bracket for that phone — known limitation, handled via the raw sheet instead.
-4. Dhananjay Kholamakar's "coming this Thursday" commitment (from 17 Aug) was TODAY — no visit logged. Worth a same-day call to find out if he showed.
-5. Watchlist unchanged since 17 Aug (3 days untouched): Ankit, Sandesh Padwal, Jigna Rathod, Nikita Gaurav, Parag Gore. Srikant Iyer now day 9 since creation, zero follow-up ever. Sham Gosavi last contact 18 Aug (2 days stale). Ushma Katira's post-visit note now 3 days stale. Shikha Thakkar unchanged, still "next Sunday" (23 Aug).
+1. URGENT NEW — Arvind Gupta's phone is mistyped: sheet has 9234315180, CRM (OTP-verified) has 9324315180. Same failure pattern as Atul Thorat. He's within_3_months — fix before he goes cold.
+2. Reverse check (18-21 Aug leads): 5 rows from 19 Aug have no CRM match and no near-match candidate — consistent with legitimate direct-caller volume, not flagged as fake. 6 dashed-phone placeholder rows from 18 Aug remain unchanged/unreachable, already known.
+3. SVD cross-check (30-day window): 15 of 21 Facebook-tagged visits CRM-verified; the other 6 all carry the "FB call" marker except Bhavin Vora (8 Aug) — still the one open flag, unchanged since 19 Aug.
+4. Atul Thorat — 8+ weeks (61 days), still Dead, phone still wrong, correct number never dialed. Longest-open item in this routine.
+5. Systemic finding: a 4-day team-wide backlog freeze (18-21 Aug). Of 99 leads created 1-17 Aug, only Vishal Thakkar and Urmila Salvi got any follow-up in the last 4 days. Everyone else on the watchlist (Dhananjay Kholamakar day 10, Srikant Iyer day 9 zero-contact, Sandesh Padwal, Jigna Rathod, Nikita Gaurav, Parag Gore, Ushma Katira, Shikha Thakkar, Sham Gosavi, Ankit 7201116501) has been silent since ~17 Aug. One root cause, not eleven lapses.
 
 DIAGNOSTIC STEPS
-1. URGENT — call Dhananjay Kholamakar today, his visit commitment was today and nothing is logged.
-2. URGENT — reopen and redial Atul Thorat: fix the phone (9819877789), reopen the Dead status, call it properly.
-3. Ops/sales — figure out why 4 straight days have zero visits despite steady lead flow (9 today alone) — check if booked visits are actually converting to show-ups.
-4. Agency — attach the SiteVisit pixel to Studio's adset, confirmed still missing.
-5. Sales — qualify jennifer dsouza and Ankit Parekh on budget before investing more call time (both 2BHK asks above the ~1.4cr ceiling).
-6. Sales — push the 3-day-stale watchlist tomorrow: Ankit, Sandesh Padwal, Jigna Rathod, Nikita Gaurav, Parag Gore, and especially Srikant Iyer (day 9, never called once).
+1. URGENT - fix Arvind Gupta's phone today (9324315180); he's a within_3_months lead currently unreachable on the wrong number.
+2. URGENT - clear the 4-day backlog freeze before a 5th day: start with Srikant Iyer (day 9, zero contact ever) and Dhananjay Kholamakar (day 10), then Sandesh Padwal, Jigna Rathod, Nikita Gaurav, Parag Gore, Sham Gosavi, and the Ankit 7201116501 mismatch.
+3. Reopen and redial Atul Thorat — 8+ weeks on a wrong number, a 10-second fix (9819877789).
+4. Agency - check "2BHK 57 Seconds" ad's zero delivery today; it's the ad that sourced both of today's visits.
+5. Agency - escalate "1BHK Gujarati" to Keval — 4th straight day of near-zero delivery, likely needs an audience/creative change.
+6. Agency - attach the SiteVisit pixel to Studio's "Open - DJR" adset, still missing on the 3rd check.
+7. Sales - qualify Vishal Thakkar's budget (Rs80L, likely under actual 2BHK pricing) before more follow-up time.
 
 ANYTHING ELSE
-Today's problem shape inverted from yesterday's: top-of-funnel looks fine or better (Studio recovered, 2BHK's CPL improved, 1BHK's best CPL yet) but site visits have gone quiet for 4 straight days. Worth treating as the headline concern going into tomorrow — 9 fresh leads with nowhere to visit is arguably more urgent than fewer leads would be.
+The 1BHK CRM pipe looks genuinely fixed: Sheet4 appeared this run with full phone_number + budget structure matching Studio/2BHK, closing an 18 Aug-to-today issue. Also correcting the record: last report's "consolidate duplicate 1BHK Gujarati adset" advice was likely a misread — two language-targeted adsets is the intended design, not a duplicate. Retracting that; the real Gujarati issue is delivery (above).
 
 LOOKING AHEAD
-- Confirm whether Studio's recovery is real (needs another day, ideally a higher-intent lead) or a one-off inside a still-broken funnel.
-- Watch whether the visit drought (4 days) breaks tomorrow — check Dhananjay Kholamakar, Ushma Katira, Shikha Thakkar (23 Aug).
-- Confirm the 1BHK CRM sync stays clean.
-- Resolve Atul Thorat's phone + reopen his Dead status; resolve Ankit/Sandesh Padwal mismatch.
-- Attach Studio's SiteVisit pixel; consolidate the duplicate 1BHK Gujarati adset.
+- Confirm Arvind Gupta's phone gets corrected and he actually gets reached.
+- Check whether the backlog freeze breaks tomorrow or today's 2 conversions used up the team's attention.
+- Watch Srikant Iyer and Dhananjay Kholamakar specifically — both now over a week stale.
+- Confirm the 1BHK CRM sync (Sheet4) stays clean over a few more runs.
+- Resolve Atul Thorat's phone + reopen his Dead status.
+- Check "2BHK 57 Seconds" and "1BHK Gujarati" delivery — both look like pacing/audience issues.
+- Confirm Studio's lead pattern (1 lead Wed, 0 Thu) — needs a few more days before reading a trend.
