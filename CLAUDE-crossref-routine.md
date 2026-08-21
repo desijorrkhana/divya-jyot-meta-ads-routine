@@ -306,6 +306,12 @@ the list. Commit message must say what was learned in one line.
   speed-to-lead. If missing, this is a Meta Ads Manager instant-form edit Keval needs to make
   (add the phone number + budget/timeline questions, matching Studio/2BHK's form structure),
   not something fixable from this pipeline's code.**
+  **UPDATE 2026-08-21 — RESOLVED.** A 4th CRM tab (`Sheet4`) appeared, header row now carrying
+  `phone_number` plus budget/timeline questions matching Sheet1/Sheet2's structure. Today's 1BHK
+  leads (Gandhi Vaibhav, Komal) landed in `Sheet4` with real `phone10` values and captured budget.
+  Confirm this holds for a few more runs, but the standing rule above (verify the header row, don't
+  assume a new tab = usable) is what caught both the original gap and its fix — keep applying it to
+  any newly-launched campaign.
 - 2026-07-27: once a lead has a logged site visit, POST-VISIT follow-up call notes get added as
   trailing dated columns on that lead's SVD-tab row itself, NOT as new rows in the Facebook tab —
   e.g. Ashok Savalkar's "26/7/26 Max budget is 1cr" note (referenced in the 26 Jul report) lives in
