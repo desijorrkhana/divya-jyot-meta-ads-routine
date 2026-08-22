@@ -1,57 +1,51 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Added 2026-08-21 (evening run, ~7:15PM IST)
+## Added 2026-08-22 (evening run, ~7:10PM IST)
 
-- **Arvind Gupta's phone is mistyped in the sheet — URGENT, within_3_months 2BHK lead.**
-  `facebook_tab` row #393 has `9234315180`; CRM (OTP-verified) has `9324315180` (digits 2/3
-  transposed). Same failure class as Atul Thorat. **Next run: check whether this got corrected
-  and whether he was actually reached — if not, escalate this in the headline.**
-- **Systemic finding, bigger than any single lead: a 4-day team-wide backlog freeze (18-21 Aug).**
-  Of 99 leads created 1-17 Aug, only Vishal Thakkar and Urmila Salvi (both 16 Aug) got any
-  follow-up touch in that window — everyone else on the pre-18-Aug list went silent at the same
-  time. **Next run: check whether the freeze broke (any pre-18-Aug lead besides the watchlist
-  finally re-contacted) or whether it's now a 5th/6th day.**
-- **Site-visit drought broke (2 CRM-verified: Vishal Thakkar, Urmila Salvi) after 4 zero-visit
-  days.** Neither came from the named watchlist (Dhananjay/Ushma/Shikha) — those three are still
-  unconverted. Both visits trace to 16-Aug leads (5-day lead-to-visit lag). Don't over-credit this
-  as "fixed" — it's 2 visits off a small base, and the funnel-wide slowness (backlog freeze) is
-  still the bigger issue.
-- **Srikant Iyer — now day 9-10 since creation (12 Aug), STILL zero follow-up ever.** The single
-  most neglected lead in the pipeline. Escalate hard next run if still untouched.
-- **Dhananjay Kholamakar — now day 10 since creation (11 Aug), last touch 17 Aug.** His "coming
-  Thursday" commitment (flagged 17 Aug, landed 20 Aug) still has no visit logged and no further
-  contact since. Chase this specifically.
-- **Atul Thorat — 8+ weeks (61 days) unresolved, still Dead, phone still wrong
-  (`98198777789`), correct number (`9819877789`) never dialed.** Longest-open item in this
-  routine — if still unfixed next run, this needs an explicit headline escalation, not just a
-  diagnostic bullet.
-- **1BHK CRM integration looks genuinely fixed:** a new tab `Sheet4` appeared with full
-  `phone_number` + budget/timeline fields, matching Studio/2BHK's structure. Confirm this holds
-  over 2-3 more runs before declaring it permanently resolved.
-- **"2BHK 57 Seconds" ad had ZERO impressions/spend today** despite being the exact ad that
-  sourced both of today's site visits (16 Aug leads). Check next run whether this was a one-day
-  blip or a pacing/budget issue worth flagging harder.
-- **"1BHK Gujarati" adset — 4th straight day of near-zero delivery** (₹17-29 spend/day, 0 leads)
-  against a healthy "1BHK Hindi" sibling. Past "too early to judge" — flag to Keval if day 5 looks
-  the same.
-- **Retracted a prior recommendation:** the 20 Aug report's "consolidate the duplicate 1BHK
-  Gujarati adset" advice was wrong — the two adsets (`Open - DJR - 1BHK` / `...gujrati`) are an
-  intentional language-targeted split per the project's own spec, not an accidental duplicate.
-  Don't repeat that advice.
-- **Studio pixel/SiteVisit event still not attached to "Open - DJR"** — reconfirmed via direct
-  Graph API check for the 3rd consecutive time.
-- **Watchlist, still stale (last touch 17 Aug, now 4 days):** Sandesh Padwal (`9819910699`),
-  Jigna Rathod, Nikita Gaurav, Parag Gore, Ankit (`7201116501`, mismatch caveat unchanged).
-- **Ushma Katira** — post-visit note stale since 17 Aug, now 4 days.
-- **Shikha Thakkar** — unchanged, still "next Sunday" (23 Aug).
-- **Sham Gosavi** — last contact 18 Aug, now 3 days stale.
-- **Vishal Thakkar (visited today)** — stated budget ₹80L, likely under real 2BHK pricing; needs
-  a budget-flex conversation before more follow-up time. Watch whether he converts or falls off
-  on price.
-- **Bhavin Vora (8 Aug SVD, no CRM/FB-call match)** — still the one open SVD integrity flag,
-  unchanged since 19 Aug, likely phone typo.
-- Reverse-check spot on 18-21 Aug leads: 5 no-CRM-match rows (19 Aug: Manish Doshi, Shailesh
-  `8433533722`, Gunjan Gangar, Reva Amit, Rashi) — no typo/near-match found, treated as normal
-  direct-caller volume, not flagged.
+- **Arvind Gupta's phone STILL wrong (day 2), and it's now a worse story: his correct number
+  (`9324315180`) has been sitting in this same sheet since 16 Aug (row #336, same email,
+  different earlier submission) — the team had it on file and still mistyped a new row on 21
+  Aug. Neither row touched since 17 Aug. Next run: escalate hard if still unfixed — this is now
+  clearly a process failure (not cross-referencing existing rows by name/email), not a one-off
+  typo.**
+- **NEW — Naresh Marpalli (SVD visit today, phone `8108784706`) is very likely a phone-typo
+  match to CRM lead "Naresh" (`8108784766`, one digit off, 12 Aug, 2BHK, matching budget/product
+  via `facebook_tab` row #1522). Flagged as a data-integrity note, not counted in the strict
+  CRM-verified visit count. Next run: check if the SVD phone got corrected.**
+- **Sunil Shinde (1BHK, arrived 17:29 today) had ZERO row in `facebook_tab` as of the ~7:10PM
+  run — 1h40m+ untouched, the day's clearest speed-to-lead miss. Next run: check how long it
+  actually took to reach him.**
+- **Jayashree Kamble (2BHK CRM lead, budget bracket ₹1.5–1.75cr) told the team verbally she
+  wants "1bhk budget 1cr" — a real product/budget contradiction worth tracking. Next run: see
+  which one turns out true once she does her promised "details share."**
+- **Backlog freeze update: cumulative touches on the 99-lead (1–17 Aug) cohort now 12 (up from
+  2 as of 21 Aug), but ZERO of that cohort was touched specifically on 22 Aug — today's only
+  old-backlog activity (Sandesh Padwal, Jigna Rathod) came from OUTSIDE that list, from leads
+  even older (24 Jul, 21 Jul). Next run: check whether the actual named cohort (esp. Srikant
+  Iyer, Dhananjay Kholamakar) gets touched at all, or whether backlog work keeps landing on
+  different names each day.**
+- **Srikant Iyer — day 11, still zero follow-up ever.** Single most neglected lead, unchanged.
+- **Dhananjay Kholamakar — day 12, last touch 17 Aug, "coming Thursday" (20 Aug) broken with no
+  follow-up since.**
+- **Site-visit momentum: 2nd straight day of 2 visits (21 Aug: Vishal Thakkar/Urmila Salvi; 22
+  Aug: Naresh Marpalli/Falguni Thakkar).** Notably, the two days' visits trace to two DIFFERENT
+  2BHK ad variants (57 Seconds, then 36 Seconds) — visit-producing power isn't riding on one
+  creative. Watch whether this holds a 3rd day.
+- **"2BHK 57 Seconds" — 5 straight dark days (18–22 Aug), zero spend/impressions.** Past "pacing
+  check" — needs an actual look at the ad/ad-set. Watch next run whether it's still dead.
+- **"1BHK Gujarati" — day 5, 3 straight zero-lead days (20/21/22 Aug).** Escalation to Keval
+  flagged for 2 reports running; check if he's acted on it.
+- **Atul Thorat — 59 days unresolved, still Dead, phone still wrong.** Longest-open item.
+- **Vishal Thakkar (visited 21 Aug) — SVD "Req Flat" now reads "1 Bhk" not 2BHK, suggesting the
+  team successfully redirected him to fit his ₹80L budget.** Confirm with the team this was
+  deliberate; watch if he converts.
+- **New watch item: an "Ankit" row (`9029073508`, created 19 Aug) has zero follow-up ever —
+  separate from the older Ankit/Sandesh Padwal (`7201116501`/`9819910699`) phone-mismatch case.**
+- **Ushma Katira** — post-visit note stale since 17 Aug, now 5 days.
+- **Shikha Thakkar** — "next Sunday" commitment is 23 Aug (tomorrow) — check if it lands.
+- **Sham Gosavi** — last touch 18 Aug, now 4 days stale. **Parag Gore** — last touch 17 Aug, 5
+  days stale.
+- **Bhavin Vora (8 Aug SVD, no CRM/FB-call match)** — still the one standing older SVD integrity
+  flag, unchanged.
 - Telegram delivery: confirm this run's send succeeded before assuming the routine is done —
   check the printed line after `--send`.

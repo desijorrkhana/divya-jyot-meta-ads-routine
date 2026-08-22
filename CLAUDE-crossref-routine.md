@@ -409,6 +409,20 @@ the list. Commit message must say what was learned in one line.
   it's trailing columns). Whenever a lead/tab/column looks "stale" or "abandoned," check the actual
   fetch range against the sheet's real dimensions (`spreadsheets().get()` → `gridProperties`) before
   concluding the team dropped it — recurring enough now to check this FIRST, not last, on any anomaly.**
+  **UPDATE 2026-08-22 — same failure class again, one layer deeper.** Even with the range widened
+  (`Facebook!A1:AG2500`), `facebook_tab`'s header row is only 18 cells long (`Created` through
+  `8th follow up`) while real rows carry data out to column 33 — a 9th, 10th... follow-up exist
+  with NO header text at all (confirmed: 563 rows have content past column 18). A naive
+  backlog/freshness analysis that selects follow-up columns by matching `"follow up"` in the
+  header (instead of "every column after Feedback, to the row's actual length") silently drops
+  every lead with more than 8 logged calls — exactly the leads worth checking most, since a high
+  follow-up count means an actively-worked lead. This first surfaced as a near-miss: an initial
+  backlog-freeze count using header-matched columns only found 5 pre-18-Aug leads touched since
+  18 Aug; re-running with all trailing columns (header or not) found 12 — including Ushma Katira's
+  actual "Visit done" entry, which the header-matched pass had silently overwritten with an
+  earlier same-date entry. **Standing rule: for `facebook_tab` (and `svd_tab`, already covered
+  above), always treat every column after `Feedback` (`Remarks` for SVD) as a follow-up column
+  regardless of whether it has header text — never filter by header string.**
 - 2026-08-09 (UPDATED 08-11): the ad account's `balance` field reaching 0 does NOT mean
   `account_status` flips back to 1 (ACTIVE) at the same time. During the Aug 8-9 billing outage,
   `balance` dropped from ₹7,141.85 to ₹0 between runs while `account_status` stayed 3 (UNSETTLED)
