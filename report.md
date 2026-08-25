@@ -1,51 +1,53 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Monday, 24 August 2026 (midnight–~7PM IST, still moving)
+Tuesday, 25 August 2026 (midnight–~7PM IST, still moving)
 
 FOLLOW-UP FROM LAST REPORT
-- Srikant Iyer: still zero contact ever, now day 13. Skipped again even as the team touched 6 more backlog leads (cumulative 88/99).
-- Arvind Gupta duplicate: unresolved, but for once neither row got a call today — a pause, not a fix.
-- khan's "Muslim" feedback: still not corrected, 2nd day untouched.
-- Kammlesh Doshi: still not requalified, no new contact.
-- Naresh Marpalli's SVD phone typo: still not fixed, 5th flag.
-- Shikha Thakkar's visit: still missing from SVD, 2nd day.
-- Neha Joshi's "coming tomorrow" promise: did NOT happen — no update, no visit.
-- 2BHK "36 Seconds": REVERSED, back delivering today. "57 Seconds": still dark.
-- 1BHK Gujarati: first real clicks in days, still zero leads.
+- Srikant Iyer: still zero contact ever, now day 14. No movement at all today.
+- Neha Joshi's "coming tomorrow" promise DID happen — visited 39 min after yesterday's report.
+- Suraj Shukla's identical promise (made yesterday) did NOT convert today — no update, no visit.
+- Backlog cohort: still 88/99 touched — team worked ZERO backlog leads today (vs 6 yesterday).
+- Arvind Gupta duplicate: still unresolved, still stalled.
+- Mangesh Yashwant Jadyal: correction — only 3 rows found today, not 4 as noted yesterday.
+- khan's "Muslim" feedback: still not corrected, day 3.
+- Kamlesh Doshi: still not requalified.
+- Naresh Marpalli's SVD phone typo: still not fixed, 6th flag.
+- Sikha Thakkar's visit: still missing from SVD — also her ₹1.50cr budget is above the 2BHK ceiling.
+- 1BHK Gujarati: RESOLVED — got its first-ever lead today, closing a 4-report-old flag.
 
 HEADLINE
-All three campaigns delivered leads the same day for the first time since 22 Aug — 1 Studio, 2 2BHK, 2 1BHK. A genuinely strong speed-to-lead day (4 of 5 contacted same-day, two under 30 min), including a promising 1BHK lead promising a visit tomorrow. But zero site visits today, and Srikant Iyer is now uncalled for 13 straight days.
+1BHK had its best day yet — 9 leads at CPL ₹35.96, a third of its 7-day average — and "1BHK Gujarati" converted its first lead ever. But Studio went a full day with zero leads (account confirmed healthy), the team touched zero backlog leads, and Srikant Iyer sits at 14 days with no contact.
 
 THE FUNNEL (today so far)
-Studio: ₹229.91 spend, 936 impr, 29 clicks, 1 lead, CPL ₹229.91
-2BHK: ₹740.58 spend, 1,797 impr, 49 clicks, 2 leads, CPL ₹370.29
-1BHK: ₹445.71 spend, 1,614 impr, 42 clicks, 2 leads, CPL ₹222.85
-Combined: ₹1,416.20 spend, 4,347 impr, 120 clicks, 5 leads, CPL ₹283.24
-CRM matches Meta exactly: 5 leads, split 1/2/2. Platform: 3 Facebook, 2 Instagram.
-Dialed same-day: 4 of 5. Only the day's last lead (arrived 18:47) had no row yet — too fresh.
-Site visits today: 0.
+Studio: ₹145.85 spend, 731 impr, 16 clicks, 0 leads.
+2BHK: ₹477.98 spend, 1,699 impr, 34 clicks, 2 leads, CPL ₹238.99.
+1BHK: ₹323.61 spend, 1,607 impr, 42 clicks, 9 leads, CPL ₹35.96.
+Combined: ₹947.44 spend, 4,037 impr, 92 clicks, 11 leads, CPL ₹86.13.
+CRM matches Meta exactly: 11 leads, split 0/2/9 (1 Gujarati + 8 Hindi). Platform: 5 Facebook, 6 Instagram.
+Dialed same-day: 10 of 11. Only the day's last lead (Manishh Chheda, arrived 18:26) has no row yet — too fresh, and his phone reuses an old April lead's number.
+Site visits today: 1 logged, but it's an old 4 July lead with no CRM match — zero CRM-verified visits today.
 
 AD PERFORMANCE
-Studio: back to producing (1 lead), CTR 3.10% up from yesterday's 2.07%. SiteVisit pixel still confirmed missing on Studio's ad set via direct API check — 1BHK and 2BHK both have it. Cheap fix, still open.
-2BHK: 2 leads. "36 Seconds" came back online today (₹581, 2 leads) after going dark yesterday — resolved. "57 Seconds" still fully dark.
-1BHK: 2 leads, both via Hindi. Gujarati got its first real clicks in days (5 clicks) but still zero leads on ₹27 spend — flagged 4 reports running now, needs a decision. Campaign's first 7 full days: ₹4,549 spend, 41 leads, CPL ₹111, 1 verified visit.
+Studio: zero leads but CTR 2.19% is healthy, no fatigue. Direct API check: account ACTIVE, balance ₹75,418, no billing issue. SiteVisit pixel still confirmed missing on Studio's ad set — still open, still cheap to fix.
+2BHK: 2 leads, CPL ₹238.99, well below its 7-day average. "36 Seconds" carried both leads. "57 Seconds" still fully dark for several days running.
+1BHK: best day yet — 9 leads, CPL ₹35.96 vs 7-day average ₹116.38. "1BHK Gujarati" got its first-ever lead (Keval Savla) after 4 reports of zero — one more day before calling this fully resolved.
 
 SPEED-TO-LEAD
-A genuinely strong day. Every lead old enough to judge was contacted same-day — Kavita Sharma in ~25 min (correctly triaged as "by mistake inquiry," Dead), Suraj Shukla in ~22 min. All 3 within_3_months leads today contacted inside ~2h14m at the outside. Suraj Shukla is today's standout: fast response, real qualified outcome — ₹80L budget, in-band for 1BHK, promising to visit tomorrow afternoon.
+Second straight strong day. All 6 within_3_months leads today were contacted within ~3.5 hours, most inside 1-2 hours. Two live promises to watch: Rama Verma said "coming today" (no SVD row yet as of this report), Parminder Suri said "coming Sunday." Credit the team on speed again.
 
 LEAD QUALITY
-Suraj Shukla (1BHK, ₹80L budget) is today's best lead — watch tomorrow whether he actually visits, the same way Neha Joshi's identical "coming tomorrow" promise from yesterday did NOT convert. Suresh Kumar (1BHK, within_3_months) still needs a redial — "Ringing," no answer yet. No site visits to grade today.
+Parminder Suri came in on the 1BHK ad but says he wants a 2BHK — an ad/intent mismatch worth a heads-up to the team. laxmi was flagged "Broker" on first contact — a quality leak, not a real prospect. Rama Verma (sub-₹1cr, within_3_months, "coming today") is the day's most time-sensitive lead to check tonight.
 
-Real cost-per-visit, trailing 30 days, CRM-verified only: ₹54,025.51 spend, 194 leads, vanity CPL ₹278.48. 15 verified visits — real cost-per-visit ~₹3,602, rate 7.73%. This is UP from yesterday's ₹3,363 purely because the 30-day window rolled past an old visit (24 Jul) with nothing new today to replace it — not a quality drop. Add 5 legitimate FB-call direct visits: ~₹2,701, rate 10.31%.
+Real cost-per-visit, trailing 30 days, CRM-verified only: ₹52,030.69 spend, 192 leads, vanity CPL ₹271.00. 12 verified visits — real cost-per-visit ~₹4,336, rate 6.25%. This is UP sharply from yesterday's ~₹3,602 — three more late-July visits aged out of the window and, unlike a normal roll, zero new verified visit landed today to replace any of them. Second straight zero-verified-visit day. Add 4 legitimate FB-call direct visits: ~₹3,252, rate 8.33%.
 
 DATA INTEGRITY
-Backlog cohort: 88 of 99 touched now (up from 82), 11 remain — including Srikant Iyer, still zero contact, day 13. Arvind Gupta's duplicate rows both sat untouched today. Mangesh Yashwant Jadyal now has a FOURTH separate row for the same phone. Neha Joshi's promised visit from yesterday didn't happen. khan's feedback still reads "Muslim." Kammlesh Doshi still not requalified. Naresh Marpalli's SVD phone typo still open, 5th flag. Shikha Thakkar's visit still not in SVD. Ushma Katira's post-visit note now 7 days stale. Atul Thorat unchanged, ~day 62. Account healthy: ACTIVE, balance ₹32,553.
+Backlog cohort: still 88 of 99 touched, unchanged — the team worked zero backlog leads today, all effort went to today's fresh 11-lead 1BHK surge. Srikant Iyer (day 14) still the most urgent open item. New flag: Neha Joshi's real 24 Aug visit has no CRM match and no "FB call" marker — ask the team whether she called direct or this is a genuine gap. Arvind Gupta duplicate still stalled. Naresh Marpalli's SVD typo still open, 6th flag. Sikha Thakkar's visit still not in SVD, and her ₹1.50cr budget exceeds the 2BHK ceiling. khan still "Muslim," day 3. Kamlesh Doshi still not requalified. Ushma Katira's post-visit note now 8 days stale. Account healthy: ACTIVE, balance ₹75,418.
 
 DIAGNOSTIC STEPS
-1. Call Srikant Iyer today — day 13, zero contact, no capacity excuse left.
-2. Fix the "khan" feedback entry — 2 days stale with "Muslim" as the only note.
-3. Requalify Kammlesh Doshi before the next call.
-4. Merge Arvind Gupta's duplicate and Mangesh Yashwant Jadyal's now-four rows; get Shikha Thakkar's visit into SVD and fix Naresh Marpalli's phone.
-5. Decide on "1BHK Gujarati" now — 4 reports flagged. Check if "2BHK 57 Seconds" comes back like "36 Seconds" did.
+1. Decide on Srikant Iyer today, one way or the other — day 14, zero contact ever.
+2. Find out why the backlog cohort had a zero-touch day and make sure it resumes tomorrow.
+3. Merge Arvind Gupta and Mangesh Jadyal duplicates, fix Naresh Marpalli's phone (6th flag), log Sikha Thakkar's visit and flag her budget mismatch, fix "khan" and requalify Kamlesh Doshi.
+4. Confirm tonight whether Rama Verma's "coming today" visit happened, and whether Suraj Shukla's still pending.
+5. Watch "1BHK Gujarati" one more day before calling it resolved; decide if "2BHK 57 Seconds" is coming back or should be paused.
 
 ANYTHING ELSE
-First day since 22 Aug all three campaigns delivered leads together — healthier than yesterday's Studio+2BHK zero-lead day. Two "coming tomorrow" promises tracked back to back (Neha Joshi broke, Suraj Shukla pending) — worth checking every such promise the next day rather than assuming it landed.
+1BHK's CPL today is the best either campaign has posted since launch, the same day its long-flagged Gujarati variant finally converted — real progress worth naming plainly. The flip side: today's contact effort went entirely to fresh leads at the expense of the backlog, which is fine once but needs watching if it repeats — Srikant Iyer doesn't get less stale because new leads arrived. Three live "coming today/tomorrow/Sunday" promises (Rama Verma, Suraj Shukla, Parminder Suri) are worth tracking by name until the sheet itself flags follow-ups due.

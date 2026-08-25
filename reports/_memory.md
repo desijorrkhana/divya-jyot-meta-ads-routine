@@ -1,41 +1,53 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Added 2026-08-24 (evening run, ~7PM IST)
+## Added 2026-08-25 (evening run, ~7PM IST)
 
-- **Srikant Iyer (8879085434, created 12 Aug) — day 13, STILL zero contact ever.** Skipped again
-  today despite the team touching 6 more backlog leads. Single most important named lead to
-  escalate next run — no capacity excuse remains.
-- **Suraj Shukla (9699995989, created today) — 1BHK, ₹80L budget, "coming tomorrow afternoon."**
-  22-min response time, real qualified outcome. Check next run whether he actually visits.
-- **Neha Joshi (7506761933) — her "coming tomorrow" promise from 23 Aug did NOT happen.** No
-  update, no SVD row. First broken promise of this kind tracked; watch if she resurfaces or goes
-  cold, and apply the same next-day check to Suraj Shukla above.
-- **Backlog cohort (99 leads, 1-17 Aug): 88/99 touched (up from 82).** 11 remain untouched:
-  Vinod Panchal, Kapil Chheda, Rajesh Mehta, Milind, Hitesh, Jaspal Kaur Bindra (old row),
-  Kripal Singh, Sharayu Rane, Milind Apte, Mahesh Gupta, plus Srikant Iyer above. Sharayu Rane
-  (₹80L, 1BHK ask) is worth a fresh look now the 1BHK product exists.
-- **Arvind Gupta duplicate — still live but stalled.** Neither row (#1550 correct 9324315180,
-  #1606 wrong 9234315180) got a new entry today. Watch if it finally gets merged.
-- **Mangesh Yashwant Jadyal (9730229334) — now a FOURTH separate row** (30 Jan, 13 Aug, 23 Aug,
-  24 Aug), still never merged. Escalating pattern, worth raising as a systemic ask.
-- **khan (8454971010) — feedback still "Muslim," 2nd day untouched.** Escalate further if still
-  open next run.
-- **Kammlesh Doshi (7208544065) — still not requalified**, no new contact since 23 Aug.
-- **Naresh Marpalli's SVD phone typo — still NOT fixed, now 5th flag** (8108784706 should be
+- **Srikant Iyer (8879085434, created 12 Aug) — day 14, STILL zero contact ever.** No movement
+  at all today. Longest-standing open item this routine tracks — push for an explicit decision
+  (call or write off), not another "still open" note.
+- **Backlog cohort (99 leads, 1-17 Aug): still 88/99 — team touched ZERO backlog leads today**
+  (vs 6 yesterday), because all contact effort went to today's fresh 11-lead 1BHK surge. Watch
+  whether backlog work resumes tomorrow or this becomes a pattern. Untouched: Srikant Iyer,
+  Vinod Panchal, Kapil Chheda, Rajesh Mehta, Hitesh, Jaspal Kaur Bindra (old row #325), Kripal
+  Singh, Sharayu Rane, Milind Apte, Mahesh Gupta (dashed phone, uncallable), plus Milind
+  (#299 untouched but a duplicate row #416 got a real "out of budget" outcome 23 Aug).
+- **Rama Verma (7011243919, 1BHK, arrived today 13:47, "coming today") — check first thing
+  whether she actually visited; no SVD row for her as of this report.**
+- **Suraj Shukla (9699995989) — "coming tomorrow" promise from 24 Aug did NOT convert today.**
+  Second such broken/pending promise this week (Neha Joshi's did convert, 39 min after the 24
+  Aug report). Ask the team directly whether he gave a real time or just ended the call.
+- **Parminder Suri (9867634953, arrived today, "coming Sunday" = 30 Aug)** — future promise,
+  came in on the 1BHK ad but says he wants a 2BHK (ad/intent mismatch) — hold the team to the
+  date, check back around 30-31 Aug.
+- **1BHK Gujarati got its first-ever lead today (Keval Savla) after 4 reports flagged at zero.**
+  Watch for a SECOND lead before calling this fully resolved — one data point isn't a trend.
+- **NEW integrity flag: Neha Joshi (7506761933) — real 24 Aug visit, no CRM match, no "FB call"
+  marker.** Ask the team whether she called direct (needs the marker added) or this is a
+  genuine CRM gap, distinct from Bhavin Vora/Naresh Marpalli/today's Jayesh (all still open).
+- **Manishh Chheda (9819728821, arrived 18:26, too fresh to judge) reuses an April lead's
+  phone number ("Manish chedda," stale "Ringing" row)** — flag to whoever calls him so he isn't
+  confused with the old inquiry.
+- **Mangesh Yashwant Jadyal — correction, not a new finding: only 3 rows exist today (30 Jan,
+  13 Aug, 23 Aug), not 4 as noted in the 24 Aug memory.** Still an unmerged duplicate regardless;
+  don't re-cite "4 rows" without re-verifying.
+- **Sikha Thakkar (9321915923, correct spelling — no "h" after "S") — visit still not in SVD,
+  now also flagged: her stated budget ₹1.50cr is ABOVE the 2BHK ceiling (~₹1.4cr).** New
+  mismatch, not previously named.
+- **Arvind Gupta duplicate — still stalled, no entry on either row today.**
+- **khan (8454971010) — feedback still "Muslim," day 3 untouched.**
+- **Kamlesh Doshi (7208544065, correct spelling — ONE m) — still not requalified**, no contact
+  since 23 Aug.
+- **Naresh Marpalli's SVD phone typo — still NOT fixed, now 6th flag** (8108784706 should be
   8108784766).
-- **Shikha Thakkar (9321915923) — 23 Aug visit still not in SVD tab, 2nd day open.**
-- **Ushma Katira (9869488784) — post-visit note now 7 days stale (since 17 Aug).**
-- **Atul Thorat — unchanged, ~day 62, still Dead on wrong number (98198777789 vs real 9819877789).**
-- **2BHK "36 Seconds" reversed — back delivering today (₹581, 2 leads), resolves prior flag.
-  "57 Seconds" still fully dark** — check next run if it returns too.
-- **1BHK Gujarati — first real clicks in days (5 clicks, CTR 5.05%) but still 0 leads, tiny
-  spend.** 4 reports flagged now; needs a decision from Keval.
-- **Real cost-per-visit ticked UP (₹3,363→₹3,602 CRM-only) purely from the 30-day window rolling
-  past Ashok Savalkar's 24 Jul visit — zero new verified visits today.** Watch next run whether
-  a fresh visit corrects this back down.
+- **Ushma Katira (9869488784) — post-visit note now 8 days stale (since 17 Aug).**
+- **Real cost-per-visit jumped UP sharply (₹3,602→₹4,336 CRM-only)** — three more late-July
+  verified visits aged out of the 30-day window and, unlike a normal roll, ZERO new verified
+  visit landed today to replace any of them (2nd straight zero-verified-visit day). Watch
+  urgently whether a fresh visit corrects this tomorrow.
 - **Studio SiteVisit pixel — reconfirmed missing again today** via direct Graph API check
   (adset "Open - DJR" still no pixel_id/custom_event_str). Cheap fix, still open.
-- **Zero site visits logged today** — first zero-visit day in a few reports; not a trend yet,
-  just note if it repeats tomorrow.
+- **2BHK "57 Seconds" — still fully dark, several days running now.** No "36 Seconds" flag
+  anymore (it's been running fine 2 days straight).
+- **Account health confirmed via direct Graph API: ACTIVE, balance ₹75,418, no billing issue.**
 - Telegram delivery: confirm this run's send succeeded before assuming the routine is done —
   check the printed line after `--send`.
