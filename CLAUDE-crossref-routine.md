@@ -319,6 +319,27 @@ the list. Commit message must say what was learned in one line.
   rule: to check a post-visit lead's latest status, read the SVD row's trailing columns, not just
   facebook_tab — the two tabs split a lead's lifecycle (pre-visit nurture vs post-visit nurture)
   rather than one tab owning the whole history.
+  **UPDATE 2026-08-26 — this rule was being violated in practice for at least a few days.**
+  Multiple reports (through 25 Aug) called several post-visit leads "stale" (Ushma Katira "8
+  days stale" was the clearest case) based on facebook_tab alone; re-reading the SVD rows'
+  own trailing columns directly found 10 post-visit leads (Ushma Katira, Neha Joshi, Jayesh,
+  Naresh Marpalli, Bhavin Vora, Dimple Dedhia, Vishal Thakkar, Urmila Salvi, Falguni Thakkar,
+  Vaibhav Gandhi) had all been touched the SAME day the correction was written — the "stale"
+  claims were simply wrong. **Reinforced standing rule: NEVER assess a post-visit lead's
+  freshness from facebook_tab; always pull the full SVD row (every column, not just the ones
+  with header text — see the 08-22 rule below) before calling anything stale.** Separately,
+  the same run tried to recompute the "backlog cohort" (leads created 1-17 Aug still
+  untouched) from scratch and got 22 untouched vs. an "11 untouched" figure carried in
+  reports/_memory.md since 24 Aug — the two never reconciled within that run. A same-row-only
+  facebook_tab scan (ignoring linked SVD activity for the same phone) undercounts touches the
+  same way this whole rule warns about; a scan that also credits ANY other row for the same
+  phone (see the 07-29 duplicate-phone rule) overcounts by attributing a different person's or
+  a different submission's activity. **Getting the backlog-cohort number right needs a single,
+  written-down definition — trailing columns on the lead's own facebook_tab row PLUS any SVD
+  activity for that exact phone, explicitly excluding cross-row facebook_tab duplicates unless
+  named as a special case (per the Milind/Sharayu Rane pattern, 08-24/08-25) — applied the same
+  way every run, not re-derived ad hoc each time.** If this keeps drifting, move the
+  computation into fetch_all.py itself so it's reproducible instead of re-reasoned daily.
 - 2026-07-26: two distinct scheduling-infra failure modes seen so far, both silent (workflow/schedule
   still shows "active" while nothing runs) — check Actions run history first if commits stop for >2h
   inside 9AM-7PM IST. (1) A GitHub repo TRANSFER de-registers cron schedules (dashboard went dark
