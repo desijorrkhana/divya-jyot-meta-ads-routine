@@ -1,48 +1,54 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Wednesday, 26 August 2026 (midnight–~7PM IST, still moving)
-
-FOLLOW-UP FROM LAST REPORT + A CORRECTION
-- MAJOR CORRECTION: several "stale" post-visit leads flagged recently were actually being worked — the check was reading facebook_tab instead of SVD's own trailing columns. Re-checked SVD directly: 10 post-visit leads got a fresh touch TODAY alone (Ushma Katira, Neha Joshi, Jayesh, Naresh Marpalli, Bhavin Vora, Dimple Dedhia, Vishal Thakkar, Urmila Salvi, Falguni Thakkar, Vaibhav Gandhi). Ushma Katira's "8 days stale" flag is retracted.
-- Backlog cohort (99 leads, 1-17 Aug): a full re-scan finds 22 leads with zero contact of any kind since creation — this doesn't match the "11 untouched" figure carried since 24 Aug. Flagging the gap honestly; needs Keval's eyes to settle which count is right.
-- Srikant Iyer: still zero contact ever, now day 15 — the one item that survives every correction above, still unmoved.
-- 1BHK Gujarati got its SECOND lead today (Hemendra Doshi) — closes the "watch for a second lead" flag.
-- Rama Verma's "coming today" and Suraj Shukla's "coming tomorrow" promises: still unconfirmed, no redial logged for either.
-- khan still "Muslim" (day 4). Kamlesh Doshi still not requalified (day 4). Arvind Gupta and Mangesh Jadyal duplicates still unmerged (but were worked in the 23 Aug mass redial, not neglected). Sikha Thakkar's visit still not logged in SVD, budget still above the 2BHK ceiling.
+Thursday, 27 August 2026 (midnight–~7PM IST, still moving)
 
 HEADLINE
-Zero site visits today — the third straight zero-verified-visit day (12 CRM-verified, flat since 24 Aug, real cost-per-visit now ~₹4,382) — even though the team had another fast-contact day AND was quietly working the post-visit backlog hard (10 leads touched today, several wrongly flagged stale before). 1BHK Gujarati's second lead resolves a 5-report watch. All 3 campaigns delivered leads today (1/4/4), clean CRM match.
+Zero site visits again — 4th straight zero-visit day (12 CRM-verified, flat since 23 Aug). Real cost/visit now ~₹4,411. All 3 campaigns delivered leads today (1/3/1, exact CRM match) but only 2 of 5 leads got dialed. One lead, Manali Bhat, is currently UNCALLABLE — her phone was mistyped in the sheet (98892377787 instead of 9892377787), same failure as the Atul Thorat case in June.
 
 THE FUNNEL (today so far)
-Studio: ₹180.31 spend, 1,144 impr, 26 clicks, 1 lead, CPL ₹180.31.
-2BHK: ₹696.09 spend, 2,826 impr, 54 clicks, 4 leads, CPL ₹174.02.
-1BHK: ₹448.64 spend, 1,897 impr, 46 clicks, 4 leads, CPL ₹112.16.
-Combined: ₹1,325.04 spend, 5,867 impr, 126 clicks, 9 leads, CPL ₹147.23.
-CRM matches Meta exactly: 9 leads, split 1/4/4. Platform: 2 Facebook, 7 Instagram.
-Dialed same-day: 8 of 9. Only Bhupesh (Studio, arrived 17:43) has no row yet — too fresh.
-Site visits today: 0. Third straight zero-verified-visit day.
+Studio: ₹188 spend, 1 lead, CPL ₹188
+2BHK: ₹569 spend, 3 leads, CPL ₹190
+1BHK: ₹448 spend, 1 lead, CPL ₹448
+Combined: ₹1,206 spend, 5,656 impr, 115 clicks, 5 leads, CPL ₹241
+Dialed same-day: 2 of 5 (Kamlesh, Santosh — no answer yet)
+Untouched: 3 of 5 (Aahana, Manali Bhat — typo blocked, Anupama — just arrived)
+Site visits today: 0
 
 AD PERFORMANCE
-Studio: 1 lead, CPL ₹180.31, CTR 2.27% — healthy, no fatigue. Account ACTIVE, balance ₹61,385, no billing issue. SiteVisit pixel still confirmed missing on Studio's adset — still open.
-2BHK: 4 leads, CPL ₹174.02, best CPL day in over a week. "36 Seconds" carried 3, "29 Seconds connectivity hook" got 1 on a strong 4.9% CTR. "57 Seconds" still fully dark.
-1BHK: 4 leads, CPL ₹112.16, roughly in line with the 7-day average (yesterday's ₹46.03 was the outlier). "1BHK Gujarati" got its SECOND-ever lead — two real leads on two different days closes this watch.
+Studio: CTR 1.75%, freq 1.13 — quiet day, not fatigue (freq is week's lowest too). Account healthy: ACTIVE, balance ₹46,301. Studio's SiteVisit pixel is STILL missing on the "Open - DJR" adset — cheap fix, flagged repeatedly.
+2BHK: best CPL of the week (₹190), best CTR (2.39%), frequency trending down (1.50→1.40→1.28) — healthy. "57 Seconds" still fully dark, no spend again.
+1BHK: worst CPL of the week (₹448). "1BHK Hindi" spent ₹406 with a normal CTR (1.71%, 16 link clicks) but ZERO leads — a reversal after 4 and 11 leads the past two days. Watch tomorrow — one day is noise, two is a pattern. "1BHK Gujarati" fine (1 lead, CPL ₹42).
 
 SPEED-TO-LEAD
-Third straight strong day. All 5 within_3_months leads today were contacted same-day or are still under 2 hours old — fastest was 23 minutes (Sandeep Gupta). Credit the team plainly, this is now a consistent pattern, not a one-off.
+Kamlesh chettiyar (2BHK, within_3mo) — arrived 6:30am, "Busy" on first dial.
+Santosh Pokharkar (Studio, within_3mo) — arrived 12:40pm, "Ringing" on first dial.
+Aahana (1BHK, exploring) — arrived 3:02pm, no contact yet.
+Manali Bhat (2BHK, exploring) — arrived 4:02pm, no contact — AND phone typo means she can't be reached until fixed.
+Anupama Sabat (2BHK, within_3mo) — arrived 6:18pm, too fresh to fault.
+Note: contact_history's revision tracking was thin today (only 6 revisions scanned) — lag is day-level only, not minute-level, for all 5 leads.
 
 LEAD QUALITY
-Kadam Snehal Prathamesh came in on the 1BHK ad but says she wants a 2BHK — an ad/intent mismatch, same pattern as yesterday. Amit Nathani's stated budget (₹1.5-1.75cr) is above the 2BHK ceiling (~₹1.4cr) — a mismatch worth confirming on the call. Nita Shah declined outright ("not looking for any property") despite a good intent tag — a real quality leak.
+Light today — 3 of 5 leads haven't been engaged yet, so no budget/mismatch read available. Full detail lands in tomorrow's report once they're worked.
 
-Real cost-per-visit, trailing 30 days, CRM-verified only: ₹52,586.28 spend, 195 leads, vanity CPL ₹269.67. 12 verified visits, unmoved for 3 straight days — real cost-per-visit ~₹4,382, rate 6.15%. Worth asking the team directly: are visits actually stalling, or is a visit happening and not making it into the SVD tab? Add 4 legitimate FB-call direct visits: ~₹3,287, rate 8.21%.
+COST PER VISIT (trailing 30 days, 28 Jul–27 Aug, CRM-verified only)
+Spend ₹52,929, 202 leads, vanity CPL ₹262.
+12 CRM-verified visits → real cost/visit ~₹4,411, visit rate 5.94%. Unmoved for 4 straight days now — the longest stretch this routine has tracked.
+Plus 4 legit FB-call direct visits → 16 total, cost/visit ~₹3,308, rate 7.92%.
+This is happening DESPITE fast contact work — looks like a conversion problem, not a contact problem.
 
 DATA INTEGRITY
-Big correction this run: backlog and post-visit tracking in recent reports missed real activity by checking the wrong tab/column — see the follow-up note above and the headline. New flag: Naresh Marpalli's SVD phone and a completely different lead ("Himalaya Agrawal," active through 22 Aug) share the exact same number, one digit off from the known typo — worth a direct check, two lead histories may be tangled under one number. Srikant Iyer (day 15) remains the one confirmed, unambiguous miss. Account healthy: ACTIVE, balance ₹61,385.
+NEW: Manali Bhat's phone typo (row #1665) — 98892377787 should be 9892377787. Fix before dialing.
+RESOLVED: the "22 vs 11 untouched" backlog confusion from the last 2 reports. Full recheck (own row + duplicate-phone rows + SVD) finds only 7 genuinely untouched leads from the 1-17 Aug cohort: Vinod Panchal, Rajesh Mehta, Hitesh, Srikant Iyer, Kripal Singh, Milind Apte, Mahesh Gupta. The gap was two things: real follow-up notes already on some rows, and some "redials" logged as brand-new duplicate rows instead of follow-up columns — both missed by a same-row-only scan.
+Srikant Iyer — still zero contact ever, now day 16. Most urgent single item in this routine.
+Naresh Marpalli SVD phone typo — still open, 8th flag.
+Account: ACTIVE, balance ₹46,301, no billing issue.
 
 DIAGNOSTIC STEPS
-1. Decide on Srikant Iyer today, one way or the other — day 15, zero contact ever.
-2. Reconcile the backlog-cohort count — this run's 22 untouched doesn't match the "11" carried since 24 Aug; spot-check a few names to settle it.
-3. Push specifically for site-visit commitments — 3 straight days flat at 12 verified visits despite fast, active contact work.
-4. Close the loop on Rama Verma and Suraj Shukla's pending promises with a direct redial.
-5. Fix the Naresh Marpalli phone typo (7th flag) and the new Naresh/Himalaya Agrawal collision, merge the Arvind Gupta and Mangesh Jadyal duplicates, log Sikha Thakkar's visit with her budget flagged, requalify "khan" and Kamlesh Doshi.
+1. URGENT — fix Manali Bhat's phone (98892377787 to 9892377787) and call her today.
+2. URGENT — decide on Srikant Iyer today. Day 16. Call or write off.
+3. Redial Rama Verma (2 days overdue on "coming today") and Suraj Shukla (3 days overdue on "coming tomorrow").
+4. Push the team hard on site-visit conversion — 4 straight zero-visit days despite fast contact. Ask directly: stalling, or a logging gap?
+5. Requalify khan and Kamlesh Doshi (day 5 each), fix Naresh Marpalli's SVD phone typo, merge Arvind Gupta / Mangesh Jadyal duplicates.
+6. Fix Studio's SiteVisit pixel. Decide on "2BHK 57 Seconds." Watch 1BHK Hindi tomorrow.
 
 ANYTHING ELSE
-Today's real story is a tracking correction, not the ad numbers: re-reading SVD's own trailing columns found the team quietly working 10 post-visit leads today that recent reports wrongly called stale. Trust the sales team's contact effort more than the last few reports implied — but the site-visit stall itself is real and unaffected by the correction: 12 verified visits, unmoved for three straight days, on top of a growing lead pool and fast contact. Push hard on what's stopping well-contacted leads from actually visiting.
+The backlog-cohort confusion is solved — turns out some redials get logged as a brand-new row instead of a follow-up note, which threw off every same-row-only count so far. Good to know, not a crisis. The real crisis is unchanged: 12 verified visits, frozen for 4 days, on top of a growing, fast-contacted lead pool. That's the number that matters most right now.
