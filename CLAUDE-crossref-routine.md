@@ -379,6 +379,21 @@ the list. Commit message must say what was learned in one line.
   contact lag unmeasurable via the tool. Standing rule: before trusting a `contact_history`
   bracket, check `meta_leads_timed` for duplicate phones — if found, read the matching
   `facebook_tab` row directly instead (day-level precision only) and say so explicitly.
+  **UPDATE 2026-08-27 — the same duplicate-phone pattern also breaks "was this lead contacted"
+  backlog/freshness checks, not just contact_history brackets, and explains a multi-day count
+  discrepancy (22 vs. 11 untouched in the 1-17 Aug cohort, unresolved 24-26 Aug).** The team
+  sometimes logs a redial as a brand-new facebook_tab row under the SAME phone (new date, no
+  link back to the original) instead of adding a follow-up entry to the original row's trailing
+  columns — confirmed for Jaspal Kaur Bindra, Sharayu Rane, and Milind (`8383061069`), each of
+  whom looked "never recontacted" on their original 1-17 Aug row but had a real, dated dial
+  attempt logged on a SEPARATE later row for the same number. A same-row-only scan (exactly
+  what earlier backlog counts were doing) silently miscounts these as neglected. Standing rule:
+  before calling any lead "untouched," check EVERY facebook_tab row sharing that lead's phone
+  (via the same digit-normalization used for CRM matching), not just the lead's own row — a
+  duplicate row with a later dated feedback entry counts as a real contact. Combined with the
+  existing own-row-trailing-column check (07-27/08-22 rules) and linked SVD activity, this
+  closed the 22-vs-11 gap: the true count was 7. If this needs re-deriving by hand again next
+  run, move it into `fetch_all.py` as a reusable function instead of re-reasoning it ad hoc.
 - 2026-07-30: some `facebook_tab` phone cells hold TWO numbers separated by "/" (e.g. Ravi, row 1221:
   "9321110668 / 8369593191"). Naive digit-only extraction concatenates both into one garbled string that
   matches nothing, wrongly flagging a real, matched lead ("Ravi DU", 10 Jun) as a reverse-check miss for
