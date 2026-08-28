@@ -258,6 +258,17 @@ the list. Commit message must say what was learned in one line.
   starts with "$" or contains a decimal point, strip the trailing ".00"/decimal remainder
   before taking the last 10 digits, or try BOTH the first-10 and last-10-digit candidates
   and accept either as a CRM match.
+  **UPDATE 2026-08-28 — a naive combination of this fix with the 07-30 dual-number ("/") split
+  rule re-breaks it.** A phone-cell splitter written as `re.split(r'[/,;]', cell)` (splitting on
+  comma alongside slash/semicolon, to catch dual numbers) shreds a currency-formatted cell like
+  `"$9,769,892,612.00"` into fragments (`"$9"`, `"769"`, `"892"`, `"612.00"`) BEFORE the
+  $/decimal-stripping logic ever sees the full number — silently reintroducing the exact
+  Sharayu Rane false-miss this rule already fixed once, just via a different code path. Caught
+  this run by re-verifying the reverse-check script's own output before trusting it (Sharayu
+  Rane reappeared as a miss despite the fix supposedly being in place). Fix: split ONLY on `/`
+  and `;` for the dual-number case; NEVER split on `,` — commas in a phone cell are thousands
+  separators from Sheets' currency auto-formatting, not a second phone number. Apply the
+  $/decimal-strip logic to each split part, not before splitting.
 - 2026-07-21/22 (CORRECTED — do not repeat this mistake; UPDATED 2026-08-18, see below): the
   CRM Event spreadsheet (`LEADS_SHEET_ID`) gets a NEW TAB per lead form, not one tab total —
   `Sheet1` (Studio) and `Sheet2` ("2BHK", added the day that campaign launched) both feed real,
