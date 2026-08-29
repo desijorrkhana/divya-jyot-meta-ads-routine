@@ -268,61 +268,25 @@ the list. Commit message must say what was learned in one line.
   Rane reappeared as a miss despite the fix supposedly being in place). Fix: split ONLY on `/`
   and `;` for the dual-number case; NEVER split on `,` — commas in a phone cell are thousands
   separators from Sheets' currency auto-formatting, not a second phone number. Apply the
-  $/decimal-strip logic to each split part, not before splitting.
-- 2026-07-21/22 (CORRECTED — do not repeat this mistake; UPDATED 2026-08-18, see below): the
-  CRM Event spreadsheet (`LEADS_SHEET_ID`) gets a NEW TAB per lead form, not one tab total —
-  `Sheet1` (Studio) and `Sheet2` ("2BHK", added the day that campaign launched) both feed real,
-  working data. `fetch_all.py` used to hardcode `Sheet1!A1:Q5000`, so `Sheet2` was silently
-  never read and an entire real campaign's leads were invisible — reported to Keval as a
-  "critical tracking gap" that didn't actually exist. Fixed: `fetch_sheets()` now calls
-  `spreadsheets().get()` to enumerate every tab in the spreadsheet and reads all of them.
-  **Standing rule: before ever reporting a data-completeness problem (a campaign/form/source
-  "not showing up"), check whether the read is scoped to one sheet/tab/range that a newer form
-  might have bypassed — a missing read looks identical to a missing integration from the
-  output alone, but they need opposite fixes.** This one took Keval pushing back three separate
-  times before it surfaced — treat persistent user pushback on a headline number as a strong
-  signal to re-derive from raw sources, not to re-explain the same conclusion more confidently.
-  **UPDATE 2026-08-18 — the OPPOSITE failure, confirmed for real this time:** a 3rd campaign
-  ("Divya Jyot V4 Aug26 - 1BHK") launched and was delivering same-day (Meta: ₹471.97 spend, 5
-  leads, confirmed via `spreadsheets().get()` returning ONLY `Sheet1`/`Sheet2`, no `Sheet3`).
-  This is a genuine missing INTEGRATION, not a missing read — the 1BHK lead form isn't feeding
-  the CRM Event sheet at all yet, so `meta_leads_timed` has zero record of any 1BHK lead
-  despite real ad spend. Compounding sign found the same day: `facebook_tab` picked up 3 new
-  rows (Urmi Gala, Vilas Shah, Lalji) with the phone cell literally `"---------"` instead of a
-  number, all instantly marked Dead/"Not contact" — plausibly the same 5 1BHK leads arriving
-  through a broken pipe that drops the phone digits before the team ever sees them (not
-  confirmed by name/time match, since there's no CRM record to match against — flag as a
-  strong hypothesis, not fact). **Standing rule, both directions: every run, compare the set of
-  campaigns with real spend/leads in `meta.today_campaigns` against the set of CRM tabs from
-  `spreadsheets().get()`. A campaign present in one but not the other is EITHER a stale-code
-  read-scope bug (fix the code) OR a live integration gap upstream of this pipeline (tell Keval,
-  don't try to code around it) — tell them apart by checking whether `spreadsheets().get()`
-  itself already lists the tab (if yes, code bug; if the tab plain doesn't exist yet, it's
-  upstream).** Also: any `facebook_tab` row with a dashed/placeholder phone cell instead of
-  digits is worth flagging on sight — a lead the team has no way to call.
-  **UPDATE same day, a few hours later — Keval connected the pipe (`Sheet3` now exists,
-  containing exactly one Meta-generated test lead, no real ones yet), but the FORM itself is
-  still incomplete.** `Sheet3`'s header row (auto-generated from the connected form's actual
-  fields) is `id, created_time, ad_id, ad_name, adset_id, adset_name, campaign_id,
-  campaign_name, form_id, form_name, is_organic, platform, full_name, email, lead_status` —
-  compare to `Sheet1`/`Sheet2`, both of which also have `phone_number` AND a budget/timeline
-  qualifier question (`when_are_you_planning_to_purchase?` /
-  `what_is_your_budget_for_this_purchase?`). The 1BHK form has NEITHER. Meta itself already
-  shows real spend/leads (6 leads, ₹487.39 same day) that aren't OTP-verified the way
-  Studio/2BHK are, and won't be catchable in `meta_leads_timed`/`phone10` even once real
-  submissions start landing in `Sheet3` — there's no phone question on the form to capture.
-  **Standing rule: don't assume "the sheet tab now exists" means a campaign is fully wired —
-  separately verify the destination sheet's HEADER ROW has `phone_number` (and ideally an
-  intent/budget question) before treating a newly-connected campaign as usable for
-  speed-to-lead. If missing, this is a Meta Ads Manager instant-form edit Keval needs to make
-  (add the phone number + budget/timeline questions, matching Studio/2BHK's form structure),
-  not something fixable from this pipeline's code.**
-  **UPDATE 2026-08-21 — RESOLVED.** A 4th CRM tab (`Sheet4`) appeared, header row now carrying
-  `phone_number` plus budget/timeline questions matching Sheet1/Sheet2's structure. Today's 1BHK
-  leads (Gandhi Vaibhav, Komal) landed in `Sheet4` with real `phone10` values and captured budget.
-  Confirm this holds for a few more runs, but the standing rule above (verify the header row, don't
-  assume a new tab = usable) is what caught both the original gap and its fix — keep applying it to
-  any newly-launched campaign.
+  $/decimal-strip logic to each split part, not before splitting. (The dual-number case itself:
+  some cells hold TWO numbers separated by "/", e.g. "9321110668 / 8369593191" — split and check
+  each 10-digit number separately against the CRM, first confirmed 2026-07-30 via "Ravi DU".)
+- 2026-07-21/22 through 2026-08-21 (RESOLVED, standing rules kept — narrative compressed
+  2026-08-29 per the ~15-entry cap): the CRM Event spreadsheet gets a NEW TAB per lead form
+  (Sheet1 Studio, Sheet2 2BHK, Sheet3/Sheet4 1BHK — the 1BHK tab took two tries: first the tab
+  didn't exist, then it existed but its form lacked a phone/budget question). Confirmed stable
+  since 08-21 across 8+ runs. **Standing rules, keep applying to any newly-launched campaign:**
+  (1) before reporting a data-completeness problem ("a campaign/form not showing up"), check
+  whether the read is scoped to one sheet/tab/range a newer form bypassed — a missing READ looks
+  identical to a missing INTEGRATION but needs the opposite fix; tell them apart via
+  `spreadsheets().get()` (tab listed = code bug; tab absent = real upstream gap, tell Keval, don't
+  code around it). (2) Every run, compare campaigns with real spend in `today_campaigns` against
+  the CRM tabs from `spreadsheets().get()` — a mismatch either direction is worth a look. (3)
+  Don't assume "the tab exists" means the campaign is fully wired — verify the HEADER ROW has
+  `phone_number` (+ ideally a budget/timeline question) before trusting it for speed-to-lead. (4)
+  A `facebook_tab` row with a dashed/placeholder phone cell is a lead the team has no way to
+  call — flag on sight. Persistent user pushback on a headline number is a strong signal to
+  re-derive from raw sources, not to re-explain the same conclusion more confidently.
 - 2026-07-27: once a lead has a logged site visit, POST-VISIT follow-up call notes get added as
   trailing dated columns on that lead's SVD-tab row itself, NOT as new rows in the Facebook tab —
   e.g. Ashok Savalkar's "26/7/26 Max budget is 1cr" note (referenced in the 26 Jul report) lives in
@@ -405,11 +369,6 @@ the list. Commit message must say what was learned in one line.
   existing own-row-trailing-column check (07-27/08-22 rules) and linked SVD activity, this
   closed the 22-vs-11 gap: the true count was 7. If this needs re-deriving by hand again next
   run, move it into `fetch_all.py` as a reusable function instead of re-reasoning it ad hoc.
-- 2026-07-30: some `facebook_tab` phone cells hold TWO numbers separated by "/" (e.g. Ravi, row 1221:
-  "9321110668 / 8369593191"). Naive digit-only extraction concatenates both into one garbled string that
-  matches nothing, wrongly flagging a real, matched lead ("Ravi DU", 10 Jun) as a reverse-check miss for
-  multiple reports running. Fix: split phone cells on non-digit separators and check each 10-digit number
-  separately against the CRM.
 - 2026-07-30 (MERGED with 07-21 typo-year note): `facebook_tab`'s Created column is NOT uniformly
   DD/MM/YYYY — pre-V3 rows from 2025 use MM/DD/YYYY (unambiguous only when day>12, e.g.
   "07/27/2025"), while 2026 V3-era rows use DD/MM/YYYY (e.g. "21/7/2026"). A parser that tries
@@ -498,6 +457,25 @@ the list. Commit message must say what was learned in one line.
   first (rules out a fake), note which side is lagging and why (arrival time vs. fetch time is
   usually the tell), and confirm on the NEXT run whether the numbers reconcile before concluding
   either way.
+- 2026-08-29: `sheet.contact_history` returned 100% null brackets for every lead, every run, for
+  4 straight days (26-29 Aug) — previously assumed to be thinning Drive revision coverage (a
+  real, separate, still-true trend: revisions_scanned fell 8→6→4 over the same days). The ACTUAL
+  cause was a code bug: `_parse_fb_tab_xlsx` read phone numbers from a hardcoded column index (5)
+  in the raw xlsx revision exports, but a blank spacer column sits there — real Phone is index 6.
+  Every phone match against a revision snapshot silently failed, so `present`/`feedback` state
+  never transitioned for any lead, on any day, regardless of how fast the team actually worked
+  them. Fixed to resolve Phone/Feedback columns from the header row on every call (same pattern
+  as the live-sheet reads elsewhere in this file) instead of a fixed index; verified against a
+  live revision export before and after, then a real `fetch_all.py` run (brackets came back
+  non-null and consistent with the live sheet). **Standing rule: when a derived signal goes
+  uniformly and silently to empty/null/zero across EVERY row for MULTIPLE days running (not just
+  one thin day), suspect a code bug (e.g. a hardcoded index/column that a sheet edit shifted)
+  before accepting an infra/quota explanation — a real quota issue degrades unevenly (some
+  rows/days worse than others) and never gets stuck at exactly 100% failure.** Verify a
+  suspected column-index bug the same way this one was confirmed: pull one real raw export
+  (xlsx here) and print the row directly rather than reasoning about it — the header may not
+  match the live Sheets-API header if a spacer/hidden column exists in one representation but
+  not the other.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

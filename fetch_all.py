@@ -315,18 +315,38 @@ def _cell_phone(c):
     return normalize_phone(c)
 
 def _parse_fb_tab_xlsx(blob, phones):
-    """From one exported revision, return {phone10: {'present': bool, 'feedback': bool}}."""
+    """From one exported revision, return {phone10: {'present': bool, 'feedback': bool}}.
+    Column positions are resolved from the header row on EVERY call rather than hardcoded —
+    a hardcoded row[5] for Phone silently broke this for 4+ days (26-29 Aug) after a blank
+    spacer column shifted Phone from index 5 to 6 in the live sheet; row[5] then always read
+    the blank spacer, so `present`/`feedback` never matched any real phone and every bracket
+    came back null. See LEARNED RULES 2026-08-29."""
     import io, openpyxl
     wb = openpyxl.load_workbook(io.BytesIO(blob), read_only=True, data_only=True)
     if "Facebook" not in wb.sheetnames:
         return {}
     state = {p: {"present": False, "feedback": False} for p in phones}
-    for row in wb["Facebook"].iter_rows(max_col=14, values_only=True):
-        p = _cell_phone(row[5]) if len(row) > 5 else ""
+    rows_iter = wb["Facebook"].iter_rows(values_only=True)
+    header = next(rows_iter, None)
+    if not header:
+        wb.close()
+        return state
+    header_l = [str(h).strip().lower() if h is not None else "" for h in header]
+    def hidx(name):
+        try: return header_l.index(name)
+        except ValueError: return None
+    phone_i, feedback_i = hidx("phone"), hidx("feedback")
+    if phone_i is None:
+        wb.close()
+        return state
+    fb_start = feedback_i if feedback_i is not None else phone_i + 3
+    for row in rows_iter:
+        p = _cell_phone(row[phone_i]) if len(row) > phone_i else ""
         if p in state:
             state[p]["present"] = True
-            # feedback = any text in Feedback (col H, idx 7) or the follow-up columns
-            if any(c is not None and str(c).strip() for c in row[7:14]):
+            # feedback = any text in Feedback or any trailing follow-up column, however many
+            # (08-22 rule: never cap/filter follow-up columns by header text or a fixed count).
+            if any(c is not None and str(c).strip() for c in row[fb_start:]):
                 state[p]["feedback"] = True
     wb.close()
     return state
