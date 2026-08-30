@@ -1,63 +1,61 @@
-DIVYA JYOT LYF REWA — Daily Snapshot — Saturday, 29 August 2026
-(Window: midnight to ~7PM IST. Numbers keep moving after this.)
+DIVYA JYOT LYF REWA — DAILY SNAPSHOT
+Sunday, 30 Aug 2026 (midnight-7:15PM IST, still moving)
+
+HEADLINE
+Meta billing grace period NOT resolved — balance owed nearly DOUBLED overnight, Rs 2,67,040 to Rs 4,70,483. All 3 campaigns still delivering fine today, but this is urgent, 2nd day running. Team had its fastest speed-to-lead day yet, but a phone typo means a real budget-qualified Nilesh lead has still never been called.
 
 FOLLOW-UP FROM YESTERDAY
-- Manali Bhat's phone typo still not fixed (98892377787 should be 9892377789), 3rd flag, now stale too — no dial today.
-- Srikant Iyer: day 18, zero contact ever. Needs a decision today.
-- 2BHK "29 Seconds connectivity hook" came back online today (was dark yesterday). "57 Seconds" still fully dark, 8 days now.
-- 1BHK Hindi's CPL scare has fully cooled: Rs138 today vs Rs651 three days ago.
-- khan and Kamlesh Doshi: day 7 each, still untouched.
-- Naresh Marpalli's SVD phone typo: still wrong, 10th flag.
-- Arvind Gupta / Mangesh Jadyal duplicates still unmerged, no dial on either today.
-- Backlog-cohort of 7 (Vinod Panchal, Rajesh Mehta, Hitesh, Srikant Iyer, Kripal Singh, Milind Apte, Mahesh Gupta) re-verified, holds exactly, 3rd run.
-- Suraj Shukla's "coming next week" (25 Aug) not yet due. Rama Verma's "coming today" (25 Aug) now 4 days overdue, redialed once, no pickup.
+- Billing grace period: WORSE, not fixed. See above.
+- Nilesh: got "dialed" today but team called a WRONG number (typo in sheet). Real lead never contacted.
+- Jyothi Gowda "Visited" claim: still no SVD proof, day 2.
+- Srikant Iyer: day 19, zero contact ever.
+- 2BHK "57 Seconds" ad: 9th straight dark day.
+- 1BHK Hindi CPL: was resolved, now spiked back up today (Rs 474 on 1 lead). Watch, don't panic yet.
 
-INFRA FIX THIS RUN
-The tool that measures exact contact speed (contact_history) has returned useless "null" results for 4 straight days. Found and fixed the bug: the code was reading the wrong spreadsheet column for phone numbers in the raw revision files, so it never matched anyone. Fixed and verified working again. No past numbers were wrong (they just said "unknown" instead of a real time) — future reports will be more precise.
+THE FUNNEL (today so far)
+Studio: spend Rs 215, 2 leads, CPL Rs 107 (best of week)
+2BHK: spend Rs 840, 2 leads, CPL Rs 420
+1BHK: spend Rs 510, 1 lead, CPL Rs 510 (worst of week)
+Combined: Rs 1,565 spend, 5 leads, blended CPL Rs 313
+CRM shows 4 of the 5 (normal lag, 5th will sync tomorrow).
+Contacted same-day: 3 of 4. Only Kranti (arrived 5:41pm) still untouched, not a concern yet.
+Site visits: 1 claimed (Divya Singh), 0 CRM-verified. 7th straight day with zero verified visits.
 
-1. HEADLINE
-Ad account entered Meta's BILLING GRACE PERIOD today (status changed from ACTIVE to grace period overnight) with Rs2,67,040 owed on the Visa card on file. This is more urgent than anything else in this report. All 3 campaigns are still running today, but a grace period is Meta's last warning before it disables the account entirely — if that happens, every campaign stops and leads go to zero. Check the payment method in Ads Manager billing settings today. Separately: leads partially recovered from yesterday's 1-lead crash (3 today), still below the normal 6-14/day range, and zero verified site visits extended to a 6th straight day.
+AD PERFORMANCE
+Studio: healthy, best CPL of week, no fatigue signal.
+2BHK: leads declining 5 days running (4,3,1,0,2) despite healthy CTR/frequency — looks like a conversion problem, not a delivery problem. "57 Seconds" still dark, needs a decision not another flag.
+1BHK: CPL and CTR both worsened together today after yesterday's "resolved" call — one day of noise on a new campaign, but watch tomorrow before calling it closed again.
 
-2. THE FUNNEL (today, midnight to ~7PM)
-Studio: Rs133 spend, 1 lead, CPL Rs133.
-2BHK: Rs598 spend, 0 leads (2nd zero-lead day running).
-1BHK: Rs320 spend, 2 leads, CPL Rs160.
-Combined: Rs1,051 spend, 3 leads, blended CPL Rs350.
-CRM matches Meta exactly at 3 leads today, all fb platform. 2 of 3 dialed same-day (Bridge Consultancy, Jyothi Gowda); Nilesh untouched but only arrived within the last hour. Zero new site visits logged today.
+SPEED TO LEAD — best day this routine has tracked
+Anthony Pintoy (Studio, arrived 9:12am): contacted within ~3hrs, said not interested in Mulund West (location mismatch).
+Jayshree Thakkar (Studio, arrived 11:56am): contacted within ~1.5hrs, Ringing, no answer yet.
+Nik (2BHK, arrived 11:31am): contacted within ~2hrs, "out of service" — also his budget (1.5-1.75cr) is above 2BHK's ceiling, double flag.
+Kranti (1BHK, arrived 5:41pm): not yet contacted, too recent to be a concern.
+3 of 4 leads dialed inside ~2 hours worst-case — credit the team.
 
-3. AD PERFORMANCE
-Studio: 1 lead, best CPL of the week, no fatigue signal.
-2BHK: 0 leads on healthy CTR (2.28%) and low frequency — this reads as a real conversion problem, not a delivery problem. "57 Seconds" variant still dark 8 days running.
-1BHK: 2 leads from 1BHK Hindi at its best CTR of the week; Gujarati variant had its worst CTR of the week on a small sample, likely noise.
+LEAD QUALITY
+Real cost-per-visit (CRM-verified only, trailing 30 days): 12 visits on Rs 53,643 spend and 205 leads = ~Rs 4,470 per visit, 5.85% visit rate. Flat since 23 Aug, 7th straight day with zero new verified visits.
+Including 4 legit direct-caller visits: ~Rs 3,353 per visit, 7.80% rate.
+Today's Divya Singh visit NOT counted in either number — see integrity note below, genuine lead but no CRM/OTP record behind the visit.
 
-4. SPEED-TO-LEAD
-Good news: the precision tool is fixed and working again.
-Bridge Consultancy (Studio, arrived 15:39): dialed within roughly 0-85 minutes.
-Jyothi Gowda (1BHK Hindi, arrived 3:27am): a repeat lead under an old phone number, so the precision tool's bracket is unreliable here — but her new row already claims "Visited," with NO matching site-visit log entry. Needs a direct check with the team, not taken at face value either way.
-Nilesh (1BHK Hindi, arrived 16:59): untouched so far, but too recent to be a concern yet — check tomorrow morning.
-Bonus: now-fixed precision shows yesterday's Krishna Upadhyay was actually contacted within about 3 hours 14 minutes, faster than credited yesterday.
+DATA INTEGRITY
+- Nilesh: sheet has 98920261949 (extra digit), real number is 9890261949. Team has been dialing a wrong number for 2 days. Fix is copy-paste from CRM.
+- Divya Singh: real 24-day tracked lead, visited today, pushed to Meta as a conversion, but never appears in the CRM/OTP sheet and has no "FB call" tag either. Ask the team how she actually came in.
+- New unexplained lead: Ritesh Shah, no CRM match, no typo found — folding into the existing unexplained bucket.
+- Reverse check: 457 leads since June, 30 with no CRM match (6.6%, up slightly from 6.0%).
+- Forward check: 85 CRM leads since 20 Aug, 82 matched (96.5%), all 3 misses explained.
+- Naresh Marpalli's SVD phone typo: still not fixed, 11th flag.
+- Meta account status still 9 (grace period), balance up Rs 2,03,443 in 24 hours.
 
-5. LEAD QUALITY
-Bridge Consultancy's business-sounding name is worth confirming — could be a genuine buyer or another agency testing the form.
-Jyothi Gowda's same-day "Visited" claim with no site-visit log entry needs verification.
-Nilesh's declared budget (Rs1.01-1.10cr) is at the very top of 1BHK's historical range — 1BHK's real price band is still unconfirmed, so don't treat this as a mismatch without asking first.
-Real cost-per-visit (trailing 30 days, CRM-verified only): Rs53,407 spend, 205 leads, vanity CPL Rs261. 12 CRM-verified visits gives a real cost-per-visit of about Rs4,451 (5.85% visit rate) — flat for a 6th straight day, the longest such stretch tracked. Including 4 legitimate direct-caller visits: about Rs3,338 per visit (7.80% rate).
+DIAGNOSTIC STEPS
+1. URGENT — fix the Meta billing grace period today, balance nearly doubled overnight.
+2. URGENT — correct Nilesh's phone (9890261949) and call him, real budget-qualified lead.
+3. URGENT — decide on Srikant Iyer today, day 19, cannot carry into a 4th week.
+4. Get a straight answer on Jyothi Gowda's and Divya Singh's visit claims — both affect whether the 7-day zero-visit streak is real.
+5. Get an answer on "2BHK 57 Seconds" (9 dark days) and treat 2BHK's 5-day lead decline as real, not noise.
+6. Fix Manali Bhat's (4th flag) and Naresh Marpalli's (11th flag) phone typos; requalify khan and Kamlesh Doshi (day 8 each); resume contact on the Arvind Gupta/Mangesh Jadyal duplicates before the 2-day gap becomes neglect.
 
-5b. DATA INTEGRITY
-Reverse-check (facebook sheet rows since 10 June vs CRM): 452 rows, 27 unmatched (6.0%), same rate as yesterday — mostly known typos, known direct-callers, and unexplained non-Meta leads, nothing new and alarming.
-Forward-check (CRM leads since 20 Aug vs facebook sheet): 81 leads, only 2 unmatched, both already explained (Manali Bhat's typo, Nilesh too recent).
-Naresh Marpalli's SVD phone typo still wrong, 10th flag.
-Account status: moved from ACTIVE to GRACE PERIOD overnight — see Headline. This is the day's most important integrity/health finding.
+ANYTHING ELSE
+Best speed-to-lead day this routine has measured, which makes the Nilesh typo sting more — the team is working fast and honest, but that speed is being spent on the wrong phone number for a real prospect. The billing balance doubling in 24 hours is not normal drift; worth a call to the bank/card issuer, not just Ads Manager.
 
-6. WHAT TO DO
-1. URGENT — fix the Meta billing issue today. Rs2,67,040 owed, account now in grace period. This is more urgent than anything else here.
-2. URGENT — decide on Srikant Iyer today. Day 18, zero contact ever.
-3. Push the team on site-visit conversion — 6th straight day at zero new visits despite fast contact work. Also get a straight answer on Jyothi Gowda's "Visited" claim.
-4. Get an answer on why "2BHK 57 Seconds" has been dark 8 days, and close out or requalify the three "Broker"-tagged backlog leads instead of leaving them open.
-5. Fix Manali Bhat's phone cell and the Naresh Marpalli SVD typo; requalify khan and Kamlesh Doshi.
-
-7. ANYTHING ELSE
-Two infrastructure notes: the Meta billing issue needs a human in Ads Manager today, and a real bug in this pipeline's own contact-tracking was found and fixed this run (see box above) — no past numbers were wrong, just less precise than they could have been.
-
-LOOKING AHEAD
-Confirm the Meta billing issue gets resolved (check account status tomorrow). Watch whether Nilesh gets dialed, whether Jyothi Gowda's visit claim gets confirmed or explained, whether lead volume fully recovers, whether Srikant Iyer gets a decision, and whether the 6-day zero-visit streak finally breaks.
+Full report with tables: reports/2026-08-30.md
