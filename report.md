@@ -1,62 +1,57 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Monday, 31 Aug 2026 (midnight-5:15PM IST, still moving)
+Tuesday, 01 Sep 2026 (midnight-7:10PM IST, still moving)
 
 HEADLINE
-Meta billing grace period WORSE for a 3rd straight day — balance owed jumped Rs 4,70,483 to Rs 6,60,368 (+Rs 1,89,885 in 24h, same ~2L/day pace as before). All 3 campaigns still delivering fine today. Good counter-news: two phone-typo fixes from yesterday's flags landed, forward-match check hit 100%, and the 7-day zero-verified-visit streak broke with a real visit today.
+Meta billing grace period WORSE for a 4th straight day — balance owed jumped Rs 6,60,368 to Rs 8,30,382 (+Rs 1,70,014 in 24h). Growth is slowing slightly (2.03L to 1.90L to 1.70L/day) but still climbing — Rs 8.3L owed now, every campaign one failed retry from DISABLED. Quiet lead day otherwise: today's "2 leads" are actually one person (Chandrakant, submitted via 2 ad forms 10 min apart). One new site visit today (Sonal Pandya, over-budget for 2BHK but real).
 
 FOLLOW-UP FROM YESTERDAY
-- Billing grace period: WORSE again, 3rd straight day of growth. See above.
-- Nilesh: phone typo FIXED, team is now correctly reaching him. Closed.
-- Manali Bhat: phone typo FIXED, contacted and disqualified cleanly. Closed.
-- Forward check: 100% match (89/89 CRM leads since 20 Aug), first clean run ever.
-- Srikant Iyer: day 20, zero contact ever.
-- 2BHK "57 Seconds" ad: 10th straight dark day.
-- Arvind Gupta / Mangesh Jadyal: resumed contact, no longer a gap.
+- Billing grace period: WORSE again, 4th straight day, now over Rs 8L owed. See above.
+- Yesterday's real full-day funnel (refetched): Rs 1,972 spend, 5 leads (vs the Rs 1,328/4 leads the 31 Aug report saw by its 5:15pm cutoff) — extra lead was Aparna Dahivale, arrived 8:38pm.
+- Forward check: 100% again, 2nd straight clean run (92/92).
+- RECHARACTERIZED: Srikant Iyer, tracked 20 days as a "neglected CRM lead," actually has NO match anywhere in the CRM/Meta data. Not confirmed to be a real Meta lead at all — different problem than assumed.
+- Backlog cohort re-read: 3 of the 7 tracked names (Kripal Singh, Milind Apte, Rajesh Mehta) are tagged "Broker" in their own notes — correctly screened out, not neglected. Recommend dropping them from tracking.
+- Veejay Kumar Yaadav, Dinesh Kukreja, Satya Bhatia, Vicky Gosar: zero movement since 31 Aug, all still single-entry.
 
 THE FUNNEL (today so far)
-Studio: spend Rs 195, 2 leads, CPL Rs 98 (best of week)
-2BHK: spend Rs 684, 0 leads (2nd zero-lead day in 3)
-1BHK: spend Rs 450, 2 leads, CPL Rs 225 (cooled from yesterday's spike)
-Combined: Rs 1,328 spend, 4 leads, blended CPL Rs 332
-CRM shows 3 of 4 (normal lag, missing lead is Studio's 2nd, syncs tomorrow).
-Contacted same-day: 3 of 3 CRM-confirmed leads. Zero untouched.
-Site visits: 1 today, and it's CRM-VERIFIED (Hemendra Doshi) — breaks the 7-day zero-visit streak.
+Studio: spend Rs 167, 1 lead, CPL Rs 167
+2BHK: spend Rs 500, 0 leads (2nd zero-lead day in 3)
+1BHK: spend Rs 393, 1 lead, CPL Rs 393
+Combined: Rs 1,060 spend, 2 leads, blended CPL Rs 530 — but both leads are the SAME person (Chandrakant), so real net-new prospects today = 1.
+Contacted same-day, both submissions, within ~30 min worst case. Credit the team on the one fresh lead.
+Site visits: 1 today (Sonal Pandya, 2BHK, FB-call direct caller) — wants Rs 1.50cr, above the ~1.4cr ceiling, worth a budget conversation.
 
 AD PERFORMANCE
-Studio: healthy, best CPL of week, no fatigue signal.
-2BHK: 0 leads again on Rs 684 spend, despite the week's best CTR and lowest frequency — this is a conversion problem, not delivery, now running close to a week. "36 Seconds" ad has had 3 zero-lead days and Meta is auto-shrinking its spend, shifting budget to "29 Seconds" which itself converts erratically. "57 Seconds" still dark, needs a decision.
-1BHK: CPL cooled to Rs 225 from yesterday's spike, both leads from Hindi. Gujarati now 4 straight zero-lead days — small spend, but a real pattern.
+Studio: healthy, no fatigue signal, normal single-lead day.
+2BHK: 0 leads again despite fine CTR/frequency — conversion problem, not delivery. "36 Seconds" now 4 straight zero-lead days after a strong run 24-27 Aug. "57 Seconds" — 16 straight dark days, still no decision.
+1BHK: Hindi converting reliably (2,1,1,2,1 leads the last 5 days), Gujarati now 5 straight zero-lead days on comparable spend — a real conversion gap, not a volume issue, heading into a 2nd week.
 
-SPEED TO LEAD — another clean day
-Satya Bhatia (Studio, arrived 2:55pm): reached same day, talking about a 1bhk not studio (routing opportunity).
-Dinesh Kukreja (1BHK Hindi, arrived 12:13am): reached same day, but wants Ghatkopar (location mismatch) and budget doesn't match the form.
-Vicky Gosar (1BHK Hindi, arrived 2:38pm): dialed, ringing, no answer yet — good fit, keep chasing.
-Carried over: Veejay Kumar Yaadav (arrived late yesterday, reached, promised a callback today) — not yet redialled as of this pull.
-3 of 3 CRM-confirmed leads contacted same-day — credit the team again.
+SPEED TO LEAD
+Chandrakant (both submissions, arrived 12:30pm/12:40pm): contacted within ~30 min worst case, a real follow-up ("Busy") logged same day, not a single call-and-stop. Team was fast on the one fresh lead today.
+Everything carried over from 31 Aug (Veejay, Dinesh Kukreja, Satya Bhatia, Vicky Gosar) got zero fresh dials in the 2 days since — that's where the gap is, not on new leads.
 
 LEAD QUALITY
-Real cost-per-visit (CRM-verified only, trailing 30 days, 1-31 Aug): 13 visits on Rs 53,701 spend and 207 leads = ~Rs 4,131 per visit, 6.28% visit rate. Up from 12 yesterday — streak broken.
-Including 5 legit direct-caller visits (new: Hemant): ~Rs 2,983 per visit, 8.70% rate.
-Dinesh Kukreja is also a duplicate-phone re-lead (same number submitted once before, Nov 2025) — team correctly treating him fresh, just worth knowing.
+Real cost-per-visit (CRM-verified only, trailing 30 days, 2 Aug-1 Sep): 11 visits on Rs 53,960 spend and 207 leads = ~Rs 4,906 per visit, 5.31% rate.
+Including 6 legit direct-caller visits (new: Sonal Pandya): ~Rs 3,174 per visit, 8.21% rate.
+4 SVD visits still unresolved (no CRM match, no FB-call tag), unchanged: Bhavin Vora, Neha Joshi, Jayesh, Divya Singh.
 
 DATA INTEGRITY
-- Nilesh and Manali Bhat phone typos: both FIXED, both closed out.
-- Forward check: 89 CRM leads since 20 Aug, all 89 matched (100%), first clean run.
-- Reverse check: 463 leads since June, 29 with no CRM match (6.3%, down from 6.6%).
-- New unexplained: Raj Gavas, created today, too fresh to explain yet, not urgent.
-- Naresh Marpalli's SVD phone typo: still not fixed, 12th flag.
-- Meta account status still 9 (grace period), balance up Rs 1,89,885 in 24 hours, 3rd day running.
-- 4 SVD visits still unresolved (no CRM match, no FB-call tag): Bhavin Vora, Neha Joshi, Jayesh, Divya Singh — no new ones today.
+- Srikant Iyer: no CRM match found at all — see above, needs a direct answer from the team on where this lead came from.
+- Forward check: 92 CRM leads since 20 Aug, all 92 matched (100%), 2nd clean run.
+- Reverse check: 466 leads since June, 21 with no CRM match (4.5%, improved from 6.6%), no new unexplained names.
+- Arvind Gupta's own two rows use phones one digit apart (9234315180 vs 9324315180) — likely the same typo pattern as Nilesh/Manali/Atul, worth checking which is real.
+- Naresh Marpalli's SVD phone typo: still not fixed, 13th flag.
+- Jyoti Gowda's "already visited" claim (29 Aug): still no matching SVD row, day 3, still no answer.
+- Meta account status still 9 (grace period), balance up Rs 1,70,014 in 24 hours, 4th day running.
 
 DIAGNOSTIC STEPS
-1. URGENT — the billing balance grew for a 3rd straight day, roughly Rs 2L/day. Needs a human in Ads Manager today, and possibly a call to the bank/card issuer.
-2. Sales — redial Veejay Kumar Yaadav today, he was promised a callback and hasn't gotten one yet.
-3. Sales — decide on Srikant Iyer today, day 20, cannot carry into a 4th week.
-4. Agency — get an answer on "2BHK 57 Seconds" (10 dark days) and treat the 2BHK lead decline as real — Meta's own system is already pulling budget off the weaker creative, but neither creative is converting reliably.
-5. Sales — clarify Dinesh Kukreja's real budget and confirm he understands this is Mulund West, not Ghatkopar, before chasing further.
-6. Sales — fix Naresh Marpalli's SVD typo (12th flag); requalify khan and Kamlesh Doshi (day 9 each); check on Rama Verma (day 7 overdue).
+1. URGENT — billing balance grew a 4th straight day, now over Rs 8L. Growth is slowing but not stopped. Needs a human in Ads Manager today, and the bank/card issuer if this isn't a normal bounded step.
+2. Sales — merge Chandrakant's two duplicate rows into one follow-up thread.
+3. Sales — get a direct answer on 3 aging claims: Jyoti Gowda's visit claim (day 3), Srikant Iyer's real source (day 20 on the clock but never confirmed as Meta), Divya Singh's visit source (still open from 31 Aug).
+4. Sales — redial everyone stale 2+ days: Veejay Kumar Yaadav, Dinesh Kukreja, Vicky Gosar, Satya Bhatia, Arvind Gupta, Mangesh Jadyal, Rama Verma. Suraj Shukla's "coming next week" promise (made 25 Aug) is due exactly today.
+5. Agency — "2BHK 57 Seconds" needs a decision after 16 dark days; watch 1BHK Gujarati's 5-day zero-lead streak, it's a conversion gap not a spend problem.
+6. Sales — fix Naresh Marpalli's SVD typo (13th flag); requalify khan/Kamlesh Doshi (day 9 each, zero follow-up).
 
 ANYTHING ELSE
-Best combined data-hygiene day this routine has tracked — two typo fixes landed, forward-match hit 100%, and the visit drought broke. The team's execution is trending the right way across multiple days now. That makes the billing crisis stand out more, not less — none of this matters if the account gets disabled, and three straight days of ~Rs 2L/day growth with no resolution is the one real threat to everything else in this report.
+Quiet lead day, good day for housekeeping instead: this run found that Srikant Iyer and 3 of the 7 "backlog cohort" names have been mischaracterized in past reports (Srikant never confirmed as a real Meta lead; 3 backlog names are correctly-screened brokers, not neglect). Worth a 5-minute check-in with the team rather than repeating the same flags again with no new information behind them.
 
-Full report with tables: reports/2026-08-31.md
+Full report with tables: reports/2026-09-01.md
