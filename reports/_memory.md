@@ -1,55 +1,48 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Added 2026-09-01 (run, ~7:10PM IST data)
+## Added 2026-09-02 (run, ~7:10PM IST data)
 
-- **URGENT — Meta billing grace period WORSE for a 4th straight day, over ₹8 lakh owed.**
-  `account_status` still 9, balance climbed ₹6,60,368 → ₹8,30,382 (+₹1,70,014/24h). Daily
-  growth is decelerating (₹2.03L→₹1.90L→₹1.70L) but still climbing. **Next run: check
-  account_status/balance first thing. If it's flattened or resolved, say so and consider
-  closing this thread; if still climbing or now 2/DISABLED, escalate harder.**
-- **RECHARACTERIZED — Srikant Iyer (8879085434) has NO match anywhere in `meta_leads_timed`,
-  under his name or any typo variant.** 20 days tracked as "neglected CRM lead" — that
-  framing was never actually verified against the CRM. **Next run: ask Keval/team where this
-  lead actually came from; until answered, describe him as "unverified source," not "CRM
-  lead neglected."**
-- **Backlog-cohort re-read: 3 of 7 (Kripal Singh, Milind Apte, Rajesh Mehta) are tagged
-  "Broker" in their own feedback — correctly screened, not neglected.** Recommend narrowing
-  the tracked cohort to just Vinod Panchal and Hitesh (`9137860437`) going forward; Mahesh
-  Gupta is a pre-V3 2025 lead, arguably doesn't belong in an "active backlog" list either.
-- **NEW — Chandrakant** (9175627932) submitted the lead form twice today (Studio 12:30pm,
-  1BHK Hindi 12:40pm) — wants a 1BHK ~₹85L. Team contacted fast (~30min worst case) but now
-  has TWO open facebook_tab rows for one person. **Next run: confirm the rows got merged and
-  he's on one clean thread, not double-worked or double-counted.**
-- **NEW — Sonal Pandya** (9920939215, 2BHK, FB-call, visited 1 Sep 3:27pm) wants ₹1.50cr —
-  above the ~₹1.4cr 2BHK ceiling. Real visit, budget mismatch. **Next run: check if the
-  mismatch got clarified or she got requalified/disqualified.**
-- **Arvind Gupta's own two facebook_tab rows use phones ONE DIGIT APART**
-  (`9234315180` vs `9324315180`) — same failure class as Nilesh/Manali/Atul Thorat. **Next
-  run: check which number is correct (or if both are dead ends) and whether this becomes a
-  14th-style phone-typo flag.**
-- **Veejay Kumar Yaadav** — promised "tomorrow" (31 Aug) callback after being reached late 30
-  Aug — no entry dated 31 Aug or 1 Sep found. Now 2 days overdue on that promise. **Next run:
-  confirm he finally got the callback.**
-- **Dinesh Kukreja, Vicky Gosar, Satya Bhatia** — all arrived 31 Aug, all still single-entry,
-  zero fresh dials in 2 days. Vicky Gosar's own note ("1/8/26 Call back after lunch," almost
-  certainly meant 1/9 = today) implies a callback was self-promised for today — check if it
-  happened.
-- **Jyoti Gowda's "already visited... budget issue 1.20, liked 631" claim (29 Aug row) — day
-  3, still no matching SVD entry, still no team answer.** Push every run until resolved.
-- **Naresh Marpalli's SVD typo — still not fixed, 13th flag** (`8108784706`→`8108784766`).
-- **khan (8454971010) and Kamlesh Doshi (7208544065) — day 9 each, single-entry, zero
+- **URGENT — account_status flipped 9 (grace period) → 3 (UNSETTLED) today, balance basically
+  cleared (₹8,30,382 → ₹757), but the account served ZERO ads all day** — ₹0 spend, 0
+  impressions, 0 leads, all 3 campaigns, confirmed via direct Graph API insights call (not a
+  fetch bug). Campaign objects still show ACTIVE. Same pattern as 8-11 Aug (resolved to ACTIVE
+  in ~3 days last time). **Next run: check account_status/balance FIRST. If back to 1 (ACTIVE)
+  with real delivery, say so and close this thread. If still 3/UNSETTLED and dark a 2nd day,
+  escalate harder — this becomes urgent in a different way (lost leads, not lost money).**
+- **Dinesh Kukreja (9819422186) and Satya Bhatia (9821022491) — the only two carry-overs still
+  at ZERO follow-up, now day 3 since arriving 31 Aug.** Everyone else on yesterday's stale list
+  got dialed today. **Next run: confirm both finally got a first call.**
+- **Mangesh Jadyal (9730229334) — one facebook_tab row says "2/9/26 Visited out of budget" but
+  there is NO matching SVD-tab row.** Either lag or a bad note. **Next run: check if SVD caught
+  up; if not, ask the team directly.**
+- **Chandrakant duplicate-row concern — RESOLVED/moot.** Only one facebook_tab row exists for
+  him; got a fresh dial today. No action needed, drop from tracking unless it recurs.
+- **Karishma Chheda (9167525540) — NEW CRM-verified visit, 1 Sep 8:09PM (after that day's report
+  cutoff), a 43-day-old lead (arrived 20 Jul) finally converting.** Budget "below ₹1.55cr" —
+  straddles the 2BHK ~1.4cr ceiling, not confirmed either way. **Next run: check if her actual
+  budget got clarified/logged.**
+- **Arvind Gupta's two rows (9324315180 / 9234315180, one digit apart) both got dialed again
+  today — still unresolved which is the real number.** Low urgency (he's being reached either
+  way) but wastes a call each round. **Next run: nudge for a direct confirmation.**
+- **Sonal Pandya (2BHK, FB-call, visited 1 Sep, wants ₹1.50cr vs ~₹1.4cr ceiling) — still no
+  budget-conversation note logged.** Carry forward.
+- **Srikant Iyer (8879085434, unverified Meta source) — day 21, still zero movement.**
+- **Vinod Panchal (9821077073) and Hitesh (9137860437) — the narrowed backlog cohort (day 30 /
+  day 21), still the only two genuinely unexplained single-touch leads.** Kripal Singh, Milind
+  Apte, Rajesh Mehta (Broker-tagged) and Mahesh Gupta (pre-V3) stay OFF this list.
+- **Jyoti Gowda's "already visited... liked 631" claim (29 Aug) — day 5, still no SVD match,
+  still no team answer.** Push every run until resolved.
+- **Naresh Marpalli's SVD typo — still not fixed, 14th flag** (`8108784706`→`8108784766`).
+- **khan (8454971010) and Kamlesh Doshi (7208544065) — now day 10 each, single-entry, zero
   follow-up.**
-- **Rama Verma — day 7 overdue** on 25 Aug "coming today" promise, last dial 30 Aug (2-day
-  gap). **Suraj Shukla's "coming next week" (made 25 Aug) — that week is up TODAY (1 Sep),
-  no visit yet, last dial 30 Aug.** Check both first thing next run.
-- **Arvind Gupta / Mangesh Jadyal — 2 days without a fresh dial** (last: 30 Aug, all rows).
-- **4 unresolved SVD rows, unchanged 2nd straight run**: Bhavin Vora, Neha Joshi, Jayesh,
+- **Suraj Shukla's "coming next week" promise (made 25 Aug) — that week came and went with no
+  visit; he got a fresh dial today (2/9 Ringing) but the specific promise was never addressed
+  head-on.** Worth one direct question about it, not just another generic follow-up.
+- **Reverse check stable at 21/457 (4.6%), forward check 100% (92/92) — 3rd straight clean
+  run, no new unexplained rows** (expected: zero new leads today).
+- **4 unresolved SVD rows, unchanged for a 3rd straight run**: Bhavin Vora, Neha Joshi, Jayesh,
   Divya Singh — no CRM match, no FB-call tag, no typo found.
-- **Reverse check improved to 4.5% (21/466)**, forward check held 100% (92/92) 2nd straight
-  run — both trending the right way, worth noting if it holds.
-- **1BHK Gujarati — 5 straight zero-lead days (28 Aug–1 Sep)** on comparable spend to Hindi
-  (which keeps converting) — a real conversion gap, watch if it hits a 2nd week.
-- **2BHK "57 Seconds" — 16 straight dark days**, flagged repeatedly with no decision either
-  way. **2BHK "36 Seconds" — new 4-straight zero-lead streak (28-31 Aug + today)** after a
-  strong run 24-27 Aug.
+- **2BHK "57 Seconds" — ~15-16 straight dark days, still no decision.** **1BHK Gujarati — 5
+  straight zero-lead days (28 Aug-1 Sep)** — both need fresh reads once delivery resumes; don't
+  let today's account-wide zero get blended into either streak, it's a different cause.
 - Telegram delivery: confirm this run's send succeeded — check the printed line after `--send`.

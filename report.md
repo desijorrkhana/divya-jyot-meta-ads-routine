@@ -1,57 +1,55 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Tuesday, 01 Sep 2026 (midnight-7:10PM IST, still moving)
+Wednesday, 02 Sep 2026 (midnight-7:10PM IST)
 
 HEADLINE
-Meta billing grace period WORSE for a 4th straight day — balance owed jumped Rs 6,60,368 to Rs 8,30,382 (+Rs 1,70,014 in 24h). Growth is slowing slightly (2.03L to 1.90L to 1.70L/day) but still climbing — Rs 8.3L owed now, every campaign one failed retry from DISABLED. Quiet lead day otherwise: today's "2 leads" are actually one person (Chandrakant, submitted via 2 ad forms 10 min apart). One new site visit today (Sonal Pandya, over-budget for 2BHK but real).
+The Meta account went completely DARK today — Rs 0 spend, 0 impressions, 0 leads, across all 3 campaigns, all day. Why: account_status flipped from 9 (grace period, Rs 8,30,382 owed yesterday) to 3 (UNSETTLED) with balance now down to just Rs 757 — the bill is basically paid, but Meta hasn't switched the account back to serving yet. disable_reason still 0 (pure billing). All 3 campaigns still show ACTIVE at the campaign level — this is an account-level hold. Same pattern as the 8-11 Aug outage, which resolved in about 3 days last time — but every dark hour today is lost leads on 3 live campaigns, so it needs checking in Ads Manager today, not just waiting.
 
 FOLLOW-UP FROM YESTERDAY
-- Billing grace period: WORSE again, 4th straight day, now over Rs 8L owed. See above.
-- Yesterday's real full-day funnel (refetched): Rs 1,972 spend, 5 leads (vs the Rs 1,328/4 leads the 31 Aug report saw by its 5:15pm cutoff) — extra lead was Aparna Dahivale, arrived 8:38pm.
-- Forward check: 100% again, 2nd straight clean run (92/92).
-- RECHARACTERIZED: Srikant Iyer, tracked 20 days as a "neglected CRM lead," actually has NO match anywhere in the CRM/Meta data. Not confirmed to be a real Meta lead at all — different problem than assumed.
-- Backlog cohort re-read: 3 of the 7 tracked names (Kripal Singh, Milind Apte, Rajesh Mehta) are tagged "Broker" in their own notes — correctly screened out, not neglected. Recommend dropping them from tracking.
-- Veejay Kumar Yaadav, Dinesh Kukreja, Satya Bhatia, Vicky Gosar: zero movement since 31 Aug, all still single-entry.
+- Billing balance basically cleared (Rs 8,30,382 to Rs 757) but account still not serving — new problem replaced the old one, see above.
+- Chandrakant: "two duplicate rows" concern is moot, only one row exists, got a fresh dial today.
+- Veejay Kumar Yaadav, Vicky Gosar, Rama Verma, Suraj Shukla, Arvind Gupta (both rows) all got fresh dial attempts today, closing yesterday's 2-day gaps.
+- Dinesh Kukreja and Satya Bhatia: still zero follow-up, now day 3 since arriving 31 Aug — the real gap now, everyone else got worked.
+- Mangesh Jadyal: one row says "2/9 Visited out of budget" but no matching SVD entry exists yet — needs checking.
+- New site visit surfaced from after yesterday's cutoff: Karishma Chheda, visited 1 Sep 8:09pm, CRM-verified, a 43-day-old lead finally converting.
 
 THE FUNNEL (today so far)
-Studio: spend Rs 167, 1 lead, CPL Rs 167
-2BHK: spend Rs 500, 0 leads (2nd zero-lead day in 3)
-1BHK: spend Rs 393, 1 lead, CPL Rs 393
-Combined: Rs 1,060 spend, 2 leads, blended CPL Rs 530 — but both leads are the SAME person (Chandrakant), so real net-new prospects today = 1.
-Contacted same-day, both submissions, within ~30 min worst case. Credit the team on the one fresh lead.
-Site visits: 1 today (Sonal Pandya, 2BHK, FB-call direct caller) — wants Rs 1.50cr, above the ~1.4cr ceiling, worth a budget conversation.
+Studio: Rs 0, 0 leads
+2BHK: Rs 0, 0 leads
+1BHK: Rs 0, 0 leads
+Combined: Rs 0 spend, 0 leads — confirmed real via a direct Graph API check, not a fetch bug.
+Zero new CRM leads, zero new facebook_tab rows, zero site visits logged for today.
+Yesterday (1 Sep) full day, refetched: Rs 1,216 spend, 2 leads (1 unique person, Chandrakant).
 
 AD PERFORMANCE
-Studio: healthy, no fatigue signal, normal single-lead day.
-2BHK: 0 leads again despite fine CTR/frequency — conversion problem, not delivery. "36 Seconds" now 4 straight zero-lead days after a strong run 24-27 Aug. "57 Seconds" — 16 straight dark days, still no decision.
-1BHK: Hindi converting reliably (2,1,1,2,1 leads the last 5 days), Gujarati now 5 straight zero-lead days on comparable spend — a real conversion gap, not a volume issue, heading into a 2nd week.
+No delivery today, nothing to measure — this is an account-status issue, not a creative one. As of yesterday (last real data): Studio healthy, 1 lead. 2BHK 0 leads, "36 Seconds" 4 straight zero-lead days, "57 Seconds" still ~15-16 dark days, no decision made yet. 1BHK Hindi converting, Gujarati on a 5th straight zero-lead day. Today's zero should NOT be counted into either streak — different cause.
 
 SPEED TO LEAD
-Chandrakant (both submissions, arrived 12:30pm/12:40pm): contacted within ~30 min worst case, a real follow-up ("Busy") logged same day, not a single call-and-stop. Team was fast on the one fresh lead today.
-Everything carried over from 31 Aug (Veejay, Dinesh Kukreja, Satya Bhatia, Vicky Gosar) got zero fresh dials in the 2 days since — that's where the gap is, not on new leads.
+No fresh leads today. Carried-over leads: 7+ got fresh dials today (Veejay, Vicky Gosar, Rama Verma, Suraj Shukla, both Arvind Gupta rows, Mangesh Jadyal, Chandrakant) — real, sustained effort despite zero new leads. Dinesh Kukreja and Satya Bhatia are the only two still untouched, now day 3.
 
 LEAD QUALITY
-Real cost-per-visit (CRM-verified only, trailing 30 days, 2 Aug-1 Sep): 11 visits on Rs 53,960 spend and 207 leads = ~Rs 4,906 per visit, 5.31% rate.
-Including 6 legit direct-caller visits (new: Sonal Pandya): ~Rs 3,174 per visit, 8.21% rate.
-4 SVD visits still unresolved (no CRM match, no FB-call tag), unchanged: Bhavin Vora, Neha Joshi, Jayesh, Divya Singh.
+Real cost-per-visit (CRM-verified only, trailing 30 days, 3 Aug-2 Sep): 12 visits (new: Karishma Chheda) on Rs 51,949 spend and 202 leads = ~Rs 4,329 per visit, 5.94% rate.
+Including 5 legit direct-caller visits: ~Rs 3,056 per visit, 8.42% rate.
+4 SVD visits still unresolved, unchanged for a 3rd run: Bhavin Vora, Neha Joshi, Jayesh, Divya Singh.
 
 DATA INTEGRITY
-- Srikant Iyer: no CRM match found at all — see above, needs a direct answer from the team on where this lead came from.
-- Forward check: 92 CRM leads since 20 Aug, all 92 matched (100%), 2nd clean run.
-- Reverse check: 466 leads since June, 21 with no CRM match (4.5%, improved from 6.6%), no new unexplained names.
-- Arvind Gupta's own two rows use phones one digit apart (9234315180 vs 9324315180) — likely the same typo pattern as Nilesh/Manali/Atul, worth checking which is real.
-- Naresh Marpalli's SVD phone typo: still not fixed, 13th flag.
-- Jyoti Gowda's "already visited" claim (29 Aug): still no matching SVD row, day 3, still no answer.
-- Meta account status still 9 (grace period), balance up Rs 1,70,014 in 24 hours, 4th day running.
+- Account status: 9 (grace period) to 3 (UNSETTLED), balance Rs 8,30,382 to Rs 757 — see headline.
+- Mangesh Jadyal's "visited out of budget" note has no matching SVD row — check tomorrow.
+- Reverse check: 21 of 457 real-phone leads since June still unmatched (4.6%), no new misses.
+- Forward check: 92 of 92 CRM leads since 20 Aug matched (100%), 3rd clean run.
+- Arvind Gupta's two rows (one digit apart) both got dialed again today — still unclear which number is correct.
+- Naresh Marpalli's SVD typo: still not fixed, 14th flag.
+- Jyoti Gowda's "already visited" claim: day 5, still no matching SVD row, still no answer.
+- Vinod Panchal (day 30) and Hitesh 9137860437 (day 21): still the only two genuinely unexplained backlog leads.
 
 DIAGNOSTIC STEPS
-1. URGENT — billing balance grew a 4th straight day, now over Rs 8L. Growth is slowing but not stopped. Needs a human in Ads Manager today, and the bank/card issuer if this isn't a normal bounded step.
-2. Sales — merge Chandrakant's two duplicate rows into one follow-up thread.
-3. Sales — get a direct answer on 3 aging claims: Jyoti Gowda's visit claim (day 3), Srikant Iyer's real source (day 20 on the clock but never confirmed as Meta), Divya Singh's visit source (still open from 31 Aug).
-4. Sales — redial everyone stale 2+ days: Veejay Kumar Yaadav, Dinesh Kukreja, Vicky Gosar, Satya Bhatia, Arvind Gupta, Mangesh Jadyal, Rama Verma. Suraj Shukla's "coming next week" promise (made 25 Aug) is due exactly today.
-5. Agency — "2BHK 57 Seconds" needs a decision after 16 dark days; watch 1BHK Gujarati's 5-day zero-lead streak, it's a conversion gap not a spend problem.
-6. Sales — fix Naresh Marpalli's SVD typo (13th flag); requalify khan/Kamlesh Doshi (day 9 each, zero follow-up).
+1. URGENT — account UNSETTLED and dark despite balance basically cleared (Rs 757 owed). Check Ads Manager today; don't just wait it out, every dark hour is lost leads on 3 active campaigns.
+2. Sales — call Dinesh Kukreja and Satya Bhatia today, the only two still at zero follow-up.
+3. Sales — confirm Mangesh Jadyal's visit and log it in SVD, or correct the note if it didn't happen.
+4. Sales — close the aging list: Jyoti Gowda (day 5), Srikant Iyer (day 21), Vinod Panchal/Hitesh (day 30/21), and confirm which Arvind Gupta number is real.
+5. Sales — fix Naresh Marpalli's SVD typo (14th flag).
+6. Agency — once delivery resumes, "2BHK 57 Seconds" still needs an explicit decision after 2+ weeks dark.
 
 ANYTHING ELSE
-Quiet lead day, good day for housekeeping instead: this run found that Srikant Iyer and 3 of the 7 "backlog cohort" names have been mischaracterized in past reports (Srikant never confirmed as a real Meta lead; 3 backlog names are correctly-screened brokers, not neglect). Worth a 5-minute check-in with the team rather than repeating the same flags again with no new information behind them.
+This is the "balance hit zero doesn't mean reactivated" lesson from the 8-11 Aug outage repeating almost exactly. Sales-side effort today was genuinely strong despite zero new leads: 7+ carried-over leads got real dial attempts, closing yesterday's stale list down to just two names. If this account pattern happens a third time, worth a direct conversation with Meta support about why reactivation isn't instant once the balance clears.
 
-Full report with tables: reports/2026-09-01.md
+Full report with tables: reports/2026-09-02.md
