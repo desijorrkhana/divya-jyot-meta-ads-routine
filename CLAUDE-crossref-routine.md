@@ -83,8 +83,15 @@ Non-negotiable rules for EVERY run, regardless of what the day's task prompt say
   window. If they can't be reconciled, say so honestly rather than reporting a number you
   can't stand behind.
 - `sheet.meta_leads_timed` — every Meta lead with EXACT arrival time in IST
-  (`created_time_ist`), `phone10`, `name`, `platform` (fb/ig), `intent`
-  (within_3_months / 3-6_months / just_exploring), and ad/adset/campaign.
+  (`created_time_ist`), `phone10`, `name`, `platform` (fb/ig), `intent`, and ad/adset/campaign.
+  In practice `intent` values are whatever the form's radio options are, not a fixed 3-way
+  enum — seen so far: `within_3_months`, `3-6_months`, `6+_months_/_just_exploring`.
+  **`budget`** (added 2026-09-05 spec note — this field exists and is usable NOW, no fetch
+  change needed): a bucketed string like `below_₹1.00_cr` / `₹1.01_cr_–_₹1.10_cr` /
+  `above_₹1.2_cr`. Populated 100% of the time on 2BHK and 1BHK leads (their forms ask it) but
+  ALWAYS EMPTY on Studio leads (that form doesn't ask). Use it as the primary budget-mismatch
+  signal for 2BHK/1BHK — cleaner and always-populated, unlike `facebook_tab` free text which
+  only has a budget mention when the team happened to write one down.
 - `sheet.facebook_tab` — the team's full lead log: Created date, Name (often w/ BHK+budget),
   Phone, Status, Feedback + up to 8 dated follow-up columns of free-text call notes.
   Multiple campaign sections stacked vertically; messy date formats — parse defensively.
@@ -343,7 +350,13 @@ the list. Commit message must say what was learned in one line.
   not be the default for unknown callers — spot-check occasionally, and never let a claimed
   source get pushed for someone the team KNOWS came from elsewhere. Dashboard counts these
   separately ("fbcall" status, 📞) and keeps the headline cost-per-visit strictly
-  CRM-verified, stating both numbers.**
+  CRM-verified, stating both numbers.** **ADDED 2026-09-05: the SVD Source column also has a
+  literal misspelling variant "Facebbok" (double-b, one-o) alongside "Facebook"/" Facebook " —
+  a naive `"facebook" in source.lower()` (or `"fb" in source.lower()`) substring check does
+  NOT match "facebbok" and silently drops a real, CRM-verified visit from the cost-per-visit
+  count (caught 5 Sep: Nityanand Singh's same-day visit had source "Facebbok" and was
+  initially missed). When classifying SVD rows by source, match "facebbok" too, or better,
+  classify by CRM-phone-match first and treat source spelling as informational only.
 - 2026-07-29: `sheet.contact_history` is keyed by PHONE NUMBER, so it breaks on a duplicate-phone
   re-lead (same person submits the Meta form twice). Only one bracket set survives per phone,
   and it gets attached to whichever sheet row the code finds for that phone — usually the OLDER
