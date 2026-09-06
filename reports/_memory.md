@@ -1,46 +1,42 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Added 2026-09-05 (run, ~7:10PM IST data)
+## Added 2026-09-06 (run, ~7:15PM IST data)
 
-- **Satya Bhatia (9821022491) — day 6, ZERO follow-up since 31 Aug intake, worst gap currently
-  tracked, second report running.** Next run: confirm he finally got a first call — day 7 if
-  not, escalate harder in the headline.
-- **Nityanand Singh — RESOLVED.** "Coming tomorrow" promise from 4 Sep came true: SVD confirms
-  a visit 5 Sep 3:42pm, budget disclosed Rs 1cr in person — first real data point toward the
-  still-unconfirmed 1BHK price band (not proof, but real signal; ask Keval before treating it
-  as the actual ceiling).
-- **Mangesh Jadyal (9730229334) — "2/9/26 Visited out of budget" claim, still no matching SVD
-  row, now day 4 across both his active rows.** Next run: push for a direct yes/no, don't carry
-  a 5th day.
-- **Jyoti Gowda (7304218100) — "already visited... liked 631" claim (29 Aug), day 8, still no
-  SVD match, still no team answer.** Push every run until resolved.
-- **Naresh Marpalli's SVD phone typo — still not fixed, 17th flag** (`8108784706` should be
+- **Satya Bhatia (9821022491) — day 7, ZERO follow-up since 31 Aug intake, third report
+  running naming him, worst gap on the account.** Next run: confirm he finally got a first
+  call — cannot reach day 8.
+- **Jeet Shah (9920811692) — NEW today, first real speed-to-lead miss in several days.**
+  2BHK lead, within_3_months intent, budget "above ₹2cr" (real mismatch vs ~₹1.4cr ceiling),
+  row logged ~17:09 but zero feedback text as of the 19:14 fetch (2h+ untouched). Next run:
+  confirm he got a screening call and an outcome logged either way.
+- **Mangesh Jadyal (9730229334) — "2/9/26 Visited out of budget" claim, day 5, still no SVD
+  row.** Push for a direct yes/no, don't carry a 6th day.
+- **Jyoti Gowda (7304218100) — "already visited... liked 631" claim (29 Aug), day 9, still no
+  SVD match.** Push every run until resolved.
+- **Naresh Marpalli's SVD phone typo — still not fixed, 18th flag** (`8108784706` should be
   `8108784766`).
-- **Srikant Iyer (8879085434, day 24), Vinod Panchal (9821077073, day 33), Hitesh (9137860437,
-  day 24)** — none has EVER received a second contact since original intake. Keep flagging.
-- **Arvind Gupta's two rows (9324315180 / 9234315180) — no dial since 2 Sep, now 3 days quiet.**
-  Still no dial distinguishing which is real.
-- **Reverse check unchanged: 22/471 (4.67%)** — same list as 4 Sep, no new fabrication
-  candidates. Forward check 105/106 (the 1 miss arrived 6 min before this fetch — not real).
-- **5 unresolved SVD rows, unchanged for a 6th straight run**: Bhavin Vora, Naresh Marpalli
-  (typo case, tracked separately), Neha Joshi, Jayesh, Divya Singh.
-- **2BHK "36 Seconds" technically resumed today (Rs 16.52, 48 impressions, 0 leads)** after being
-  fully dark 2-4 Sep — but that's ~2% of its historical Rs 500-900/day. Next run: check whether
-  it scales back up for real or stays token-level (still needs a direct answer: throttled on
-  purpose, or losing the auction).
-- **1BHK Gujarati — now 8 real zero-lead delivery days running** (28,29,30,31 Aug,1,3,4,5 Sep,
-  2 Sep excluded/no delivery). Needs a creative/audience review, still hasn't happened.
-- **2BHK "57 Seconds"** — still fully dark, no kill/keep call, now 2.5+ weeks open.
-- **1BHK Hindi — Meta showed 0 leads today but a CRM lead (C Esakki Mari Lingathar, 19:03,
-  Hindi ad) arrived 6 min before the fetch and hasn't been attributed by Meta yet.** Next run:
-  confirm it shows up in Meta's official count and check whether he's been contacted.
-- **Today's 3 fresh leads were ALL `6+_months_/_just_exploring` intent** — a shift from
-  yesterday's all-`within_3_months` day. Watch next run whether this becomes a real trend or
-  was a one-off, especially on 2BHK's "29 Seconds" ads (both today's leads came from there).
-- **New data point found this run: `meta_leads_timed.budget` is a clean, always-populated
-  bucketed field for 2BHK/1BHK leads (Studio's form doesn't ask it) — use it as the primary
-  budget-mismatch signal going forward instead of relying only on facebook_tab free text.**
-  Also documented in CLAUDE-crossref-routine.md this run.
-- **CTR down across all 3 campaigns today vs yesterday and 7d** — one day, likely tied to
-  today's weaker-intent leads, not yet a fatigue call. Recheck tomorrow before flagging.
+- **Srikant Iyer (8879085434, day 26), Vinod Panchal (9821077073, day 35), Hitesh
+  (9137860437, day 26)** — none has EVER received a second contact since original intake.
+- **Arvind Gupta's two rows (9324315180 / 9234315180) — no dial since 2 Sep, now 4 days
+  quiet.**
+- **Reverse check essentially unchanged: 22/479 (4.59%)** — same list as prior runs, no new
+  fabrication candidates.
+- **1BHK Gujarati — now 9 real zero-lead delivery days running.** Needs a creative/audience
+  review that still hasn't happened — Hindi's 3-lead day today makes the gap more visible.
+- **2BHK "36 Seconds" had its first real (non-token) day since 28 Aug** — ₹133.93, 1 lead.
+  Still below its ₹500-900/day healthy average. Next run: confirm whether it holds or reverts
+  to token spend.
+- **2BHK "57 Seconds"** — still fully dark, no real spend since 17 Aug (20 days), no kill/keep
+  call.
+- **CTR recovered sharply on 2BHK and 1BHK today** (both beat yesterday AND their own 7-day
+  average) after yesterday's account-wide dip. Next run: confirm whether this holds — one good
+  day isn't a trend yet either direction.
+- **Kalpesh Dediya (9892782540) — 34-day-old Studio-origin lead (3 Aug) visited today wanting
+  a 2BHK at ₹1.60cr** — real evidence an old lead can still convert, but also a live
+  budget-mismatch case (₹1.60cr vs ~₹1.4cr ceiling) worth a direct conversation, not an
+  assumed close.
+- **5 Sep's live-reported headline (2-3 leads) undercounted the real total (5 leads,
+  ₹3,098.14, CPL ₹619.63)** — two extra after-hours leads (Satish Pahuja, BRIJESH) arrived
+  beyond the one already flagged as pending. All were contacted. Standard 7PM-cutoff pattern,
+  no new lesson, just confirms the effect again.
 - Telegram delivery: confirm this run's send succeeded — check the printed line after `--send`.
