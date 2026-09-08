@@ -1,67 +1,64 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Monday, 07 Sep 2026 (midnight-7:15PM IST)
+Tuesday, 08 Sep 2026 (midnight-7:11PM IST)
 
 HEADLINE
-5 leads today (Rs 1,471.93 spent, CPL Rs 294.39) and every single one got a logged contact within hours, most under an hour — cleanest speed-to-lead day in weeks. But Satya Bhatia is now DAY 8 with zero follow-up since 31 Aug — fourth report running naming him, the worst-neglected lead on this account. Also new today: a phone typo that may mean a lead was dialed on the wrong number, and one unverified site visit that needs a straight answer.
+6 leads today so far (Rs 956.51 spent, CPL Rs 159.42 — cheapest day in weeks), but the real story is a lead the team never logged at all. Niilesh Kathole (2BHK, 3-6 month intent) arrived 22:20 last night and has zero trace anywhere in the sheet, nearly 21 hours later — not a typo, not a duplicate, just absent. Satya Bhatia is now DAY 9 with nothing on his row since 31 Aug — fifth report running naming him. Second phone-typo case in three days (Dileep Mehta today, Yuv Smith on 6 Sep).
 
 FOLLOW-UP FROM YESTERDAY
-- Jeet Shah: RESOLVED — contacted 6 Sep 18:13-19:31, ~2h18m after arrival. Yesterday's flag was real but short-lived.
-- 6 Sep's live headline undercounted itself AGAIN (third time, after 4 Aug and 5 Aug): real total was 9 leads, not 6 — Rs 2,042.55, CPL Rs 226.95. Three after-hours leads (Manisha Nikam Sonavane, Yuv Smith, Darshana Dedhia) arrived past the 7:15PM cutoff, all got same-night or next-morning contact.
-- 1BHK Hindi's real 6 Sep count was 5 leads, not 3 — its best day since launch.
-- Mangesh Jadyal: recontacted today after 28 Aug silence, but his "visited out of budget" SVD claim is still unconfirmed, day 6.
-- Arvind Gupta: RESOLVED — both rows recontacted today, ending a 5-day quiet streak.
-- Satya Bhatia: STILL zero follow-up, now day 8 — fourth report running.
-- Jyoti Gowda's "liked 631" claim: day 10, still unresolved.
-- Naresh Marpalli's SVD typo: still not fixed, 19th flag.
-- Srikant Iyer (day 27), Vinod Panchal (day 36), Hitesh (day 27): one day older, never a second contact ever.
-- Reverse check: 22 to 23 of 488 (4.71%) — one new name, Yuv Smith, explained by a phone typo below, not a new fabrication.
-- 2BHK 36 Seconds: held its rebound for a 2nd day, Rs 466.77, 1 lead.
-- 1BHK Gujarati: zero-lead streak now 10 real days.
+- 7 Sep undercounted itself AGAIN live (same pattern as 4 Aug, 5 Aug, 6 Sep): real total was 7 leads, not 5 — Rs 1,972.19, CPL Rs 281.74. Sayali and Niilesh Kathole arrived after the ~7:15PM cutoff. Sayali got called twice since (not yet connected). Niilesh Kathole did not — see below.
+- Satya Bhatia: STILL zero follow-up, now day 9 — fifth report running.
+- Chandan Sharma: still unresolved on source, but got a follow-up call today.
+- Yuv Smith: phone typo still not fixed in the sheet, but got a follow-up call today under the wrong number.
+- Mangesh Jadyal: no update today, visit claim still unconfirmed, day 7.
+- Jyoti Gowda's "liked 631" claim: day 11, still unresolved.
+- Naresh Marpalli's SVD typo: still not fixed, 20th flag.
+- Srikant Iyer (day 28), Vinod Panchal (day 37), Hitesh (day 28): one day older, never a second contact ever.
+- Reverse check: 23 to 24 of 495 (4.85%) — one new name, Dileep Mehta, explained by a typo below.
+- 1BHK Hindi's zero-lead day yesterday was a one-day blip — back to 3 leads today.
+- 2BHK 36 Seconds: third good day in a row now, a real trend.
 
 THE FUNNEL (today so far)
-Studio: Rs 215.94, 2 leads, CPL Rs 107.97
-2BHK: Rs 801.54, 3 leads, CPL Rs 267.18
-1BHK: Rs 454.45, 0 leads
-Combined: Rs 1,471.93, 5 leads, CPL Rs 294.39 — verified against lead_actions_raw, no double-count. Meta and CRM feed agree exactly, no lag.
-Platform split: 3 Facebook, 2 Instagram. Contacted: 5 of 5 same day, no one left untouched. Site visits today: 1 (Mohnish Yadav, CRM-verified).
+Studio: Rs 121.20, 0 leads
+2BHK: Rs 501.82, 3 leads, CPL Rs 167.27
+1BHK: Rs 333.49, 3 leads, CPL Rs 111.16
+Combined: Rs 956.51, 6 leads (Meta), CPL Rs 159.42 — verified against lead_actions_raw, no double-count. CRM shows 7 arrivals (one, Gautam Mungekar, arrived 11 min before this fetch — Meta insights will likely catch up tomorrow).
+Platform split: 4 Instagram, 3 Facebook. Contacted: 4 of 7 confirmed reached. Dileep Mehta's row is under a mistyped number — not actually reached. Hardik Soni untouched 1h13m+ and counting. Gautam Mungekar too fresh to judge. Site visits today: 0.
 
 AD PERFORMANCE
-Studio: 2 leads on Rs 215.94, CPL Rs 107.97 — best CPL in weeks, CTR up to 2.37% (vs 2.05% 7d avg).
-2BHK: CTR held at 2.47% (vs 1.91% 7d avg) — 6 Sep's rebound looks real, not a one-day bounce. "36 Seconds" spent Rs 466.77 for 1 lead, back in its normal range for a 2nd day. "29 Seconds connectivity hook" carried the leads (Rs 261.01, 2 leads). "57 Seconds" still fully dark, 21 days since real spend, still no kill/keep call.
-1BHK: quiet reversal after yesterday's best-ever day — Hindi spent Rs 403.26 for 0 leads, Gujarati spent Rs 51.16 for 0 leads, now a 10-real-day zero-lead streak. Hindi's proven the offer works; Gujarati hasn't proven anything in 10 days.
+Studio: a genuinely quiet day — Rs 121.20 spend and 605 impressions, both well below the last week's typical range, 0 leads, CTR down to 1.49%. Still spending and delivering, just thin — watch tomorrow.
+2BHK: CTR steady at 2.08% (vs 1.89% 7d avg). "36 Seconds" spent Rs 471.87 for 3 leads, CPL Rs 157.29 — third good day running, now a real trend. "57 Seconds" still fully dark, 22 days since real spend, still no kill/keep call.
+1BHK: clean rebound — Hindi spent Rs 282.54 for 3 leads, CPL Rs 94.18, confirming yesterday's zero-lead day was a blip. Gujarati spent Rs 50.95 for 0 leads, now 11 real zero-lead delivery days (last lead 27 Aug). The gap keeps widening.
 
 SPEED TO LEAD
-All 5 today's leads got a logged outcome same day: Pratik Dharod, Paresh Pabaria, Priya Tiwari, Urmi Rajgor Monani, Deepak Shah — worst case ~4h37m, several under an hour. No within-3-months lead was left waiting today. Credit the team.
-Satya Bhatia (day 8, zero follow-up since 31 Aug) needs a call today, no exceptions — fourth report naming him. Carried over, zero movement ever: Srikant Iyer (day 27), Vinod Panchal (day 36), Hitesh (day 27).
+Sanket and V were both fast (V's feedback appeared within roughly 6 minutes of arrival). Deepak Shah and Pooja Khade are duplicate-phone re-leads — both reached today (day-level only, per standing rule on duplicate phones). Dileep Mehta was NOT actually reached: his row is logged under 9769701332, one digit off his real CRM number 9769701334 — a call was logged against the wrong number. Hardik Soni is a live in-progress miss: within-3-months lead, arrived 17:58, no feedback logged yet as of this fetch.
+Satya Bhatia (day 9, zero follow-up since 31 Aug) needs a call today — fifth report naming him, this has moved past "reminder." Carried over, zero movement ever: Srikant Iyer (day 28), Vinod Panchal (day 37), Hitesh (day 28).
 
 LEAD QUALITY
-Intent mix today: 1 within-3-months, 3 3-6 months, 1 just-exploring.
-No budget mismatches today — all three 2BHK leads landed in the lowest bucket (below Rs 1.55cr), inside the ~Rs 1.4cr ceiling.
-Deepak Shah (Studio): "Looking for rental" — wrong intent, quality leak, not worth chasing hard.
-Real cost-per-visit (CRM-verified, trailing 30 days, 8 Aug-7 Sep): 13 visits on Rs 53,383 spend and 205 leads = ~Rs 4,106 per visit, 6.34% rate.
-Including 5 legit direct-caller visits: ~Rs 2,966 per visit, 8.78% rate (18 visits).
-6 unresolved SVD rows: Bhavin Vora, Naresh Marpalli (known typo), Neha Joshi, Jayesh, Divya Singh, and NEW today — Chandan Sharma.
+No budget mismatches today — every 2BHK lead landed in the lowest bucket (below Rs 1.55cr), inside the ~Rs 1.4cr ceiling.
+Deepak Shah (1BHK): "Looking for rental" — his SECOND submission with rental intent across two different campaign forms. Real quality leak, don't chase hard.
+Pooja Khade: a re-lead whose original row logged 19 dialed attempts with no conversion — worth a different approach this time.
+Real cost-per-visit (CRM-verified, trailing 30 days, 9 Aug-8 Sep): 13 visits on Rs 53,885 spend and 207 leads = ~Rs 4,145 per visit, 6.28% rate.
+Including 5 legit direct-caller visits: ~Rs 2,994 per visit, 8.70% rate (18 visits). Unchanged from yesterday — no new visit today.
 
 DATA INTEGRITY
-- Account: ACTIVE, balance Rs 8,254, no issues — real spend across all 3 campaigns confirms delivery is healthy.
-- Reverse check: 23 of 488 unmatched (4.71%) — one new name, Yuv Smith, explained by a phone typo (11-digit garbled number on file vs the correct CRM number). He was dialed same-night but under the wrong number on record — confirm it reached him.
-- Forward check: 121 of 122 matched (99.18%) — the one miss is Yuv Smith, same typo, not a missing row.
-- NEW — Chandan Sharma (Facebook-source SVD visit, 6 Sep 7:31pm): no CRM match, no FB-call marker, no facebook_tab row, no relative tag. Too fresh to call fabricated — ask the team where he actually came from before concluding anything.
-- Naresh Marpalli's SVD typo: still not fixed, 19th flag.
-- Mangesh Jadyal's visit claim: still unconfirmed, day 6.
-- Jyoti Gowda's "already visited" claim: day 10, still unresolved.
+- Reverse check: 24 of 495 unmatched (4.85%) — one new name, Dileep Mehta, phone typo (9769701332 vs correct 9769701334). A call was logged against the wrong number — urgent, not routine: fix the sheet and re-dial.
+- Forward check: 127 of 131 matched (96.95%), down from 99.18% yesterday. Three of the four misses are explained (Dileep Mehta and Yuv Smith typos, Gautam Mungekar too new) — but NIILESH KATHOLE (arrived 22:20 last night, 2BHK, 3-6 month intent) is genuinely never logged anywhere, not a typo or cutoff case. Needs to be added and called today.
+- Naresh Marpalli's SVD typo: still not fixed, 20th flag.
+- Mangesh Jadyal's visit claim: still unconfirmed, day 7.
+- Jyoti Gowda's "already visited" claim: day 11, still unresolved.
+- Chandan Sharma: still unresolved on source, day 3, though back in contact.
 
 DIAGNOSTIC STEPS
-1. Sales — call Satya Bhatia TODAY, day 8, fourth report running, no more routine reminders.
-2. Sales — get Chandan Sharma's real lead source confirmed.
-3. Sales — verify Yuv Smith's number and that the "Ringing" contact actually reached him.
-4. Sales — close out Mangesh Jadyal's SVD claim (day 6) and Jyoti Gowda's "liked 631" claim (day 10).
-5. Sales — fix Naresh Marpalli's SVD typo (19th flag).
-6. Agency — 1BHK Gujarati's 10-real-day zero-lead streak needs a creative/audience change now, or shift budget to Hindi.
-7. Agency — "57 Seconds" still needs an explicit kill/keep call, 21 days dark.
+1. Sales — log and call Niilesh Kathole (9323290235) today, the clearest miss in this report.
+2. Sales — call Satya Bhatia TODAY, day 9, fifth report running, no more routine reminders.
+3. Sales — fix Dileep Mehta's phone number (...332 to ...334) and re-dial.
+4. Sales — close Hardik Soni's contact loop tonight before it becomes tomorrow's overnight miss.
+5. Sales — get Chandan Sharma's source confirmed and fix Naresh Marpalli's SVD typo (20th flag).
+6. Agency — "57 Seconds" needs an explicit kill/keep call, 22 days dark.
+7. Agency — 1BHK Gujarati's 11-day zero-lead streak needs a creative/audience change or a budget shift to Hindi.
 
 ANYTHING ELSE
-Mohnish Yadav's visit today is the SECOND aged-lead conversion in two days — a 14-day-old 1BHK Hindi lead from 24 Aug, right after Kalpesh Dediya (34-day-old Studio lead) visited yesterday. Real evidence nurture pays off on leads older than a week.
-Second: Srikant Iyer, Vinod Panchal, and Hitesh have now gone 27, 36, and 27 days with exactly ONE contact ever. They keep recurring because they were caught once — worth a one-time sweep of the whole sheet for other "single contact, then silence" leads that haven't been individually named yet.
+"2BHK 36 Seconds" has had three consecutive good days now — worth asking whether whatever's working there (creative or audience) can be applied to "57 Seconds" before that ad gets killed outright.
+This is the second phone-typo case in three days (Yuv Smith, Dileep Mehta) and the third since late June (after Atul Thorat). Same shape every time: a transposed digit, a call logged against the wrong number, the real lead never reached. If it keeps recurring, the fix that scales is copying the number from the CRM sheet directly rather than retyping it.
 
-Full report with tables: reports/2026-09-07.md
+Full report with tables: reports/2026-09-08.md
