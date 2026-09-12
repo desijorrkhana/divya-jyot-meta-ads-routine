@@ -382,6 +382,26 @@ the list. Commit message must say what was learned in one line.
   existing own-row-trailing-column check (07-27/08-22 rules) and linked SVD activity, this
   closed the 22-vs-11 gap: the true count was 7. If this needs re-deriving by hand again next
   run, move it into `fetch_all.py` as a reusable function instead of re-reasoning it ad hoc.
+  **ADDED 2026-09-12 — a reusable method for finding phone-TYPO pairs (different bug class:
+  one digit mistyped on a REAL, different person's number, not a duplicate re-lead).** Five
+  confirmed instances to date (Atul Thorat, Ankit, Dileep Mehta, Jigna Rathod, Parag Gore) share
+  one shape: a CRM forward-check miss and a facebook_tab reverse-check miss, same/adjacent
+  name, phones differing by 1-2 digits, created within ~3 weeks of each other — and in at least
+  2 of the 5 cases the WRONG number then got marked "Dead"/"Not interested" while the real
+  number was never dialed at all. Standing method: after computing forward/reverse misses,
+  compute Hamming distance (equal-length digit strings, position-wise) between every
+  forward-miss CRM phone and every reverse-miss sheet phone created within ~3 weeks of the
+  CRM arrival; distance <=2 with a matching/similar name is a real typo-pair candidate, not
+  noise (verified false-positive rate so far: 0 on name-matched candidates, 1 rejected on a
+  name mismatch). Run this scan every time rather than only recalling named cases from
+  `_memory.md` — it caught Parag Gore's wrong number being re-dialed on 12 Sep, which a
+  memory-only carry-forward would have reported as merely "still unresolved" rather than
+  "actively getting worse today." Separately: when reporting the REVERSE-check headline count,
+  split out rows whose phone cell is a placeholder/all-dashes (`--------`, no digits at all) —
+  those are "no number given," a different problem from "wrong number in the system," and
+  conflating them inflates the headline count and obscures which real-phone rows need a typo
+  check (9 of 31 raw reverse-check rows on 12 Sep were placeholders; the real mismatch count,
+  22, matched the established 22-24 baseline exactly once separated out).
 - 2026-07-30 (MERGED with 07-21 typo-year note): `facebook_tab`'s Created column is NOT uniformly
   DD/MM/YYYY — pre-V3 rows from 2025 use MM/DD/YYYY (unambiguous only when day>12, e.g.
   "07/27/2025"), while 2026 V3-era rows use DD/MM/YYYY (e.g. "21/7/2026"). A parser that tries
