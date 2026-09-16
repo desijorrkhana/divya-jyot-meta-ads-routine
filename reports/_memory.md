@@ -1,38 +1,41 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Added 2026-09-15 (run, ~7:11PM IST data)
+## Added 2026-09-16 (run, ~7:14PM IST data)
 
-- **Mahesh Mandlik (9167642037) — promised "14th" visit day passed with ZERO confirmation call
-  ever logged since the row was created 10 Sep.** Most urgent item — find out whether the visit
-  happened.
-- **Manohar gajanan thakare (9657448889) — today's sharpest miss: within_3_months, untouched
-  ~19 hours as of run time.** 2BHK "36 Seconds," budget ₹1.5-1.75cr (above ceiling, but ask
-  don't write off). Call first tomorrow if still uncalled.
-- **Sales-side stall today: 0/4 fresh leads contacted, 0/8 carried aging leads touched, 0 site
-  visits (3rd straight day).** Ask the team directly whether staffing was reduced 15 Sep — watch
-  tomorrow whether this was a one-off.
-- **Bhavika mua (8779022739, arrived 14 Sep) — escalated from timing artifact to a REAL
-  never-logged miss**, 24h+ with zero facebook_tab row. Needs logging + follow-up.
-- **Dileep Mehta — day 8, still zero dial on real number (9769701334).** **Parag Gore — real
-  number (9820973479) never dialed since arrival 16 Aug, ~1 month now.** **Ankit, Jigna Rathod —
-  unchanged**, dead-ended on wrong numbers.
-- **Niilesh Kathole (9323290235) — day 9, still zero trace.**
-- **Mahesh Kondal, raj, Hitesh Munshi — zero new contact today**, product-clarity asks
-  (Studio/1BHK, 1BHK-form/2BHK-ask) all stalled an extra day.
-- **14 Sep close-out confirmed the post-7PM spend-drift pattern for a 3RD straight day** — spend
-  +₹397.17 (+21%) vs. what was reported live, CPL ₹370.82→₹450.25. Watch: today's own
-  ₹1,262.17/4-lead figure will likely revise up too.
-- **Naresh Marpalli SVD phone typo — 27th flag** (8108784706 should be 8108784766). **3
-  unexplained SVD rows unchanged**: Neha Joshi, Jayesh, Divya Singh.
-- **1BHK Gujarati — 0 leads 5 straight days (11–15 Sep)**, 0 clicks today specifically.
-- **"2BHK 57 Seconds" — 29 days dark**, kill/keep call more overdue than ever.
-- **"2BHK 36 Seconds" — yesterday's low-CTR fatigue flag did NOT deepen** (CTR recovered
-  1.16%→1.61%, converted 1 lead) — no longer an open watch item unless it drops again.
-- **Studio — best CTR in 7 days (2.69%) but 0 leads.** Disconnect worth a day of watching, not
-  yet a problem (CPM stayed normal).
-- **Reverse check: 22 unmatched, unchanged, nothing new this week** (last dated entry still 8
-  Sep). **Forward check: 20/494 unmatched** (+4, all today's fresh arrivals bar Bhavika mua who's
-  now a real miss). **Typo-pair scan re-run: no new pairs**, same 4 confirmed.
-- **Zero site visits in 3 straight days (13–15 Sep)** — last real visit 12 Sep (Shubham). 30-day
-  rate still healthy (5.19%/11 CRM-verified) but worth watching if the dry spell extends.
+- **Mahesh Mandlik (9167642037) — STILL unconfirmed, now 2 days past the promised "14th" visit
+  date, a week since row creation with zero follow-up ever.** Most overdue item in the sheet —
+  escalate beyond a phone call tomorrow if still unconfirmed.
+- **Recovery day: all 5 fresh leads contacted same-day, PLUS yesterday's entire stalled backlog
+  (Manohar, Omkar Thatte, Mehul Maru, Rajashri Bharat Zambare, Bhavika mua) got logged/contacted.**
+  But the OLDER backlog (below) got zero touches — watch whether tomorrow finally works it.
+- **Untouched again today, unchanged**: Dileep Mehta (real# 9769701334, day 9), Parag Gore (real#
+  9820973479, 1 month exactly), Niilesh Kathole (9323290235, day 10, zero trace anywhere),
+  Mahesh Kondal, "Raj" (8657402430), Hitesh Munshi (zero follow-up ever since 13 Sep), Ramesh
+  Khade (zero follow-up ever since 12 Sep).
+- **Ankit typo pair now PRECISELY identified**: CRM `7021116501` (arrived 11 Aug) vs. wrong
+  number `7201116501` dialed same-day, marked "Not interested" 30 Aug. Joins confirmed pairs
+  Jigna Rathod (CRM `...483` vs dialed `...482`), Parag Gore (`...479` vs `...478`), Dileep
+  Mehta (`...334` vs `...332`), Atul Thorat. Get real numbers redialed.
+- **Sunil Guraldas Sidhwani (9175119337) — RETURN lead**, already visited 7 Aug, resubmitted
+  today citing "Vasstu problem" — specific objection, prioritize a targeted callback, don't
+  treat as a cold fresh lead.
+- **15 Sep close-out: 7 leads/₹1,784.36 vs 4/₹1,262.17 reported live** — 4th straight day of
+  post-7PM drift, FIRST time it's a lead-count gap (+3), not just spend. Expect 16 Sep's own
+  5-lead/₹1,204.32 figure to revise up tomorrow.
+- **Zero site visits 4 straight days (13-16 Sep)** — longest dry spell tracked; last real visit
+  12 Sep (Shubham). Watch closely — if it hits 5-6 days, escalate to Keval directly.
+- **Product/unit-type mismatch pattern, 2nd instance**: Anish Pimputkar (Studio ad → wants
+  1BHK), Lakshmi Krishnan (1BHK ad → wants 2BHK, 15 Sep). Watch for a 3rd before flagging to
+  agency as a creative/copy issue.
+- **Naresh Marpalli SVD phone typo — 28th flag** (8108784706 should be 8108784766), still
+  uncorrected.
+- **1BHK Gujarati — 0 leads 6 straight days (11-16 Sep)**, first click in 3 days today though.
+- **"2BHK 57 Seconds" — 30 days dark**, kill/keep call more overdue than ever, 3rd report flag.
+- **Reverse check: 22 unmatched, unchanged (baseline).** Forward check: 15 unmatched (down 5,
+  today's + Bhavika mua now logged). 10 genuinely-never-logged names unchanged (Manal, Andre
+  Rozario, Himalaya Agrawal, Raju Shinde, Sangita Kadam, Sandesh Padwal, Celine, Sagar Rane,
+  Bahrati Soni) + Niilesh Kathole tracked separately + 4 typo pairs above.
+- **Cost-per-visit trailing 30d (17 Aug-16 Sep): 10 CRM-verified (₹5,526.62/visit, 4.93%), 15
+  explained total (₹3,684.41/visit, 7.39%).** Drop from 11→10 CRM-verified is a window-roll
+  artifact (a 16 Aug visit fell out), not a real change.
 - Telegram delivery: confirm this run's send succeeded — check the printed line after `--send`.
