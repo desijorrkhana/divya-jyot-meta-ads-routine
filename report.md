@@ -1,90 +1,79 @@
-DIVYA JYOT LYF REWA — Daily Snapshot — Wed 16 Sep 2026
-(Window: midnight–~7:14PM IST)
+DIVYA JYOT LYF REWA — Daily Snapshot — Thu 17 Sep 2026
+(Window: midnight–~7:17PM IST)
 
 HEADLINE
-Sales-side flipped from yesterday's near-total stall to full same-day coverage — all 5 of today's fresh leads (100% within_3_months) got contacted, and the team also cleared yesterday's entire backlog of neglected leads (Manohar, Omkar, Mehul Maru, Rajashri, Bhavika mua). But the OLDER backlog — Mahesh Mandlik, Dileep Mehta, Parag Gore, Niilesh Kathole and 5 more — got zero new touches today. And 15 Sep's close-out confirms a 4th straight day of the post-7PM drift, this time adding 3 real leads Meta hadn't shown live.
+Quietest lead day tracked so far — just 1 lead / Rs1,040.92 spend (CPL Rs1,040.92), down from 5+ on every recent day. The team didn't sit idle though: they ran a 130-lead mass backlog redial sweep today (zero connects). Problem — it hit an OLDER Aug-dated cohort, not the specifically-flagged, more urgent leads (Mahesh Mandlik, the 4 typo-pair real numbers) named in report after report. Meanwhile the site-visit drought hit 5 straight days — this needs a direct conversation with the team, not another report flag.
 
 FOLLOW-UP FROM LAST REPORT
-- Mahesh Mandlik — STILL zero confirmation, now 2 days past the promised 14th visit date, a week since the row was created with no follow-up ever. Most overdue item in the sheet — escalate beyond a call.
-- Good news: all 4 of yesterday's totally-untouched leads got contacted — Manohar, Omkar Thatte, Mehul Maru, Rajashri Bharat Zambare. Bhavika mua finally got logged too.
-- Dileep Mehta — still zero dial on real number (9769701334), day 9. Wrong number also saw no new dial.
-- Parag Gore — still zero on real number (9820973479), now exactly one month. Wrong number still being endlessly re-dialed without resolving.
-- Ankit / Jigna Rathod — unchanged, but the typo mechanism is now pinned down precisely (see integrity section).
-- Niilesh Kathole (9323290235) — day 10, still zero trace.
-- Mahesh Kondal, "Raj," Hitesh Munshi, Ramesh Khade — zero new contact again. Hitesh Munshi and Ramesh Khade have literally never had a single follow-up logged since their rows were created.
-- Naresh Marpalli SVD typo — still unfixed, 28th flag.
-- 15 Sep's true close-out: 7 leads / Rs1,784.36 (CPL Rs254.91) vs the 4 leads / Rs1,262.17 reported live — +3 leads, +Rs522.19 (+41%), all landing after 7PM. 4th straight day of this drift, and the first time it's a lead-count gap, not just spend.
+- Mahesh Mandlik — still zero confirmation, now day 8 since the row was created, 3 days past the promised 14th visit date. Still the most overdue item in the sheet.
+- Sunil Guraldas Sidhwani — the Vastu-objection callback recommended yesterday has NOT happened yet.
+- Dileep Mehta, Parag Gore, Niilesh Kathole, Mahesh Kondal, Raj, Hitesh Munshi, Ramesh Khade, Ankit, Jigna Rathod — all still zero touch on their real/flagged numbers. Parag Gore's WRONG number got redialed again instead ("Ringing").
+- Unprecedented: a 130-lead mass backlog redial swept the sheet today — but none of the leads above were in it (see below).
+- Zero site visits now 5 straight days — past the point flagged for escalating directly to Keval.
 
 THE FUNNEL (today so far)
-Studio: Rs140.19 spend, 1 lead, CPL Rs140.19
-2BHK: Rs641.63 spend, 1 lead, CPL Rs641.63
-1BHK: Rs422.50 spend, 3 leads, CPL Rs140.83
-Combined: Rs1,204.32 spend, 5 leads, CPL Rs240.86
-3524 impressions, 2765 reach, 58 clicks, 36 link clicks.
-Leads verified against lead_actions_raw — no double-count anomaly, matches CRM exactly (5=5).
-Platform: all 5 via Facebook, zero via Instagram today.
-Contacted: 5 of 5, same day — full reversal from yesterday's 0/4.
-Site visits logged today: 0, now the 4th straight day (last real visit 12 Sep).
-Intent mix: ALL 5 within_3_months — strongest single-day intent read in recent memory.
+Studio: Rs151.51 spend, 0 leads
+2BHK: Rs532.72 spend, 0 leads
+1BHK: Rs356.69 spend, 1 lead, CPL Rs356.69
+Combined: Rs1,040.92 spend, 1 lead, CPL Rs1,040.92
+3133 impressions, 2540 reach, 51 clicks, 37 link clicks.
+Leads verified against lead_actions_raw — no double-count anomaly, matches CRM exactly (1=1).
+Platform: the day's only lead came via Instagram, a reversal of recent all-Facebook days.
+Contacted: 1 of 1. Site visits logged today: 0, now the 5th straight day (last real visit 12 Sep).
+Intent: the one lead is 3-6_months — the weakest bucket, opposite of yesterday's 100% within_3_months.
 
-Yesterday's 3 late (post-7PM) leads, all contacted by today: Ghanshyam Agrawal (Studio, feedback "Broker" — low quality), Yash stationery and toys (1BHK Hindi, budget 95L, clean), Lakshmi Krishnan (1BHK Hindi ad but wants a 2BHK — product mismatch).
+Yesterday's (16 Sep) true close-out: Rs1,818.64 spend, 5 leads, CPL Rs363.73 — vs reported live Rs1,204.32/5 leads. Spend revised up 51% but the SAME 5 leads this time (no late arrivals) — pure spend-drift day, 5th straight day of the post-7PM pattern.
 
 AD PERFORMANCE (vs trailing 7 days)
-Studio: CTR dropped to near the bottom of range (1.39%, down from yesterday's 2.69% high) but converted 1 lead this time — yesterday's CTR-without-leads disconnect resolved rather than deepened. No fatigue.
-2BHK: CTR (1.78%) and freq (1.30) both near the low end of range — healthy, not fatigue. "36 Seconds" carried 87% of spend again, CTR 1.86%, 1 lead. "2BHK 57 Seconds" — still fully dark, now 30 days since last spend — kill/keep call more overdue than ever, 3rd straight report flagging it.
-1BHK: CTR/freq/CPM all mid-range, healthy. Hindi carried all 3 leads at CPL Rs138.99, even better than yesterday. Gujarati — 1 click today (first in 3 days) but still 0 leads, now 6 straight days since its last lead.
+Studio: CTR 1.87% mid-range, but frequency (1.14) dropped BELOW its 7-day range for the first time — healthiest reading in a week. Zero leads today.
+2BHK: CTR (1.54%) fell below its 7-day range, and ALL THREE 2BHK ads went to zero leads simultaneously — first time this has happened. Frequency still low (not fatigue) — reads as a quiet demand day, watch for a repeat. "2BHK 57 Seconds" — still fully dark, now 31 days since last spend — kill/keep call more overdue than ever, 4th straight report flag.
+1BHK: CTR/CPM mid-range, frequency (1.24) below its 7-day range — healthy. Hindi carried the day's only lead at CPL Rs340.89. Gujarati — 1 click today but still 0 leads, now 7 straight days since its last lead (10 Sep) — a full week dry.
 
 SPEED-TO-LEAD — the most important section
-Only 3 Drive revisions scanned this run (thin), so most brackets only confirm same-day contact, not finer lag. All 5 confirmed contacted same-day against the live sheet — full reversal from yesterday's 0/4:
-Sunil Guraldas Sidhwani (9175119337) — arrived 00:12 — same-day contact — within_3_months. NOTE: this is a RETURN lead — he already visited once (7 Aug) on an older row; today's resubmission says "Vasstu problem," a specific objection worth a targeted callback.
-Raju Kasabe (9004034850) — arrived 05:58 — same-day contact — within_3_months
-Samir Shirsekar (9619987318) — arrived 07:05 — same-day contact ("Ringing," not yet connected) — within_3_months
-Anish Pimputkar (9773509995) — arrived 09:19 — same-day contact — within_3_months. Feedback: wants a 1BHK despite coming in on the Studio ad — product mismatch.
-Nirav Madiyar (9870319949) — arrived 12:13 — contacted within ~25 minutes (the one precisely-timed case today, thanks to a nearby revision) — within_3_months.
-Zero of the ~9-lead aging backlog (Mahesh Mandlik, Dileep Mehta, Parag Gore, Niilesh Kathole, Mahesh Kondal, Raj, Hitesh Munshi, Ramesh Khade, Ankit, Jigna Rathod) got touched today — today's recovery didn't extend to the backlog.
+Only 1 fresh lead today, coverage was good (7 revisions scanned):
+Nac (8424927933) — arrived 08:56 IST — feedback appeared within roughly 2h41m (bracket confirms by 11:37 same day) — contacted fast despite the weaker 3-6_months intent bucket. Feedback so far just "Ringing," not yet connected — too early to call warm or dead.
+Zero of the specifically-flagged aging backlog got touched today: Mahesh Mandlik, Dileep Mehta's real number, Parag Gore's real number (wrong one redialed instead), Niilesh Kathole, Mahesh Kondal, Raj, Hitesh Munshi, Ramesh Khade, Ankit's and Jigna Rathod's real numbers, and Sunil Guraldas Sidhwani's promised callback.
+Separately: a 130-lead mass backlog redial swept sheet rows created roughly 1 Aug-early Sep today (124 Ringing, 3 Cut the call, 1 Out of service, 1 Switch off, 1 Voicemail) — zero connects, and none of the specifically-named overdue leads above were included. Real dial volume, wrong target.
 
 LEAD QUALITY
-Anish Pimputkar (Studio ad, wants 1BHK) and yesterday's Lakshmi Krishnan (1BHK ad, wants 2BHK) — 2 product-mismatch leads in 2 days, worth watching whether ad creative is blurring which unit each campaign sells.
-Nirav Madiyar — 2BHK, budget 1.50 vs the ~1.4cr ceiling — a touch over, not a write-off.
-Sunil Guraldas Sidhwani — genuine warm return lead with a specific, addressable objection.
+Nac (1BHK Hindi, Instagram, budget below Rs1cr, intent 3-6_months) — feedback just "Ringing," not yet connected. Too early to judge.
 
-REAL COST-PER-VISIT (trailing 30 days, 17 Aug-16 Sep, CRM-verified only)
-Vanity CPL: Rs272.25 (203 leads, Rs55,266.21 spend).
-10 CRM-verified visits — real cost/visit ~Rs5,526.62, visit rate 4.93% (above 4.5% baseline; down slightly from 5.19% last report purely because the window rolled forward a day, not a real change).
-Plus 3 legit "FB call" direct-callers + 1 typo + 1 relative-tag = 15 explained visits, cost/visit ~Rs3,684.41, rate 7.39%.
+REAL COST-PER-VISIT (trailing 30 days, 18 Aug-17 Sep, CRM-verified)
+Vanity CPL: Rs280.49 (196 leads, Rs54,976.11 spend).
+10 CRM-verified visits — real cost/visit ~Rs5,497.61, visit rate 5.10% (stable vs yesterday — the window rolled forward a day but neither the day that dropped out nor the one that entered had a visit).
+Plus 3 legit "FB call" direct-callers + 1 typo + 1 relative-tag = 15 explained visits, cost/visit ~Rs3,665.07, rate 7.65%.
 3 SVD rows remain genuinely unexplained (Neha Joshi, Jayesh, Divya Singh) — unchanged.
-Zero site visits logged in 4 straight days (13-16 Sep) — the longest dry spell tracked so far; worth a direct check on whether visits are happening and not logged, or genuinely not converting.
+Zero site visits logged in 5 straight days (13-17 Sep) — longest dry spell tracked. Per standing guidance, this is the point to escalate directly to Keval, not just flag it again.
 
 DATA INTEGRITY CROSS-CHECK
-Reverse check (544 facebook_tab rows since V3 start): 22 rows with real phone, no CRM match — same as last report, within baseline. 9 placeholder rows unchanged.
-Forward check (534 CRM records / 501 unique phones): 15 phones never appear in facebook_tab, down 5 from last report — fully explained by today's 5 fresh arrivals plus Bhavika mua now logged.
-NEW this run: the Ankit typo pair is now precisely identified — CRM phone 7021116501 (arrived 11 Aug) vs a facebook_tab row logged the SAME day under 7201116501 (two-digit transposition). That wrong number was dialed to "Not interested" on 30 Aug while the real number was never tried.
-Confirmed unchanged, same pattern (wrong number worked to a dead end or endless loop while the real number sits untouched): Jigna Rathod, Parag Gore, Dileep Mehta, and Atul Thorat from earlier in September.
-Niilesh Kathole — still zero trace, day 10.
-10 leads remain genuinely never logged with no typo pair found — unchanged backlog.
-Naresh Marpalli's SVD typo — still uncorrected, 28th flag.
+Reverse check (545 facebook_tab rows since V3 start): 22 rows with real phone, no CRM match — unchanged baseline. 9 placeholder rows unchanged.
+Forward check (502 unique CRM phones): 16 phones never appear in facebook_tab, up 1 from yesterday.
+NEW this run: Vishal Pisal — CRM phone 9819114468 (arrived 10 Jul) never logged under that number. A same-named facebook_tab row exists from the same day but under a totally different number (8652006315, dialed 30+ times, unresolved) — too different to be a typo pair, likely two people or a different callback number. Two months stale, low priority.
+Confirmed unchanged: Ankit, Jigna Rathod, Parag Gore, Dileep Mehta typo pairs, plus Atul Thorat — all still working a wrong number while the real one sits untouched.
+Niilesh Kathole — still zero trace, day 11.
+9 leads remain genuinely never logged with no typo pair found — unchanged.
+Naresh Marpalli's SVD typo — still uncorrected, 29th flag.
 CRM tabs Sheet1-4 all present, no gap vs live campaigns.
 
 DIAGNOSTIC STEPS
-1. Sales, urgent: escalate Mahesh Mandlik beyond a phone call — promised visit date passed 2 days ago, zero confirmation ever logged on a week-old row.
-2. Sales: don't let tomorrow's fresh-lead response come at the backlog's expense again — redial the REAL numbers for Dileep Mehta (9769701334), Parag Gore (9820973479), Ankit (7021116501), Jigna Rathod (9969283483) — all four confirmed typo pairs where a wrong number was worked instead.
-3. Sales: call back Sunil Guraldas Sidhwani (9175119337) with the Vastu objection specifically in mind — he already visited once, this is a warm re-engagement.
-4. Agency: "2BHK 57 Seconds," now 30 days fully dark — kill/keep decision more overdue than ever.
-5. Agency: watch the Studio/1BHK unit-type mismatch pattern (Anish Pimputkar, Lakshmi Krishnan) — 2 leads in 2 days wanting a different unit than the ad they clicked.
+1. Sales, urgent: escalate the site-visit drought directly to Keval — 5 straight zero-visit days, last real visit 12 Sep. Ask the team point-blank whether visits are happening unlogged or genuinely not converting.
+2. Sales, urgent: Mahesh Mandlik still needs escalation beyond a phone call — day 8, zero follow-up ever.
+3. Sales: redirect tomorrow's dial effort at the specifically-flagged real numbers (Dileep Mehta 9769701334, Parag Gore 9820973479, Ankit 7021116501, Jigna Rathod 9969283483) instead of another broad Aug-cohort sweep.
+4. Sales: make the Sunil Guraldas Sidhwani (9175119337) Vastu-objection callback — still not logged.
+5. Agency: "2BHK 57 Seconds," now 31 days fully dark — kill/keep decision more overdue than ever.
 
 ANYTHING ELSE
-Today is a genuine good-news/bad-news split. The team fully recovered on every fresh lead — same-day contact on all 5 arrivals plus clearing yesterday's 4 stalled leads and Bhavika mua. But the older backlog got zero new dials today — several names now weeks old. Reads like the team is reactive to what's freshest rather than working a prioritized queue.
-15 Sep's close-out confirms the post-7PM drift for a 4th straight day, and for the first time added real leads Meta hadn't shown live (7 vs 4) — the biggest gap yet. Expect today's own Rs1,204.32/5-lead figure to revise upward too.
-100% within_3_months intent across all 5 of today's leads is the strongest single-day intent mix seen in recent reports.
+Today was the quietest lead day tracked, and the team used the slack for real dial volume — a 130-lead mass backlog redial, zero connects but genuine effort. Good instinct, wrong targeting: it swept an older Aug cohort rather than the handful of specifically-named, time-critical leads flagged repeatedly. Worth telling the team directly: work the named list first, then the broad sweep.
+Today's Rs1,040.92/1-lead figure should be read with the same caution as every recent day — expect some upward revision tomorrow, though a single "Ringing" lead is unlikely to add a lead-count miss the way 15-to-16 Sep saw.
+All three 2BHK ads landing on zero leads simultaneously, and Studio's frequency dropping below its own 7-day range, are single-day reads — worth a second look tomorrow before calling either one a trend.
 
 LOOKING AHEAD
-- Mahesh Mandlik's visit status — 2 days overdue unconfirmed, escalate beyond a call.
-- Backlog untouched today: Dileep Mehta, Parag Gore, Niilesh Kathole, Mahesh Kondal, Hitesh Munshi, Ramesh Khade, Raj, Ankit, Jigna Rathod — watch if tomorrow breaks the stall.
-- Ankit's real number (7021116501) now precisely identified — confirm it gets redialed.
-- Sunil Guraldas Sidhwani — confirm the Vastu-objection callback happens.
-- Naresh Marpalli's SVD typo — 29th flag if still unfixed.
-- 1BHK Gujarati — 6 straight 0-lead days, watch for a 7th or a break.
-- "2BHK 57 Seconds" kill/keep call — 30 days dark.
-- Zero site visits, now 4 straight days — watch whether it breaks or deepens.
-- Confirm today's Rs1,204.32/5-lead figure once re-pulled tomorrow (post-7PM drift, 4th day running).
-- Anish Pimputkar / Lakshmi Krishnan — unit-type mismatch pattern, watch for a 3rd instance.
+- Site-visit drought: 5 straight days — escalate directly to Keval, don't just re-flag.
+- Mahesh Mandlik — still unconfirmed, escalate beyond a call.
+- Sunil Guraldas Sidhwani — Vastu callback still pending.
+- Redirect backlog redial effort at Dileep Mehta, Parag Gore, Ankit, Jigna Rathod's REAL numbers, plus Niilesh Kathole, Mahesh Kondal, Raj, Hitesh Munshi, Ramesh Khade.
+- 1BHK Gujarati — 7 straight 0-lead days, watch for an 8th or a break.
+- "2BHK 57 Seconds" kill/keep call — 31 days dark, most overdue yet.
+- Today's Rs1,040.92/1-lead figure — confirm once re-pulled tomorrow.
+- Watch whether all-2BHK-zero and Studio's low-frequency reading repeat tomorrow or were one-off.
+- Vishal Pisal — low-priority integrity note, no action needed unless it resurfaces.
