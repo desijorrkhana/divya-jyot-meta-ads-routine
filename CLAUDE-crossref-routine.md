@@ -433,6 +433,17 @@ the list. Commit message must say what was learned in one line.
   comparing — recompute "yesterday" from the freshly pulled data.json, and when the delta is large,
   attribute it to the 7PM cutoff by default rather than an unexplained Meta revision, unless the specific
   late-arriving leads/spend can't account for the gap.
+  **UPDATE 2026-09-18 — the same class of lag also applies to SVD (site-visit) entries, not just leads,
+  and it can make a real multi-day "zero visit" streak look worse than it is.** The 17 Sep report (and
+  `_memory.md`) flagged 5 straight zero-site-visit days (13-17 Sep) as past the threshold for escalating
+  directly to Keval. On the 18 Sep run, the SVD tab had a NEW row for Nirav Madiyar (CRM-verified,
+  `9870319949`, arrived 16 Sep) with Visit Date "17/9/2026" but a confirmation checkmark timestamp of
+  "18/9/2026, 11:06:05 am" — i.e. the visit happened on the 17th but wasn't entered into the sheet until
+  the morning of the 18th, one calendar day later. A report generated on the evening of the 17th (this
+  routine's ~7PM run) could not have seen it. Standing rule: before escalating a site-visit drought as
+  real, note that SVD confirmation timestamps can trail the actual visit date by about a day — don't
+  present a streak ending on "yesterday" as definitively real without saying that the most recent 1-2
+  days could still fill in on the next run, the same caveat already applied to leads/spend above.
 - 2026-08-08 (SAME CLASS OF BUG AS 07-21/22, worse impact): `fetch_all.py` read `Facebook!A1:N2000` and
   `SVD!A1:O500` — but the Facebook tab actually has follow-up columns through col AG ("8th follow up";
   N only covers 1st-4th) and SVD carries dated post-visit notes in unlabeled columns through col AF.

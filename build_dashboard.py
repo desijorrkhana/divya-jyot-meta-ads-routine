@@ -195,7 +195,8 @@ def build():
     i_src, i_name, i_num, i_date = hdr.index("source"), hdr.index("name"), hdr.index("number"), hdr.index("visit date")
     KNOWN_BAD = {"8976779929": "pre-V3 lead (Apr) — not a V3 result",
                  "9673213241": "never a Meta lead (Dedhia case, 4 Jul)"}
-    ANNOTATED_OK = {"9372158643": "relative's phone; team-annotated {Sushma} — ties to real CRM lead"}
+    ANNOTATED_OK = {"9372158643": "relative's phone; team-annotated {Sushma} — ties to real CRM lead",
+                    "9821799349": "relative's phone; SVD row tagged '(urmii)' — ties to CRM lead Urmi Rajgor Monani"}
     visits = []
     for r in svd[1:]:
         if len(r) <= i_num:
