@@ -444,6 +444,14 @@ the list. Commit message must say what was learned in one line.
   real, note that SVD confirmation timestamps can trail the actual visit date by about a day — don't
   present a streak ending on "yesterday" as definitively real without saying that the most recent 1-2
   days could still fill in on the next run, the same caveat already applied to leads/spend above.
+  **MERGED 2026-09-19 (was a standalone 08-12/08-15 entry, same lag family): a same-day mismatch
+  between `meta.today_ads`' per-ad lead count and the count of same-day rows in
+  `sheet.meta_leads_timed` is a timing/attribution lag between two independently-updating
+  sources, not a phantom/error — confirmed in BOTH directions (12 Aug: Meta ahead of CRM by 1,
+  the sheet caught up; 15 Aug: CRM ahead of Meta by 1, Meta's ad-level insights hadn't caught up
+  to its own webhook feed yet). Don't assume either source is authoritative in the moment — check
+  `sheet.facebook_tab` for a same-day row with no CRM match first (rules out a fake), note which
+  side is lagging, and confirm on the NEXT run whether the numbers reconcile.**
 - 2026-08-08 (SAME CLASS OF BUG AS 07-21/22, worse impact): `fetch_all.py` read `Facebook!A1:N2000` and
   `SVD!A1:O500` — but the Facebook tab actually has follow-up columns through col AG ("8th follow up";
   N only covers 1st-4th) and SVD carries dated post-visit notes in unlabeled columns through col AF.
@@ -487,20 +495,6 @@ the list. Commit message must say what was learned in one line.
   `account_status: 1`, `balance: "102108"`, matching the real spend/leads that appeared in
   `today_campaigns` the same run — the two signals should always be cross-checked against each
   other, not just against `data.json`.
-- 2026-08-12 (UPDATED 08-15, now confirmed in BOTH directions): a same-day mismatch between
-  `meta.today_ads`' per-ad lead count and the count of same-day rows in `sheet.meta_leads_timed`
-  is most likely a timing/attribution lag between two independently-updating sources, not a
-  phantom/error — check which side is behind before concluding anything. (1) Meta-ahead-of-CRM
-  case (12 Aug): Meta said 4 "2BHK" leads, CRM only had 3 — the team's sheet had the 4th
-  (Srikant Iyer) with clearly 2BHK-flavored feedback, so it was the CRM Event sheet catching up
-  to Meta. (2) CRM-ahead-of-Meta case (15 Aug, opposite direction): CRM's `meta_leads_timed`
-  showed 2 leads today (Vishal Gaikwad arriving literally 3 minutes before the fetch), but Meta's
-  own `today_ads` canonical `leads` field still only showed 1 — Meta's ad-level insights hadn't
-  caught up to its own webhook feed yet. Standing rule: don't assume either source is
-  authoritative in the moment — check `sheet.facebook_tab` for a same-day row with no CRM match
-  first (rules out a fake), note which side is lagging and why (arrival time vs. fetch time is
-  usually the tell), and confirm on the NEXT run whether the numbers reconcile before concluding
-  either way.
 - 2026-08-29: `sheet.contact_history` returned 100% null brackets for every lead, every run, for
   4 straight days (26-29 Aug) — previously assumed to be thinning Drive revision coverage (a
   real, separate, still-true trend: revisions_scanned fell 8→6→4 over the same days). The ACTUAL
@@ -520,6 +514,20 @@ the list. Commit message must say what was learned in one line.
   (xlsx here) and print the row directly rather than reasoning about it — the header may not
   match the live Sheets-API header if a spacer/hidden column exists in one representation but
   not the other.
+- 2026-09-19: `build_dashboard.py` edits made from inside a daily session DO NOT survive past
+  that session — `.github/workflows/report-sync.yml` only copies `report.md`, `reports/**`,
+  `CLAUDE-crossref-routine.md`, and `fetch_all.py` from a pushed `claude/*` branch onto `main`;
+  `build_dashboard.py` is not in that path list, and `dashboard.yml` (the separate cron that
+  actually rebuilds `dashboard.html`) runs entirely against `main`. Confirmed the hard way: the
+  5 Sep learned rule said the "Facebbok"-misspelling SVD-source bug was fixed, and 18 Sep's
+  `_memory.md` said an ANNOTATED_OK entry (Dhaval/Urmi, `9821799349`) had just been added to
+  `build_dashboard.py` — but `git log -- build_dashboard.py` showed zero substantive commits
+  since 11 Sep; neither fix had ever actually reached the file the live dashboard builds from.
+  Both were silently lost every day since. Standing rule: any `build_dashboard.py` change made
+  during a routine run must be pushed to `main` directly in the same run (the same "push routine
+  output straight to main" authorization already used for reports) — never assume report-sync
+  carries it, and don't trust a past report/memory note claiming a dashboard-code fix landed
+  without checking `git log -- build_dashboard.py` on `main` first.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,

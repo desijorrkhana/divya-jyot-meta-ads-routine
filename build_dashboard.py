@@ -195,13 +195,20 @@ def build():
     i_src, i_name, i_num, i_date = hdr.index("source"), hdr.index("name"), hdr.index("number"), hdr.index("visit date")
     KNOWN_BAD = {"8976779929": "pre-V3 lead (Apr) — not a V3 result",
                  "9673213241": "never a Meta lead (Dedhia case, 4 Jul)"}
-    ANNOTATED_OK = {"9372158643": "relative's phone; team-annotated {Sushma} — ties to real CRM lead"}
+    ANNOTATED_OK = {"9372158643": "relative's phone; team-annotated {Sushma} — ties to real CRM lead",
+                    "9821799349": "relative's phone; Dhaval/Urmi Rajgor Monani — ties to real CRM lead"}
     visits = []
     for r in svd[1:]:
         if len(r) <= i_num:
             continue
         vd = parse_dmy(r[i_date] if len(r) > i_date else "", today)
-        if not vd or "facebook" not in (r[i_src] if len(r) > i_src else "").lower():
+        # Source spelling is informational only, never gate-keeping — the sheet has a
+        # confirmed "Facebbok" (double-b, one-o) misspelling variant alongside "Facebook"
+        # (2026-09-05 learned rule; Nityanand Singh's row still carries it, uncorrected,
+        # as of 2026-09-19). A naive "facebook" substring check silently drops these rows
+        # from the visit count entirely. Match both spellings.
+        src_l = (r[i_src] if len(r) > i_src else "").lower()
+        if not vd or ("facebook" not in src_l and "facebbok" not in src_l):
             continue
         ph = normphone(r[i_num])
         crm = crm_by_phone.get(ph)
