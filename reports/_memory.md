@@ -1,59 +1,62 @@
 # Routine memory — read at the start of every run, update at the end
 
-## Added 2026-09-19 (run, ~7:10PM IST data)
+## Added 2026-09-20 (run, ~7:20PM IST data)
 
-- **ESCALATED per standing instruction: named priority backlog needs a DIRECT INSTRUCTION from
-  Keval to the team, not another report flag.** Mahesh Mandlik (spelled "Mandilik" in the sheet —
-  search for that spelling), Sunil Guraldas Sidhwani's Vastu callback (see below, now the sharpest
-  case), Ankit/Jigna Rathod/Parag Gore/Dileep Mehta's real numbers, Niilesh Kathole, Mahesh Kondal,
-  "Raj," Hitesh Munshi, Ramesh Khade — 4+ consecutive reports, zero progress. Even the WRONG-number
-  redials (Parag Gore, Dileep Mehta) stopped for 2 straight days (18th, 19th) — nobody is dialing
-  these numbers at all anymore, right or wrong.
-- **Sunil Guraldas Sidhwani (9175119337) — now the most urgent single case.** He's a DUPLICATE
-  lead: original Studio submission 19 Jul, visited 7 Aug ("Visit done"), then RE-SUBMITTED the
-  form for 1BHK on 16 Sep (new facebook_tab row same phone). That new row's only entry is "Vasstu
-  problem" (16 Sep) — 4 straight days of total silence since. This is a warm, previously-converted
-  (visited) lead going cold over an addressable objection, not cold outreach. CHECK FIRST THING
-  NEXT RUN whether a callback finally happened.
-- **Nitin Gurav — RESOLVED.** Contacted, feedback "Busy" logged (attempted, no connect yet).
-- **2 new/newly-discovered leads**: Swati Kawade (9325890164, fb, 1BHK Hindi, 3-6_months, budget
-  1.01-1.10cr, arrived 02:16:34 19 Sep, "Ringing" logged) and Mahesh Rathod (9920286150, fb, 1BHK
-  Gujarati, within_3_months, budget 1.11-1.20cr, arrived 21:23:31 18 Sep — post-7PM, invisible to
-  the 18 Sep report — "Cut the call" logged). Both dialed fast, neither connected yet — CHECK
-  whether either gets a real connect next run.
-- **contact_history had a ~16-hour overnight scan gap (last scan 18:53:01 on the 18th, next scan
-  10:51:50 on the 19th)** — widened both new leads' lag brackets to hours instead of minutes.
-  Nothing to fix (Drive quota pacing, as designed) but worth noting precision was worse than
-  recent days.
-- **Raju Kasabe (9004034850) — genuinely good news.** CRM lead 16 Sep (1BHK Hindi, within_3_months,
-  below-1cr) -> CRM-verified visit 19 Sep, logged SAME DAY with no lag (unlike Nirav Madiyar's
-  1-day lag). Clean 3-day lead-to-visit. CHECK post-visit outcome next run before it goes stale
-  like Nirav Madiyar's did.
-- **Nirav Madiyar — still no post-visit outcome logged**, 2 days since his 17 Sep visit. Flag
-  again if still nothing next run.
-- **1BHK Gujarati's streak-break (18 Sep, 2 leads) looks like a one-off** — reverted to 0 leads
-  today, only 1 of the last 9 days had any Gujarati leads. Don't call it recovered yet.
-- **2BHK's CTR-below-7-day-range problem resolved after 2 days** — today's CTR (2.51%) is back
-  in range. No 3rd-day escalation needed on that specific metric.
-- **Studio now on a 3rd straight zero-lead day (17, 18, 19 Sep)** — new pattern, not previously
-  tracked at this length. Watch for a 4th day before treating as a real trend; Studio historically
-  runs thin volume so this may just be noise.
-- **1BHK CTR hit a new 7-day high today (2.95%, prior max 2.20%)**, driven by Hindi (3.13%).
-- **"2BHK 57 Seconds" — 33 days dark, 6th straight report flag.**
-- **Cost-per-visit trailing 30d (21 Aug-19 Sep): 12 CRM-verified (Rs 4,417.73/visit, 7.06%), 17
-  explained total (Rs 3,118.40/visit, 10.00%).** Vanity CPL Rs 311.84 (170 leads/Rs 53,012.80) —
-  window rolled forward, dropping a high-lead day (19 Aug) out of the lookback; not a real quality
-  change, just the rolling-window edge. Don't compare this lead-count number to yesterday's 189
-  without noting that.
-- **Reverse check: 22 unmatched, unchanged. Forward check: 16 unmatched, unchanged.** Clean sync
-  night again — both new leads matched correctly on both sides.
-- **CODE BUG FOUND AND FIXED in build_dashboard.py this run** (not fetch_all.py) — see the new
-  LEARNED RULE in the main spec file. Two things were fixed: (1) the SVD source classifier now
-  matches "facebbok" as well as "facebook" (previously silently dropped Nityanand Singh's row from
-  the dashboard entirely); (2) added the missing Dhaval/Urmi (9821799349) ANNOTATED_OK entry that
-  an earlier day's memory claimed was already added but never was. Pushed directly to `main`
-  (build_dashboard.py is NOT covered by report-sync.yml's auto-copy — this is a structural gap,
-  now documented). CONFIRM NEXT RUN that this survived the next scheduled dashboard build.
-- **Naresh Marpalli SVD phone typo — 31st flag** (8108784706 should be 8108784766), still
+- **ESCALATION CONTINUES — named priority backlog now 5+ consecutive reports with zero
+  progress; still needs a DIRECT INSTRUCTION from Keval to the team.** Mahesh Mandlik, Mahesh
+  Kondal, "Raj" all still frozen at 17/9 "Ringing" (3 more silent days added). Ramesh Khade
+  (phone 9819530753) and Hitesh Munshi (9821407006) remain completely untouched since row
+  creation (12-13 Sep, now 7-8 days old — only Feedback-column intake text, no dated follow-up
+  ever). The 4 typo-pair REAL numbers (Ankit 7021116501, Jigna Rathod 9969283483, Parag Gore
+  9820973479, Dileep Mehta 9769701334) plus Atul Thorat's real number (9819877789) have NEVER
+  been dialed at all, ever. The WRONG numbers also got zero redial for a 3rd straight day
+  (18th, 19th, 20th).
+- **Sunil Guraldas Sidhwani (9175119337) — now 5 straight days silent, WORSE not better.** Still
+  just "Vasstu problem" (16 Sep row 1759), nothing added since. Already-visited (7 Aug) warm
+  lead who resubmitted for 1BHK. 4th consecutive report flagging this exact case. CHECK FIRST
+  THING NEXT RUN.
+- **Studio's 3-day zero-lead streak BROKE today** — 2 leads (Rahul Kamplikar, Sheetal Yelve
+  Jadhav). Confirms it was noise. No further tracking needed on this specific point.
+- **2BHK now has ITS OWN 3-day zero-lead streak (18, 19, 20 Sep)** — same pattern Studio just
+  broke out of. Watch for a 4th day before escalating.
+- **Best SVD day since 12 Sep: 2 CRM-verified visits today, both same-day, no lag** — Bharati
+  Thakkar (9820687305, 1BHK lead 28 Aug, 23-day gestation, didn't like layout) and Pratik
+  Dharod (9867496222, 2BHK lead 7 Sep, 13-day gestation, budget ~1.40cr fits ceiling well).
+  Tab had gone 0-0-0-0 on 13-16 Sep, then 1-0-1 on 17/18/19. Watch next run whether this
+  continues or was a one-off.
+- **Pravin Sargar (9702887601, 1BHK Hindi, ig, within_3_months, budget 1.01-1.10cr) — best
+  lead of the day.** Arrived 16:45:40, connected within ~2h, "Call back tomorrow" logged — a
+  real conversation, not just an attempt. CHECK NEXT RUN whether the promised callback
+  actually happened.
+- **Dilip Samant (9869699712, 1BHK Hindi, fb, 3-6_months, budget 1.11-1.2cr) — phone was off
+  on first attempt ("Switch off"), lag imprecise (~9-11h). Needs a 2nd dial attempt** — check
+  next run whether it happened.
+- **Sheetal Yelve Jadhav (9594870078, Studio, fb, 3-6_months) — possible PRODUCT mismatch, not
+  budget.** Came in via the Studio ad but her logged note says "Looking for 1bhk budget
+  82lakhs" — an entirely different unit type than Studio's ₹87L bare shell. Worth a
+  clarifying call. Also her dial-outcome is ambiguous (descriptive note, no clear
+  Ringing/Busy/etc word) — CHECK next run whether she was actually spoken to.
+- **Mahesh Rathod and Swati Kawade (from 18/19 Sep) — still no real connect**, unchanged from
+  yesterday ("Cut the call" / "Ringing" respectively, no new dial logged). Both going stale
+  without ever connecting.
+- **Nirav Madiyar — still no post-visit outcome, now 3 full days since his 17 Sep visit.**
+  Clearly overdue now, escalate language next time if still nothing.
+- **Raju Kasabe — no post-visit outcome yet either, but only day 1 since his 19 Sep visit** —
+  not alarming yet on its own, but check next run before it becomes a 2nd Nirav Madiyar.
+- **build_dashboard.py fix (33a8aab, "facebbok" match + Dhaval/Urmi ANNOTATED_OK) — CONFIRMED
+  survived on main, verified via `git log origin/main -- build_dashboard.py`, with multiple
+  scheduled dashboard rebuilds on top of it since (latest 20 Sep 19:11 IST) not reverting it.
+  This loop is CLOSED — no need to re-check unless a NEW build_dashboard.py edit is made.**
+- **Reverse check: 22 unmatched, unchanged. Forward check: 16 unmatched, unchanged.** Clean
+  sync again — both today's new leads matched correctly on both sides.
+- **Typo-pair Hamming scan re-run in full: same 5 pairs, no new candidates.**
+- **2BHK "29 Seconds | connectivity hook" went dark today (₹0 spend) after running ₹161.17
+  yesterday** — a rotation flip vs. "36 Seconds"/"Legacy hook" getting the spend today. Watch
+  whether this is normal rotation or a developing delivery issue on that variant.
+- **"2BHK 57 Seconds" — 34 days dark, 7th straight report flag.**
+- **1BHK Gujarati — still just 1 good day out of the last 10.** No new data point.
+- **3 SVD rows remain genuinely unexplained, unchanged: Neha Joshi (24/8), Jayesh (25/8),
+  Divya Singh (30/8).**
+- **Naresh Marpalli SVD phone typo — 32nd flag** (8108784706 should be 8108784766), still
   uncorrected.
 - Telegram delivery: confirm this run's send succeeded — check the printed line after `--send`.
