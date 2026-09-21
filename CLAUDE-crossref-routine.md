@@ -402,6 +402,17 @@ the list. Commit message must say what was learned in one line.
   conflating them inflates the headline count and obscures which real-phone rows need a typo
   check (9 of 31 raw reverse-check rows on 12 Sep were placeholders; the real mismatch count,
   22, matched the established 22-24 baseline exactly once separated out).
+  **ADDED 2026-09-21 — a THIRD typo shape, INSERTION not substitution, which the Hamming scan
+  above structurally cannot catch (it only compares equal-length strings).** Akshata's 20 Sep
+  facebook_tab row logged her phone as `80802543357` (11 digits, an extra "0" inserted after
+  the first three) against her real CRM number `8082543357` (10 digits) — same name, same-day
+  creation, obviously her, but neither the last-10/first-10-digit candidate check nor the
+  equal-length Hamming scan matches an 11-digit cell to a 10-digit one, so it silently showed
+  up as both a reverse- and forward-check miss instead of a typo. If insertion/deletion typos
+  recur, extend the scan to edit distance (not just fixed-length Hamming) between forward-miss
+  and reverse-miss phones; for now, treat any reverse-check phone cell with 11+ digits and a
+  forward-miss CRM phone of the same name as a likely insertion-typo candidate worth a manual
+  check.
 - 2026-07-30 (MERGED with 07-21 typo-year note): `facebook_tab`'s Created column is NOT uniformly
   DD/MM/YYYY — pre-V3 rows from 2025 use MM/DD/YYYY (unambiguous only when day>12, e.g.
   "07/27/2025"), while 2026 V3-era rows use DD/MM/YYYY (e.g. "21/7/2026"). A parser that tries
