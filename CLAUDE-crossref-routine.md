@@ -357,6 +357,15 @@ the list. Commit message must say what was learned in one line.
   count (caught 5 Sep: Nityanand Singh's same-day visit had source "Facebbok" and was
   initially missed). When classifying SVD rows by source, match "facebbok" too, or better,
   classify by CRM-phone-match first and treat source spelling as informational only.
+  **ADDED 2026-09-22: the "FB call" / relative-tag marker does NOT live in the `Source`
+  column at all — it's in the blank-header spacer column immediately BEFORE `Remarks` (right
+  after `Req Flat`; `Source` stays "Facebook" either way).** A classifier that checks `Source`
+  text for "fb call" will never match — it always reads "Facebook" there — and silently
+  reclassifies every real direct-caller visit (Hemant, Sonal Pandya, Chandan Sharma, confirmed
+  22 Sep) as "unexplained," inflating the integrity-flag count and threatening to undercount
+  explained visits in the cost-per-visit math. Standing rule: scan the whole row up to and
+  including `Remarks` (not just `Source`) for "fb call"/"fbcall" (case-insensitive) before
+  classifying an SVD row as unexplained.
 - 2026-07-29: `sheet.contact_history` is keyed by PHONE NUMBER, so it breaks on a duplicate-phone
   re-lead (same person submits the Meta form twice). Only one bracket set survives per phone,
   and it gets attached to whichever sheet row the code finds for that phone — usually the OLDER
