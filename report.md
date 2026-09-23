@@ -1,70 +1,68 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Tuesday, 22 September 2026 — window: midnight to ~7:15PM IST
+Wednesday, 23 September 2026 — window: midnight to ~7:20PM IST
 
 HEADLINE
-5 leads today, the biggest arrival count in over a week, and 4 of 5 are within_3_months — the sharpest intent mix in recent reports. Yesterday's two open threads both resolved: Madhu bhandari connected (raises a real question about 2BHK's price FLOOR, not just its ceiling) and Bhumi Makhija turned out to want Ghatkopar, not Mulund West. Khade, Munshi, Sidhwani and all 5 typo-pair real numbers are still untouched. Site visits are now 0 for a 2nd straight day.
+9 leads today, the best day in weeks, and 6 of 9 are within_3_months — even sharper than yesterday's already-strong mix. But the real story is urgent: Aniket Surve arrived at 12:53pm and his real number has NEVER been dialed, because the team logged his row under a mistyped number and already worked THAT number to a voicemail/Cold dead-end. Separately, the "1BHK lead actually wants 2BHK" pattern jumped from 2 to 4 data points today — two more showed up in one day. Site visits are now 0 for a 3rd straight day.
 
 FOLLOW-UP FROM YESTERDAY
-- Madhu bhandari finally connected: "Looking for 2bhk budget 1.20, Out of budget." Her ask (1.20cr) is under the known ~1.4cr 2BHK ceiling, so this only makes sense if 1.20cr is below 2BHK's actual starting price (other confirmed 2BHK asks run 1.30cr+). The price FLOOR isn't documented anywhere — worth asking Keval directly.
-- Bhumi Makhija resolved: she wants a 1BHK in Ghatkopar, not Mulund West. Location mismatch, not neglect. Loop closed.
-- Mandlik, Kondal, Raj — dialed yesterday, no further movement today. Still just "Ringing," no connect.
-- Khade and Munshi — still completely untouched, now 11 and 10 days (inclusive count).
-- Typo-pair wrong numbers — no new dials today. All 5 REAL numbers (Ankit, Jigna Rathod, Parag Gore, Dileep Mehta, Atul Thorat) still never dialed, ever.
-- Sunil Sidhwani — now 7 straight days silent, 6th consecutive report flagging this.
-- Leena Rane, Komal Ashtekar, Chandrakant Jadhav — no change today.
-- "Layout" rejection pattern — no new mentions today, still 11 total.
+- Mandlik, Kondal, Raj — no further touch again today, 2 full days without a redial.
+- Khade and Munshi — still completely untouched, now 12 and 11 days.
+- Typo-pair wrong numbers — no new dials on the 5 known pairs. All 5 real numbers still never dialed. See below for a NEW, 6th pair found today — this one urgent.
+- Sunil Sidhwani — now 8 straight days silent, 7th flag. New context: this number already had a full visit cycle back in July/August ("Visit done" 7 Aug) — he's a returning warm contact, not a cold one.
+- Suprabha Sahu — redialed today as recommended, hit voicemail again. Still no connect.
+- Krunal Nikam — resolved: "by mistake inquiry," nothing to chase.
+- 1BHK Hindi's CTR fully recovered today (1.89%) — yesterday's dip was noise, not fatigue.
 
 THE FUNNEL (today so far)
-Studio: spend Rs 182.77, 941 impr, 17 clicks, 1 lead, CPL Rs 182.77
-2BHK: spend Rs 686.15, 1776 impr, 31 clicks, 1 lead, CPL Rs 686.15
-1BHK: spend Rs 598.96, 1373 impr, 16 clicks, 3 leads, CPL Rs 199.65
-Combined: spend Rs 1467.88, 4090 impr, 64 clicks, 5 leads, CPL Rs 293.58
+Studio: spend Rs 179.29, 731 impr, 17 clicks, 1 lead, CPL Rs 179.29
+2BHK: spend Rs 797.24, 1935 impr, 30 clicks, 5 leads, CPL Rs 159.45
+1BHK: spend Rs 487.34, 1139 impr, 20 clicks, 3 leads, CPL Rs 162.45
+Combined: spend Rs 1463.87, 3805 impr, 67 clicks, 9 leads, CPL Rs 162.65
 Leads verified against lead_actions_raw, canonical count matches Ads Manager, no double-count.
 
-5 CRM leads today, 3 Facebook / 2 Instagram, 4 of 5 within_3_months: sharad sangle (Studio, claims "already visited," unverified), Kiran soni (1BHK Hindi ad but says "looking for 2bhk" — 2nd time this pattern shows up in 2 days), krunal Nikam and Suprabha Sahu (both 1BHK Hindi, clean budget fits, not yet connected), Priya (2BHK, lowest intent bucket).
+9 CRM leads today, 4 Facebook / 5 Instagram, 6 of 9 within_3_months. Two 1BHK-Hindi leads (Bhavesh Waman Adivarekar, Minal Kapil Angane) both asked about a 2BHK on the call. Ameya Patil (2BHK) is a clear budget mismatch at 1.5-1.75cr. Four other 2BHK leads logged "below 1.55cr," a bucket too wide to call fit or mismatch confidently.
 
-All 5 contacted same day, 0 untouched. Site visits today: 0 — 2nd straight zero-visit day.
+8 of 9 contacted same day. 1 untouched — Aniket Surve, and it's a phone typo, not neglect (see Data Integrity). Site visits today: 0 — 3rd straight zero-visit day.
 
-Numbers still moving, it's only ~7:15PM.
+Numbers still moving, it's only ~7:20PM.
 
 AD PERFORMANCE
-Studio: CTR 1.81% (7d range 1.66-2.92), freq 1.19, CPM Rs 194.23 — healthy, best CPL of the day.
-2BHK: CTR 1.75% (7d range 1.58-2.51), freq 1.34, CPM Rs 386.35 — healthy. "2BHK 29 Seconds connectivity hook" just crossed its 3rd straight dark day. "2BHK 57 Seconds": still dark, 36 days, 9th straight flag.
-1BHK: CTR 1.17% — BELOW its 7-day range (1.55-2.26) for the first time. But frequency (1.22) is also below its range floor, which rules out classic fatigue — looks like one-day noise concentrated in the Hindi ad (CTR 1.04%), which still pulled all 3 of today's leads. Gujarati healthy but thin, still just 1 good day out of 10.
-Yesterday recomputed: same 2 leads as reported, but spend rose from Rs 1,085.76 to Rs 1,589.51 — the extra is continued delivery after the ~7:20PM cutoff, not new leads. Fully reconciled.
+Studio: CTR 2.33% (7d range 1.66-2.46), freq 1.12, CPM Rs 245.27 — healthy, 1 lead.
+2BHK: CTR 1.55% (7d range 1.58-2.51, marginally below floor), freq 1.25 (also below range, rules out fatigue), CPM Rs 412.01 — best lead day of the week (5) despite the soft CTR. "2BHK 36 Seconds" carried all 5 leads. "2BHK 57 Seconds": still dark, 37 days, 10th straight flag. "29 Seconds connectivity hook" spent only a token Rs 12.67 today — not a real recovery, kill/keep call still pending.
+1BHK: CTR 1.76% (7d range 1.54-2.26), freq 1.27, CPM Rs 427.87 — fully back in range. Hindi carried all 3 leads at CTR 1.89%, confirming yesterday's dip was noise. Gujarati still thin, 1 good day out of the last 10.
 
 SPEED-TO-LEAD (most important)
-sharad sangle — dialed within the hour. Says "already visited" — unverified, no matching SVD row, worth a clarifying question next call.
-Priya, Kiran soni, krunal Nikam — all arrived overnight (00:49-01:53 IST), contact_history bracket is wide (spans the whole overnight gap), lag somewhere between same-morning and ~12h. All three got a same-day dial once the day started.
-Suprabha Sahu — dialed within ~2.5h, hit voicemail, needs a redial, within_3_months.
-Krunal Nikam — phone off on first attempt, needs a redial.
-Named backlog: Mandlik/Kondal/Raj got no further movement today; Khade/Munshi/Sidhwani/the 5 typo-pair reals remain completely untouched.
+Nilesh Dave, Bhavesh Waman Adivarekar, Minal Kapil Angane, Rohit koushal, S Chandan, sejal doshi, Sudipta Guha, Ameya Patil — all dialed same day, most within 1-2.5 hours. No connect yet on most (Ringing/Busy/voicemail), Sudipta Guha promised a callback tomorrow.
+Aniket Surve — arrived 12:53pm, still completely untouched under his real number. The team dialed a mistyped number instead (one digit off) and marked it Cold off a voicemail. Fix the number and redial today.
+Late arrivals from yesterday (first visible this run): Mahendra Dherange (21:35, dialed, no connect), Rinnkle Shah (22:31, dialed, said "coming Saturday" — a promised visit for the 26th), Swapnil Lakhan (22:37, dialed, "call back after 3pm" — verify this happened today).
+Named backlog: Mandlik/Kondal/Raj no further movement; Khade/Munshi/Sidhwani/the typo-pair reals remain untouched.
 
 LEAD QUALITY
-4 of 5 leads today are within_3_months — the best intent mix in recent reports, even though the raw count (5) isn't the week's biggest.
-Kiran soni's "looking for 2bhk" despite coming from the 1BHK ad is the 2nd instance of this pattern in 2 days (Madhu bhandari yesterday) — small sample, worth watching for a 3rd.
+6 of 9 leads today are within_3_months — the sharpest intent day yet.
+Two 1BHK-Hindi leads asking about 2BHK today (Bhavesh, Minal) push this pattern to 4 total instances (after Madhu bhandari and Kiran soni) — no longer a coincidence, worth a real look at whether 1BHK's ad is pulling in 2BHK-minded buyers.
 
-Real cost-per-visit, trailing 30 days (23 Aug-22 Sep): spend Rs 55,047.58, 174 leads, vanity CPL Rs 316.37.
-11 CRM-verified visits, unchanged (0 new today or yesterday) — real cost-per-visit now ~Rs 5,004.33 (up from ~Rs 4,824.77), visit rate 6.32% (down from 6.51%). Two straight zero-visit days are now showing in the trailing average.
-Plus 3 legit "FB call" visits and 1 relative-tag-explained visit — 15 explained total, cost-per-visit ~Rs 3,669.84, rate 8.62%.
+Real cost-per-visit, trailing 30 days (24 Aug-23 Sep): spend Rs 56,171.85, 182 leads, vanity CPL Rs 308.64.
+10 CRM-verified visits, down from 11 (one rolled out of the 30-day window, nothing new to replace it) — real cost-per-visit now ~Rs 5,617.19 (up from ~Rs 5,004.33), visit rate 5.49% (down from 6.32%). Three straight zero-visit days are now a real drag on the trailing average.
+Plus 3 legit "FB call" visits and 1 relative-tag-explained visit — 14 explained total, cost-per-visit ~Rs 4,012.28, rate 7.69%.
 3 SVD rows still genuinely unexplained: Neha Joshi, Jayesh, Divya Singh — unchanged.
-Naresh Marpalli's phone typo still uncorrected, 34th flag.
+Naresh Marpalli's phone typo still uncorrected, 35th flag.
 
 DATA INTEGRITY
-Reverse check: 23 unmatched, unchanged from yesterday, no new anomaly.
-Forward check: 17 unmatched, unchanged.
-Typo-pair scan re-run: same 5 pairs, no new candidates. None of the 5 real numbers ever dialed.
-Akshata's phone typo still uncorrected — contact_history confirms she's still unmatchable under her real number.
+URGENT — a 6th typo pair found today, and it's fresh: Aniket Surve's real number (9892435525) vs a same-day sheet row logged under 9892535525 (one digit off, edit distance 1, exact name match). Unlike the other 5 pairs, this one is hours old — the wrong number has already been dialed to a voicemail/Cold outcome while the real lead sits untouched. Fix it now before it goes cold like the others.
+Reverse check: 24 unmatched (23 unchanged + Aniket Surve's typo row). Forward check: 18 unmatched (17 unchanged + Aniket Surve's real number). No other new anomaly.
+Typo-pair scan re-run: same 5 established pairs, still unresolved, plus the new one above.
+Akshata's phone typo still uncorrected, still unmatchable under her real number.
+build_dashboard.py confirmed still on main, no drift.
 
 DIAGNOSTIC STEPS
-1. Sales, urgent — Sunil Guraldas Sidhwani's Vastu callback, 7 days silent, 6th flag. Needs a direct instruction from Keval to the team now.
-2. Sales — Khade, Munshi, and the 5 typo-pair real numbers got zero movement again today despite the team proving it can clear a named list this week (Mandlik/Kondal/Raj). Push the same list again.
-3. Agency — ask Keval for 2BHK's actual starting price, not just its ceiling. Madhu bhandari's 1.20cr ask was marked out of budget today despite being under the known ~1.4cr ceiling.
-4. Sales — redial Suprabha Sahu and Krunal Nikam before they cool.
-5. Agency — "2BHK 29 Seconds connectivity hook" just crossed 3 straight dark days; pair its kill/keep call with the already-overdue "2BHK 57 Seconds" (36 days, 9th flag).
-6. Sales — clarify sharad sangle's "already visited" claim on the next call.
+1. URGENT, sales — fix Aniket Surve's phone number (9892435525, logged as 9892535525) and redial today. The wrong number is already a dead end; the real lead has never been called.
+2. Sales, urgent — Sunil Sidhwani's Vastu callback, 8 days silent, 7th flag, now known to be a warm returning contact. Needs a direct instruction from Keval.
+3. Sales — push on Ramesh Khade (12d), Hitesh Munshi (11d), and the 5 older typo-pair real numbers — never dialed, ever, despite the team proving it can clear a named list (Mandlik/Kondal/Raj).
+4. Agency — ask Keval for 2BHK's actual floor price, now backed by 4 data points (2 from today). Worth also asking whether 1BHK's ad copy is pulling in 2BHK-minded buyers.
+5. Agency — "2BHK 57 Seconds," 37 days dark, 10th flag — still the most overdue kill/keep call.
+6. Sales — verify Swapnil Lakhan's 3pm callback happened, and follow through on Sudipta Guha's tomorrow callback.
 
 ANYTHING ELSE
-Today's intent mix is the real story — 4 of 5 within_3_months, the sharpest in recent reports, even though the count itself isn't the week's biggest. The "1BHK lead actually wants 2BHK" pattern now has 2 data points (Madhu bhandari, Kiran soni) — worth watching for a 3rd before reading into ad targeting/copy. Site visits are at 2 straight zero days — not yet drought-scale, but the trailing cost-per-visit already moved because of it.
+Today is the best combination of volume and quality seen recently — 9 leads, 6 within_3_months. The "1BHK wants 2BHK" pattern is now a real signal (4 instances, 2 today alone), not noise. Site visits are at 3 straight zero days — one more from matching the 13-17 Sep drought that previously needed direct escalation; the only concrete visit promise on the books is Rinnkle Shah's Saturday.
 
-Full report with tables committed to the repo (reports/2026-09-22.md and reports/latest.md).
+Full report with tables committed to the repo (reports/2026-09-23.md and reports/latest.md).
