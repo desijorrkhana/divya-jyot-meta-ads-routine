@@ -1,67 +1,62 @@
 DIVYA JYOT LYF REWA — DAILY SNAPSHOT
-Thursday, 24 September 2026 (midnight–7:18PM IST)
+Friday, 25 September 2026 (midnight–~7:16PM IST)
 
 HEADLINE
-Quiet 4-lead day (half of yesterday's 9) but the real story is site visits: the 3-day zero-visit drought (21-23 Sep) broke today with 3 new visits. Meanwhile Aniket Surve's urgent phone typo from yesterday got WORSE — team redialed the wrong number again today instead of the real one.
+Quiet 3-lead day, but a clean one — every lead, including 2 duplicate re-leads carried over from yesterday's late arrivals, got dialed same-day. What didn't happen: zero site visits today, zero progress on Aniket Surve's real number, and one lead's phone number was structurally invalid (starts with digit 1) yet passed OTP verification.
 
 FOLLOW-UP FROM YESTERDAY
-- Aniket Surve typo: STILL unresolved. Real number 9892435525 has zero contact history. Wrong number 9892535525 got a 2nd dial today (Ringing). Fix the digit and call the real number now.
-- Site visits: drought broken, see below.
-- 1BHK-wants-2BHK pattern: no 5th case today, holds at 4.
-- Sunil Sidhwani: 9 days silent, 8th flag, still needs Keval's direct instruction to the team.
-- Ramesh Khade (13d) and Hitesh Munshi (12d): still untouched.
-- Dileep Mehta's WRONG number got dialed again today (Busy) — wasted effort continues, his real number never dialed.
-- Sudipta Guha's callback promise: honored today (Ringing, no connect yet).
-- Swapnil Lakhan's callback: only partial follow-through so far.
+- Aniket Surve: real number 9892435525 still ZERO contact, ~54 hours now. Good news: the team did NOT redial the wrong number again today.
+- Site visits: yesterday's 3-visit breakthrough did not continue — 0 new visits today.
+- Sunil Sidhwani: now 10 straight days silent, 9th flag. Ramesh Khade (14d) and Hitesh Munshi (13d): still zero contact ever.
+- Mahesh Kondal and Raj: the redial cadence itself has stopped — no touch for 2 days after previously being redialed regularly.
+- Typo-pair wrong numbers (Dileep Mehta, Akshata): not re-dialed today, good — but all 5 typo-pair REAL numbers still never called.
+- Rinnkle Shah's "coming Saturday" visit promise: tomorrow, 26 Sep.
 
-THE FUNNEL (today so far)
-Spend ₹1,265.51, Impressions 3,495, Clicks 80 (66 link), Leads 4, CPL ₹316.38
-By campaign: Studio ₹138.96/0 leads. 2BHK ₹708.62/3 leads (CPL ₹236.21). 1BHK ₹417.93/1 lead (CPL ₹417.93).
-Leads verified against Meta's canonical action count — no double-count anomaly.
-Platform: 2 FB, 2 IG. Intent: 2 of 4 within_3_months (50%) — softer than yesterday's 67%.
-Contacted: 4 of 4 same day. Site visits logged today: 3 (breaks the drought).
-Yesterday recomputed: still exactly 9 leads, no late-arrival corrections needed.
+THE FUNNEL (today)
+Spend Rs 1,056.38 | Impressions 3,246 | Clicks 61 (41 link) | Leads 3 | CPL Rs 352.13
+By campaign: Studio Rs158.38/1 lead, 2BHK Rs506.51/2 leads, 1BHK Rs391.49/0 leads (first zero-lead day this week).
+All 3 leads via Facebook, 0 via Instagram. 2 of 3 within_3_months intent.
+Contacted: 3 of 3 same day. Site visits today: 0.
+Yesterday recomputed: 7 CRM leads (up from 4 reported same-day) — 3 late arrivals after the 7PM cutoff, all contacted same-day too.
 
 AD PERFORMANCE
-Studio: CTR 2.36% (healthy, mid-range), 0 leads today but no fatigue signal.
-2BHK: CTR 1.93%, healthy. "2BHK 36 Seconds" carried 2/3 leads. "29 Seconds connectivity hook" — real re-activation today (₹154, CTR 3.31%), watch if it holds. "2BHK 57 Seconds" — still dark, 38 days, 11th flag, most overdue kill/keep call in the account.
-1BHK: CTR 2.99%, best of the week, above its 7-day range. Hindi carried the day's only lead.
+Studio: CTR 2.02%, healthy, mid-range. 2BHK: CTR 2.00%, CPM actually below its 7-day floor — cheap reach today. "2BHK 29 Seconds connectivity hook" hit 5.19% CTR on 1 lead — small base but a strong signal. "2BHK 57 Seconds" now 39 days dark, 12th straight flag — still the most overdue kill/keep call in the account.
+1BHK: CTR 1.59%, low end of its range, 0 leads despite most spend going to "1BHK Hindi" (yesterday's top performer).
 
 SPEED-TO-LEAD
-All 4 fresh leads today dialed same-day — solid work.
-- Pritesh Shah, arrived 6:51am, dialed within ~4.5h, low intent (just exploring), hit Busy.
-- Mithun Shah, arrived 1:05pm, dialed within ~1h20m, wants 2bhk budget 1.50 — mismatch vs ~1.4cr ceiling.
-- Sheenu Panicker, arrived 5:02pm, dialed within ~1.5h, budget 1.5-1.75cr — also above ceiling.
-- Amit Patil, arrived 2:42am, dialed within ~8.5h, within_3_months, budget 65 lakhs — best lead of the day, clean fit.
-Aniket Surve (from yesterday, real number) remains the day's most urgent item — untouched ~30+ hours.
+Paresh Goshar (2BHK, 3-6mo, below Rs1.55cr budget) — dialed within 0 to 3h43m, hit Busy.
+Gopal Perumal (2BHK, within_3mo, below Rs1.55cr) — dialed in 3h11m to 4h15m, still Ringing, best lead of the day.
+Kenisha Vaswani (Studio, within_3mo) — dialed fastest (0 to 1h34m) but the number is invalid, see below.
+Late arrivals from yesterday (Mitesh Shah, Sharad Sangle, Amey Angane) — all 3 contacted same-day despite arriving after the 7PM cutoff. Sharad Sangle: new visit promise for Sunday 27 Sep.
 
 LEAD QUALITY
-Amit Patil is today's standout — good budget fit, high intent. Mithun Shah and Sheenu Panicker are clean 2BHK budget mismatches. Pritesh Shah is low intent. No new 1BHK-wants-2BHK case today.
+Kenisha Vaswani's CRM phone (1568032971) starts with digit 1 — not a valid Indian mobile prefix. Team correctly marked it Invalid. Worth flagging to Meta if this recurs since OTP verification should prevent this.
+Kaushik Thakkar (yesterday's visit win) followed up today as a budget mismatch (wants 95L) — track to a real outcome, not an automatic win.
+No new "1BHK wants 2BHK" pattern instance today, holds at 4.
 
-Real cost-per-visit (trailing 30 days, 25 Aug-24 Sep): spend ₹54,711.52, 171 leads, vanity CPL ₹319.95.
-11 CRM-verified visits (up from 10) — real cost-per-visit ~₹4,974, down from ~₹5,617. Visit rate 6.43%, up from 5.49%.
-Plus 5 legitimate FB-call direct-caller visits and 1 relative-tag-explained visit — 17 explained visits total, cost-per-visit ~₹3,218, rate 9.94%. Both numbers improving.
-2 SVD rows remain genuinely unexplained: Jayesh (25/8), Divya Singh (30/8).
+REAL COST PER VISIT (trailing 30 days, 26 Aug to 25 Sep)
+Spend Rs 54,702.49, 163 leads, vanity CPL Rs 335.60.
+11 CRM-verified visits — real cost-per-visit ~Rs 4,972.95, rate 6.75% (flat vs yesterday, no new visit today).
+17 explained visits (11 CRM + 5 legit FB-call direct callers + 1 relative-tag) — cost-per-visit ~Rs 3,217.79, rate 10.43%.
+1 SVD row remains genuinely unexplained: Divya Singh (30 Aug).
 
 DATA INTEGRITY
-URGENT — Aniket Surve typo pair unresolved and worsening (2nd wrong-number dial today).
 Reverse check: 24 rows with real phone, no CRM match — unchanged from yesterday.
-Forward check: 18 CRM phones never logged in the sheet — unchanged from yesterday.
-Same 5 typo pairs confirmed again (Atul Thorat, Ankit, Dileep Mehta, Jigna Rathod, Parag Gore) — none of their real numbers ever dialed. Akshata's insertion-typo still uncorrected.
-Today's 2 FB-call SVD rows are legitimate direct-caller visits, not integrity flags.
+Forward check: 18 CRM phones never logged in the sheet — unchanged, same roster (5 typo pairs, Akshata, Aniket Surve, plus 11 genuinely never logged).
+No new integrity misses today — all 3 of today's leads matched cleanly both directions.
 build_dashboard.py confirmed still on main, no drift.
 
 DIAGNOSTIC STEPS
-1. URGENT — fix Aniket Surve's number (9892435525) and call it today. Team dialed the wrong number twice now.
-2. Sunil Sidhwani — 9 days silent, warm returning contact, needs Keval's direct instruction to the team.
-3. Push Ramesh Khade (13d), Hitesh Munshi (12d), and the 5 typo-pair real numbers — team can clear a list when pushed, these haven't gotten that push.
-4. Stop re-dialing known-wrong numbers (Dileep Mehta today) — that time belongs on the real, never-dialed leads.
-5. "2BHK 57 Seconds" — 38 days dark, 11th flag — make the kill/keep call.
-6. Ask Keval for 2BHK's real floor price (4 data points now) and whether the 2BHK form can ask a tighter budget question.
+1. URGENT: fix Aniket Surve's phone digit and call the real number 9892435525 — still never dialed, 54+ hours.
+2. Sunil Sidhwani — 10 days silent, needs a direct instruction from Keval.
+3. Ramesh Khade and Hitesh Munshi — still completely untouched.
+4. Find out why Kondal and Raj stopped being dialed entirely.
+5. Now that wrong-number redials have stopped, push the team to dial the 5 typo-pair REAL numbers that have never been called.
+6. "2BHK 57 Seconds" — 39 days dark, 12th flag. Overdue kill/keep call.
+7. Flag Kenisha Vaswani's invalid phone number to Meta if this pattern recurs.
 
 ANYTHING ELSE
-Today's 3-visit turnaround is the best news of the week — pulled cost-per-visit down meaningfully in one day. One of today's visits (Kaushik Thakkar) was a 6 Aug lead finally converting, ~7 weeks later — a reminder not to write off older untouched leads as dead.
-The Aniket Surve situation is the clearest sign yet that a report flag alone isn't enough — the team redialed the same wrong number again today despite yesterday's report calling it out. Worth a direct message to the team, not just another report line.
+Two visit promises now on the books: Rinnkle Shah (26 Sep) and Sharad Sangle (27 Sep). Worth checking both over the weekend.
+The duplicate-phone re-lead handling worked well today — both Mitesh Shah and Sharad Sangle got same-day contact on their new submissions despite the sheet's contact-history tooling pointing at their older rows.
 
-LOOKING AHEAD
-Aniket Surve fix, Sunil Sidhwani, Ramesh Khade/Hitesh Munshi/typo-pair numbers, site-visit momentum, 2BHK floor price, 2BHK 57 Seconds kill/keep call, Swapnil Lakhan callback follow-through, Naresh Marpalli and Akshata phone typos.
+Full report with tables and details: reports/latest.md in the repo.
