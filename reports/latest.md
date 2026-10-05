@@ -1,70 +1,72 @@
 DIVYA JYOT LYF REWA - DAILY SNAPSHOT
-Sunday, 4 October 2026 - data pulled ~7PM IST (partial day)
-(Filed under run date 2026-10-04, per the spec. The scheduler prompt said "yesterday's date" again; 2026-10-03.md already holds that day's report. Nothing overwritten.)
+Monday, 5 October 2026 - data pulled ~5:40PM IST (partial day)
+(Filed under run date 2026-10-05, per the spec. The scheduler prompt said "yesterday's date" again; 2026-10-04.md already holds the 4 Oct report, nothing overwritten. 4 Oct full-day numbers are below.)
 
 FOLLOW-UP FROM LAST REPORT
-- Retry discipline held up. On 4 Oct the team logged second attempts on Satish Shah (Busy), Dimple Jain (Ringing), Drvanshi Chawda (Ringing), Pooja Jadhav (Ringing), plus Jimmit Raval (spoke, see below). Credit. All still not connected except Jimmit.
-- Jimmit Raval (2BHK form, ticked 1.5-1.75cr): connected today. Real ask is a 1BHK, 420 sqft, 70 lakhs. So the budget bucket on the 2BHK form was not his real budget. Check whether he is moved to the 1BHK pitch.
-- Hardik Panchal, Prasad Bodale (both within_3_months) and Nutan Gangawane: STILL only the 3 Oct "Ringing", no 4 Oct attempt in the sheet. Last report asked for a second attempt plus WhatsApp. Not done yet as of the pull.
-- Ajay Yadav said "coming Sunday" (today). Sheet shows "4/10 Ringing". No visit logged as of the pull. He needs a call and WhatsApp tonight. Krupa ("3/10 Coming tomorrow" = today) also shows "4/10 Ringing", no visit yet.
-- Site visits landed for 3 Oct (entered 4 Oct 10:21): Shripal Jain (CRM-verified, 1BHK lead of 27 Sep) and Vaibhav Mahadik (FB call, 1cr 1BHK). First 2-visit day in weeks. The 3 Oct report said 0 visits. That was the usual entry lag (visit on 3rd, logged on 4th).
-- Sharad Sangle "Prucashed" (1 Oct): unchanged, nobody verified. Aniket Surve wrong-number row (9892535525, 23 Sep): still live. Harshakothari 9833426565 still not in the sheet.
+- 4 Oct closed at Rs 1,222 spend and 4 leads (CPL Rs 305), not the 1 lead I reported at 7PM. Three leads landed after the pull: Tarun Sompura (2BHK, 20:02), Tarun again on the Studio form (23:04) and Hiren Shah (1BHK, 23:35). So the "1 lead, Rs 827" headline was just a partial-day artefact.
+- Ajay Yadav ("coming Sunday") and Krupa ("coming tomorrow"): NO visit logged, no new note after 4 Oct "Ringing". Both are now 2 days past their own promised date with nobody reaching them. Call tonight.
+- Hardik Panchal, Prasad Bodale (within_3_months), Nutan Gangawane: still only the 3 Oct "Ringing". No 4 or 5 Oct attempt. Third report running.
+- Post-visit notes landed (5 Oct): Shripal Jain "Out of budget 1.10 and 439 sqft with parking". Vaibhav Mahadik "Out of budget, 420 sqft 80 lakhs". Rinnkle Shah "call back next week/after 1 week". So of the two 3 Oct visits, both are budget-dead for the 439/420 sqft 1BHK. Useful signal: 1BHK demand is 70-80L, the unit is above it.
+- Jimmit Raval: no new note after the 4 Oct "1BHK 420 sqft 70 lakhs". Nobody has re-pitched. Open.
+- Sharad Sangle "Prucashed" and the Aniket Surve wrong-number row (9892535525): unchanged, nobody fixed. Forward-miss list unchanged (see 5b).
 - Still waiting on Keval: the 1BHK price band.
 
 1. HEADLINE
-Today so far: Rs 827 spent, only 1 lead (Rs 827 per lead blended). Studio (Rs 196) and 1BHK (Rs 261) produced ZERO leads. Spend is already above all of yesterday (Rs 651) with a fifth of the leads. But the team converted yesterday's flow into 2 site visits, so do not touch budgets on one thin day.
+Two visits landed on 4 Oct (Mehul Maru, Vijay Yadav), but 1BHK visits keep dying on price: Shripal, Vaibhav and Vijay all topped out at 70-80L against a 420-439 sqft unit. Today so far: Rs 764, 2 leads (Rs 382 blended), both 2BHK, and one of them (Mani) ticked 1.75-2cr, above the ceiling.
 
-2. FUNNEL (today, midnight to ~7PM IST, partial day, will keep moving)
-- Spend: Rs 827 (Studio 196 / 2BHK 369 / 1BHK 261)
-- Impressions / reach: 2,428 / ~1,880 (sum of campaign reach)
-- Clicks / link clicks: 57 / 41
-- Leads: 1 (2BHK 1, Studio 0, 1BHK 0). Campaign row, ad row and CRM all say 1. lead_actions_raw checked: canonical onsite_conversion.lead_grouped = 1 = lead. No double-count. CPL Rs 369 (2BHK). Platform: 1 ig (Mittul Desai), 0 fb.
-- In the sheet with a first note: 1 of 1 (Mittul, Voicemail). Spoken to: 0. Untouched: 0.
-- Site visits logged today: 0 so far (entry lag, see above; Ajay Yadav and Krupa both due today).
-- Yesterday (3 Oct, full day, refetched): spend Rs 651, 5 leads, CPL Rs 130 (Studio 3 at Rs 54, 2BHK 1 at Rs 291, 1BHK 1 at Rs 197). Same 5 leads as the 7PM report; Rs 164 more spend came after 7PM, no extra leads. Visits that day: 2 (Shripal Jain, Vaibhav Mahadik).
-- Oct month to date (incl. today partial): Rs 3,447, 16 leads (CPL Rs 215). Visits: 3 (Rinnkle Shah 2 Oct and Shripal Jain 3 Oct are CRM-verified; Vaibhav Mahadik 3 Oct is FB call, not in CRM). Rs 1,724 per CRM-verified visit, Rs 1,149 per explained visit. Tiny sample (16 leads).
+2. FUNNEL (today, midnight to ~5:40PM IST, partial day, will keep moving)
+- Spend: Rs 764 (Studio 166 / 2BHK 338 / 1BHK 261)
+- Impressions / reach: 2,192 / ~1,716 (sum of campaign reach)
+- Clicks / link clicks: 74 / 40
+- Leads: 2 (2BHK 2, Studio 0, 1BHK 0). Campaign row, ad rows and CRM all agree on 2. lead_actions_raw checked: canonical onsite_conversion.lead_grouped = 2 = lead, no double-count. 2BHK CPL Rs 169. Platform: 2 ig, 0 fb.
+- Of those 2: both have a first note in the sheet (Walter Noronha Ringing, Mani spoke and got budget). Untouched: 0. Spoken to: 1 (Mani).
+- Site visits logged today: 0 (entry lag, the 4 Oct visits were entered this morning).
+- Yesterday 4 Oct (full day, refetched): spend Rs 1,222, 4 leads, CPL Rs 305. Studio 1 at Rs 293, 2BHK 2 at Rs 283, 1BHK 1 at Rs 362. Visits that day: 2 (Mehul Maru, Vijay Yadav FB call).
+- Oct month to date (1-5 Oct, incl. today partial): Rs 4,606, 21 leads (CPL Rs 219). Visits Oct 1-4: 5 logged. CRM-verified: 3 (Rinnkle Shah 2 Oct, Shripal Jain 3 Oct, Mehul Maru 4 Oct, see 5b - verified by name, SVD has the wrong phone). FB-call direct callers: 2 (Vaibhav Mahadik 3 Oct, Vijay Yadav 4 Oct). Cost per CRM-verified visit Rs 1,535; per explained visit (5) Rs 921. Note Mehul Maru's lead is from 15 Sep, so strictly 2 of the 3 verified visits come from October leads. Sample is tiny, do not over-read.
 
-3. AD PERFORMANCE (agency hat) - today vs yesterday vs 7-day
-- Studio: CTR 2.21% (yday 2.90, 7d 2.51), CPC Rs 10.91 (5.08, 7.77), CPM Rs 241 (147, 195), freq 1.14 (1.26, 7d 1.69), Rs 196, 0 leads. Delivery live, but auctions pricier than yesterday and the 3-lead day of 3 Oct did not repeat. 7d CPL Rs 175.
-- 2BHK: CTR 2.18% (2.35, 2.24), CPC Rs 18.46 (13.87, 13.53), CPM Rs 403 (326, 304), freq 1.46 (1.30, 7d 2.02), Rs 369, 1 lead = Rs 369 (7d Rs 316). Per ad: connectivity hook Rs 170 / 441 imps / 1 lead (Mittul); Legacy hook Rs 190 / 441 imps / 0 leads, CPC Rs 21; 36 Seconds only Rs 9.66 / 33 imps. The 36 Seconds ad, which sourced most recent 2BHK leads, is starved again (it flipped to Rs 49 on 3 Oct, now Rs 10).
-- 1BHK: CTR 2.73% (3.53, 2.07), CPC Rs 13.75 (7.88, 14.55), CPM Rs 375 (278, 300), freq 1.29 (1.28, 7d 1.92), Rs 261, 0 leads (7d CPL Rs 244). Hindi Rs 247 / 648 imps / 0 leads. Gujarati Rs 14.54 / 48 imps: dark for a 4th straight day.
-- Partial day, so CPM/CPC swings are partly time-of-day mix. No fatigue signal today (frequency ~1.1-1.5 everywhere). Watch the 7-day frequency of 2.0 on 2BHK and 1.9 on 1BHK. All three campaigns are well past 2 weeks old, so the 7d baseline is meaningful.
+3. AD PERFORMANCE (agency hat) - today vs yesterday (full day) vs 7-day
+- Studio: CTR 3.61% (yday 2.08, 7d 2.42), CPC Rs 6.63 (10.85, 7.94), CPM Rs 239 (225, 192), freq 1.16 (1.19, 7d 1.68), Rs 166, 0 leads. Delivery cheap and healthy, 7d CPL Rs 169. Zero leads on a partial day is normal at this volume.
+- 2BHK: CTR 2.83% (2.82, 2.35), CPC Rs 14.08 (14.91, 12.30), CPM Rs 398 (420, 289), freq 1.37 (1.50, 7d 2.01), Rs 338, 2 leads = Rs 169 (7d Rs 266). Per ad: 36 Seconds Rs 102 / 171 imps / 1 lead (Mani), connectivity hook Rs 158 / 427 imps / 1 lead (Walter), Legacy hook Rs 78 / 253 imps / 0 leads. CPM is 38% above its own 7d average and 7d frequency is 2.0: this campaign is getting expensive to reach. Watch item, not an action yet.
+- 1BHK: CTR 3.83% (3.04, 2.19), CPC Rs 10.43 (12.08, 12.55), CPM Rs 400 (367, 275), freq 1.30 (1.37, 7d 1.93), Rs 261, 0 leads (7d CPL Rs 231). Hindi Rs 244 / 609 imps / 0 leads, CTR 4.11%. Gujarati Rs 16 / 43 imps / 0 clicks: dark for a 5th straight day.
+- Partial day, so CPM/CPC swings are partly time-of-day mix. No fatigue signal on frequency today. All three campaigns are well past 2 weeks, so the 7d baseline is meaningful. Studio is delivering normally.
 
 4. SPEED-TO-LEAD (sales-manager hat)
-Precision: Drive revision history, 8 revisions scanned, 0 failed. Brackets are [after, by]. Where "after" is before the arrival time, the lag is an upper bound only. Sheet seems edited in batches (about 11:34, 14:15, 15:18 on 3 Oct; 10:21 SVD, 12:11 and 13:31 on 4 Oct).
+Precision: Drive revision history, 8 revisions scanned, 0 failed. Brackets are [after, by]. Sheet looks batch-edited: about 14:38 and 11:41 (4-5 Oct), then 16:16 and 17:36 on 5 Oct.
 
 Lead / Arrived in Meta / Appeared in sheet (bracket) / Lag
-- Mittul Desai (2BHK connectivity, 6+mo/exploring, below 1.55cr, ig): arr 4 Oct 13:05 / between 12:11 and 13:31 / under 26 min. First note Voicemail. Fast.
-- Aniket Surve (Studio, just_exploring, fb): arr 3 Oct 15:01 / between 14:15 and 15:18 / under 17 min. Details shared.
-- Nikhil Kangane (Studio, within_3_months, ig): arr 3 Oct 12:59 / between 11:34 and 14:15 / under 1h16m. Wants 1RK 75L, details shared. No retry since.
-- Pooja Jadhav (Studio, within_3_months, ig): arr 3 Oct 09:42 / between 2 Oct 17:04 and 3 Oct 11:34 / under 1h52m. Busy, then 4 Oct Ringing.
-- Drvanshi Chawda (1BHK Hindi, 3-6mo, ig): arr 3 Oct 04:15 / by 3 Oct 11:34 / under 7h19m. 4 Oct Ringing.
-- Jimmit Raval (2BHK 36 Seconds, within_3_months, 1.5-1.75cr, fb): arr 3 Oct 00:25 / by 3 Oct 11:34 / under 11h09m. Spoke 4 Oct.
-- Dimple Jain (2BHK, 3-6mo, 1.5-1.75cr, ig): arr 2 Oct 22:41 / by 3 Oct 11:34 / under 12h53m. 4 Oct Ringing.
-(Satish Shah, 2 Oct 18:55, is outside the revision window: row present 3 Oct, day-level only. Earlier estimate under 16h39m.)
-Summary: every lead since 2 Oct 18:55 had a row within 17h at the outside, the daytime ones within 2h, and today's lead within 26 minutes. Credit to the team on logging speed. The weak spots are unchanged: overnight and evening leads wait for the late-morning batch, and connect rate is poor. Of the 8 leads since 2 Oct, only 3 have ever been spoken to (Jimmit, Nikhil, Aniket).
+- Mani (2BHK 36 Seconds, within_3_months, 1.75-2cr, ig): arr 5 Oct 17:23 / row and note between 16:16 and 17:36, so after 17:23 / under 13 min. Fastest of the week. Spoke, budget not disclosed.
+- Walter Noronha (2BHK connectivity, 3-6mo, below 1.55cr, ig): arr 5 Oct 14:17 / row and note between 16:16 and 17:36 / 1h59m to 3h19m. First note Ringing.
+- Hiren Shah (1BHK Hindi, 3-6mo, below 1cr, ig): arr 4 Oct 23:35 / row by 5 Oct 11:41 (under 12h06m), first note "Busy on meeting" between 16:16 and 17:36 / about 16h41m to 18h01m.
+- Tarun Sompura (2BHK, 6+mo/exploring, ig): arr 4 Oct 20:02 / row by 5 Oct 11:41 (under 15h39m), "Details shared" between 16:16 and 17:36 / about 20h14m to 21h34m.
+- Tarun Sompura again (Studio form, within_3_months, fb, name shown as an email in the CRM): arr 4 Oct 23:04, same phone 7045294094. Bracket is shared with the row above (duplicate phone, so day-level only for this submission): same sheet row, so about 17h12m to 18h32m to first note. Same person submitted twice in 3 hours across two campaigns, and the team has one row, noted "Details shared".
+- Mittul Desai (2BHK, arr 4 Oct 13:05) already measured last report: under 26 min.
+Summary: daytime arrivals get a row within 2 hours or less (Mani under 13 min, Mittul under 26 min). Every night arrival (20:02, 23:04, 23:35) waited until the next day, and for the three 4 Oct night leads the first actual call note only appeared 17-21 hours later. Tarun is a within_3_months Studio lead on the Studio form who took ~17h. The late-night pattern is unchanged; credit the daytime speed.
 
 5. LEAD QUALITY
-- Warm / alive: Ajay Yadav (said today, 70L 1BHK, Ghatkopar-side), Krupa (1BHK 80L, said today), Kalpesh Somaiya ("coming navratri", 1.10cr liked 439 sqft), Raju Pandey (after 15 days), Minal (2BHK 1.70, next week; above the 1.4cr ceiling), Nikhil Kangane, Aniket Surve. Two real visits just done: Shripal Jain and Vaibhav Mahadik (both 1BHK around 1-1.1cr). Their post-visit status is not logged yet.
-- Mismatches: Satish Shah and Dimple Jain still unconnected on the 1.5-1.75cr 2BHK bucket, which is above the ceiling. Jimmit Raval proved the bucket is unreliable: it was 1.5-1.75cr on the form, 70L for a 1BHK on the phone. Nikhil Kangane (Studio ad, wants 1RK 75L) is the third Studio-ad 1RK ask in three days.
-- 1BHK price band is still unconfirmed, so no budget-fit judgment on Drvanshi Chawda or Prasad Bodale.
-- Cost per visit: Sept (carried): Rs 49,729, 150 leads, 11 CRM-verified visits = Rs 4,521 each (7.3%); with FB-call and Dhaval/Urmi, 17 explained = Rs 2,925. Oct MTD: see funnel, 2 CRM-verified of 16 leads (12.5%), well above the ~4.5% baseline but the sample is tiny. Sheet claims 3 Oct visits = 2; CRM verifies 1, the other is an FB-call direct caller (legit).
+- Warm / alive: Ajay Yadav (70L 1BHK, promised Sunday, unreached), Krupa (1BHK 80L, promised Sunday, unreached), Kalpesh Somaiya ("coming navratri", 1.10cr, liked 439 sqft), Raju Pandey ("call back after pitar pakash" 5 Oct, Pitru Paksha ends mid-Oct so a date to chase), Nirav Madiyar (2BHK, same pitru paksha callback), Nikhil Kangane (Studio form, wants 1RK 75L), Hiren Shah, Tarun Sompura. Rinnkle Shah and Mehul Maru: post-visit "call back after 1 week", both genuinely warm, put a date on them.
+- Budget-dead after visit: Shripal Jain (1.10cr, 439 sqft with parking), Vaibhav Mahadik (80L, 420 sqft), Vijay Yadav (max 70L, 420 sqft). Three 1BHK visits in 3 days all ended on price. This is the real quality finding: 1BHK demand sits at 60-80L, the unit is around 1.0-1.1cr for 420-439 sqft. If that is the price band, the 1BHK ad is sourcing visits that cannot close. Need the band from Keval to say for sure.
+- Mismatches: Mani ticked 1.75-2cr on the 2BHK form (above ceiling, but 2BHK buckets are unreliable, Jimmit proved it). Satish Shah and Dimple Jain are 1.5-1.75cr and still unconnected after two attempts each. Mehul Maru ticked 1.5-1.75cr and said 1.70 and still visited, so the above-ceiling bucket is not an automatic no.
+- Cost per visit: Sept (carried): Rs 49,729, 150 leads, 11 CRM-verified visits = Rs 4,521 each (7.3%); with FB-call and Dhaval/Urmi, 17 explained = Rs 2,925. Oct MTD: Rs 1,535 per CRM-verified visit (3 of 21 leads, 14%) and Rs 921 per explained visit (5). Sheet claims 5 visits in Oct 1-4; CRM verifies 3 (one by name only, see 5b), the other two are FB-call direct callers, legit. Well above the ~4.5% baseline, tiny sample, and 0 of the 5 look closable on budget yet.
 - Warm rate: not measurable, no warm column in the sheet.
 
 5b. DATA INTEGRITY
-- Forward check (CRM to sheet, 1 Sep onward, 167 leads): 4 misses, unchanged: harshakothari 9833426565 (26 Sep), Niilesh Kathole 9323290235, Dileep Mehta 9769701334 (sheet row has 9769701332), Akshata 8082543357 (sheet cell has 11 digits). Every lead since 27 Sep matches by phone, including Mittul (sheet name "Mitthul desi", fine).
-- Reverse check (sheet rows since 1 Sep, no CRM phone): the Dileep Mehta typo row and the old Aniket Surve row (9892535525). Legacy 22-row baseline from June not re-derived this run, so unconfirmed.
-- SVD validation: Shripal Jain 9323949181 is in the CRM (1BHK, 27 Sep): verified. Vaibhav Mahadik 8082587383 has the FB call marker, no CRM record: legit direct caller, not a flag. Zero integrity flags. Minor: SVD row serials are unreliable (Vaibhav's "635" duplicates Shripal's facebook-tab serial 635, Shripal's SVD row has no serial or a different one), and Shripal's SVD name is shortened to "Shripal". Row 1845 (Aniket Surve, 3 Oct) and row 1846 (Mittul) in the facebook tab have no serial number.
+- Forward check (CRM to sheet, 1 Sep onward): 4 misses, all unchanged: harshakothari 9833426565 (26 Sep), Niilesh Kathole 9323290235 (7 Sep), Dileep Mehta 9769701334 (sheet row 9769701332), Akshata 8082543357 (sheet cell 11 digits). Every lead since 27 Sep matches by phone (Walter, Mani, Hiren, Tarun all logged).
+- NEW: SVD row "Mehul maru", visit 4 Oct, carries phone 9004034850 and serial 548. That phone and serial belong to Raju Kasabe (CRM 1BHK lead, visited 19 Sep). Mehul Maru's real phone is 7738087778 (CRM 2BHK, 15 Sep; facebook tab row 542 says "4/10/26 Visit done"). So the visit is real and CRM-verified by name, but the SVD phone was copy-pasted from the previous row. If that wrong phone is what gets pushed to Meta, the conversion is credited to Raju Kasabe's number and Mehul's visit never reaches the optimizer. Fix the SVD phone to 7738087778.
+- NEW: Tarun Sompura submitted twice (2BHK ig 20:02, Studio fb 23:04, same phone), and the Studio submission's name field in the CRM is his email address. One sheet row. Not an error, but a duplicate submission across campaigns: his first call should cover both.
+- SVD validation: Vijay Yadav 9967673860 has the FB call marker, no CRM record: legit direct caller. Vaibhav Mahadik 8082587383 same. Rinnkle Shah 9967189339 and Shripal Jain 9323949181 are in the CRM: verified. Zero other flags. Serial numbers on SVD rows remain unreliable (Shripal 635, Mehul 548).
+- Reverse check: legacy 22-row baseline not re-derived this run, unconfirmed. Old Aniket Surve wrong-number row (9892535525, 23 Sep) still live.
 - Spend vs CRM tabs: Studio, 2BHK, 1BHK all have spend and a CRM tab (Sheet1-4). Nothing unwired.
+- Observation: on 5 Oct the team logged a "Ringing" redial on about 25 old Aug-Sep leads (rows 207 to 313) but not one of the 1-4 Oct leads (Ajay, Krupa, Hardik, Prasad, Nikhil, Satish, Dimple, Pooja, Drvanshi, Jimmit). The rotation is feeding the dead backlog while the freshest leads wait.
 
 6. DIAGNOSTIC STEPS
-1. Sales: tonight, call Ajay Yadav and Krupa (both said "coming today", both Ringing) and send WhatsApp with location pin and a 10AM slot for tomorrow. Also get post-visit notes on Shripal Jain and Vaibhav Mahadik today while it is fresh.
-2. Sales: second attempt plus WhatsApp tomorrow morning for Hardik Panchal, Prasad Bodale (both within_3_months, one note since 1 Oct) and Nikhil Kangane. Satish Shah, Dimple Jain: budget-screen on the first connected call, and ask Jimmit-style: "what is your real budget and BHK" before pitching.
-3. Agency, 2BHK: the form budget buckets run to 1.75cr, above what the project serves, and Jimmit shows they are noisy. Tighten the top bucket to "above 1.4cr" and add a BHK-needed question. Put the 36 Seconds hook in its own ad set so it stops being starved by the other two. 2BHK frequency 2.0 on 7d is the next watch item. No pausing on CPL.
-4. Agency, 1BHK: Gujarati ad is dark a 4th day (Rs 14, 48 imps). Check the ad set for a learning limit, audience size or a rejected ad. Hindi alone is carrying Rs 247 with no leads today, which is within normal variance, so wait for 24h before changing creative.
-5. Sales hygiene: delete the wrong-number Aniket Surve row (9892535525), add harshakothari 9833426565, Niilesh Kathole 9323290235, Dileep Mehta 9769701334 and Akshata 8082543357 by copying from the CRM sheet. Confirm Sharad Sangle ("Prucashed") and close him if bought.
+1. Sales, tonight: call Ajay Yadav and Krupa (both promised Sunday, both silent since 4 Oct) and Hiren Shah, Tarun Sompura, Walter Noronha, Mani. WhatsApp location and a 10AM slot. Move the 5 Oct redial effort from rows 207-313 (Aug-Sep leads, ringing for 2 months) to the 1-4 Oct leads.
+2. Sales, price screen: three 1BHK visits in three days ended "out of budget" at 70-80L. Ask the budget on the first connected call before booking a visit, and for 1BHK leads quote the actual price band first. Visits that cannot close cost the team a half-day each.
+3. Agency, 1BHK: Hindi is spending Rs 244/day for 0 leads today and 1 yesterday; Gujarati is dark 5 days (Rs 16, 43 imps). Check the ad set for a learning limit or rejected ad. Hold creative changes for 24h, but if the band is above 1BHK buyers' 70-80L, the targeting or message should lead with the price. Do not pause on CPL.
+4. Agency, 2BHK: tighten the form budget top bucket to "above 1.4cr" and add a BHK-needed question (Jimmit: form 1.5-1.75cr, real ask 1BHK 70L). 7d frequency 2.0 and CPM 38% above the 7d average: plan a creative refresh for next week.
+5. Sales hygiene: SVD row for Mehul Maru: change phone to 7738087778. Delete the wrong-number Aniket Surve row. Add harshakothari 9833426565, Niilesh Kathole 9323290235, Dileep Mehta 9769701334, Akshata 8082543357 by copy-pasting from the CRM sheet. Close Sharad Sangle if bought.
 
 7. ANYTHING ELSE
-- 3 Oct showed what the funnel can do: 5 leads at Rs 130 CPL and 2 visits within one day. Today it is 1 lead at Rs 827 on 3x the spend per lead. This is ordinary day-to-day variance on ~Rs 1,000/day, not a signal yet. Judge on a 7-day window.
-- Site visit entry lags a day (3 Oct visits entered 4 Oct 10:21). Any "0 visits today" at 7PM should be read as "not yet logged". Ask the team to log visits the same evening.
-- QUESTION FOR KEVAL: what is the 1BHK price band? Still needed to judge 1BHK budget fit.
+- Late-night leads: 3 of the last 5 CRM leads arrived after 8PM (20:02, 23:04, 23:35) and waited until next-day afternoon for a first call. A 9AM first-hour call block for overnight arrivals would remove most of the 17-21h lag.
+- Mehul Maru ticked 1.5-1.75cr on a form the ceiling says is out, still visited and is warm. So a blanket "above the ceiling" screen on the 2BHK bucket would have dropped a real visitor. Screen on the call, not on the form.
+- Site visit entry lags a day (visits dated 3 and 4 Oct entered the next morning). "0 visits today" at the pull time means "not yet logged".
+- QUESTION FOR KEVAL: what is the 1BHK price band? Three visits in a row ended at budget now make this the single most useful unanswered question.
