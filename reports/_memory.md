@@ -1,5 +1,15 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-05 (run, ~5:40PM IST data)
+- 4 Oct full day: Rs 1,222, 4 leads (7PM report said 1; 3 leads came after the pull). Oct MTD to 5 Oct: Rs 4,606, 21 leads; visits Oct 1-4: 5 (3 CRM-verified: Rinnkle, Shripal, Mehul Maru by name; 2 FB call: Vaibhav, Vijay Yadav).
+- 1BHK visits (Shripal 1.10cr, Vaibhav 80L, Vijay Yadav 70L) all ended "out of budget" 5 Oct. Ask Keval 1BHK price band (still unanswered).
+- SVD row Mehul maru (4 Oct) has Raju Kasabe's phone 9004034850 + serial 548; real phone 7738087778. Check if fixed.
+- Ajay Yadav 9022655945 and Krupa 9773174426: promised Sunday 4 Oct, no visit, no note after 4 Oct. Hardik Panchal, Prasad Bodale (within_3_months), Nutan: single note since 3 Oct. Team redialed ~25 old Aug-Sep leads on 5 Oct but none of 1-4 Oct leads.
+- Tarun Sompura 7045294094 submitted twice (2BHK 20:02, Studio 23:04), one sheet row. Check first contact. Overnight arrivals wait 17-21h for first call.
+- Walter Noronha, Mani (2BHK 1.75-2cr), Hiren Shah (1BHK): first notes only. Rinnkle Shah, Mehul Maru: post-visit callback after 1 week. Raju Pandey, Nirav Madiyar: callback after pitru paksha.
+- 2BHK CPM 38% above 7d avg, 7d freq 2.0: refresh creative watch. 1BHK Gujarati dark 5th day. Forward misses unchanged (harshakothari, Niilesh Kathole, Dileep Mehta, Akshata); Aniket Surve old row still live.
+- Scheduler prompt omitted openpyxl and Telegram send, called spec CLAUDE.md (real: CLAUDE-crossref-routine.md), asked for yesterday's date: filed under run date.
+
 ## Added 2026-10-04 (run, ~7PM IST data)
 - Oct MTD (incl. 4 Oct partial): Rs 3,447, 16 leads, 3 visits (Rinnkle Shah 2 Oct + Shripal Jain 3 Oct CRM-verified; Vaibhav Mahadik 3 Oct FB call). 4 Oct: Rs 827, 1 lead (Mittul Desai, 2BHK), Studio and 1BHK 0 leads.
 - Check next run: Ajay Yadav (9022655945) and Krupa (9773174426) both "coming today" 4 Oct, both Ringing at pull; any visit dated 4 Oct in SVD? (entries lag ~1 day). Post-visit notes for Shripal Jain, Vaibhav Mahadik.
