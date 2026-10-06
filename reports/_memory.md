@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-06 (run, ~6:50PM IST data)
+- 6 Oct so far: Rs 705, 3 leads (1 per campaign). 5 Oct full day: Rs 1,083, 2 leads. Oct MTD 1-6: Rs 5,631, 24 leads. Visits Oct 1-4: 5 (3 CRM-verified, 2 FB call); nothing dated 5-6 Oct in SVD yet (lag ~1 day).
+- Team redialed almost every 1-5 Oct lead on 6 Oct (good), but nearly all Ringing. Suggested WhatsApp. Vaishali Shah "coming Sat & Sun" 6 Oct: check visit. Anish Mate, Mittul Desai details shared.
+- Priya Shinde Vichare 9821941847 (2BHK, within_3_months, 1.5-1.75cr, arr 18:39 6 Oct): check first contact lag next run. Valley Edwarddsouza (Studio form, wants 1/2BHK) contacted <3.3h. Walter Noronha submitted 2BHK (5 Oct) and 1BHK Hindi (6 Oct), one row.
+- Ajay Yadav and Krupa: 3rd miss, still Ringing 6 Oct. Mehul Maru SVD phone still wrong (9004034850, real 7738087778), Aniket Surve old row 9892535525 still live. Forward misses unchanged (harshakothari, Niilesh Kathole, Dileep Mehta, Akshata). Reverse check now 27 + 9 placeholders (not reconciled by name).
+- 2BHK 36 Seconds took 92% of 2BHK spend 6 Oct; 7d freq 2.05. 1BHK Gujarati dark 6th day. Ask Keval: 1BHK price band (still unanswered; 1BHK conversations land at 60-80L).
+- Setup: fresh container needed `python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl` (plain pip install left `google` unimportable and fetch_all.py wrote a sheet error). Scheduler prompt again omitted Telegram send, called the spec CLAUDE.md, asked for yesterday's date.
+
 ## Added 2026-10-05 (run, ~5:40PM IST data)
 - 4 Oct full day: Rs 1,222, 4 leads (7PM report said 1; 3 leads came after the pull). Oct MTD to 5 Oct: Rs 4,606, 21 leads; visits Oct 1-4: 5 (3 CRM-verified: Rinnkle, Shripal, Mehul Maru by name; 2 FB call: Vaibhav, Vijay Yadav).
 - 1BHK visits (Shripal 1.10cr, Vaibhav 80L, Vijay Yadav 70L) all ended "out of budget" 5 Oct. Ask Keval 1BHK price band (still unanswered).
