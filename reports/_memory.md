@@ -1,5 +1,14 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-07 (run, ~7:10PM IST data)
+- 7 Oct so far: Rs 754, 2 leads (Studio Manisha Shah re-lead, 2BHK Parag Shah 1.5-1.75cr), 1BHK 0 leads on Rs 232. 6 Oct full day: Rs 970, 4 leads. Oct MTD 1-7: Rs 6,649, 27 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call); none dated 5-7 Oct.
+- NO notes dated 7 Oct on the 1-5 Oct pipeline (blitz of 6 Oct not repeated). Check next run whether redials/WhatsApp happen. Hot: Priya Shinde Vichare (spoke 7 Oct am, within_3_months, 1.5-1.75cr), Anish Mate, Mittul Desai (details shared 6 Oct), Vaishali Shah (Sat/Sun 10-11 Oct visit), Dasarathy Mudad (Ringing 7 Oct).
+- Manisha Shah 8433782376 = re-lead (row 92, 2 Jul; new row 679, 7 Oct, Out of service): contact_history bracket for her phone is the OLD row, ignore. Parag Shah called ~2h after arrival (fastest).
+- 2BHK CPM Rs 399 (+40% vs 7d), CPL Rs 332 vs 7d Rs 226, 36 Seconds 97% of spend, 7d freq 2.02: creative refresh. 1BHK Gujarati dark 7th day.
+- Mehul Maru SVD phone still 9004034850 (real 7738087778); Aniket Surve old row 9892535525 still live; forward misses unchanged (harshakothari, Niilesh Kathole, Dileep Mehta, Akshata). Ask Keval: 1BHK price band.
+- Setup: plain pip install again left google unimportable (sheet error). Needed `python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl` then rerun fetch_all.py. Scheduler prompt omitted Telegram send again, called spec CLAUDE.md, asked for yesterday's date: filed under run date 2026-10-07.
+
+
 ## Added 2026-10-06 (run, ~6:50PM IST data)
 - 6 Oct so far: Rs 705, 3 leads (1 per campaign). 5 Oct full day: Rs 1,083, 2 leads. Oct MTD 1-6: Rs 5,631, 24 leads. Visits Oct 1-4: 5 (3 CRM-verified, 2 FB call); nothing dated 5-6 Oct in SVD yet (lag ~1 day).
 - Team redialed almost every 1-5 Oct lead on 6 Oct (good), but nearly all Ringing. Suggested WhatsApp. Vaishali Shah "coming Sat & Sun" 6 Oct: check visit. Anish Mate, Mittul Desai details shared.
