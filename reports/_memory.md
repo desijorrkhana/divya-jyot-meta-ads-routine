@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-08 (run, ~7:15PM IST data)
+- 8 Oct so far: Rs 675, 1 lead (Praful Palav 9545357842, 1BHK Hindi, arr 14:54, NOT in sheet at pull = untouched 4h20m; check next run). 7 Oct full day refetched: Rs 1,040, 3 leads (Namita Sorathi Studio 22:02 after cutoff). Oct MTD 1-8: Rs 7,611, 29 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call).
+- 7 Oct team dialed ~30 old Sep leads (6-7 attempts each, all Ringing/Busy) but NOT the 1-6 Oct leads. Recommended stop-dialing/WhatsApp for Sep batch and focus on Anish Mate, Mittul Desai, Priya Shinde Vichare, Vaishali Shah (Sat/Sun 10-11 Oct visit). Check whether 8 Oct notes appear on them.
+- Namita Sorathi (sheet: Namita shah) within_3_months, one Busy ~15-18h after arrival; Dasarathy Mudad one Ringing. Check retries.
+- 2BHK today: Legacy 29s hook took 62% of spend at CPM Rs 677; CPM 47% above 7d. 1BHK Gujarati dark 8th day.
+- Mehul Maru SVD phone still wrong (real 7738087778), Aniket Surve old row 9892535525 live, 4 forward misses unchanged. Ask Keval: 1BHK price band.
+- Setup: plain pip leaves google unimportable; needed `python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl` then rerun fetch_all.py. Scheduler prompt again omitted Telegram send; filed under run date 2026-10-08.
+
 ## Added 2026-10-07 (run, ~7:10PM IST data)
 - 7 Oct so far: Rs 754, 2 leads (Studio Manisha Shah re-lead, 2BHK Parag Shah 1.5-1.75cr), 1BHK 0 leads on Rs 232. 6 Oct full day: Rs 970, 4 leads. Oct MTD 1-7: Rs 6,649, 27 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call); none dated 5-7 Oct.
 - NO notes dated 7 Oct on the 1-5 Oct pipeline (blitz of 6 Oct not repeated). Check next run whether redials/WhatsApp happen. Hot: Priya Shinde Vichare (spoke 7 Oct am, within_3_months, 1.5-1.75cr), Anish Mate, Mittul Desai (details shared 6 Oct), Vaishali Shah (Sat/Sun 10-11 Oct visit), Dasarathy Mudad (Ringing 7 Oct).
