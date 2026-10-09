@@ -1,5 +1,11 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-09 (run, ~7:15PM IST data)
+- 9 Oct so far: Rs 692, 2 leads = ONE person (Punit Thakkar 9987546956: 1BHK form 02:33 above 1.2cr + 2BHK form 10:00 below 1.55cr, within_3_months, row Busy). 8 Oct full day: Rs 1,062, 2 leads (Praful Palav 14:54 Ringing, Raj Sharma 23:11 Ringing). Oct MTD 1-9: Rs 8,691, 32 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call); none 5-9 Oct.
+- Check: any connected call on Punit/Praful/Raj; visits from Vaishali Shah (Sat/Sun 10-11 Oct), Ajay Yadav (Sunday), Mittul Desai (this week), Mani (next week). 8 Oct team dialed ~35 leads, mostly Ringing/Busy; no 9 Oct notes seen.
+- Studio 0 leads two days on Rs 429 (7d CPL Rs 184). 2BHK CPM Rs 423 (+46% vs 7d), Legacy 29s hook 88% of spend. 1BHK Hindi CTR 3.74% yday, Gujarati dark 9th day.
+- Mehul Maru SVD phone still wrong; Aniket Surve old row live; forward misses unchanged. Ask Keval: 1BHK price band.
+- Setup: same pip fix (--ignore-installed cffi cryptography ...). Scheduler prompt omitted Telegram send, again asked yesterday's date: filed under run date 2026-10-09.
 ## Added 2026-10-08 (run, ~7:15PM IST data)
 - 8 Oct so far: Rs 675, 1 lead (Praful Palav 9545357842, 1BHK Hindi, arr 14:54, NOT in sheet at pull = untouched 4h20m; check next run). 7 Oct full day refetched: Rs 1,040, 3 leads (Namita Sorathi Studio 22:02 after cutoff). Oct MTD 1-8: Rs 7,611, 29 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call).
 - 7 Oct team dialed ~30 old Sep leads (6-7 attempts each, all Ringing/Busy) but NOT the 1-6 Oct leads. Recommended stop-dialing/WhatsApp for Sep batch and focus on Anish Mate, Mittul Desai, Priya Shinde Vichare, Vaishali Shah (Sat/Sun 10-11 Oct visit). Check whether 8 Oct notes appear on them.
