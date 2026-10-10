@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-10 (run, ~7:15PM IST data)
+- 10 Oct so far: Rs 596, 3 leads (Tanvi Jain Studio, Amit Konkar + Latasha Parab 1BHK Hindi, all ig). 9 Oct full day refetched: Rs 886, 3 leads (Ravi Hodavadekar Studio 21:54 after cutoff). Oct MTD 1-10: Rs 9,480, 36 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call); none 5-10 Oct (6 days). Check if 9-11 Oct visits land in SVD (Vaishali Shah, Raju Pandey, Ajay Yadav, Mittul Desai).
+- No notes dated 9 or 10 Oct on 1-8 Oct leads. Ravi (within_3_months) and Punit (within_3_months) only Ringing/Busy once. Tanvi Jain row note "Visited req 1rk budget 70 lakhs" has no SVD row: verify it was not a visit.
+- 2BHK: CTR 1.16% today, 7d freq 2.38 (up from 2.05), 7d CPL Rs 388, only Legacy 29s hook live: recommended creative refresh. 1BHK Gujarati dark 10th day. Studio healthy (CPL Rs 178 MTD).
+- Sheet Created dates for 9-10 Oct leads read 9/10 (one day behind actual 10 Oct arrival): day-level lag from cell dates unreliable. Sheet saved in batches 12:20/13:49/14:46.
+- Forward misses now 18 (all pre-Oct; same 4 recent typos: harshakothari, Niilesh Kathole, Dileep Mehta, Akshata); reverse 24 + 9 placeholders, none in Oct. Mehul Maru SVD phone wrong, Aniket Surve old row live. Ask Keval: 1BHK price band.
+- Setup: pip install of --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl needed. Scheduler prompt again asked for yesterday's date and omitted Telegram: filed under run date 2026-10-10 (overwrote nothing; 2026-10-09 report kept).
+
 ## Added 2026-10-09 (run, ~7:15PM IST data)
 - 9 Oct so far: Rs 692, 2 leads = ONE person (Punit Thakkar 9987546956: 1BHK form 02:33 above 1.2cr + 2BHK form 10:00 below 1.55cr, within_3_months, row Busy). 8 Oct full day: Rs 1,062, 2 leads (Praful Palav 14:54 Ringing, Raj Sharma 23:11 Ringing). Oct MTD 1-9: Rs 8,691, 32 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call); none 5-9 Oct.
 - Check: any connected call on Punit/Praful/Raj; visits from Vaishali Shah (Sat/Sun 10-11 Oct), Ajay Yadav (Sunday), Mittul Desai (this week), Mani (next week). 8 Oct team dialed ~35 leads, mostly Ringing/Busy; no 9 Oct notes seen.
