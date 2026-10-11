@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-11 (run, ~7:15PM IST data)
+- 11 Oct so far: Rs 1,087, 0 leads (all 3 campaigns). 10 Oct full day refetched: Rs 724, 4 leads (Paresh Khatri Studio re-lead 19:23 after cutoff). Oct MTD 1-11: Rs 10,696, 37 leads. Visits: 6 (4 CRM-verified incl. NEW Punit Thakkar 9987546956 1BHK, visit 11 Oct logged 6:44pm; 2 FB call). Cost/CRM-verified visit Rs 2,674.
+- Check: Punit post-visit note on SVD row; Paresh Khatri (9892954990, row 689) no call note yet; Ravi Hodavadekar (within_3_months) one Ringing only; Raju Pandey 11 Oct Ringing (no visit); Kalpesh Somaiya soft no 11 Oct; Vaishali Shah/Ajay Yadav visits not in SVD (check Monday).
+- 2BHK: connectivity hook back in delivery with Legacy, 36 Seconds off since 9 Oct; both under 2% CTR, CPM ~Rs 496, no lead since 9 Oct, 7d CPL Rs 449, 7d freq 2.35: new creative needed. 1BHK Hindi CTR 1.54% (yday 2.96%), Gujarati dark 11th day.
+- Mehul Maru SVD phone still wrong; Aniket Surve old row live; forward misses unchanged (harshakothari, Niilesh Kathole, Dileep Mehta, Akshata). Ask Keval: 1BHK price band.
+- Setup: pip needed --ignore-installed cffi cryptography ... (first fetch wrote sheet error), then rerun. Scheduler prompt omitted Telegram again and asked for yesterday's date: filed under run date 2026-10-11 per spec.
+
 ## Added 2026-10-10 (run, ~7:15PM IST data)
 - 10 Oct so far: Rs 596, 3 leads (Tanvi Jain Studio, Amit Konkar + Latasha Parab 1BHK Hindi, all ig). 9 Oct full day refetched: Rs 886, 3 leads (Ravi Hodavadekar Studio 21:54 after cutoff). Oct MTD 1-10: Rs 9,480, 36 leads. Visits still only Oct 1-4 (5: 3 CRM-verified, 2 FB call); none 5-10 Oct (6 days). Check if 9-11 Oct visits land in SVD (Vaishali Shah, Raju Pandey, Ajay Yadav, Mittul Desai).
 - No notes dated 9 or 10 Oct on 1-8 Oct leads. Ravi (within_3_months) and Punit (within_3_months) only Ringing/Busy once. Tanvi Jain row note "Visited req 1rk budget 70 lakhs" has no SVD row: verify it was not a visit.
