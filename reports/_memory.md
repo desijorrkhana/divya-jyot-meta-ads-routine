@@ -74,3 +74,10 @@
 - 2BHK hook split flips daily; 36 Seconds ad has most leads. 1BHK Gujarati dark 3 days. Studio ad attracting 1RK buyers (Ranjana, Nikhil).
 - Sheet appears updated in batches (~11:30, ~15:00); nothing after 15:18 visible at pull. openpyxl must be installed or contact_history is empty (install it first, rerun fetch_all.py).
 - Reverse-check legacy baseline (22 mismatches) NOT re-derived 3 Oct. Ask Keval: 1BHK price band. Scheduler said "yesterday's date" again, filed under run date.
+
+## Added 2026-10-12 (run, ~7:15PM IST data)
+- 12 Oct so far: Rs 815, 2 Studio leads (Purshotam Bhagtani 9821709593 00:00 within_3_months, row 690, NO call note; Bharat Davda 9987625211 09:13 within_3_months, "Not intertsed"). 11 Oct full day refetched: Rs 1,386, 0 leads. Oct MTD 1-12: Rs 11,809, 39 leads. Visits 6 (4 CRM-verified, 2 FB call), cost/verified visit Rs 2,952.
+- Check: Purshotam first call; Punit Thakkar post-visit note (12 Oct only "Ringing"); Ravi Hodavadekar one Ringing since 9 Oct; Raju Pandey out of service; Kalpesh Somaiya wants RTM (lost). No facebook_tab notes dated 11/12 Oct on old leads: team did not redial.
+- 2BHK CPM Rs 579 (+48% vs 7d), 7d CPL Rs 643, 7d freq 2.28, no lead since 9 Oct; connectivity hook has nearly all spend. 1BHK Hindi CTR 1.35% (7d 2.89%), Gujarati dark 12th day.
+- Mehul Maru SVD phone still wrong; Aniket Surve old row live; forward misses 18 unchanged; reverse 23 + 10 placeholders. Ask Keval: 1BHK price band.
+- Setup: plain pip leaves google unusable again (first fetch wrote sheet error): needed --ignore-installed cffi cryptography ... openpyxl then rerun. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-12.
