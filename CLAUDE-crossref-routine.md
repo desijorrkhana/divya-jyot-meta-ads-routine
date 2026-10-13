@@ -548,6 +548,7 @@ the list. Commit message must say what was learned in one line.
   output straight to main" authorization already used for reports) — never assume report-sync
   carries it, and don't trust a past report/memory note claiming a dashboard-code fix landed
   without checking `git log -- build_dashboard.py` on `main` first.
+- 2026-10-13: on a fresh container `pip install` can target a different Python than `python3` (fetch then writes `sheet.error: No module named 'google'`). Use `python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl`, then rerun fetch_all.py.
 
 ## Delivery
 Write report.md + reports/YYYY-MM-DD.md + reports/latest.md, update reports/_memory.md,
