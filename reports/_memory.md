@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-13 (run, ~7:15PM IST data)
+- 13 Oct so far: Rs 605, 4 leads (Reshma Sawant Studio, Tipru Haldankar 2BHK, Jimmit Raval + Palak Mehta 1BHK), 3 touched same day, Jimmit untouched. 12 Oct full day refetched: Rs 1,051, 3 leads (Drishti Thakkar 1BHK 22:06 after cutoff). Oct MTD 1-13: Rs 12,651, 44 leads. Visits 6 (4 CRM-verified), Rs 3,163 per verified visit. No visits dated 5-10 or 12-13 Oct.
+- Check: Jimmit Raval 9702065200 (untouched), Purshotam (13/10 Ringing only), Punit post-visit note, Rinnkle Shah (liked 439 sqft, push second visit), Bharat Davda/Drishti/Palak 1BHK 1.15cr WhatsApp, Vaishali Shah/Ajay Yadav visits still not in SVD.
+- 2BHK 7d CPL about Rs 1,023, CPM Rs 541, freq 2.16: recommended new creative and budget shift to 1BHK Hindi/Studio. 1BHK Hindi CTR 4.28% today. Gujarati dark 13th day.
+- Mehul Maru SVD phone still wrong; Aniket Surve old row live; forward misses 18 unchanged; reverse 24 + 10 placeholders none in Oct. Ask Keval: 1BHK price band.
+- Setup: pip must be run as python3 -m pip (plain pip targets another Python); first fetch wrote sheet error. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-13.
+
 ## Added 2026-10-11 (run, ~7:15PM IST data)
 - 11 Oct so far: Rs 1,087, 0 leads (all 3 campaigns). 10 Oct full day refetched: Rs 724, 4 leads (Paresh Khatri Studio re-lead 19:23 after cutoff). Oct MTD 1-11: Rs 10,696, 37 leads. Visits: 6 (4 CRM-verified incl. NEW Punit Thakkar 9987546956 1BHK, visit 11 Oct logged 6:44pm; 2 FB call). Cost/CRM-verified visit Rs 2,674.
 - Check: Punit post-visit note on SVD row; Paresh Khatri (9892954990, row 689) no call note yet; Ravi Hodavadekar (within_3_months) one Ringing only; Raju Pandey 11 Oct Ringing (no visit); Kalpesh Somaiya soft no 11 Oct; Vaishali Shah/Ajay Yadav visits not in SVD (check Monday).
