@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-16 (run, ~7:15PM IST data)
+- 16 Oct so far: Rs 580, 1 lead (Jyoti Asthana 1BHK form, wants 2bhk, 3rd submission). 15 Oct refetched: Rs 1,200, 7 leads (Neha Gupta Studio 23:40, Samir 1BHK 20:33 after cutoff). Oct MTD 1-16: Rs 16,312, 58 leads. Visits 6 (4 CRM-verified), Rs 4,078 per verified visit. No visit rows after Punit (11 Oct): 5 days.
+- Check: Jimmit Raval 9702065200 STILL untouched since 13 Oct 01:10 (~90h, flagged 3 reports running); Rinnkle second visit; Palak 1BHK vs 2BHK; Neha Gupta only Ringing; Samir/Yogesh budgets unknown; Vaishali Shah/Ajay Yadav visits not in SVD.
+- Team did redial blitz 16/10 (~47 old leads, mostly Ringing): suggest WhatsApp. Overnight arrivals wait 11-14h: suggest 9-10PM sweep.
+- 2BHK Legacy 29s hook Rs 533 over 15-16 Oct, 0 leads, 92% of 2BHK spend today: recommended pause (3rd time, not acted on). 2BHK 7d CPL Rs 464, freq 2.19. 1BHK Gujarati dark 16th day.
+- Mehul Maru SVD phone still wrong; Aniket Surve old row live; forward misses 19 (none Oct); reverse 25 + 10 placeholders none in Oct. Ask Keval: 1BHK price band.
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl, then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-16 (10-15 already holds a real report).
+
 ## Added 2026-10-15 (run, ~7:15PM IST data)
 - 15 Oct so far: Rs 935, 5 leads (Salil Aras Studio; Lalit Gada, Aashish, Hitesh Vadhel 2BHK; Yogesh Ghuge 1BHK). 14 Oct full day refetched: Rs 990, 4 leads (Balasaheb Shirke 1BHK 23:43 after cutoff). Oct MTD 1-15: Rs 14,888, 54 leads. Visits 6 (4 CRM-verified), Rs 3,722 per verified visit. No visit rows after Punit (11 Oct): 4 days.
 - Check: Jimmit Raval 9702065200 STILL untouched since 13 Oct 01:10 (~66h); Yogesh Ghuge 8788462969 not in sheet at 7PM (arr 15:31); Balasaheb Shirke row "Ringing" undated; Purshotam no dial since 14/10; Rinnkle no note since 13/10; Palak 1BHK vs 2BHK; Hitesh (1.50) and Aashish (1.5-1.75cr) above 1.4cr ceiling: budget screen; Vaishali Shah/Ajay Yadav visits not in SVD.
