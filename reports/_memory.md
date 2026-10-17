@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-17 (run, ~7:15PM IST data)
+- 17 Oct so far: Rs 550, 3 leads (Ajit Patil Studio, Rajendra Naik 2BHK 1.75-2cr, Jyotish B 2BHK). 16 Oct refetched: Rs 830, 2 leads (Dilip Deora Studio 23:31 after cutoff, row already says coming tomorrow). Oct MTD 1-17: Rs 16,534, 61 leads. Visits 7 (5 CRM-verified incl Uday Masurkar 17/10), Rs 3,307 per verified visit. Palak Mehta "Visited" 17/10 in facebook_tab, not in SVD.
+- Check: Jimmit Raval 9702065200 STILL untouched (~114h, 4th report, escalate to Keval if not done by Mon); Dilip Deora visit; Palak into SVD; Ajit Patil not in sheet at 7PM; Latasha Parab 9769562409 (CRM 10 Oct) never logged; Rajendra/Dilip above 1.4cr ceiling; Rinnkle second visit; Punit callback ~22 Oct.
+- 2BHK Legacy hook fell to Rs 51 (yday Rs 353); 36 Seconds 2 leads. Still recommend OFF + new creative. 1BHK Gujarati 17th starved day (30d CPL Rs 208, better than assumed). 1BHK 0 leads by 7PM.
+- Data: forward misses 24 strict/20 fb-only; reverse 24 + 11 placeholders none Oct. Mehul Maru phone wrong; Aniket Surve live. Ask Keval: 1BHK price band. Oct MTD 1-16 corrected to Rs 15,983 (earlier 16,312 did not reconcile).
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-17; Telegram attempted.
+
 ## Added 2026-10-16 (run, ~7:15PM IST data)
 - 16 Oct so far: Rs 580, 1 lead (Jyoti Asthana 1BHK form, wants 2bhk, 3rd submission). 15 Oct refetched: Rs 1,200, 7 leads (Neha Gupta Studio 23:40, Samir 1BHK 20:33 after cutoff). Oct MTD 1-16: Rs 16,312, 58 leads. Visits 6 (4 CRM-verified), Rs 4,078 per verified visit. No visit rows after Punit (11 Oct): 5 days.
 - Check: Jimmit Raval 9702065200 STILL untouched since 13 Oct 01:10 (~90h, flagged 3 reports running); Rinnkle second visit; Palak 1BHK vs 2BHK; Neha Gupta only Ringing; Samir/Yogesh budgets unknown; Vaishali Shah/Ajay Yadav visits not in SVD.
