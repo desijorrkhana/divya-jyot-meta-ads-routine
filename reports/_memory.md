@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-18 (run, ~7PM IST data)
+- 18 Oct so far: Rs 1,051, 2 leads (Vishal Jadhav Studio ig 14:43 NOT in sheet at 7PM; Vijay Shinde 1BHK re-lead, already visited, 95 lakhs). 17 Oct refetched: Rs 619, 3 leads. Oct MTD 1-18: Rs 17,653, 63 leads. Visits 9 SVD (7 CRM-verified: incl Devendra Shah, Dilip Deora 18/10), Rs 2,522 per verified visit.
+- Check: Jimmit Raval 9702065200 STILL untouched (5th report; Keval to call Monday noon if not done); Vishal Jadhav logged?; Palak Mehta visit into SVD; Latasha Parab 9769562409 never logged; Dilip 2cr above ceiling, closing push; Vijay Shinde closing push; Rajendra/Jyotish only Ringing/Busy; Punit callback ~22 Oct.
+- 2BHK Rs 539 / 0 leads today, Legacy hook still taking Rs 69 (pause recommended 4x). 1BHK Gujarati starved 18th day. Studio healthy.
+- Reverse check baseline not re-run this run. Mehul Maru SVD phone wrong; Aniket Surve old row live. Ask Keval: 1BHK price band.
+- Setup: first fetch gave sheet error (No module google); python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-18.
+
 ## Added 2026-10-17 (run, ~7:15PM IST data)
 - 17 Oct so far: Rs 550, 3 leads (Ajit Patil Studio, Rajendra Naik 2BHK 1.75-2cr, Jyotish B 2BHK). 16 Oct refetched: Rs 830, 2 leads (Dilip Deora Studio 23:31 after cutoff, row already says coming tomorrow). Oct MTD 1-17: Rs 16,534, 61 leads. Visits 7 (5 CRM-verified incl Uday Masurkar 17/10), Rs 3,307 per verified visit. Palak Mehta "Visited" 17/10 in facebook_tab, not in SVD.
 - Check: Jimmit Raval 9702065200 STILL untouched (~114h, 4th report, escalate to Keval if not done by Mon); Dilip Deora visit; Palak into SVD; Ajit Patil not in sheet at 7PM; Latasha Parab 9769562409 (CRM 10 Oct) never logged; Rajendra/Dilip above 1.4cr ceiling; Rinnkle second visit; Punit callback ~22 Oct.
