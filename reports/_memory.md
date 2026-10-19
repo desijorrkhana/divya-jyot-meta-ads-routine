@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-19 (run, ~7PM IST data)
+- 19 Oct so far: Rs 845, 6 leads (Dadasaheb Bangar Studio 17:33 not yet logged; Alf, Atul Parte, Pravin Shimpi, Shrikant Sangale 2BHK; Srinivas Domal 1BHK wants 2bhk 1.25, coming Saturday). 18 Oct refetched: Rs 1,370, 5 leads (3 after cutoff). Oct MTD 1-19: Rs 18,817, 72 leads. Visits 10 (8 CRM-verified), Rs 2,352 per verified visit. Vishal Jadhav lead 18 Oct 14:43 -> visit 19 Oct 1:28 PM.
+- Check: Jimmit Raval 9702065200 STILL untouched 6.7 days, 6th report, Monday deadline breached, Keval told to call; Vaibhavi Patil within_3_months one Ringing only; Dadasaheb logged?; Palak Mehta not in SVD (3rd ask); Latasha Parab 9769562409 never logged (9 days); Rajendra Naik Ringing only; Srinivas Domal Saturday visit.
+- 2BHK: only 36 Seconds served today (4 leads, CPL Rs 109), Legacy/connectivity Rs 0; still recommend Legacy OFF + fresh creative. 1BHK Gujarati 19th starved day, 30d record is Rs 638 / 1 lead (earlier Rs 212 / 3 leads figure was wrong).
+- Data: Oct reverse check clean; forward misses Latasha + Dadasaheb (new); Mehul Maru phone wrong; historical baseline not re-run. Ask Keval: 1BHK price band.
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-19.
+
 ## Added 2026-10-18 (run, ~7PM IST data)
 - 18 Oct so far: Rs 1,051, 2 leads (Vishal Jadhav Studio ig 14:43 NOT in sheet at 7PM; Vijay Shinde 1BHK re-lead, already visited, 95 lakhs). 17 Oct refetched: Rs 619, 3 leads. Oct MTD 1-18: Rs 17,653, 63 leads. Visits 9 SVD (7 CRM-verified: incl Devendra Shah, Dilip Deora 18/10), Rs 2,522 per verified visit.
 - Check: Jimmit Raval 9702065200 STILL untouched (5th report; Keval to call Monday noon if not done); Vishal Jadhav logged?; Palak Mehta visit into SVD; Latasha Parab 9769562409 never logged; Dilip 2cr above ceiling, closing push; Vijay Shinde closing push; Rajendra/Jyotish only Ringing/Busy; Punit callback ~22 Oct.
