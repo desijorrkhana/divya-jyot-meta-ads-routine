@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-20 (run, ~7PM IST data)
+- 20 Oct so far: Rs 749, 5 leads (Studio: Sanjay Chande 16:55 NO row, Kishore Thakkar wants 1bhk 60L; 2BHK Shilpa Kambali; 1BHK Hindi Shilpa again, Gujarati Chirag Mota wants 2bhk 1.60). 19 Oct refetched: Rs 1,217, 8 leads (Bharat Palan 19:22, Arjun Mange 22:20 after cutoff). Oct MTD 1-20: Rs 19,939, 79 leads. Visits 10 (8 CRM-verified), Rs 2,492 per verified visit; no new visit rows since Vishal Jadhav.
+- Check: Jimmit Raval 9702065200 STILL untouched 7.7 days, 7th report, Keval told to call; Sanjay Chande 9022666908 row created?; Vaibhavi Patil one Ringing; Palak Mehta not in SVD (4th ask); Latasha Parab 9769562409 never logged (10 days); Srinivas Domal Saturday 24 Oct; Vishal Jadhav voicemail; Devendra Shah and Punit Thakkar now Not interested.
+- Studio form pulls 1BHK buyers (Kishore 60L, Dadasaheb 85L): recommended BHK/budget question. 2BHK 7d freq 2.22, Legacy zero spend, still not formally OFF. 1BHK best 7d CPL Rs 168.
+- Data: Oct reverse check clean; forward misses Latasha + Sanjay (sheet serial 727 skipped). Mehul Maru SVD phone wrong. Ask Keval: 1BHK price band.
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-20.
+
 ## Added 2026-10-19 (run, ~7PM IST data)
 - 19 Oct so far: Rs 845, 6 leads (Dadasaheb Bangar Studio 17:33 not yet logged; Alf, Atul Parte, Pravin Shimpi, Shrikant Sangale 2BHK; Srinivas Domal 1BHK wants 2bhk 1.25, coming Saturday). 18 Oct refetched: Rs 1,370, 5 leads (3 after cutoff). Oct MTD 1-19: Rs 18,817, 72 leads. Visits 10 (8 CRM-verified), Rs 2,352 per verified visit. Vishal Jadhav lead 18 Oct 14:43 -> visit 19 Oct 1:28 PM.
 - Check: Jimmit Raval 9702065200 STILL untouched 6.7 days, 6th report, Monday deadline breached, Keval told to call; Vaibhavi Patil within_3_months one Ringing only; Dadasaheb logged?; Palak Mehta not in SVD (3rd ask); Latasha Parab 9769562409 never logged (9 days); Rajendra Naik Ringing only; Srinivas Domal Saturday visit.
