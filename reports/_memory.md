@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-21 (run, ~7PM IST data)
+- 21 Oct so far: Rs 667, 4 leads (Studio: Rajesh Kothari 03:09, Suresh Sawant 09:56 who also filled 1BHK 09:41; 1BHK: Ashok Mangle 09:12). 2BHK Rs 256 / 0 leads. 20 Oct refetched: Rs 1,085, 7 leads (Vijay Pratap Singh 23:19 after cutoff). Oct MTD 1-21: Rs 20,942, 85 leads. Visits 10 SVD (8 CRM-verified), Rs 2,618 per verified visit; none since Vishal Jadhav 19 Oct.
+- Check: Jimmit Raval 9702065200 STILL untouched 8 days (8th report); Sanjay Chande 9022666908 no new row (old Rakhi Chande row); Vijay Gopalani phone typo (sheet 8097193237 vs CRM 8097193437); Latasha Parab never logged (11 days); Palak Mehta not in SVD (5th ask); Chirag Mota and Srinivas Domal Saturday 24 Oct.
+- 2BHK 7d CPL Rs 289, freq 2.21: Legacy/connectivity starved, still not formally OFF. 1BHK Hindi best (7d Rs 162). Gujarati starved.
+- Data: Oct reverse check clean. Ask Keval: 1BHK price band.
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py (first fetch always fails with 'No module google'). Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-21.
+
 ## Added 2026-10-20 (run, ~7PM IST data)
 - 20 Oct so far: Rs 749, 5 leads (Studio: Sanjay Chande 16:55 NO row, Kishore Thakkar wants 1bhk 60L; 2BHK Shilpa Kambali; 1BHK Hindi Shilpa again, Gujarati Chirag Mota wants 2bhk 1.60). 19 Oct refetched: Rs 1,217, 8 leads (Bharat Palan 19:22, Arjun Mange 22:20 after cutoff). Oct MTD 1-20: Rs 19,939, 79 leads. Visits 10 (8 CRM-verified), Rs 2,492 per verified visit; no new visit rows since Vishal Jadhav.
 - Check: Jimmit Raval 9702065200 STILL untouched 7.7 days, 7th report, Keval told to call; Sanjay Chande 9022666908 row created?; Vaibhavi Patil one Ringing; Palak Mehta not in SVD (4th ask); Latasha Parab 9769562409 never logged (10 days); Srinivas Domal Saturday 24 Oct; Vishal Jadhav voicemail; Devendra Shah and Punit Thakkar now Not interested.
