@@ -1,75 +1,69 @@
 DIVYA JYOT LYF REWA - DAILY SNAPSHOT
-Wed 21 Oct 2026, today = midnight to 7PM IST (partial day, will keep moving)
+Thu 22 Oct 2026, today = midnight to 7PM IST (partial day, will keep moving)
 
 HEADLINE
-4 leads, Rs 667 spent (CPL Rs 167), but ZERO site visits for 2 days (last: Vishal Jadhav, 19 Oct). 2BHK burned Rs 256 for 0 leads. Fix today: Jimmit Raval (8 days untouched), Sanjay Chande (26h untouched), Vijay Gopalani (team dialing a wrong number).
+2 leads, Rs 460 spent (CPL Rs 230), and THREE straight days with zero site visits (last: Vishal Jadhav, 19 Oct). Studio and 2BHK burned Rs 291 for 0 leads. Jimmit Raval is now 9+ days untouched.
 
 FOLLOW-UP FROM LAST REPORT
-- Jimmit Raval 9702065200 (within_3_months, 13 Oct 01:10): STILL no row, no call. 8th report running. Only his old 3 Oct row exists. 8 days is lost - call him now.
-- Sanjay Chande 9022666908 (within_3_months, 20 Oct 16:55): still no new row. The number sits on an old April row (Rakhi Chande, marked Not interested 14 May). ~26h untouched.
-- Latasha Parab 9769562409 (CRM 10 Oct): never logged, 11 days.
-- Palak Mehta: Visited 17 Oct in Facebook tab, STILL not in SVD (5th ask).
-- Dadasaheb Bangar: now logged (85 lakhs). Srinivas Domal and Chirag Mota both say coming Saturday 24 Oct.
-- Reshma Sawant redialed 21/10: wants 1bhk 80 lakhs.
+- Jimmit Raval 9702065200 (within_3_months, 13 Oct 01:10): STILL no new row, no call. 9th report. Only his old 3 Oct row exists. Call him now.
+- Sanjay Chande 9022666908 (within_3_months, 20 Oct 16:55): still no new row, no call, ~50h. Number sits on the old April row (Rakhi Chande, Not interested 14 May).
+- Vijay Gopalani: phone typo NOT fixed. Sheet 8097193237, CRM 8097193437. Row still just "Ringing" (wrong person), ~48h.
+- Latasha Parab 9769562409 (CRM 10 Oct): never logged, 12 days.
+- Palak Mehta: Visited 17 Oct, still not in SVD (6th ask).
+- Chirag Mota and Srinivas Domal: coming Saturday 24 Oct. Confirm Friday evening.
+- Suresh Sawant: row still just "Ringing", no redial logged.
 
 THE FUNNEL (today 12AM-7PM)
-Spend Rs 667
-Impressions 2,211 / reach 1,780 (campaign sum)
-Clicks 74 / link clicks 48
-Leads 4 (CRM matches Meta: 4). Canonical lead_actions_raw count checked, no double count.
- - Studio 2 (CPL Rs 82)
- - 2BHK 0 (Rs 256 spent)
- - 1BHK 2 (CPL Rs 123)
-Platform: all 4 on fb.
-Contacted: 3 of 4 (Kothari voicemail, Sawant ringing, Mangle spoke). Vijay Gopalani effectively untouched (wrong number, below).
+Spend Rs 460
+Impressions 2,013 / reach 1,612 (campaign sum)
+Clicks 57 / link clicks 38
+Leads 2 (CRM matches Meta: 2). lead_actions_raw checked, canonical count, no double count.
+ - Studio 0 (Rs 121 spent)
+ - 2BHK 0 (Rs 170 spent)
+ - 1BHK 2 (Rs 169, CPL Rs 84), both on Hindi
+Platform: both fb.
+Contacted: 1 of 2 (Swapnil Rane Ringing). Dnyandeo Sawant row exists, no call logged.
 Site visits logged today: 0
-Yesterday refetched (20 Oct): Rs 1,085, 7 leads (Vijay Pratap Singh 23:19 came after the 7PM cutoff).
-Oct MTD 1-21: Rs 20,942, 85 leads.
+Yesterday refetched (21 Oct): Rs 889, 4 leads (matches last report).
+Oct MTD 1-22: Rs 21,624, 87 leads.
 
 AD PERFORMANCE (agency hat)
-STUDIO: Rs 164, 2 leads, CTR 4.26%, CPC Rs 5.1, CPM Rs 219, freq 1.20. Healthiest campaign. 7d CPL Rs 157. Keep funding.
-2BHK: Rs 256, 0 leads, CTR 2.38%, CPC Rs 15, CPM Rs 358, freq 1.27. 7d: CPL Rs 289, freq 2.21, CPM Rs 463 = fatigue. Yesterday Rs 462 for 1 lead. 36 Seconds took Rs 238 of today's Rs 256. Legacy (Rs 13) and connectivity (Rs 5) hooks are starved, effectively off - make that formal and ship fresh creative.
-1BHK: Rs 247, 2 leads, CTR 3.36%, CPC Rs 9.9, freq 1.26. Hindi: Rs 241, 2 leads, CPL Rs 121 (7d Rs 162, best of the three). Gujarati: Rs 5 spend, starved again (3rd week).
-Delivery healthy on all three.
+STUDIO: Rs 121, 0 leads, CTR 2.25%, CPC Rs 8.6, CPM Rs 194, freq 1.17. Delivering, quiet day. 7d: Rs 1,779, 12 leads, CPL Rs 148, freq 1.70. Healthy. Do not judge on 8 hours.
+2BHK: Rs 170, 0 leads, CTR 3.22%, CPC Rs 9.0, CPM Rs 289, freq 1.33. 0 leads for 2 of the last 3 days. 7d: Rs 3,301, 11 leads, CPL Rs 300, CPM Rs 444, freq 2.22 = fatigue, a repeat of last report. By ad today: 36 Seconds Rs 121, connectivity hook Rs 42, Legacy hook Rs 8. Legacy and connectivity are starved, effectively off.
+1BHK: Rs 169, 2 leads, CPL Rs 84, CTR 3.0%, CPC Rs 7.0, freq 1.26. Hindi Rs 161, 2 leads (CPL Rs 80). Gujarati Rs 8 (5 impressions) starved again, 4th week. 7d: Rs 2,132, 13 leads, CPL Rs 164, best volume of the three.
+Delivery is healthy on all three. Spend is on pace for a normal day (about Rs 460 at 7PM).
 
 SPEED-TO-LEAD (sales hat)
-Precision: Drive revision brackets (last revision scanned 10:51 IST, 10 revisions, 0 failed).
+Precision: Drive revision brackets, 6 revisions scanned, 0 failed. Last revision 22 Oct 17:37 IST. The sheet was only revised 18:18 on 21 Oct and 17:37 on 22 Oct, so today's brackets are WIDE (about 23h); treat as upper bounds.
 Name | Arrived in Meta | Sheet updated | Lag
-Ashok Mangle (1BHK) | 21/10 09:12 | by 10:51 | under 1.6h, spoke
-Suresh Sawant (Studio+1BHK, both forms) | 21/10 09:41 and 09:56 | by 10:51 | under 1.2h, Ringing
-Rajesh Kothari (Studio, within_3_months) | 21/10 03:09 | by 10:51 | under 7.7h overnight, Voicemail
-Vijay Pratap Singh (Studio, just exploring) | 20/10 23:19 | by 21/10 10:51 | under 11.5h, By mistake enquiry
-Vijay Gopalani (1BHK, within_3_months) | 20/10 19:37 | WRONG NUMBER row | effectively never
-Kishore Thakkar (Studio, 3-6mo) | 20/10 18:17 | between 17:16-18:55 | under 38 min, FASTEST
-Chirag Mota (1BHK Gujarati) | 20/10 17:11 | already logged by 19/10 17:32 per bracket (old bracket, day-level only) | contacted 20/10, coming Saturday
-Sanjay Chande (Studio, within_3_months) | 20/10 16:55 | no new row | ~26h+ and counting
-Shilpa Kambali (2BHK 09:44, then 1BHK 14:14) | 20/10 | by 13:04 | under 3.3h, final budget 75 lakhs
-Bharat Palan (1BHK, within_3_months) | 19/10 19:22 | by 20/10 13:04 | under 17.7h overnight
-Credit: Kishore, Ashok, Sawant, Mangle handled inside the hour. Daytime response is good. The leaks are: (1) overnight arrivals wait 8-17h (suggest a 9-10PM sweep), (2) re-leads on old phone numbers (Sanjay, Jimmit) never get a new row, (3) typo.
+Swapnil Rane (1BHK, within_3_months) | 22/10 09:12 | row + "Ringing" by 17:37 | under 8.4h, bracket wide
+Dnyandeo Sawant (1BHK, within_3_months) | 22/10 09:58 | row by 17:37, NO call note | 7.6h+ untouched
+Suresh Sawant (Studio + 1BHK, 21/10 09:41 and 09:56) | 21/10 | one "Ringing", no redial | 1 attempt in 33h
+Vijay Gopalani (1BHK, within_3_months) | 20/10 19:37 | wrong number row | effectively never, 48h
+Sanjay Chande (Studio, within_3_months) | 20/10 16:55 | no new row | 50h and counting
+Jimmit Raval (1BHK, within_3_months) | 13/10 01:10 | no new row | 9.7 days
+Credit: none worth naming today. Both fresh within_3_months leads are 1BHK Hindi. One is Ringing, the other has no logged call at 7PM. Pattern since Monday: same-day daytime handling is fine, but the sheet only gets updated in bursts (last two revisions 23h apart), so I cannot prove speed. Please write the call TIME next to the date.
 
 LEAD QUALITY (sales hat)
-Warm/real: Ashok Mangle (within_3, 420 sqft, 65 lakhs - low vs the 439 sqft units, budget screen), Shilpa Kambali (75 lakhs final), Kishore (wants 1bhk 60L from the Studio form, mismatch), Chirag Mota (asks 2bhk 1.60 through the 1BHK form, above the 1.4cr ceiling, but says coming Saturday).
-Dead/mismatch: Vijay Pratap Singh (by mistake), Ajit Patil (by mistake).
-Unreachable so far: Kothari, Sawant (Ringing).
-Cost per site visit: Oct MTD 10 SVD rows, 8 CRM-verified (2 are FB calls, valid direct callers). Rs 20,942 / 8 = Rs 2,618 per verified visit (Rs 2,094 if all 10 count). Last verified visit Vishal Jadhav 19 Oct. Caveat: SVD entries can trail the visit by a day, so 20/21 Oct may still fill in.
-V3/V4 baseline: ~2.3% warm, ~4.5% visit. Oct 85 leads / 8 verified visits = 9.4% lead-to-visit, above baseline.
+Warm/real: Swapnil Rane and Dnyandeo Sawant (both within_3_months, form budget below 1.00cr, correct for a 1BHK; not yet spoken to). Chirag Mota (Saturday visit, asks 2bhk 1.60, above the 1.4cr ceiling). Srinivas Domal (Saturday).
+Mismatch/dead: Vijay Pratap Singh (by mistake), Arjun Mange (broker), Kishore Thakkar (Studio form but wants 1bhk 60L).
+Unreachable so far: Rajesh Kothari (Voicemail), Suresh Sawant (Ringing), Swapnil (Ringing).
+Cost per site visit: Oct MTD 10 SVD rows, 8 CRM-verified (2 are FB calls, valid direct callers). Rs 21,624 / 8 = Rs 2,703 per verified visit (Rs 2,162 if all 10 count). Last verified visit Vishal Jadhav 19 Oct. Caveat: SVD entries can trail the visit by about a day, so 21/22 Oct may still fill in.
+Baseline ~2.3% warm / ~4.5% visit: Oct 87 leads / 8 verified visits = 9.2% lead-to-visit, still above baseline.
 
 DATA INTEGRITY CROSS-CHECK
-- Reverse check (Oct sheet rows vs CRM): clean, nothing fake.
-- PHONE TYPO, URGENT: Vijay Gopalani. CRM 8097193437, team row 8097193237 (one digit). Team marked Ringing on the wrong person. Copy the number from the CRM sheet, call today.
-- Jimmit Raval 13 Oct 1BHK submission: not logged (only the 3 Oct row).
-- Sanjay Chande: lives on old Rakhi Chande row (same phone, different name).
-- Latasha Parab: never logged.
-- Suresh Sawant submitted two forms (Studio 09:56, 1BHK 09:41) - one row, fine.
-- SVD: Palak Mehta missing. FB-call visits (Vaibhav Mahadik, Vijay Yadav) valid direct callers, not flagged.
+- Reverse check (Oct sheet rows vs CRM): one miss, Vijay Gopalani 8097193237 = typo of CRM 8097193437 (one digit). No fake leads.
+- Forward misses in Oct: Latasha Parab (never logged), Vijay Gopalani (typo). Jimmit Raval and Sanjay Chande match by phone to OLD rows, so they look logged but their new submissions were never actioned.
+- SVD: Palak Mehta missing. FB-call visits (Vaibhav Mahadik, Vijay Yadav, Nikhil Chaudhari, Raju Pandey) are valid direct callers, not flagged. Mehul Maru SVD phone (9004034850) still unverified against CRM.
+- Name consistency: "Dhyandeo sawant" in sheet vs "Dnyandeo Sawant" in CRM, same phone, harmless.
 
 DIAGNOSTIC STEPS
-1. Sales: call Vijay Gopalani on 8097193437 NOW, Sanjay Chande 9022666908 now, Jimmit Raval 9702065200 now, Latasha Parab 9769562409. Create fresh rows for each by copy-paste from the CRM sheet.
-2. Sales: add Palak Mehta to SVD. Confirm Chirag Mota and Srinivas Domal for Saturday with a reminder on Friday evening.
-3. Agency: 2BHK freq 2.21, CPM Rs 463, 0 leads today. Formally turn Legacy and connectivity hooks off, replace 36 Seconds with a fresh hook, and shift some 2BHK budget to Studio (CPL Rs 82 today). Not a pause on CPL alone - it is fatigue plus a falling lead rate.
-4. Agency: Studio form pulls 1BHK buyers (Kishore 60L, earlier Dadasaheb 85L). Add a BHK/budget question to the Studio form.
-5. Sales: 9-10PM sweep for overnight arrivals; write call time next to the date in the sheet.
+1. Sales, now: call Vijay Gopalani on 8097193437 (copy from the CRM sheet), Sanjay Chande 9022666908, Jimmit Raval 9702065200, Latasha Parab 9769562409, and Dnyandeo Sawant 9594384981. Each of the first four is a within_3_months or OTP-verified lead aged 2+ days. Create a fresh row for each.
+2. Sales: add Palak Mehta to SVD and Chirag Mota plus Srinivas Domal reminders for Friday evening. Three zero-visit days make Saturday the make-or-break day.
+3. Agency: 2BHK 7d CPL Rs 300 at freq 2.22 with 0 leads today. Formally switch OFF Legacy and connectivity, ship a fresh hook, and move part of the 2BHK budget to 1BHK Hindi (CPL Rs 80 today, Rs 162 7d). This is fatigue, not a CPL-only call.
+4. Agency: 1BHK Gujarati has been starved for 4 weeks. Either give it its own budget or fold it into Hindi.
+5. Sales: 9-10PM sweep for overnight arrivals, and write call time next to the date.
 
 ANYTHING ELSE
-- Ask Keval: confirm the 1BHK price band so budget-mismatch calls on 1BHK leads can be made (not guessing).
-- Two straight zero-visit days with Saturday visits queued - Saturday matters.
+- Ask Keval: please confirm the 1BHK price band so budget-mismatch calls on 1BHK leads can be made.
+- The team is not touching the sheet during the day (two revisions in 24h), which is why lag is unmeasurable today.
