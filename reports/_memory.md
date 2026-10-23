@@ -1,5 +1,11 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-23 (run, ~3PM IST; report filed as 2026-10-22 = yesterday, full day)
+- 22 Oct full day: Rs 721, 4 leads (Studio Manish Ratnotar, 2BHK Rashh, 1BHK Swapnil Rane + Dnyandeo Sawant). 23 Oct by ~3PM: 4 leads, Rs 515. Oct MTD 1-22: Rs 21,885, 89 leads. 8 CRM-verified visits = Rs 2,736 each; none since Vishal Jadhav 19 Oct.
+- Check: Swapnil Rane row says "Already visited" but not in SVD; Palak Mehta not in SVD (7th ask); Jimmit Raval 9702065200 and Sanjay Chande 9022666908 untouched; Vijay Gopalani typo unfixed; Latasha Parab never logged; Chirag Mota + Srinivas Domal Saturday 24 Oct.
+- 2BHK 7d CPL Rs 327 freq 2.34, connectivity hook Rs 85/0 leads; 1BHK Gujarati starved 5 weeks; 1BHK freq 2.16 rising.
+- Setup: 'pip install' alone leaves 'No module google' -> use python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py.
+
 ## Added 2026-10-22 (run, ~7PM IST data)
 - 22 Oct so far: Rs 460, 2 leads (both 1BHK Hindi: Swapnil Rane 09:12 Ringing, Dnyandeo Sawant 09:58 no call logged). Studio Rs 121 / 0, 2BHK Rs 170 / 0. 21 Oct refetched: Rs 889, 4 leads (unchanged). Oct MTD 1-22: Rs 21,624, 87 leads. Visits 10 SVD (8 CRM-verified), Rs 2,703 per verified visit; none since Vishal Jadhav 19 Oct (3 zero days).
 - Check: Jimmit Raval 9702065200 STILL untouched 9.7 days (9th report); Sanjay Chande 9022666908 no new row (~50h); Vijay Gopalani typo unfixed (sheet 8097193237 vs CRM 8097193437); Latasha Parab never logged (12 days); Palak Mehta not in SVD (6th ask); Chirag Mota and Srinivas Domal Saturday 24 Oct; Dnyandeo Sawant call logged?
