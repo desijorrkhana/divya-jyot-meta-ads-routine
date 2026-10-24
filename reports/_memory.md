@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-24 (run, ~7PM IST; report filed as 2026-10-23 = yesterday, full day)
+- 23 Oct full day: Rs 689, 8 Meta leads (CPL Rs 86) but CRM only 6 (Studio 1, 2BHK 2, 1BHK 3); Hetal Satra 9920291800 sheet row 23/10 has NO CRM match (candidate for the gap, or direct caller; ask team). Oct MTD 1-23: Rs 22,573, 97 leads. 24 Oct by 7PM: Rs 408, 1 lead (Swati 2BHK Legacy, row says 'Already visited').
+- Visits: 8 CRM-verified through 23 Oct = Rs 2,822 each; Srinivas Domal visited 24 Oct (SVD 6:53PM) -> 9 = Rs 2,508. Palak Mehta and Swapnil Rane still missing from SVD.
+- Check: Jimmit Raval 9702065200 untouched 11 days (11th report); Sanjay Chande 9022666908 no row; Vijay Gopalani typo unfixed (sheet 8097193237 vs CRM 8097193437); Latasha Parab never logged (14 days); Chirag Mota not answering (23, 24 Oct); Jigna Maru + Rajesh Bhinde asked callback; Srinivas post-visit push.
+- Ads: 2BHK 7d CPL Rs 251 freq 2.31 (improving); Legacy hook now yields leads at tiny spend (revised: test, do not pause); 1BHK 7d CPL Rs 131, Hindi carries; Gujarati starved. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error (No module google); python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under 2026-10-23, Telegram per spec.
+
 ## Added 2026-10-23 (run, ~3PM IST; report filed as 2026-10-22 = yesterday, full day)
 - 22 Oct full day: Rs 721, 4 leads (Studio Manish Ratnotar, 2BHK Rashh, 1BHK Swapnil Rane + Dnyandeo Sawant). 23 Oct by ~3PM: 4 leads, Rs 515. Oct MTD 1-22: Rs 21,885, 89 leads. 8 CRM-verified visits = Rs 2,736 each; none since Vishal Jadhav 19 Oct.
 - Check: Swapnil Rane row says "Already visited" but not in SVD; Palak Mehta not in SVD (7th ask); Jimmit Raval 9702065200 and Sanjay Chande 9022666908 untouched; Vijay Gopalani typo unfixed; Latasha Parab never logged; Chirag Mota + Srinivas Domal Saturday 24 Oct.
