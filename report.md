@@ -1,77 +1,75 @@
 DIVYA JYOT LYF REWA - DAILY SNAPSHOT
-Fri 23 Oct 2026, FULL DAY (12AM-12AM IST). Run on Sat 24 Oct ~7PM IST; 24 Oct so far is at the bottom.
+Sat 24 Oct 2026, FULL DAY (12AM-12AM IST). Run on Sun 25 Oct ~7PM IST; 25 Oct so far is at the bottom.
 
 HEADLINE
-Cheapest lead day in a while: 8 leads on Rs 689 (CPL Rs 86) on 23 Oct, but 0 site visits logged again (last before: Vishal Jadhav, 19 Oct). The drought broke today 24 Oct: Srinivas Domal's visit entered 6:53PM. Of yesterday's 8 Meta leads, only 6 are in the CRM sheet so far (see data integrity).
+24 Oct: 3 leads on Rs 493 (CPL Rs 164), and 1 CRM-verified site visit (Srinivas Domal, 2BHK, SVD 6:53PM). Visit drought of 5 days is broken, but nothing has been logged since. Oct MTD 1-24: Rs 23,067, 100 leads, 9 CRM-verified visits = Rs 2,563 per verified visit. Four named leads are STILL never actioned (Jimmit Raval 12 days, Sanjay Chande, Vijay Gopalani wrong number, Latasha Parab 15 days).
 
 FOLLOW-UP FROM LAST REPORT
-- Jimmit Raval 9702065200 (within_3_months, 13 Oct): STILL no new row, 11 days, 11th report. Only his old 3/10 row exists. Call him.
-- Sanjay Chande 9022666908 (within_3_months, 20 Oct): still no row, ~4 days. Only the old April row (Rakhi Chande, Not interested).
-- Vijay Gopalani: phone typo NOT fixed, 4 days. Sheet 8097193237, CRM 8097193437. Team keeps dialing the wrong person (23/10 Ringing).
-- Latasha Parab 9769562409: never logged, 14 days.
-- Palak Mehta: row says "17/10 Visited", still NOT in SVD (8th ask).
-- Swapnil Rane 9773106733: row says "Already visited, 420 sqft, final 90 lakhs", still NOT in SVD. Verify.
-- Chirag Mota: "Coming Saturday" did not happen by 7PM: 23/10 and 24/10 both "Cut the call". Treat as lost unless he calls back.
-- Srinivas Domal: the Saturday promise was KEPT. Visit done 24 Oct (SVD 6:53PM), 2BHK 1.25cr. Credit to the team for the confirm call on 23/10.
-- Dnyandeo Sawant: 23/10 "Cut the call" (he picked up and cut). Suresh Sawant: still one "Ringing".
-- Last report said turn OFF the 2BHK Legacy and connectivity hooks. REVISED today: see Ad Performance, Legacy is producing leads at tiny spend.
+- Jimmit Raval 9702065200 (within_3_months, 13 Oct): still no new row, 12 days, 12th report. Only the old 3/10 row. CALL HIM.
+- Sanjay Chande 9022666908 (within_3_months, 20 Oct): still no new row, 5 days. Only the old April row under Rakhi Chande (Not interested).
+- Vijay Gopalani: phone typo NOT fixed, 5 days. Sheet 8097193237, CRM 8097193437. Team still dials the wrong person.
+- Latasha Parab 9769562409 (1BHK, 10 Oct): never logged, 15 days.
+- Palak Mehta: row says "17/10 Visited", still NOT in SVD (9th ask). Swapnil Rane 9773106733: row says "Already visited... final budget 90 lakhs", still NOT in SVD. Swati row also says "Already visited" and is not in SVD.
+- Srinivas Domal: post-visit push happened, 25/10 note "Out of budget, 601 sqft, budget 1.30". He wants 601 sqft at 1.30cr: check whether a unit fits.
+- Dilip (visited 18/10): 25/10 note "Purchased in Tambe Nagar". Lost. Close the row.
+- Chirag Mota: nothing new after two Cut-the-call. Treat as lost.
+- Hetal Satra 9920291800 (sheet row 23/10): still no CRM match, no explanation from the team.
+- Last report asked for a measured Legacy hook test: Legacy took Rs 7.24 and got 1 lead on 24 Oct (Swati, 01:13). Still too small to judge.
 
-THE FUNNEL (23 Oct, full day)
-Spend Rs 689 (Studio 234, 2BHK 201, 1BHK 254)
-Impressions 2,421 / reach (campaign sum) 1,874
-Clicks 94 / link clicks 59
-Leads 8 per Meta (CPL Rs 86). lead_actions_raw checked: onsite_conversion.lead_grouped = lead = 8, no double count. Matches Ads Manager basis.
- - Studio 2 (CPL Rs 117) - CRM shows 1 (Rajesh Bhinde, fb, 3-6 months)
- - 2BHK 2 (CPL Rs 100) - Tina Shah (ig, within_3m), Rakesh Solanki (ig, just_exploring)
- - 1BHK 4 (CPL Rs 63) - Red Recipes, Jai shri krishna (both ig), Jigna Maru (fb) in CRM; 1 not yet in CRM
-Reconciliation: Meta 8 vs CRM 6 (IST day 23 Oct). Gap = 1 Studio + 1 1BHK. Hetal Satra 9920291800 (sheet row 23/10, no CRM match) may be one of them. Meta and CRM update independently, so check whether the CRM catches up on the next run.
-Platform (CRM 6): ig 4, fb 2.
-Contacted: all 6 CRM leads have a sheet row (6/6). Spoken to: Rajesh Bhinde (call back after 1 hour), Jigna Maru (call back tomorrow). Ringing/Busy only: Red Recipes, Tina Shah, Jai shri krishna, Rakesh Solanki.
-Site visits logged 23 Oct: 0. Oct MTD (1-23): Rs 22,573, 97 leads.
+THE FUNNEL (24 Oct, full day)
+Spend Rs 493 (Studio 176, 2BHK 188, 1BHK 129)
+Impressions 2,157 / reach (campaign sum) 1,720
+Clicks 60 / link clicks 31
+Leads 3 per Meta (CPL Rs 164). lead_actions_raw checked: onsite_conversion.lead_grouped = lead = 3, no double count.
+ - Studio 1 (CPL Rs 176): Sameer S Gangadhare (fb, within_3m, 21:14)
+ - 2BHK 2 (CPL Rs 94): Swati (ig, within_3m, 01:13, Legacy hook), "9867291111" (fb, 3-6m, 21:37, 36 Seconds)
+ - 1BHK 0 on Rs 129 (Hindi Rs 124, Gujarati Rs 5)
+Reconciliation: Meta 3 = CRM 3. Clean day.
+Platform: fb 2, ig 1.
+Contacted: 3 of 3 have a sheet row. Only Ringing/Busy so far: Sameer (Ringing), "9867291111" (Busy), Swati (row says "Already visited" but no SVD entry). Nobody reached by phone yet.
+Site visits logged 24 Oct: 1 (Srinivas Domal, CRM-verified). Oct MTD (1-24): Rs 23,067, 100 leads. Note: 24 Oct refetched now reads Rs 493 / 3 leads vs Rs 408 / 1 lead at last 7PM report; the difference is the two late-evening leads (21:14, 21:37) after the cutoff.
 
 AD PERFORMANCE (agency hat)
-STUDIO: Rs 234, 2 leads, CTR 3.48%, CPC Rs 6.7, CPM Rs 232, freq 1.24, reach 810. Healthy, best CPC of the three. 7d: Rs 1,738, 12 leads, CPL Rs 145, freq 1.72.
-2BHK: Rs 201, 2 leads, CTR 3.62%, CPC Rs 8.7, CPM Rs 316, freq 1.34. 7d: Rs 2,763, 11 leads, CPL Rs 251 (was Rs 327), freq 2.31 still the highest = fatigue, but CPL improving. By ad: 36 Seconds Rs 186 / 1 lead; connectivity hook Rs 12 / 0 leads (negligible); Legacy hook Rs 2.67 / 1 lead (5 impressions, 80% CTR). Both Legacy leads (Rakesh 23:31, Swati 01:13 on 24 Oct) came in late night. Legacy is cheap but spend is tiny, so I cannot call it good or bad: do NOT pause it now, give it a proper test budget.
-1BHK: Rs 254, 4 leads, CTR 4.63% (best), CPC Rs 7.0, CPM Rs 326, freq 1.32. Hindi Rs 253 / 4 leads (CPL Rs 63). Gujarati Rs 1 / 8 impressions (starved, 5+ weeks). 7d: Rs 2,089, 16 leads, CPL Rs 131 (was Rs 160), freq 2.15 (watch).
-Delivery healthy on all three campaigns. Studio resumed and stable. 1BHK is young (since 18 Aug), judge on trend: it is improving.
+STUDIO (24 Oct): Rs 176, 1 lead, CTR 2.77%, CPC Rs 7.4, CPM Rs 203, freq 1.21, reach 716. 7d: Rs 1,747, 12 leads, CPL Rs 146, freq 1.71, CTR 2.91%. Healthy and cheapest media. Today (25 Oct) CTR fell to 1.79% and CPC jumped to Rs 16.9: one soft day, watch.
+2BHK (24 Oct): Rs 188, 2 leads, CTR 2.72%, CPC Rs 9.4, CPM Rs 256, freq 1.36. 7d: Rs 2,712, 11 leads, CPL Rs 247 (was Rs 251), freq 2.33 (highest of the three = fatigue), CTR 3.0%. By ad: 36 Seconds Rs 181 / 1 lead; Legacy hook Rs 7 / 1 lead / 17 impressions (tiny sample, 17.65% CTR). Do not conclude from 17 impressions.
+1BHK (24 Oct): Rs 129, 0 leads, CTR 2.88%, CPC Rs 8.1, CPM Rs 232, freq 1.20. Hindi Rs 124 / 0 leads; Gujarati Rs 5 / 15 impressions (starved, 5+ weeks). 7d: Rs 2,005, 16 leads, CPL Rs 125 (was Rs 131), freq 2.16, CTR 3.35% (best). One blank day in a healthy week is noise.
+Delivery healthy on all three campaigns; Studio stable since the June pause. 1BHK is young (since 18 Aug) and improving week on week.
 
 SPEED-TO-LEAD (sales hat)
-Precision: Drive revision brackets, 7 revisions scanned, 0 failed. Revisions near the window: 22/10 17:37, 23/10 12:53, 23/10 18:21, 24/10 12:35. Brackets are wide (hours); upper bounds only. Row = lead's row appeared; note = first call note.
+Precision: Drive revision brackets, 7 revisions scanned, 0 failed. Brackets are hours wide (revisions near the window: 24/10 18:54 and 25/10 11:41, a 16.8h gap), so these are upper bounds only.
 Name | Arrived in Meta | Sheet updated | Lag
-Red Recipes (1BHK, within_3m) | 23/10 08:59 | row+note between 22/10 17:37 and 23/10 12:53 | under 3.9h (Ringing)
-Rajesh Bhinde (Studio, 3-6m) | 23/10 09:41 | row+note between 22/10 17:37 and 23/10 12:53 | under 3.2h (spoke, call back in 1h)
-Tina Shah (2BHK, within_3m) | 23/10 12:29 | new row #742 undated, bracket matched OLD Aug row | day-level only: same day (Busy)
-Jai shri krishna (1BHK, within_3m) | 23/10 15:22 | new row #743 undated, bracket matched OLD rows | day-level only: same day (Ringing)
-Jigna Maru (1BHK, within_3m) | 23/10 19:21 | row between 23/10 18:21 and 24/10 12:35 | 0-17.2h (spoke: call back tomorrow)
-Rakesh Solanki (2BHK, just_exploring) | 23/10 23:31 | row between 23/10 18:21 and 24/10 12:35 | under 13.1h (Busy)
-Swati (2BHK Legacy, within_3m) | 24/10 01:13 | row between 23/10 18:21 and 24/10 12:35 | under 11.4h ("Already visited")
-Duplicate-phone note: Tina Shah and Jai shri krishna are re-leads; contact_history attached to their old rows, so only day-level is reliable.
-Credit: every 23 Oct lead got a row within one revision, and the two daytime Meta leads were called within ~3-4h; Red Recipes and Rajesh Bhinde were the fastest. Weakness: overnight/evening arrivals (Jigna 19:21, Rakesh 23:31) still wait for the morning, and no second attempt is logged on the within_3m leads Red Recipes, Tina, Jai shri krishna. Still never actioned: Jimmit Raval (11 days), Sanjay Chande (~4 days), Vijay Gopalani (wrong number). Please write the call TIME next to the date.
+Swati (2BHK, within_3m) | 24/10 01:13 | row+note between 23/10 18:21 and 24/10 12:35 | under 11.4h ("Already visited")
+Sameer S Gangadhare (Studio, within_3m) | 24/10 21:14 | row+note between 24/10 18:54 and 25/10 11:41 | under 14.5h (Ringing)
+9867291111 (2BHK, 3-6m) | 24/10 21:37 | new row #750 "Mahesh navlakha", bracket matched OLD July row | day-level only: same day (Busy)
+Sridhar Kumar (1BHK, within_3m; 25 Oct) | 25/10 03:27 | row+note between 24/10 18:54 and 25/10 11:41 | under 8.2h (spoke: Bhandup, wants 1bhk, budget not disclosed)
+Pratik Shah (2BHK, within_3m; 25 Oct) | 25/10 10:13 | new row, bracket matched OLD 2025 row | day-level only: same day (Cut the call)
+Narpatp Purohit (Studio, within_3m; 25 Oct) | 25/10 12:39 | no row at 7PM | untouched ~6.4h and counting
+Duplicate-phone note: "9867291111" (old July row "Mahesh"; new row says Mahesh Navlakha, CRM name is just the number) and Pratik Shah (old 2025 row, Not interested) are re-leads, so only day-level lag is reliable.
+Credit: Sridhar Kumar (arrived 03:27 overnight) was reached and qualified within the morning, and Pratik Shah got a same-day dial. Weakness: the 21:00-23:59 arrivals again wait for next day (Sameer, 9867291111) and none of the within_3m leads has a logged second attempt. Narpatp Purohit (within_3m, Studio) is open right now: call tonight. Please write the call TIME next to the date.
 
 LEAD QUALITY (sales hat)
-Warm/real: Jigna Maru (1BHK, 1.01-1.10cr form budget, spoke), Rajesh Bhinde (Studio, spoke), Red Recipes (1BHK, 1.01-1.10cr, not reached yet), Srinivas Domal (visited 24 Oct, 2BHK 1.25cr fits under 1.4cr ceiling).
-Check/verify: Swati ("Already visited" but not in SVD; maybe a repeat or the note is wrong), Tina Shah (Aug note said 1bhk 85L, now 2BHK form below 1.55cr: confirm what she wants), Hetal Satra (no CRM match).
-Weak: Jai shri krishna (same number, 10+ unanswered attempts since April on 3 old rows; low odds), Rakesh Solanki (just_exploring), Chirag Mota (asks 1.60cr, above 1.4cr ceiling, not answering).
-Unreachable: Jai shri krishna, Rakesh, Tina (Busy), Red Recipes (Ringing).
-1BHK price band is still unconfirmed, so no budget-mismatch calls on 1BHK leads: the form budget 1.01-1.10cr is the demand, not the price.
-Cost per site visit: Oct MTD 1-23 spend Rs 22,573. CRM-verified visits through 23 Oct = 8 (10 SVD rows, 2 are FB-call direct callers) = Rs 2,822 per verified visit (Rs 2,257 if all 10 count). With Srinivas Domal (24 Oct, CRM-verified 9819214778) it becomes 9 visits = Rs 2,508 on spend through 23 Oct; will fall as 24 Oct spend is added.
-Baseline ~2.3% warm / ~4.5% visit: Oct 97 leads / 8 verified visits = 8.2% lead-to-visit (9 = 9.3%), above baseline. Momentum was cold (5 days with no visit, 19 Oct to 24 Oct) and the SVD trails reality by about a day, so Palak Mehta and Swapnil Rane may fill it in.
+Warm/real: Sridhar Kumar (1BHK, within_3m, spoke), Srinivas Domal (visited, 2BHK, 1.30cr budget for 601 sqft), Pratik Shah (2BHK within_3m, but form budget 1.5-1.75cr is ABOVE the ~1.4cr 2BHK ceiling: budget mismatch, he was Not interested in 2025 and cut the call today).
+Check/verify: Swati ("Already visited" but not in SVD), "9867291111"/Mahesh (3-6m, Busy; old July row Not interested), Sameer (Studio within_3m, Ringing), Narpatp (not yet called).
+Weak/lost: Dilip (purchased elsewhere), Chirag Mota (1.60cr, cutting calls), Raju Pandey (post-visit, Busy 3 times).
+Budget mismatch: Pratik Shah 1.5-1.75cr vs 2BHK ceiling 1.4cr. Everything else is within form budgets (2BHK below 1.55cr is borderline, 1BHK 1.01-1.10cr is demand, not price: 1BHK band still unconfirmed).
+Cost per site visit: Oct MTD 1-24 spend Rs 23,067. CRM-verified visits 9 (Rinnkle Shah, Shripal, Mehul Maru, Punit Thakkar, Uday Masukar, Devendra Shah, Dilip, Vishal Jadhav, Srinivas Domal) = Rs 2,563 per verified visit. SVD sheet claims 11 rows; 2 (Vaibhav Mahadik, Vijay Yadav) are "Fb call" direct callers with no CRM record, valid but counted separately: Rs 2,097 if all 11 count.
+Baseline ~2.3% warm / ~4.5% visit: Oct 100 leads, 9 verified visits = 9.0% lead-to-visit (above baseline; 11 = 11%). Caveat: SVD entries trail reality by about a day, so Palak Mehta and Swapnil Rane may fill it in. No visit yet on 25 Oct.
 
 DATA INTEGRITY CROSS-CHECK
-- Reverse check (Oct sheet rows vs CRM): 2 misses. Vijay Gopalani 8097193237 = one-digit typo of CRM 8097193437 (see above). NEW: Hetal Satra 9920291800, sheet row #745 created 23/10 (Ringing), no CRM match and no near-typo (no Hamming match against the forward misses). Either a Meta lead the CRM has not received yet (Meta shows 8 leads vs CRM 6) or a direct caller logged as Facebook. Ask the team where she came from. No fake chain found.
-- Forward misses in Oct: Latasha Parab (never logged), Sanjay Chande (no row, old April row under Rakhi Chande), Vijay Gopalani (typo).
-- Sheet serial 747 is skipped between Hetal/Rakesh (#746) and Swati (#748): likely a deleted row. Harmless but worth a look.
-- SVD: Palak Mehta and Swapnil Rane missing. FB-call visits (Vaibhav Mahadik, Vijay Yadav, Raju Pandey) are valid direct callers. Mehul Maru SVD phone 9004034850 remains unverified. Srinivas Domal verified against CRM.
-- Name consistency: "Dhyandeo sawant" (sheet) vs "Dnyandeo Sawant" (CRM), same phone, harmless. Chirag Mota appears in CRM under both 2BHK (July) and 1BHK (20 Oct) forms.
+- Reverse check (Oct sheet rows vs CRM): 2 misses, both unchanged. Vijay Gopalani 8097193237 = one-digit typo of CRM 8097193437. Hetal Satra 9920291800 (row #745, 23 Oct) has no CRM match and no near-typo; Meta and CRM agreed on counts both days, so she is most likely a direct caller logged as Facebook. Ask the team. No fake visit chain found.
+- Forward misses in Oct: Latasha Parab (never logged), Vijay Gopalani (typo), Narpatp Purohit (arrived 12:39 today, not yet logged at 7PM, not a miss yet). Sanjay Chande and Jimmit Raval phones exist only on OLD rows, so no fresh row was created for their Oct submissions.
+- SVD: Palak Mehta and Swapnil Rane missing. FB-call visits are valid. Mehul Maru SVD phone 9004034850 still unverified. Srinivas Domal verified against CRM.
+- Name consistency: CRM "9867291111" (name = phone number) vs sheet "Mahesh navlakha" vs old July row "Mahesh": same phone, three names. "Dhyandeo sawant" vs CRM "Dnyandeo Sawant": harmless. Pratik Shah's new sheet row has no serial number (row after #751).
 
 DIAGNOSTIC STEPS
-1. Sales, today: fix and dial Vijay Gopalani on 8097193437 (copy from CRM); create fresh rows for Sanjay Chande 9022666908, Jimmit Raval 9702065200, Latasha Parab 9769562409. All are within_3m or OTP leads aged 4+ days.
-2. Sales: add Palak Mehta and (if real) Swapnil Rane to SVD; confirm what Swati means by "Already visited". Chase Jigna Maru and Rajesh Bhinde (both asked for a call back). Add the Srinivas Domal post-visit follow-up tomorrow (closing push at 1.25cr).
-3. Agency: do NOT pause 2BHK Legacy on spend alone. Give it a measured test (about Rs 100-150/day for 3 days) against 36 Seconds; connectivity can go OFF (Rs 12, 0 leads). 2BHK 7d freq 2.31: line up one fresh hook.
-4. Agency: 1BHK Hindi is carrying the whole campaign (CPL Rs 63 yesterday, Rs 131 7d, CTR 4.6%). Gujarati has been starved 5+ weeks: either give it its own budget or fold it into Hindi. 1BHK freq 2.15: prepare a second creative.
-5. Sales: add a 9-10PM sweep. Evening/overnight arrivals (Jigna 19:21, Rakesh 23:31, Swati 01:13) waited 11-17h; OTP leads are hot in the first hour.
+1. Sales, tonight: call Narpatp Purohit (Studio, within_3m, 12:39 today). Then Jimmit Raval 9702065200, Sanjay Chande 9022666908, Latasha Parab 9769562409 with fresh rows, and Vijay Gopalani on 8097193437 (copy from CRM). All four are OTP leads aged 5-15 days.
+2. Sales: add Palak Mehta, and Swapnil Rane and Swati if real, to SVD; close Dilip (bought elsewhere). Srinivas Domal: check if a 601 sqft unit can meet 1.30cr and push for a decision this week.
+3. Sales: budget screen on 2BHK form answers. Pratik Shah picked 1.5-1.75cr against a 1.4cr ceiling; either ask on the first call or fix the form options so 2BHK only offers bands the project can serve.
+4. Agency: Studio CTR fell to 1.79% and CPC doubled today; if it stays under 2% tomorrow, rotate a fresh Studio creative. 2BHK freq 2.33: have one new hook ready; give Legacy a real test budget (Rs 100-150/day for 3 days) rather than judging off 17 impressions.
+5. Agency: 1BHK Hindi carries the campaign (7d CPL Rs 125). Gujarati has been starved 5+ weeks: give it its own budget or fold it into Hindi. Prepare a second 1BHK creative (freq 2.16).
+6. Sales: add a 9-10PM sweep. Evening arrivals (Sameer 21:14, Mahesh 21:37) are the ones that wait overnight.
 
 ANYTHING ELSE
-- Ask Keval: please confirm the 1BHK price band. Form budgets cluster at 1.01-1.10cr (Red Recipes, Jai shri krishna, Jigna Maru); I need the real price to judge them.
-- Instagram carried 4 of 6 CRM leads yesterday; Legacy hook leads are IG late-night. Worth a dayparting look if late-night volume holds.
-- 24 Oct so far (to ~7PM): Rs 408, 1 lead per Meta (2BHK Legacy: Swati 01:13), 0 Studio, 0 1BHK. Spend Studio 143, 2BHK 158, 1BHK 106. Quiet Saturday for leads, but Srinivas Domal's visit landed. Figures will move after the report.
+- Ask Keval: please confirm the 1BHK price band. Form budgets cluster at 1.01-1.10cr.
+- Weekend pattern: Sat/Sun lead volume is thin (3 on Sat, 3 by 7PM Sun). Spend is roughly flat (Rs 493 Sat, Rs 726 Sun by 7PM), so weekend CPL is the highest of the week: consider trimming weekend budget toward Fri/Mon-Tue if the pattern holds another week.
+- 25 Oct so far (to ~7PM): Rs 726, 3 leads per Meta (CPL Rs 242): Studio Rs 236 / 1 (Narpatp Purohit, ig), 2BHK Rs 241 / 1 (Pratik Shah, fb), 1BHK Rs 248 / 1 (Sridhar Kumar, ig). Meta 3 = CRM 3. Platform ig 2, fb 1. Reach 1,727 (sum), impressions 2,116, clicks 54, link clicks 33. 1BHK CTR 3.57% (best), Studio 1.79%, 2BHK 2.25%. Figures will move after the report.
