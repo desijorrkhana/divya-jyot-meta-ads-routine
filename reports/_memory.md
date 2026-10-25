@@ -1,5 +1,11 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-25 (run, ~7PM IST; report filed as 2026-10-24 = yesterday, full day)
+- 24 Oct full day: Rs 493, 3 leads (Studio Sameer, 2BHK Swati + "9867291111"/Mahesh Navlakha), Meta = CRM. 25 Oct by 7PM: Rs 726, 3 leads (Narpatp Purohit Studio 12:39 NOT in sheet yet, Pratik Shah 2BHK 1.5-1.75cr above ceiling, Sridhar Kumar 1BHK spoke). Oct MTD 1-24: Rs 23,067, 100 leads, 9 CRM-verified visits = Rs 2,563 each.
+- Check: Narpatp Purohit logged?; Jimmit Raval 9702065200 untouched 12 days (12th report); Sanjay Chande 9022666908 no row; Vijay Gopalani typo unfixed; Latasha Parab never logged (15 days); Palak Mehta / Swapnil Rane / Swati not in SVD; Hetal Satra no CRM; Dilip bought elsewhere; Srinivas Domal wants 601 sqft at 1.30cr.
+- Ads: Studio CTR 1.79% today (was 2.77%), watch; 2BHK 7d CPL Rs 247 freq 2.33; 1BHK 7d CPL Rs 125 freq 2.16; Gujarati starved; Legacy 17 impressions, untestable. Weekend CPL highest of week: hypothesis to confirm. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error; python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under 2026-10-24, Telegram per spec.
+
 ## Added 2026-10-24 (run, ~7PM IST; report filed as 2026-10-23 = yesterday, full day)
 - 23 Oct full day: Rs 689, 8 Meta leads (CPL Rs 86) but CRM only 6 (Studio 1, 2BHK 2, 1BHK 3); Hetal Satra 9920291800 sheet row 23/10 has NO CRM match (candidate for the gap, or direct caller; ask team). Oct MTD 1-23: Rs 22,573, 97 leads. 24 Oct by 7PM: Rs 408, 1 lead (Swati 2BHK Legacy, row says 'Already visited').
 - Visits: 8 CRM-verified through 23 Oct = Rs 2,822 each; Srinivas Domal visited 24 Oct (SVD 6:53PM) -> 9 = Rs 2,508. Palak Mehta and Swapnil Rane still missing from SVD.
