@@ -1,5 +1,11 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-26 (run, ~7PM IST; report filed as 2026-10-26 = run date per spec)
+- 26 Oct so far: Rs 496, 2 leads (Keeran Jamesbond 1BHK Hindi 14:41 Ringing; Amey Deshpande 2BHK 16:03 wants 3BHK 2.05cr), Studio 0 on Rs 164. 25 Oct full day refetched: Rs 974, 4 leads (Arjun Mange Studio broker 22:37 after cutoff). Oct MTD 1-26: Rs 24,537, 106 leads, 10 CRM-verified visits (Amey Angane 26 Oct 3:56PM, CRM Sept 24) = Rs 2,454 each.
+- Check: Jimmit Raval 9702065200 untouched 13 days (13th report); Sanjay Chande 9022666908 no row; Vijay Gopalani typo unfixed (6 days, team dialing wrong number); Latasha Parab never logged (16 days); Palak Mehta / Swapnil Rane not in SVD; Keeran + Sridhar Kumar retry; Sameer 3 failed dials; Hetal Satra no CRM; Srinivas Domal 601 sqft at 1.30cr; Amey Angane budget 65L / 300 sqft fit.
+- Ads: Studio CTR recovered 2.91%; Studio form pulls 1BHK 65L buyers + brokers (Narpatp, Arjun): recommended BHK/budget question; 2BHK 7d CPL Rs 214 freq 2.32 CPM Rs 377; 1BHK 7d CPL Rs 130 best; Gujarati starved; Legacy Rs 0 today. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error; python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-26 per spec, Telegram per spec.
+
 ## Added 2026-10-25 (run, ~7PM IST; report filed as 2026-10-24 = yesterday, full day)
 - 24 Oct full day: Rs 493, 3 leads (Studio Sameer, 2BHK Swati + "9867291111"/Mahesh Navlakha), Meta = CRM. 25 Oct by 7PM: Rs 726, 3 leads (Narpatp Purohit Studio 12:39 NOT in sheet yet, Pratik Shah 2BHK 1.5-1.75cr above ceiling, Sridhar Kumar 1BHK spoke). Oct MTD 1-24: Rs 23,067, 100 leads, 9 CRM-verified visits = Rs 2,563 each.
 - Check: Narpatp Purohit logged?; Jimmit Raval 9702065200 untouched 12 days (12th report); Sanjay Chande 9022666908 no row; Vijay Gopalani typo unfixed; Latasha Parab never logged (15 days); Palak Mehta / Swapnil Rane / Swati not in SVD; Hetal Satra no CRM; Dilip bought elsewhere; Srinivas Domal wants 601 sqft at 1.30cr.
