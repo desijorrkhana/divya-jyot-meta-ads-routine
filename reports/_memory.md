@@ -1,5 +1,11 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-27 (run, ~7PM IST; report filed as 2026-10-27 = run date per spec)
+- 27 Oct so far: Rs 519, 4 leads (Harish Sejpal Studio 03:26 AND 1BHK 03:46; Pooja Mhapsekar 1BHK 16:06; Adal Pinto 1BHK within_3m 18:24), none in sheet at 7PM. 26 Oct full day refetched: Rs 768, 2 leads. Oct MTD 1-27: Rs 25,330, 110 leads, 10 CRM-verified visits = Rs 2,533 each. No visit today.
+- Check: Harish/Pooja/Adal logged?; Jimmit Raval 9702065200 untouched 14 days (14th report); Sanjay Chande 9022666908 no row; Vijay Gopalani typo unfixed (7 days); Latasha Parab never logged (17 days); Palak Mehta / Swapnil Rane not in SVD; Keeran, Sridhar Kumar, Sameer retries; Amey Angane post-visit push; Hetal Satra no CRM.
+- Ads: 2BHK Legacy took 93% of 2BHK spend (Rs 196), 0 leads, CTR 1.77%: recommended cap; 2BHK 7d CPL Rs 253 freq 2.30; 1BHK Hindi Rs 49 CPL today, 7d Rs 141; Studio 7d Rs 160. Gujarati starved. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error; python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date 2026-10-27, Telegram per spec.
+
 ## Added 2026-10-26 (run, ~7PM IST; report filed as 2026-10-26 = run date per spec)
 - 26 Oct so far: Rs 496, 2 leads (Keeran Jamesbond 1BHK Hindi 14:41 Ringing; Amey Deshpande 2BHK 16:03 wants 3BHK 2.05cr), Studio 0 on Rs 164. 25 Oct full day refetched: Rs 974, 4 leads (Arjun Mange Studio broker 22:37 after cutoff). Oct MTD 1-26: Rs 24,537, 106 leads, 10 CRM-verified visits (Amey Angane 26 Oct 3:56PM, CRM Sept 24) = Rs 2,454 each.
 - Check: Jimmit Raval 9702065200 untouched 13 days (13th report); Sanjay Chande 9022666908 no row; Vijay Gopalani typo unfixed (6 days, team dialing wrong number); Latasha Parab never logged (16 days); Palak Mehta / Swapnil Rane not in SVD; Keeran + Sridhar Kumar retry; Sameer 3 failed dials; Hetal Satra no CRM; Srinivas Domal 601 sqft at 1.30cr; Amey Angane budget 65L / 300 sqft fit.
