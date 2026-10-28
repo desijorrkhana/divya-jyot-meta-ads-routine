@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-28 (run, ~7PM IST; report filed as 2026-10-28 = run date per spec)
+- 28 Oct so far: Rs 465, 2 leads (Jigna Maru Studio 00:39; Jyoti Suryarao 1BHK 00:15, already visited w/ broker, out of budget). 27 Oct full day refetched: Rs 725, 5 leads (Kavita Negi Studio 23:43 after cutoff, Ghatkopar 75L). Oct MTD 1-28: Rs 26,001, 113 leads, 10 CRM-verified visits = Rs 2,600 each. No visit since Amey Angane 26 Oct.
+- Team now logging leads same day (all 6 leads of 27-28 Oct have rows). Last report wrongly said 0/4 touched; rows appeared after 7PM snapshot.
+- Check: Jimmit Raval 9702065200 untouched 15 days (15th report); Sanjay Chande 9022666908 no row; Latasha Parab never logged (18 days); Vijay Gopalani phone typo still in row 731 though 28/10 note exists; Hetal Satra no CRM, 3 dials unreached; Keeran, Sridhar, Adal callbacks; Harish Sejpal visit push (439 sqft 1.15cr); Palak Mehta / Swapnil Rane not in SVD.
+- Ads: 2BHK Rs 409 over 27-28 Oct, 0 leads, Legacy 72-92% of spend, 7d CPL Rs 260 freq 2.32: cap Legacy (not acted on). 1BHK 7d CPL Rs 133 best. Studio 7d CPL Rs 171. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error; python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date, Telegram per spec.
+
 ## Added 2026-10-27 (run, ~7PM IST; report filed as 2026-10-27 = run date per spec)
 - 27 Oct so far: Rs 519, 4 leads (Harish Sejpal Studio 03:26 AND 1BHK 03:46; Pooja Mhapsekar 1BHK 16:06; Adal Pinto 1BHK within_3m 18:24), none in sheet at 7PM. 26 Oct full day refetched: Rs 768, 2 leads. Oct MTD 1-27: Rs 25,330, 110 leads, 10 CRM-verified visits = Rs 2,533 each. No visit today.
 - Check: Harish/Pooja/Adal logged?; Jimmit Raval 9702065200 untouched 14 days (14th report); Sanjay Chande 9022666908 no row; Vijay Gopalani typo unfixed (7 days); Latasha Parab never logged (17 days); Palak Mehta / Swapnil Rane not in SVD; Keeran, Sridhar Kumar, Sameer retries; Amey Angane post-visit push; Hetal Satra no CRM.
