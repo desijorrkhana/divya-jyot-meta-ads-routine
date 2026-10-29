@@ -1,5 +1,11 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-29 (run, ~7PM IST; report filed as 2026-10-29 = run date per spec)
+- 29 Oct so far: Rs 479, 1 lead (Bharat Gandhi Studio 12:50, wants 2bhk 1cr Ghatkopar west, logged row 762 same day). 28 Oct full day refetched: Rs 714, 2 leads. Oct MTD 1-28: Rs 26,250, 113 leads, 10 CRM-verified visits = Rs 2,625 each. No visit since Amey Angane 26 Oct.
+- Check: Jimmit Raval 9702065200 untouched 16 days (16th report); Sanjay Chande 9022666908 no row; Latasha Parab never logged (19 days); Vijay Gopalani phone typo row 731; Hetal Satra no CRM; Adal/Keeran/Sridhar callbacks; Harish Sejpal visit date; Palak Mehta / Swapnil Rane not in SVD.
+- Ads: 2BHK 3 days ~Rs 550 / 0 leads, Legacy 61-77% of spend, CPM Rs 592: cap Legacy (not acted on). 1BHK 7d CPL Rs 138 best, 0 leads today. Studio 7d CPL Rs 189. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error; python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date, Telegram per spec.
+
 ## Added 2026-10-28 (run, ~7PM IST; report filed as 2026-10-28 = run date per spec)
 - 28 Oct so far: Rs 465, 2 leads (Jigna Maru Studio 00:39; Jyoti Suryarao 1BHK 00:15, already visited w/ broker, out of budget). 27 Oct full day refetched: Rs 725, 5 leads (Kavita Negi Studio 23:43 after cutoff, Ghatkopar 75L). Oct MTD 1-28: Rs 26,001, 113 leads, 10 CRM-verified visits = Rs 2,600 each. No visit since Amey Angane 26 Oct.
 - Team now logging leads same day (all 6 leads of 27-28 Oct have rows). Last report wrongly said 0/4 touched; rows appeared after 7PM snapshot.
