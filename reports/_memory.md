@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-30 (run, ~7:40PM IST; report filed as 2026-10-30 = run date per spec)
+- 30 Oct so far: Rs 667, 2 leads (Sandeep Shirdhankar Studio 01:49 wants 1bhk; Savita Shinde 2BHK connectivity hook 15:51, budget below 1.55cr, row only Ringing, email typo gmai.com). 29 Oct full day refetched: Rs 577, 2 leads (Bharat Gandhi, Ojesh 19:41 after cutoff). Oct MTD 1-29: Rs 26,827, 115 leads; 1-30 so far Rs 27,494, 117 leads, 10 CRM-verified visits = Rs 2,749 each. No visit since Amey Angane 26 Oct.
+- Team redial blitz 30 Oct: 125 rows noted, 115 unanswered. Suggest WhatsApp. Coming Sat/Sun: Hardik Soni, Tina Shah, Jyotish B, Sudipta Guha, Pranav Kokate: check visits.
+- Check: Jimmit Raval 9702065200 untouched 17 days (17th report); Sanjay Chande 9022666908 no row; Latasha Parab never logged (20 days); Vijay Gopalani typo row 731 (10 days); Hetal Satra no CRM; Savita first real call; Harish Sejpal visit date; Palak Mehta / Swapnil Rane not in SVD.
+- Ads: 2BHK Legacy Rs 160/0 leads, CPM Rs 840, 7d CPL Rs 268: cap Legacy (not acted on); connectivity hook gave Savita. 1BHK 0 leads 2 days, 7d CPL Rs 160. Studio 7d CPL Rs 173. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error; python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date, Telegram per spec.
+
 ## Added 2026-10-29 (run, ~7PM IST; report filed as 2026-10-29 = run date per spec)
 - 29 Oct so far: Rs 479, 1 lead (Bharat Gandhi Studio 12:50, wants 2bhk 1cr Ghatkopar west, logged row 762 same day). 28 Oct full day refetched: Rs 714, 2 leads. Oct MTD 1-28: Rs 26,250, 113 leads, 10 CRM-verified visits = Rs 2,625 each. No visit since Amey Angane 26 Oct.
 - Check: Jimmit Raval 9702065200 untouched 16 days (16th report); Sanjay Chande 9022666908 no row; Latasha Parab never logged (19 days); Vijay Gopalani phone typo row 731; Hetal Satra no CRM; Adal/Keeran/Sridhar callbacks; Harish Sejpal visit date; Palak Mehta / Swapnil Rane not in SVD.
