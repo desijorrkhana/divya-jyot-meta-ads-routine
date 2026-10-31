@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-10-31 (run, ~7PM IST; filed as 2026-10-31 = run date per spec)
+- 31 Oct so far: Rs 313, 1 lead (Pravin Gole Studio just_exploring 18:42, not in sheet at run time: check he was logged). 30 Oct full day refetched: Rs 775, 2 leads. Oct MTD 1-31 so far: Rs 27,915, 118 leads, 10 CRM-verified visits = Rs 2,792 each. No visit since Amey Angane 26 Oct (5 days).
+- Redial blitz was one day only (125 notes 30 Oct, 1 on 31 Oct). Tina Shah "Coming sunday". Check Sun 1 Nov visits: Tina Shah, Hardik Soni, Jyotish B, Sudipta Guha, Pranav Kokate.
+- Check: Jimmit Raval 9702065200 (18 days, 18th report); Sanjay Chande 9022666908 no row; Latasha Parab never logged (21 days); Vijay Gopalani row 731 typo; Savita Shinde CRM budget below 1.55cr vs team note 1.70cr (above 2BHK ceiling); rows 762-765 have no dated call attempts.
+- Ads: 2BHK Legacy 0 clicks/0 leads again (cap not acted on, 4th report); 2BHK freq 2.16 7d; 1BHK Hindi CTR 5.2% but 0 leads 3 days (check form/OTP); Studio form pulls 1/2BHK seekers. Ask Keval: 1BHK price band.
+- Setup: first fetch gives sheet error; run python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler prompt asked for yesterday's date and omitted Telegram: filed under run date, Telegram per spec.
+
 ## Added 2026-10-30 (run, ~7:40PM IST; report filed as 2026-10-30 = run date per spec)
 - 30 Oct so far: Rs 667, 2 leads (Sandeep Shirdhankar Studio 01:49 wants 1bhk; Savita Shinde 2BHK connectivity hook 15:51, budget below 1.55cr, row only Ringing, email typo gmai.com). 29 Oct full day refetched: Rs 577, 2 leads (Bharat Gandhi, Ojesh 19:41 after cutoff). Oct MTD 1-29: Rs 26,827, 115 leads; 1-30 so far Rs 27,494, 117 leads, 10 CRM-verified visits = Rs 2,749 each. No visit since Amey Angane 26 Oct.
 - Team redial blitz 30 Oct: 125 rows noted, 115 unanswered. Suggest WhatsApp. Coming Sat/Sun: Hardik Soni, Tina Shah, Jyotish B, Sudipta Guha, Pranav Kokate: check visits.
