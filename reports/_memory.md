@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-01 (run, ~7PM IST; filed as 2026-11-01 = run date per spec)
+- 1 Nov so far: Rs 720, Meta 2 leads (Nitin Khatri 08:44, Monisons 13:20 Studio); CRM also has Prashant Shah 2BHK 18:59:59 (Meta lag). Yesterday 31 Oct full: Rs 361, 1 lead. October (2-31): Rs 27,020, 112 leads, 11 CRM-verified visits = Rs 2,456 each.
+- Visits: Rajesh Bhinde 31 Oct, Sahil M (8976277579) 1 Nov. Sunday no-shows: Tina Shah, Jyotish B (next week), Sudipta Guha, Hardik Soni. Check if any come 2-3 Nov.
+- Check: Nitin Khatri, Monisons, Prashant Shah actually reached? Jimmit Raval 9702065200 (19 days); Sanjay Chande 9022666908 no row; Latasha Parab never logged (22 days); Vijay Gopalani row 731 typo; Prashant/Savita above 2BHK ceiling.
+- Ads: 2BHK CTR collapsed to 0.88% today (Rs 244, 4 clicks), Legacy cap not acted on (5th report); 1BHK 4 days 0 leads; spend jumped to Rs 720. Ask Keval: 1BHK price band.
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py (first fetch gave sheet error otherwise); scheduler asked yesterday's date and omitted Telegram: filed under run date, Telegram per spec.
+
 ## Added 2026-10-31 (run, ~7PM IST; filed as 2026-10-31 = run date per spec)
 - 31 Oct so far: Rs 313, 1 lead (Pravin Gole Studio just_exploring 18:42, not in sheet at run time: check he was logged). 30 Oct full day refetched: Rs 775, 2 leads. Oct MTD 1-31 so far: Rs 27,915, 118 leads, 10 CRM-verified visits = Rs 2,792 each. No visit since Amey Angane 26 Oct (5 days).
 - Redial blitz was one day only (125 notes 30 Oct, 1 on 31 Oct). Tina Shah "Coming sunday". Check Sun 1 Nov visits: Tina Shah, Hardik Soni, Jyotish B, Sudipta Guha, Pranav Kokate.
