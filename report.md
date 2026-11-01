@@ -8,7 +8,7 @@ Rs 720 spent, 2 leads per Meta (3 in CRM), and TWO site visits in 2 days after a
 FOLLOW-UP FROM LAST REPORT
 - Check on Pravin Gole: logged in the sheet (row 766), first call "Ringing" on creation. Credit: the row appeared within about 17h worst case.
 - Tina Shah "Coming sunday": no show, 1/11 note says "Ringing". Jyotish B: "Next week coming". Sudipta Guha: "Coming tomorrow" on 30/10, 1/11 "Cut the call". Hardik Soni: "Coming saturday" on 30/10, 31/10 Ringing, no visit. So the 5 Sunday hopes produced 1 visit (Sahil, who was a different lead).
-- Sahil M (8976277579): the 5 Oct-era "Ringing" lead dialed 20+ times since 14 Sep finally came, 49 days after his 13 Sep CRM arrival. Persistence paid, but note he was dialed 26 times.
+- Sahil M (8976277579): the "Ringing" lead dialed about 25 times since 14 Sep finally came, 49 days after his 13 Sep CRM arrival. Persistence paid, but note he was dialed about 25 times.
 - Jimmit Raval 9702065200 (within_3m): still only the 4/10 note, 19 days now, 19th report. Sanjay Chande 9022666908 (20 Oct): still no row. Latasha Parab 9769562409 (1BHK, 10 Oct): never logged, 22 days.
 - Vijay Gopalani row 731: still the wrong number 8097193237 vs CRM 8097193437.
 - 2BHK Legacy hook cap: not acted on (5th report). Studio form BHK/budget question: not acted on.
@@ -26,7 +26,7 @@ Contacted by the team: 2 of 3 had a dial logged (Nitin: Busy, Monisons: Ringing)
 Site visits logged today: 1 (Sahil, 2BHK-form lead). Yesterday 1 (Rajesh Bhinde).
 
 AD PERFORMANCE (agency hat)
-STUDIO today: Rs 246, 2 leads, CTR 2.71%, CPC Rs 8.78, CPM Rs 238, freq 1.19, reach 866 is the account total (Studio 7d freq 1.57). Yesterday Rs 164, 1 lead, CTR 1.82%. 7d: Rs 1,748, 9 leads, CPL Rs 194, CTR 2.44%. Best day of the week for Studio; both leads within_3m. Delivery healthy.
+STUDIO today: Rs 246, 2 leads, CTR 2.71%, CPC Rs 8.78, CPM Rs 238, freq 1.19, reach 866. Yesterday Rs 164, 1 lead, CTR 1.82%. 7d: Rs 1,748, 9 leads, CPL Rs 194, CTR 2.44%. Best day of the week for Studio; both leads within_3m. Delivery healthy.
 2BHK today: Rs 244, 0 leads, CTR 0.88%, CPC Rs 60.89, CPM Rs 535, freq 1.25. This is a bad delivery day: connectivity hook Rs 147 / 3 clicks (CTR 1.13%), Legacy hook Rs 96 / 1 click (CTR 0.53%), 36 Seconds Rs 0.30. Yesterday CTR was 4.09% on Rs 88, so the day has swung hard; spend jumped 2.8x with almost no clicks. 7d: Rs 1,575, 3 leads, CPL Rs 525, freq 2.06 on reach only 1,682. The audience is saturated and the cost is climbing. Do not judge on CPL alone, but the click collapse is the real signal: refresh the creative or widen the audience.
 1BHK today: Rs 230, 0 leads, CTR 2.97%, CPC Rs 9.60, CPM Rs 285, freq 1.28. Hindi takes everything (Rs 230, 24 clicks); Gujarati Rs 0.60 is starved. Yesterday Rs 109, CTR 4.48%. 7d: Rs 1,574, 6 leads, CPL Rs 262, freq 1.95. 24 clicks and no form fill: check form friction / OTP step.
 Spend today (Rs 720 to 7PM) is already near the whole of yesterday plus 30 Oct: budgets look uncapped on 2BHK/1BHK today. Delivery live on all three.
