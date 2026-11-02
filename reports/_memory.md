@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-02 (run, ~7PM IST; filed as 2026-11-02 = run date per spec)
+- 2 Nov so far: Rs 567, 6 leads (Studio: Priyank Thakkar, Raju Naik, Seema Hemani, Jayprakash Jadhav; 2BHK: Milind Jadhav 1.5-1.75cr; 1BHK: Sahil Sawant). NONE in the sheet at run time; Prashant Shah (1 Nov 18:59) also unlogged after 25h. Sheet last row 768. Check all 7 got rows/calls. Priyank has old row 250 (29 Jul "by mistake").
+- 1 Nov full day: Rs 945, 3 leads. Oct 3-31: Rs 25,994, 108 leads, 11 verified visits = Rs 2,363. Nov MTD: Rs 1,512, 9 leads, 1 visit (Sahil M).
+- Ads: 2BHK Legacy made today's lead, so I softened the cap advice; suggest moving the form budget bucket to 1.4cr. 1BHK zero-lead streak ended. Ask Keval: 1BHK price band.
+- Old: Jimmit Raval, Sanjay Chande, Latasha Parab, Vijay Gopalani typo, Hetal Satra not re-checked.
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun fetch_all.py. Scheduler asked yesterday's date: filed under run date.
+
 ## Added 2026-11-01 (run, ~7PM IST; filed as 2026-11-01 = run date per spec)
 - 1 Nov so far: Rs 720, Meta 2 leads (Nitin Khatri 08:44, Monisons 13:20 Studio); CRM also has Prashant Shah 2BHK 18:59:59 (Meta lag). Yesterday 31 Oct full: Rs 361, 1 lead. October (2-31): Rs 27,020, 112 leads, 11 CRM-verified visits = Rs 2,456 each.
 - Visits: Rajesh Bhinde 31 Oct, Sahil M (8976277579) 1 Nov. Sunday no-shows: Tina Shah, Jyotish B (next week), Sudipta Guha, Hardik Soni. Check if any come 2-3 Nov.
