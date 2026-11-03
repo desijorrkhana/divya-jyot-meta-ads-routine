@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-03 (run, ~7PM IST; filed as 2026-11-03 = run date per spec)
+- 3 Nov so far: Rs 358, 3 Studio leads (chetan joshi, Deepak Loke, Sachin Alawani), all logged + dialed within ~3h. 2BHK 0 clicks on Rs 118 (freq 2.08 7d): refresh if repeats. 1BHK 11 clicks 0 leads.
+- Milind Jadhav 9867798610 (2BHK 1.5-1.75cr, arrived 2 Nov 01:15) still NOT in sheet at 42h. Maybe same person as old Milind rows 299/416 (milind.jadhav123 email). Sheet row nos jump 769->780.
+- Backlog from 2 Nov now has rows but only ONE dial each (Cut the call x3, Ringing, Busy). Check for 2nd attempts. Seema Hemani = Ghatkopar 2BHK 1.5cr mismatch; Monisons 1RK 65L mismatch; Sachin wants 1BHK 75L.
+- Window 4 Oct-3 Nov: Rs 27,375, 115 leads, 10 verified visits = Rs 2,737. Nov MTD Rs 2,032, 12 leads, 1 visit.
+- Still open: 1BHK price band (ask Keval), 2BHK bucket to 1.4cr, Studio BHK/budget question, Jimmit Raval, Sanjay Chande, Latasha Parab, Vijay Gopalani typo, Hetal Satra, Sunday no-shows.
+- Setup: first fetch had sheet error (No module google); python3 -m pip install --ignore-installed ... then rerun fixed it. Telegram send not in scheduler prompt but spec requires it.
+
 ## Added 2026-11-02 (run, ~7PM IST; filed as 2026-11-02 = run date per spec)
 - 2 Nov so far: Rs 567, 6 leads (Studio: Priyank Thakkar, Raju Naik, Seema Hemani, Jayprakash Jadhav; 2BHK: Milind Jadhav 1.5-1.75cr; 1BHK: Sahil Sawant). NONE in the sheet at run time; Prashant Shah (1 Nov 18:59) also unlogged after 25h. Sheet last row 768. Check all 7 got rows/calls. Priyank has old row 250 (29 Jul "by mistake").
 - 1 Nov full day: Rs 945, 3 leads. Oct 3-31: Rs 25,994, 108 leads, 11 verified visits = Rs 2,363. Nov MTD: Rs 1,512, 9 leads, 1 visit (Sahil M).
