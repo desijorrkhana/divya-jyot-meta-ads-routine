@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-04 (run, ~7PM IST; filed as 2026-11-04 = run date per spec)
+- 4 Nov so far: Rs 499, 1 lead (Jackson 1BHK Hindi 07:20, logged + dialed by ~13:22). Studio and 2BHK 0 leads. 3 Nov refetched: Rs 558, 4 leads (Anthony Francis 1BHK 19:19, logged next day). Window 5 Oct-4 Nov: Rs 26,853, 113 leads, 9 verified visits = Rs 2,984. Nov MTD Rs 2,732, 1 visit (Sahil).
+- Milind Jadhav 9867798610 (2BHK 1.5-1.75cr, arrived 2 Nov 01:15) still NOT in sheet at ~66h. 2 Nov backlog has only ONE dial each (4 Nov): check second attempts.
+- Ads: 2BHK 7d CPL Rs 491 freq 1.95, connectivity hook starved (42 impr); Studio CTR 1.2% vs 3.2% yesterday; 1BHK Hindi steady CTR 3.5%. Ask Keval: 1BHK price band.
+- Old: Jimmit Raval, Sanjay Chande, Latasha Parab, Vijay Gopalani typo, Hetal Satra not re-checked. Sunday no-shows (Tina Shah, Jyotish B, Sudipta Guha, Hardik Soni) not in SVD.
+- Setup: first fetch had sheet error; python3 -m pip install --ignore-installed ... then rerun fixed it. Scheduler asked yesterday's date + omitted Telegram: filed under run date, Telegram per spec.
+
 ## Added 2026-11-03 (run, ~7PM IST; filed as 2026-11-03 = run date per spec)
 - 3 Nov so far: Rs 358, 3 Studio leads (chetan joshi, Deepak Loke, Sachin Alawani), all logged + dialed within ~3h. 2BHK 0 clicks on Rs 118 (freq 2.08 7d): refresh if repeats. 1BHK 11 clicks 0 leads.
 - Milind Jadhav 9867798610 (2BHK 1.5-1.75cr, arrived 2 Nov 01:15) still NOT in sheet at 42h. Maybe same person as old Milind rows 299/416 (milind.jadhav123 email). Sheet row nos jump 769->780.
