@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-05 (run, ~7PM IST; filed as 2026-11-05 = run date per spec)
+- 5 Nov so far: Rs 524, 3 leads (Pritam Chaudhari Studio re-lead of old row 225; Kunika Pawar + Geeta Patil 2BHK). Late 4 Nov: Praveen Mishra 21:59, Mitesh Madnani 22:47 (2BHK). Window 6 Oct-5 Nov: Rs 26,574, 116 leads, 9 verified visits = Rs 2,953. Nov MTD Rs 3,536, 19 leads, 1 visit. No visit since Sahil 1 Nov.
+- Milind Jadhav 9867798610 still NOT in sheet at ~90h. Sheet Milind 8383061069 shares email.
+- Mitesh Madnani asked callback evening 5 Nov: check. Team did second dials on 5 Nov for all backlog; still nobody reached. Suggest WhatsApp.
+- Ads: 2BHK recovered (CTR 3.5%, Rs 96 CPL today, only 36 Seconds ad delivering); 1BHK 16 clicks 0 leads, 7d CPL Rs 491: test form. Suggested 2BHK budget bucket cap 1.4cr. Ask Keval: 1BHK price band.
+- Old: Jimmit Raval, Sanjay Chande, Latasha Parab, Vijay Gopalani typo, Hetal Satra not re-checked. Sunday no-shows not in SVD.
+- Setup: first fetch had sheet error; python3 -m pip install --ignore-installed ... then rerun fixed it (CLAUDE.md is CLAUDE-crossref-routine.md).
+
 ## Added 2026-11-04 (run, ~7PM IST; filed as 2026-11-04 = run date per spec)
 - 4 Nov so far: Rs 499, 1 lead (Jackson 1BHK Hindi 07:20, logged + dialed by ~13:22). Studio and 2BHK 0 leads. 3 Nov refetched: Rs 558, 4 leads (Anthony Francis 1BHK 19:19, logged next day). Window 5 Oct-4 Nov: Rs 26,853, 113 leads, 9 verified visits = Rs 2,984. Nov MTD Rs 2,732, 1 visit (Sahil).
 - Milind Jadhav 9867798610 (2BHK 1.5-1.75cr, arrived 2 Nov 01:15) still NOT in sheet at ~66h. 2 Nov backlog has only ONE dial each (4 Nov): check second attempts.
