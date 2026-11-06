@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-06 (run, ~7PM IST; filed as 2026-11-06 = run date per spec)
+- 6 Nov so far: Rs 441, 3 leads but 2 people (Jagannathreddy Reddy filled Studio 07:57 + 1BHK 08:17; Vidyanand Pathak 1BHK 00:42). 5 Nov full: Rs 738, 3 leads. Window 7 Oct-6 Nov: Rs 26,260, 115 leads, 9 verified visits = Rs 2,918. Nov MTD Rs 4,192, 22 leads, 1 visit (Sahil 1 Nov). No visit in 5 days.
+- Milind Jadhav 9867798610 still NOT in sheet at ~114h. Mitesh Madnani + Vidyanand Pathak have evening callbacks pending: check notes.
+- No 6/11 dial on the 2-5 Nov backlog at run time. Suggest WhatsApp.
+- Ads: 2BHK 0 leads, freq 2.03 7d; 1BHK Gujarati gets Rs 0.02 (merge or fund); Studio CTR 1.54%. Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
+- Old: Jimmit Raval, Sanjay Chande, Latasha Parab, Vijay Gopalani typo, Hetal Satra not re-checked. Sunday no-shows not in SVD.
+- Setup: first fetch has sheet error; python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl then rerun. Scheduler asked yesterday's date and omitted Telegram: filed under run date, Telegram per spec.
+
 ## Added 2026-11-05 (run, ~7PM IST; filed as 2026-11-05 = run date per spec)
 - 5 Nov so far: Rs 524, 3 leads (Pritam Chaudhari Studio re-lead of old row 225; Kunika Pawar + Geeta Patil 2BHK). Late 4 Nov: Praveen Mishra 21:59, Mitesh Madnani 22:47 (2BHK). Window 6 Oct-5 Nov: Rs 26,574, 116 leads, 9 verified visits = Rs 2,953. Nov MTD Rs 3,536, 19 leads, 1 visit. No visit since Sahil 1 Nov.
 - Milind Jadhav 9867798610 still NOT in sheet at ~90h. Sheet Milind 8383061069 shares email.
