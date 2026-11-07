@@ -1,5 +1,15 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-07 (run, ~7PM IST; filed as 2026-11-07 = run date per spec)
+- 7 Nov so far: Rs 420, 0 leads. 6 Nov restated Rs 636, 4 leads (Charmee Khimsariya 22:01, 2BHK, 1.30cr, Mulund east: best warm candidate, push Sunday visit). Window 8 Oct-7 Nov: Rs 25,834, 113 leads, 9 verified visits = Rs 2,870. Nov MTD Rs 4,807, 23 leads, 1 visit. No visit since Sahil 1 Nov.
+- Milind Jadhav 9867798610 still NOT in sheet at ~138h.
+- 2-6 Nov backlog dialed 7/11 (3rd round), nobody reached. Recommended WhatsApp.
+- 2BHK freq 2.11 7d, CTR 1.82% today: refresh hook. 1BHK Gujarati Rs 0.61: merge or fund.
+- Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
+- Setup: first pip install hit wrong python; use python3 -m pip install --ignore-installed ... (already a learned rule).
+- Scheduler asked yesterday's date: filed under run date.
+
+
 ## Added 2026-11-06 (run, ~7PM IST; filed as 2026-11-06 = run date per spec)
 - 6 Nov so far: Rs 441, 3 leads but 2 people (Jagannathreddy Reddy filled Studio 07:57 + 1BHK 08:17; Vidyanand Pathak 1BHK 00:42). 5 Nov full: Rs 738, 3 leads. Window 7 Oct-6 Nov: Rs 26,260, 115 leads, 9 verified visits = Rs 2,918. Nov MTD Rs 4,192, 22 leads, 1 visit (Sahil 1 Nov). No visit in 5 days.
 - Milind Jadhav 9867798610 still NOT in sheet at ~114h. Mitesh Madnani + Vidyanand Pathak have evening callbacks pending: check notes.
