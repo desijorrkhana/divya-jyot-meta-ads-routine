@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-08 (run, ~7PM IST; filed as 2026-11-08 = run date per spec)
+- 8 Nov so far: Rs 627, 2 leads (Ankit Rai 1BHK ig 01:04, 3-6m, row 798 "Cut the call"; Sanjay Chande 1BHK fb 11:23, within_3m, row 799 "Switch off"). 7 Nov refetched: Rs 503, 0 leads. Window 9 Oct-8 Nov: Rs 25,481, 113 leads, 9 verified visits = Rs 2,831. Nov MTD Rs 5,516, 25 leads, 1 visit (Sahil 1 Nov, 7 days ago).
+- Milind Jadhav 9867798610 still NOT in sheet at ~162h (8th report). Sanjay Chande CLOSED (logged 8 Nov, same phone as old Rakhi chande row 623).
+- No dial on any old row today (Sunday). 2-6 Nov backlog 0 pickups in 3 rounds: WhatsApp. Check Ankit/Sanjay redials and Charmee second touch.
+- Ads: Studio CTR 0.95% (was 2.30%) watch; 2BHK Legacy 66% of spend, 0 leads, freq 2.14 7d: cap; 1BHK Hindi CPL Rs 101 today, Gujarati Rs 0.06. Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
+- Old: Jimmit Raval, Latasha Parab, Vijay Gopalani typo, Hetal Satra not re-checked.
+- Setup: first fetch had 'No module google'; python3 -m pip install --ignore-installed ... then rerun (learned rule). Scheduler asked yesterday's date: filed under run date.
+
 ## Added 2026-11-07 (run, ~7PM IST; filed as 2026-11-07 = run date per spec)
 - 7 Nov so far: Rs 420, 0 leads. 6 Nov restated Rs 636, 4 leads (Charmee Khimsariya 22:01, 2BHK, 1.30cr, Mulund east: best warm candidate, push Sunday visit). Window 8 Oct-7 Nov: Rs 25,834, 113 leads, 9 verified visits = Rs 2,870. Nov MTD Rs 4,807, 23 leads, 1 visit. No visit since Sahil 1 Nov.
 - Milind Jadhav 9867798610 still NOT in sheet at ~138h.
