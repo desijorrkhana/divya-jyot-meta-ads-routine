@@ -1,5 +1,12 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-09 (run, ~7PM IST; filed as 2026-11-09 = run date per spec)
+- 9 Nov so far: Rs 680, 7 leads (1BHK 5: Rohit Jain, Haresh Bhogte, Rashmi Mojidra, Devadas Kandathil, Rajan Rajput; Studio Harish Ganatra; 2BHK Ashishraj Malhotra). 8 Nov restated Rs 886, 5 leads (late: Ashok Thakkar, Nirav Shah, Chirag Shukla). Window 10 Oct-9 Nov: Rs 25,534, 120 leads, 10 verified visits = Rs 2,553. Nov MTD Rs 6,455, 35 leads, 2 visits (Sahil 1 Nov, Anthony Francis 9 Nov).
+- Milind Jadhav 9867798610 still NOT in sheet at ~185h (9th report). 
+- Check: Nirav Shah (said coming 8 Nov afternoon, no SVD), Chirag Shukla (coming Sat/Sun, bad email), Charmee (1.35cr final, inside ceiling: re-pitch), 2-6 Nov backlog 4 rounds 0 pickups: WhatsApp. Harish/Rohit/Haresh/Devadas need 2nd dial.
+- Ads: 1BHK Hindi CPL Rs 44 today, 2BHK 7d freq 2.18 (36 Seconds back leading), Studio CTR recovered 1.72%. Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
+- Setup: first fetch 'No module google'; pip install --ignore-installed ... then rerun. Scheduler asked yesterday's date; filed under run date.
+
 ## Added 2026-11-08 (run, ~7PM IST; filed as 2026-11-08 = run date per spec)
 - 8 Nov so far: Rs 627, 2 leads (Ankit Rai 1BHK ig 01:04, 3-6m, row 798 "Cut the call"; Sanjay Chande 1BHK fb 11:23, within_3m, row 799 "Switch off"). 7 Nov refetched: Rs 503, 0 leads. Window 9 Oct-8 Nov: Rs 25,481, 113 leads, 9 verified visits = Rs 2,831. Nov MTD Rs 5,516, 25 leads, 1 visit (Sahil 1 Nov, 7 days ago).
 - Milind Jadhav 9867798610 still NOT in sheet at ~162h (8th report). Sanjay Chande CLOSED (logged 8 Nov, same phone as old Rakhi chande row 623).
