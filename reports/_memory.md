@@ -1,5 +1,13 @@
 # Routine memory - read at the start of every run, update at the end
 
+## Added 2026-11-10 (run, ~6PM IST; filed as 2026-11-10 = run date per spec)
+- 10 Nov so far: Rs 534, 3 leads (Studio Manidha Gaonkar 17:32; 2BHK Mitesh Thakkar 00:37, Shivdas Shedge 09:36). 1BHK 0 leads on Rs 174 (22 clicks). 9 Nov restated Rs 918, 9 leads (late: Nikeeta Jaisswal 20:23, Nishant Kamdar 20:59). Window 11 Oct-10 Nov: Rs 25,583, 121 leads, 10 verified visits = Rs 2,558. Nov MTD Rs 7,228, 40 leads, 2 visits.
+- URGENT: Shivdas Shedge sheet row 814 phone 9820900416 vs CRM 9820900146 (typo), said coming 11 Nov. Check fixed + visit.
+- Milind Jadhav 9867798610 still NOT in sheet at ~209h (10th report).
+- Check: Nishant Kamdar (Thane, said coming 10 Nov, no SVD), Nirav Shah + Chirag Shukla no-shows, backlog 2-6 Nov 0 dials on 10 Nov, WhatsApp untried. Anthony Francis post-visit note.
+- Ads: 2BHK 7d freq 2.24 (CPL Rs 204), connectivity hook Rs 16 lead on 72 impr; Legacy 0 leads; Studio 7d CPL Rs 292; 1BHK 7d CPL Rs 117. Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
+- Setup: pip install --ignore-installed ... then rerun fetch (works). Scheduler asked yesterday's date: filed under run date.
+
 ## Added 2026-11-09 (run, ~7PM IST; filed as 2026-11-09 = run date per spec)
 - 9 Nov so far: Rs 680, 7 leads (1BHK 5: Rohit Jain, Haresh Bhogte, Rashmi Mojidra, Devadas Kandathil, Rajan Rajput; Studio Harish Ganatra; 2BHK Ashishraj Malhotra). 8 Nov restated Rs 886, 5 leads (late: Ashok Thakkar, Nirav Shah, Chirag Shukla). Window 10 Oct-9 Nov: Rs 25,534, 120 leads, 10 verified visits = Rs 2,553. Nov MTD Rs 6,455, 35 leads, 2 visits (Sahil 1 Nov, Anthony Francis 9 Nov).
 - Milind Jadhav 9867798610 still NOT in sheet at ~185h (9th report). 
