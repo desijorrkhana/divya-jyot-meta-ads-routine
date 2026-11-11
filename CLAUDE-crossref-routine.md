@@ -422,6 +422,12 @@ the list. Commit message must say what was learned in one line.
   and reverse-miss phones; for now, treat any reverse-check phone cell with 11+ digits and a
   forward-miss CRM phone of the same name as a likely insertion-typo candidate worth a manual
   check.
+  **ADDED 2026-11-11 — a typo propagates into the SVD tab.** Shivdas Shedge's wrong number
+  (`9820900416`, CRM `9820900146`, flagged 10 Nov) was copied verbatim onto his SVD visit row
+  the next day, so a strict phone-only CRM match would have reported his real, CRM-backed
+  visit as "unverified" and dropped it from cost-per-visit. Standing rule: feed the typo pairs
+  found by the forward/reverse scan into SVD verification (count the visit, label it
+  "typo-matched"), and flag that the visit must NOT be pushed to Meta under the wrong number.
 - 2026-07-30 (MERGED with 07-21 typo-year note): `facebook_tab`'s Created column is NOT uniformly
   DD/MM/YYYY — pre-V3 rows from 2025 use MM/DD/YYYY (unambiguous only when day>12, e.g.
   "07/27/2025"), while 2026 V3-era rows use DD/MM/YYYY (e.g. "21/7/2026"). A parser that tries
