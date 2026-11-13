@@ -1,6 +1,15 @@
 # Routine memory - read at the start of every run, update at the end
 # Rewritten fresh each run (spec: keep under ~40 lines). Older daily blocks live in git history and in reports/*.md.
 
+## Added 2026-11-13 (run, ~8PM IST, fired an hour late; filed as 2026-11-13 = run date per spec)
+- 13 Nov so far: Rs 476, 3 leads (Studio Vilas Dhale 9819731253 08:58, Sahil Devulkar 9769692265 12:55; 1BHK Papanna Gowda 9619399664 02:21 re-lead, old row 1832 "Not interested" 7/11). 12 Nov restated Rs 608, 2 leads (late: Rikin Gandhi 9867932469 1BHK 19:46). Window 14 Oct-13 Nov: Rs 24,274, 121 leads, 11 verified visits = Rs 2,207. Nov MTD Rs 9,273, 48 leads, 4 visits = Rs 2,318 (8.3%).
+- WORST MISS: NO new fb-tab row since 10 Nov (last row 814 Manidha) although team redialed 58 rows on 13/11. 8 unlogged: Bharat Zambare 9653328977, Sandeep Singh 7069005482, Krutanjali Vaidya 8879369158 (all 11 Nov, within 3m), Dilip Panchal 9820368746, Rikin Gandhi, Papanna, Vilas Dhale, Sahil Devulkar. Check tomorrow: rows + calls + lag. Asked 3 times for twice-daily CRM check; told Keval it needs to come from him.
+- VISIT: Vidyanand Pathak 9967131877 visited 13 Nov (SVD row 138, CRM lead 6 Nov 1BHK Hindi), said "today & saturday": check 14 Nov revisit. Anthony Francis due 14-15 Nov (not reconfirmed). Mitesh Madnani 2BHK 1.50cr with parking: pitch. Sanjay Chande wants 2BHK 1.10 (mismatch). Harish Ganatra = broker.
+- Shivdas typo: fb row 813 FIXED (9820900146); SVD row 137 still 9820900416. Milind Jadhav 9867798610 not in sheet, 13th report: said I will keep him in forward-check count only, stop listing in follow-ups.
+- Ads: 1BHK dry streak OVER (form works, drop the form-test ask). Studio 7d CPL Rs 358 (6-12 Nov) but Rs 292 incl today: withdrew the Rs 50/day shift. 2BHK 0 leads 12-13 Nov (Rs 344, 20 link clicks, about 10% odds), 7d freq 2.33 (5 reports climbing): new hook + retire Legacy (0 leads, Rs 252 7d). Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
+- Redial rhythm rows touched: 109, 0, 79, 0, 58 (9-13 Nov). 13/11 round connected 6 of 61 notes: advised WhatsApp + after-7PM slot.
+- Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl, then fetch (worked first try). Scheduler asked yesterday's date: filed under run date. CLAUDE.md = CLAUDE-crossref-routine.md.
+
 ## Added 2026-11-12 (run, ~7PM IST; filed as 2026-11-12 = run date per spec)
 - 12 Nov so far: Rs 384, 1 lead (Studio Dilip B. Panchal 9820368746, 18:08 ig, just exploring). 11 Nov restated Rs 738, 3 leads (unchanged). Window 13 Oct-12 Nov: Rs 24,488, 122 leads, 10 verified visits = Rs 2,449. Nov MTD Rs 8,572, 44 leads, 3 visits = Rs 2,857.
 - WORST MISS: Facebook tab had ZERO activity 12 Nov (0 rows with 12/11 note, last row still 814 Manidha). 11 Nov leads Bharat Zambare 9653328977, Sandeep Singh 7069005482, Krutanjali Vaidya 8879369158 (all within 3m) STILL no row at 24-31h. Check tomorrow: rows + calls + lag. Pattern: fb-tab rows touched 109 (9/11), 0 (10/11), 79 (11/11), 0 (12/11) = every other day; asked for twice-daily CRM check.
@@ -18,11 +27,3 @@
 - Team did 79-row redial blitz 11/11 (0 on 10/11, 109 on 9/11): every-other-day pattern. 2-6 Nov backlog 6th round all Ringing, Kunika skipped; no WhatsApp evidence. No-shows: Nishant Kamdar, Nirav Shah (11/11 Ringing), Chirag Shukla (no dial since 8/11). Charmee 1.35cr not re-pitched. Rajan Singh Rajput now 2BHK 1.30cr (pitch). Dhaval (Urmi) 22 post-visit dials: advised stop.
 - Ads: 1BHK 2 dry days (Rs 455, 29 link clicks, 0 leads) -> asked for a form test; 7d 12 leads Rs 162. 2BHK 7d freq 2.29 (2.18 -> 2.24 -> 2.29), CPL Rs 144, 36 Seconds 10 of 12 leads; Legacy 0 leads Rs 243 7d. Studio 7d CPL Rs 319 rising; threshold set: Rs 350 with no visit -> shift Rs 50/day to 2BHK. Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
 - Setup: python3 -m pip install --ignore-installed cffi cryptography google-api-python-client google-auth google-auth-httplib2 openpyxl, then fetch. Scheduler asked yesterday's date: filed under run date. CLAUDE.md = CLAUDE-crossref-routine.md.
-
-## Added 2026-11-10 (run, ~6PM IST; filed as 2026-11-10 = run date per spec)
-- 10 Nov so far: Rs 534, 3 leads (Studio Manidha Gaonkar 17:32; 2BHK Mitesh Thakkar 00:37, Shivdas Shedge 09:36). 1BHK 0 leads on Rs 174 (22 clicks). 9 Nov restated Rs 918, 9 leads (late: Nikeeta Jaisswal 20:23, Nishant Kamdar 20:59). Window 11 Oct-10 Nov: Rs 25,583, 121 leads, 10 verified visits = Rs 2,558. Nov MTD Rs 7,228, 40 leads, 2 visits.
-- URGENT: Shivdas Shedge sheet row 814 phone 9820900416 vs CRM 9820900146 (typo), said coming 11 Nov. Check fixed + visit.
-- Milind Jadhav 9867798610 still NOT in sheet at ~209h (10th report).
-- Check: Nishant Kamdar (Thane, said coming 10 Nov, no SVD), Nirav Shah + Chirag Shukla no-shows, backlog 2-6 Nov 0 dials on 10 Nov, WhatsApp untried. Anthony Francis post-visit note.
-- Ads: 2BHK 7d freq 2.24 (CPL Rs 204), connectivity hook Rs 16 lead on 72 impr; Legacy 0 leads; Studio 7d CPL Rs 292; 1BHK 7d CPL Rs 117. Ask Keval: 1BHK price band; 2BHK bucket to 1.4cr.
-- Setup: pip install --ignore-installed ... then rerun fetch (works). Scheduler asked yesterday's date: filed under run date.
