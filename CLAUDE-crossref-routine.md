@@ -357,6 +357,9 @@ the list. Commit message must say what was learned in one line.
   count (caught 5 Sep: Nityanand Singh's same-day visit had source "Facebbok" and was
   initially missed). When classifying SVD rows by source, match "facebbok" too, or better,
   classify by CRM-phone-match first and treat source spelling as informational only.
+  (2026-11-19: a third and fourth variant appeared, "Fcaebook" and "Facebookk"; "Fcaebook" on
+  Laxman Kinlekar's visit row was dropped by the dashboard's two-spelling list. Match fuzzily,
+  e.g. difflib ratio to "facebook" >= 0.75, never by enumerating typos.)
   **ADDED 2026-09-22: the "FB call" / relative-tag marker does NOT live in the `Source`
   column at all — it's in the blank-header spacer column immediately BEFORE `Remarks` (right
   after `Req Flat`; `Source` stays "Facebook" either way).** A classifier that checks `Source`
