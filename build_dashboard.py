@@ -7,6 +7,7 @@ are embedded as JSON and rendered client-side, so the date-range filter works
 offline with no server. Every reports/YYYY-MM-DD.md is embedded in the Reports
 section, so the archive travels with the file.
 """
+import difflib
 import html
 import json, os, re, glob
 from datetime import datetime, timedelta, timezone
@@ -207,8 +208,12 @@ def build():
         # (2026-09-05 learned rule; Nityanand Singh's row still carries it, uncorrected,
         # as of 2026-09-19). A naive "facebook" substring check silently drops these rows
         # from the visit count entirely. Match both spellings.
-        src_l = (r[i_src] if len(r) > i_src else "").lower()
-        if not vd or ("facebook" not in src_l and "facebbok" not in src_l):
+        # 2026-11-19: a third variant, "Fcaebook" (Laxman Kinlekar's visit row), slipped
+        # past the two-spelling list, so match fuzzily instead of enumerating typos.
+        src_l = (r[i_src] if len(r) > i_src else "").strip().lower()
+        is_fb = "facebook" in src_l or (
+            difflib.SequenceMatcher(None, src_l, "facebook").ratio() >= 0.75)
+        if not vd or not is_fb:
             continue
         ph = normphone(r[i_num])
         crm = crm_by_phone.get(ph)
