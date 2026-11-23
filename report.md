@@ -1,80 +1,95 @@
-DIVYA JYOT DAILY SNAPSHOT - 19 Nov 2026 (Thu), midnight to ~7PM IST (partial day)
+DIVYA JYOT DAILY SNAPSHOT - 23 Nov 2026 (Mon), midnight to ~7PM IST (partial day)
 
 HEADLINE
-A lead became a site visit in 17 hours. Laxman Kinlekar filled the Studio form at 7:31PM yesterday, was called this morning and was on site by 12:33PM. Against that: zero leads from all three campaigns today by 7PM, only the second such day in 30.
+No report ran on 20, 21 or 22 Nov (the schedule skipped three days; this one covers the gap). The picture since Thursday: new leads are being logged and called within hours, including on Sunday, but follow-up has stopped. Not one dated redial note in the sheet for 21, 22 or 23 Nov, and no site visit since Laxman on 19 Nov.
 
-FOLLOW-UP FROM LAST REPORT
-- Second attempt on the 15 unreached: done for 14 of them today. Only 1 picked up (rohanjambhle: 1BHK, 65 lakh final, marked Dead). Harshada Nare Gaonkar (2BHK, within 3 months) is the one not redialed.
-- Is the fix holding? Yes. The only new lead since yesterday's report (Laxman, 7:31PM) was in the sheet and called by this morning.
-- Rikin Gandhi 9867932469 (1BHK, within 3 months, below 1cr, 12 Nov): still no row. Day 7. Asked three days running.
-- Ashok Thakkar 9769343377 (filled the form again 16 Nov): still no note after 11/11 on row 1963.
-- Visit candidates named yesterday: Bharat Zambare dialed, Busy. Aarti Ahuja dialed, Ringing. Ankit Rai (90 lakh, 1cr with parking) not dialed today. Mitesh Madnani (2BHK 1.50cr) not dialed since 13 Nov, now 6 days.
-- Nishant Kamdar: dialed today, "Busy on meeting".
-- Post-visit: Sahil dialed 18/11, Busy. Jyotish Badiyani 18/11 "Coming Monday & Tuesday" (23-24 Nov), still pending. Vidyanand Pathak not dialed since 16 Nov.
-- Anthony Francis booking: no new note. I still cannot see whether it went to Meta.
+FOLLOW-UP FROM LAST REPORT (19 Nov)
+- Missed days restated from full-day data: 19 Nov Rs 670, 1 lead (Rajesh Pawar, 9:58PM, after the report). 20 Nov Rs 527, 3 leads (one per campaign). 21 Nov Rs 587, 0 leads. 22 Nov Rs 934, 3 leads, all 1BHK.
+- "If Friday is also empty, treat it as real": Friday brought 3 leads. Saturday was a full zero day, the third in 30 (7 Nov, 21 Nov). Not a trend: 3 on Sunday, 3 today.
+- 1BHK form test: no longer needed. 1BHK produced 5 leads in 4 days (1 on 20 Nov, 3 on 22 Nov, 1 today). The form works; 18-19 Nov was a dry patch.
+- 2BHK Legacy hook: still running. 30-day cost is now Rs 1,735 for 3 leads = Rs 578 per lead (was Rs 401). About Rs 200 more spent since I asked for it to be switched off, 0 leads.
+- Laxman Kinlekar (visited 19 Nov): one post-visit call on 20/11, Ringing. Nothing since.
+- WhatsApp + evening calls for the unreached: no note mentions WhatsApp. 7 of them got a third plain call on 20/11 (Manjit Kaur Dham Busy; Suniil Nair, Aarti Ahuja, Rahul Dev, Varsha Gangurde, Adv Swapnil Chaudhari, Jassi all Ringing). Then nothing.
+- Rikin Gandhi 9867932469 (1BHK, within 3 months, below 1cr, 12 Nov): still no row. Day 11.
+- Harshada Nare Gaonkar (2BHK, within 3 months): still one dial, on 13 Nov.
+- Ashok Thakkar (second form 16 Nov): no note since 11/11. Mitesh Madnani (2BHK 1.50cr): none since 13/11. Ankit Rai (1cr with parking): none since 17/11. Bharat Zambare, Nishant Kamdar: none since 19/11.
+- Jyotish Badiyani: 20/11 note repeats "Coming Monday & Tuesday". Today is Monday; no visit logged by 7PM.
+- Sahil: 20/11 Ringing. Vidyanand Pathak: no dial since 16 Nov. Anthony Francis booking: no new note.
 - SVD row 137 Shivdas Shedge still carries 9820900416 (CRM 9820900146).
-- Narendra Thakkar: "WhatsApp call not available" today. Still not a CRM lead, no source.
-- 18 Nov restated from full-day data: Rs 715, 3 leads, all Studio (was Rs 492, 2 leads at 7PM). The late one is Laxman.
-- Still waiting on you, Keval: the 1BHK price band, and the question to the team about whether 11-17 Nov leads were called and not logged.
+- Dashboard fix for the "Fcaebook" spelling: still not on main. Live dashboard remains one visit short (Laxman).
+- Still waiting on you, Keval: the 1BHK price band.
 
 THE FUNNEL (today, midnight-7PM IST; will keep moving)
-Spend: Rs 498
-Impressions: 1,942
-Reach: about 1,580 (sum of campaigns, overlap possible)
-Clicks: 42, link clicks 32
-Leads: 0 (Meta shows 0 on every campaign and ad; the CRM sheet also shows 0 today, so the two agree)
-  Studio 0, 2BHK 0, 1BHK 0
-Contacted: nothing new to contact today. The one lead that arrived after yesterday's report was contacted.
-Site visits today: 1, Laxman Kinlekar, entered at 12:33PM. CRM-verified.
-Ad account is active (status 1), spend is in line with yesterday at the same hour (Rs 492), so this is not a delivery problem.
+Spend: Rs 582
+Impressions: 2,046
+Reach: about 1,640 (sum of campaigns, overlap possible)
+Clicks: 64, link clicks 34
+Leads: 3 (Meta and the CRM sheet agree, all Facebook, none Instagram)
+  Studio 1 (Vipin Kulkarni, 4:25PM)
+  2BHK 1 (Meghana Joshi, 3:16PM, 36 Seconds ad)
+  1BHK 1 ("deore", logged as Kabita Deore, 8:07AM, Hindi ad)
+Contacted: 1 of 3. Kabita Deore was in the sheet by noon (Busy). Meghana Joshi and Vipin Kulkarni had no row at 7:02PM, 3h 46m and 2h 37m after arriving.
+Site visits today: 0 logged.
+Ad account active (status 1).
 
-AD PERFORMANCE (agency hat), today vs yesterday vs 7 days
-Studio: Rs 187, CTR 1.67%, CPC Rs 12.5, CPM Rs 208, freq 1.19, 0 leads. Yesterday Rs 268, 3 leads, CTR 3.23%. 7 days (12-18 Nov): Rs 1,746 for 12 leads = Rs 146, CTR 2.66%, freq 1.66. The four-day CTR climb (2.14, 2.68, 2.98, 3.23) broke today: half the click rate on the same CPM and frequency. One partial day; not fatigue at frequency 1.19. Still the cheapest leads in the account and the source of today's visit.
-2BHK: Rs 154, CTR 1.76%, CPC Rs 17.1, CPM Rs 301, freq 1.26, 0 leads. Yesterday Rs 250, 0 leads, CTR 2.19%. 7 days: Rs 1,543 for 5 leads = Rs 309, CTR 2.68%, freq 2.36. No lead since 17 Nov 4:22PM: Rs 404 spent across two days for nothing, and CTR has fallen three days in a row (3.61, 2.19, 1.76). This is now the weakest campaign. Per ad over 30 days: 36 Seconds Rs 224 per lead, connectivity hook Rs 273, Legacy hook Rs 401 (Rs 1,605 for 4). Legacy drew Rs 38 today and Rs 45 yesterday for 0 leads.
-1BHK: Rs 157, CTR 3.38%, CPC Rs 8.7, CPM Rs 295, freq 1.27, 0 leads. Yesterday Rs 197, 0 leads, CTR 3.18%. 7 days: Rs 1,413 for 7 leads = Rs 202, CTR 3.21%, freq 1.99. The 3-day watch ends: 2, 0, 0 leads. People click (best CTR in the account every day) and do not submit: 24 link clicks in two days, no form. That points at the form, not the creative. Hindi ad 30-day frequency 3.13. Gujarati is effectively off.
-Mix: 7-day CPL runs Studio Rs 146, 1BHK Rs 202, 2BHK Rs 309. The gap has widened since yesterday (174 / 213 / 213).
+AD PERFORMANCE (agency hat), today vs yesterday vs 7 days (16-22 Nov)
+Studio: today Rs 196, 1 lead, CTR 3.01%, CPC Rs 8.2, CPM Rs 246, freq 1.18. Yesterday Rs 330, 0 leads, CTR 1.39%. 7 days: Rs 1,751 for 9 leads = Rs 195, CTR 2.15%, freq 1.56. The click rate sagged for four days (1.78, 1.72, 1.42, 1.39) and Studio spent Rs 545 on Sat-Sun for no lead. Today it is back at 3%. Daily frequency is flat at 1.1-1.2, so this is not fatigue; watch whether 3% holds tomorrow. Its 7-day CPL has slipped from Rs 146 to Rs 195.
+2BHK: today Rs 189, 1 lead, CTR 3.11%, CPC Rs 12.6, CPM Rs 391, freq 1.36. Yesterday Rs 297, 0 leads, CTR 2.46%. 7 days: Rs 1,570 for 5 leads = Rs 314, CTR 2.83%, freq 2.23. Two leads since 17 Nov (Mamta Sahal 20 Nov, Meghana Joshi today), both from 36 Seconds. Per ad over 30 days: 36 Seconds Rs 220 per lead (18 leads), connectivity hook Rs 269 (4), Legacy hook Rs 578 (3). Most expensive CPM in the account.
+1BHK: today Rs 197, 1 lead, CTR 3.26%, CPC Rs 7.9, CPM Rs 258, freq 1.25. Yesterday Rs 307, 3 leads (Rs 102 each), CTR 2.95%. 7 days: Rs 1,583 for 6 leads = Rs 264, CTR 3.37%, freq 2.04. Best click rate every day and now converting again. Only the Hindi ad is delivering; its 30-day frequency is 3.06, the highest in the account. Gujarati has stopped.
+Mix: 7-day CPL Studio Rs 195, 1BHK Rs 264, 2BHK Rs 314. Last four days (20-23 Nov): Rs 2,630 for 9 leads = Rs 292, with 1BHK bringing 5 of the 9.
 
 SPEED-TO-LEAD (sales hat)
-Precision: Drive revision history, 6 revisions scanned, 0 failed. Lag is a range between two revisions.
-Name - Arrived in Meta - First note appeared in sheet - Lag - Outcome
-Laxman Kinlekar (Studio ad, within 3m) - 18 Nov 7:31PM - 19 Nov between 11:15AM and 12:34PM - 15h 44m to 17h 03m - spoke: 1BHK, 85 lakh. Visit logged 12:33PM the same morning.
-That is the only fresh lead in the window. He arrived after office hours, so a call the next morning is the realistic best, and the team turned the call into a visit inside about an hour. Credit to them. This is exactly what the week of 11-17 Nov was missing.
-For the record, yesterday's two (Varsha Gangurde, Suresh Jain) stand as reported: both logged by 1:08PM on the day.
-Redials today: 76 rows carry a 19/11 note (yesterday 0, 17 Nov 69). 38 Ringing, 29 Busy, 5 Cut the call, 1 Voicemail, 1 WhatsApp unavailable, 1 conversation, 1 visit. 23 of the 76 are this week's new rows, 53 are older rows.
-Second attempts on the 11-18 Nov leads, all dated 19/11:
-Krutanjali Vaidya (within 3m) Ringing. Sandeep Singh (within 3m) Cut the call, second time. Raj Thakkar (within 3m) Busy. Manmohan Singh (within 3m) Ringing. Nailesh Sheth (within 3m) Ringing. Rahul Dev (within 3m) Busy. Adv Swapnil Chaudhari (within 3m) Ringing. Varsha Gangurde (within 3m) Ringing. Papanna Gowda (within 3m) Cut the call. Bharat Zambare (within 3m) Busy. Aarti Ahuja (within 3m) Ringing. Jassi Ringing. Sahil Devulkar Busy. Suniil Nair Ringing. Manjit Kaur Dham Ringing (the number connects now). rohanjambhle spoke, 65 lakh.
-Not dialed: Harshada Nare Gaonkar. No row: Rikin Gandhi.
-One pickup from 16 calls. Twelve of those 16 ticked "within 3 months", and most were first called days late. A plain call is no longer getting through to them.
+Precision: Drive revision history, only 3 revisions in the 2-day window (20 Nov 6:05PM, 22 Nov 12:09PM, 23 Nov 12:00PM), 0 failed. Brackets are wide, so each lag below is an upper limit. Leads before 22 Nov are day-level from the sheet dates.
+Name - Arrived in Meta - First note in sheet - Lag - Outcome
+Kumar Kamat (1BHK, exploring, below 1cr) - Sun 22 Nov 12:33AM - by 12:09PM Sunday - under 11h 36m (arrived after midnight) - "Ringing, Ringing"
+Narendra Amratlal Shah (1BHK, within 3m, below 1cr) - Sun 22 Nov 8:37AM - by 12:09PM Sunday - under 3h 32m - spoke: wants 300 sqft, coming next week
+Nandkumar Vatare (1BHK, 3-6m, 1.01-1.10cr) - Sun 22 Nov 5:33PM - between Sun 12:09PM and Mon 12:00PM - under 18h 27m - "in meeting right now"
+Kabita Deore (1BHK, exploring, 1.01-1.10cr) - Mon 23 Nov 8:07AM - by 12:00PM - under 3h 54m - Busy
+Meghana Joshi (2BHK, exploring, 1.5-1.75cr) - Mon 3:16PM - no row at 7:02PM - 3h 46m and counting
+Vipin Kulkarni (Studio, exploring) - Mon 4:25PM - no row at 7:02PM - 2h 37m and counting
+Day-level, from the missed days:
+Rajesh Pawar (Studio, within 3m, Instagram) - Thu 19 Nov 9:58PM - row dated 19/11 - Ringing. One attempt, no redial in 4 days.
+Hitesh Pandya (1BHK, within 3m, above 1.2cr) - Fri 20 Nov 12:19PM - row dated 20/11 - Cut the call. One attempt, no redial.
+Mamta Sahal (2BHK, within 3m, 1.5-1.75cr) - Fri 20 Nov 3:12PM - same day - spoke: 2BHK, 1.60cr, "coming today & Saturday"
+Piyush Kasiyani (Studio, within 3m, Instagram) - Fri 20 Nov 3:22PM - same day - spoke: 1BHK, 80 lakh, Mulund West
+Credit where due: 8 of the 8 leads that arrived before today's lunch are in the sheet with a first call, two of them logged on a Sunday morning. First contact is no longer the problem.
+The problem is the second call. Dated follow-up notes per day: 17 Nov 69, 18 Nov 0, 19 Nov 76, 20 Nov 7 (plus 3 post-visit), 21 Nov 0, 22 Nov 0, 23 Nov 0 by 7PM. Rajesh Pawar and Hitesh Pandya both ticked "within 3 months" and each has had exactly one unanswered call.
 
 LEAD QUALITY (sales hat)
-- Laxman Kinlekar: came through the Studio ad, wants a 1BHK at 85 lakh, lives in Bhandup, visited. No post-visit note yet. Whether 85 lakh buys a 1BHK here is the 1BHK price question again.
-- rohanjambhle: filled the form twice, wants a 1BHK at 65 lakh final. Dead.
-- That makes 4 Studio-form leads reached this week at 60 to 65 lakh (Dilip Panchal, Vilas Dhale, Nimish Chudasama, rohanjambhle) and 2 who wanted a 1BHK or 2BHK at a higher number (Laxman 85 lakh, Suresh Jain 1cr). The Studio ad is pulling in 1BHK buyers at both ends. None of the six asked for a studio.
-- Of the 26 people who filled a form from 11 to 18 Nov: 10 spoken to (1 visit, 2 still open: Bharat Zambare and Aarti Ahuja, 7 dead or mismatched), 14 not reached (13 after two attempts, Harshada after one), 1 with no row (Rikin Gandhi), 1 repeat lead not called again (Ashok Thakkar).
-Cost per verified visit: window 20 Oct to 19 Nov = Rs 22,163 spend, 111 leads, 9 CRM-verified visits = Rs 2,463 per visit (CPL Rs 200). Yesterday's window read Rs 2,518; Laxman came in, Vishal Jadhav (19 Oct) dropped out.
-Nov month to date: Rs 13,390, 67 leads, 6 visits (Sahil 1 Nov, Anthony Francis 9 Nov, Shivdas Shedge 11 Nov, Vidyanand Pathak 13 Nov, Jyotish Badiyani 14 Nov, Laxman Kinlekar 19 Nov) = Rs 2,232 per visit, visit rate 9.0% against the 4.5% baseline. One booking (Anthony Francis, 1002 and 1003).
-Sheet claims 9 Facebook-source visits in the window. 8 verify directly on phone, 1 (Shivdas) only through the known typo. 0 unexplained. Counted as 9.
-The five-day gap without a visit ended today.
+10 leads arrived since the last report (19 Nov evening to now): 8 logged, 2 waiting from this afternoon. 4 reached, 4 not reached, 0 visits so far.
+- Mamta Sahal: 2BHK at 1.60cr, said she would come Friday or Saturday. No visit logged, no call since. Warmest name in the sheet right now.
+- Narendra Amratlal Shah: Mulund, wants 300 sqft, "coming next week" (this week).
+- Piyush Kasiyani: Mulund West, 1BHK at 80 lakh, via the Studio ad. No next step written.
+- Nandkumar Vatare: picked up, in a meeting. Needs the call back.
+- 1BHK form budgets on the five new 1BHK leads: 2 below 1cr, 2 at 1.01-1.10cr, 1 above 1.2cr. Whether those fit depends on the 1BHK price I still do not have.
+- Both new 2BHK leads ticked 1.5-1.75cr.
+- The Studio pattern continues: Piyush is the seventh Studio-form lead in two weeks to ask for a 1BHK. Still none asking for a studio.
+Cost per verified visit: window 24 Oct to 23 Nov = Rs 21,582 spend, 98 leads, 9 CRM-verified visits = Rs 2,398 per visit (CPL Rs 220).
+Nov month to date: Rs 16,192, 77 leads, 6 visits = Rs 2,699 per visit, visit rate 7.8% against the 4.5% baseline. On 19 Nov this read Rs 2,232 and 9.0%: four days of spend (Rs 2,800) with no new visit.
+Sheet claims 9 Facebook-source visits in the window. 8 verify directly on phone, 1 (Shivdas Shedge) through the known typo. 0 unexplained. Counted as 9. Two of the nine are older leads who visited in this window (Amey Angone from July, Sahil from September).
+No visit logged for 20-23 Nov. Late entries are normal, so the last day or two can still fill in.
 
 DATA INTEGRITY CROSS-CHECK
-- Forward check (CRM leads since 1 Oct with no sheet phone match): 4, unchanged. Rikin Gandhi 9867932469 (12 Nov), Milind Jadhav 9867798610 (2 Nov), Latasha Parab 9769562409 (10 Oct), Vijay Gopalani (20 Oct, typo row: sheet 8097193237, CRM 8097193437).
-- Reverse check (sheet rows since 1 Oct not in CRM): 3, unchanged. Vijay Gopalani (the typo), Hetal Satra 9920291800 (dialed again today, Ringing), Narendra Thakkar 9892789368.
-- Match rate for CRM leads since 25 Oct: 98% (83 of 85).
-- Typo scan: no new pair. Laxman's number matches the CRM exactly in both tabs.
-- SVD row 140 (Laxman) has the source typed "Fcaebook". The dashboard matched on spelling and would have dropped his visit from its count. I fixed the matching in build_dashboard.py on this run's branch, but that file is not carried to main by the sync, so the live dashboard is one visit short until the fix is merged (see below).
-- Laxman's Created date is typed 18/11 and is correct. Status on his row says "Cold" next to "Visit done"; rohanjambhle and Suresh Jain are marked Dead correctly.
-- Campaign vs CRM tabs: 3 campaigns spending, 4 CRM tabs present. Meta and CRM agree on today (0) and yesterday (3).
+- Forward check (CRM leads since 1 Oct with no sheet phone match): 6. Two are this afternoon's (Meghana Joshi, Vipin Kulkarni). The other four are unchanged: Rikin Gandhi 9867932469, Milind Jadhav 9867798610, Latasha Parab 9769562409, Vijay Gopalani (typo row: sheet 8097193237, CRM 8097193437).
+- Reverse check (sheet rows since 1 Oct not in CRM): 3, unchanged. Vijay Gopalani (the typo), Hetal Satra 9920291800, Narendra Thakkar 9892789368.
+- Match rate for CRM leads since 25 Oct: 96% (91 of 95); 98% excluding today's two.
+- Typo scan: no new pair. All 8 new rows carry the exact CRM phone.
+- Created dates typed a day early on three rows: Kumar Kamat and Narendra Amratlal Shah arrived 22 Nov, typed 21/11; Kabita Deore arrived 23 Nov, typed 22/11. Harmless for matching, but it makes a lead look a day older than it is.
+- "deore" in the CRM is "Kabita Deore" in the sheet: same phone, the team got the full name on the call.
+- Row 1979 Sandeep Singh still has the date typed "1111/2026".
+- Campaign vs CRM tabs: 3 campaigns spending, 4 CRM tabs present. Meta and CRM agree for today (3), 22 Nov (3), 21 Nov (0) and 20 Nov (3).
 
 DIAGNOSTIC STEPS
-1. Sales, tomorrow morning: call Laxman Kinlekar 7738350847 for his reaction while the visit is fresh, and write the note on SVD row 140. A lead who walks in 17 hours after the form is the warmest person in the sheet.
-2. Sales: stop repeating plain calls to the 15 who did not pick up today. Send each a WhatsApp with the brochure and one line ("you enquired about Divya Jyot Mulund, when can we call?"), then call at 7-8PM, not in office hours. Within-3-month names first: Krutanjali Vaidya 8879369158, Raj Thakkar 9619327741, Manmohan Singh 9702678262, Nailesh Sheth 9036787111, Rahul Dev 9619206299, Adv Swapnil Chaudhari 9702999214, Varsha Gangurde 8879300397, Aarti Ahuja 9619442904, Bharat Zambare 9653328977. And the first call to Harshada Nare Gaonkar 8422074324 since her row was made.
-3. Sales: create the row for Rikin Gandhi 9867932469 and call him. Call Ashok Thakkar 9769343377 (1cr, wants 500 carpet, second form on 16 Nov). Call Mitesh Madnani 9870897924 (2BHK 1.50cr with parking, 6 days silent) and Ankit Rai 9136730576 (1cr with parking) and fix a visit day with each.
-4. Agency: switch off the 2BHK Legacy hook now. Rs 401 per lead over 30 days, and the 2BHK campaign has spent Rs 404 for no lead since 17 Nov. Keep 36 Seconds running. If 2BHK is still at 0 by Saturday, move a third of its budget to Studio, which is at Rs 146 and just produced a visit.
-5. Agency: open the 1BHK form on a phone and submit a test lead. Best CTR in the account, 24 link clicks in two days, 0 forms. Check the OTP step and the budget options.
-6. Keval: the 1BHK price. Laxman (85 lakh, visited), Aarti Ahuja (80 lakh) and Ankit Rai (90 lakh to 1cr) are all waiting on it, and so is the decision on adding a budget question to the Studio form.
+1. Sales, now: create rows for Meghana Joshi 9930855319 and Vipin Kulkarni 9769930080 and call both this evening.
+2. Sales, tomorrow first thing: Mamta Sahal 9820837510. She offered two visit days and neither happened. Fix a new day. Then Nandkumar Vatare 9029952687 (was in a meeting), Narendra Amratlal Shah 9892938080 (pin the day for "next week") and Piyush Kasiyani 8898090909 (80 lakh 1BHK, lives in Mulund West, no next step written).
+3. Sales: three days with no follow-up notes. Tomorrow's redial list, within-3-month names first: Rajesh Pawar 8459089972, Hitesh Pandya 7977228181, Harshada Nare Gaonkar 8422074324, Krutanjali Vaidya 8879369158, Raj Thakkar 9619327741, Manmohan Singh 9702678262, Nailesh Sheth 9036787111, Bharat Zambare 9653328977. Plain daytime calls have failed three times on most of these: WhatsApp first, then call at 7-8PM. And the row for Rikin Gandhi 9867932469.
+4. Sales, post-visit: call Jyotish Badiyani 8425873716 to confirm tomorrow (he said Monday or Tuesday). Laxman Kinlekar 7738350847 has had one unanswered call since his visit.
+5. Agency: switch off the 2BHK Legacy hook. Rs 578 per lead over 30 days against Rs 220 for 36 Seconds in the same campaign.
+6. Agency: leave Studio alone for now; today's CTR recovery says the weekend was noise. If it prints two more days under 1.5% CTR with no leads, refresh the creative. The 1BHK Hindi ad needs a second creative soon: 30-day frequency 3.06 and it is the only 1BHK ad delivering.
+7. Keval: the 1BHK price band. Seven Studio-form leads and five new 1BHK-form leads are waiting on it.
 
 ANYTHING ELSE
-Zero leads by 7PM has happened once before in the last 30 days (7 Nov, which stayed at 0 for the full day and was followed by 5 and 9 leads on the next two). So it is a soft day, not an alarm, but it comes with the lowest Studio and 2BHK click rates of the week. Read tomorrow's restated figure. If Friday is also empty by 7PM, treat it as real.
-The Studio ad is working as a 1BHK ad. Today's visitor, yesterday's 1cr enquiry and four 60-65 lakh enquiries all came through it and none wanted a studio. Worth checking what the Studio creative and form actually promise, and whether the 1BHK campaign should borrow that creative.
-Dashboard: needs one small merge. build_dashboard.py on branch claude/wizardly-carson-ocsvja now accepts any close misspelling of "Facebook" in the SVD source column. Until that reaches main the dashboard's visit count is one short (Laxman).
-Housekeeping: the scheduler asked for yesterday's date; this report is filed under 2026-11-19 (run date), as in every prior run. The scheduler also points to CLAUDE.md, which does not exist; the spec is CLAUDE-crossref-routine.md.
+The schedule did not fire on 20, 21 and 22 Nov. Nothing in the repo is broken; the last report on main is 19 Nov. Worth a look at the routine's schedule on claude.ai.
+The follow-up rhythm is a burst every second or third day (76 notes on 19 Nov, then 7, 0, 0, 0). Leads that arrive between bursts get one call and then wait. A fixed daily slot for redials, even 20 calls a day, would do more than a 76-call day twice a week.
+Dashboard: build_dashboard.py on main still matches only two spellings of "Facebook" in the SVD source column, so Laxman's visit (typed "Fcaebook") is missing from the live dashboard. The fix sits on branch claude/wizardly-carson-ocsvja and needs merging to main.
+Housekeeping: the scheduler asked for yesterday's date; this report is filed under 2026-11-23 (run date), as in every prior run. The scheduler points to CLAUDE.md, which does not exist; the spec is CLAUDE-crossref-routine.md.
